@@ -1,1 +1,5 @@
-+build
+build/
+gettext/
+temp/
+source/
+_sources/
