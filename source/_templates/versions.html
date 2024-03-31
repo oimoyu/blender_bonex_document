@@ -1,0 +1,29 @@
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+  <span id="language-label" class="rst-current-version" data-toggle="rst-current-version">
+    Select Language 
+    <span class="fa fa-caret-down"></span>
+  </span>
+  <div class="rst-other-versions">
+	<dl>
+	  <dt>{{ _('Languages') }}</dt>
+		{% for lang_id, lang_title in languages %}
+		  <dd><a href="{{ lang_id }}/index.html">{{ lang_title }}</a></dd><br>
+		{% endfor %}
+	</dl>
+  </div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var userLang = navigator.language || navigator.userLanguage; 
+  if(userLang.startsWith('zh')) {
+    document.getElementById('language-label').textContent = '选择语言';
+  } 
+  else if(userLang.startsWith('ja')) {
+    document.getElementById('language-label').textContent = '言語を選択';
+  }
+  else {
+    document.getElementById('language-label').textContent = 'Select Language';
+  }
+});
+</script>
+
+</div>

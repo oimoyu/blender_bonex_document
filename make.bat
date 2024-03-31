@@ -53,6 +53,8 @@ rmdir /S /Q "docs\zh\_static\video"
 rmdir /S /Q "docs\ja\_static\image"
 rmdir /S /Q "docs\ja\_static\video"
 
+if not exist "docs\.nojekyll" echo.> docs\.nojekyll
+
 
 :end
 popd
