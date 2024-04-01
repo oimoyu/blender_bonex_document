@@ -14,3 +14,4 @@ Welcome to blender bonex document's documentation!
    tool
    example
    faq
+   contact

@@ -28,9 +28,9 @@ Joint Properties
 
 ......
 
-**Angle Limit**: hard constraint that limit the rigidbody relative rotation.
+**Angle Limit**: hard constraint, which limits the rigidbody relative rotation.
 
-**Distance Limit**: hard constraint that limit the rigidbody relative movement.
+**Distance Limit**: hard constraint, which limits the rigidbody relative movement.
 
 **Hard constraints**: the distance constraints and angle constraints set in the panel. This is the constraint range you tell physx should not exceed. If too much force pushes him away from the hard constraint range, it will be subject to a large reaction force trying to return.
 
