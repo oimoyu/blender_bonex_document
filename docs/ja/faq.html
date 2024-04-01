@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ &mdash; Blender Bonex Document 1.0.0 ドキュメント</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=90d9a163"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/translations.js?v=4dbe4bdc"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="検索" href="search.html" />
+    <link rel="prev" title="Parameters with Examples" href="example.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Blender Bonex Document
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get_start.html">Get start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rigidbody.html">Rigid body</a></li>
+<li class="toctree-l1"><a class="reference internal" href="joint.html">Joint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="force_field.html">Force Field</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scene.html">Scene Setting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simulation.html">Simulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tool.html">Tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example.html">Parameters with Examples</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">FAQ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#why-does-relative-displacement-still-appear-after-simulation-even-though-the-joint-distance-is-set-to-0">Why does relative displacement still appear after simulation even though the joint distance is set to 0?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#why-does-jitter-occur">Why does jitter occur?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#why-is-the-simulation-unable-to-move-despite-setting-upper-and-lower-displacement-limits">Why is the simulation unable to move despite setting upper and lower displacement limits?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what-should-i-do-if-the-fps-is-too-low-during-playback">What should I do if the FPS is too low during playback?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#why-can-t-i-move-rigid-body-bones-during-playback">Why can't I move rigid body bones during playback?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#high-speed-movement-penetrate-rigidbody-issues">High speed movement penetrate rigidbody issues</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Blender Bonex Document</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">FAQ</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="faq">
+<h1>FAQ<a class="headerlink" href="#faq" title="Link to this heading"></a></h1>
+<section id="why-does-relative-displacement-still-appear-after-simulation-even-though-the-joint-distance-is-set-to-0">
+<h2>Why does relative displacement still appear after simulation even though the joint distance is set to 0?<a class="headerlink" href="#why-does-relative-displacement-still-appear-after-simulation-even-though-the-joint-distance-is-set-to-0" title="Link to this heading"></a></h2>
+<p>The constraints of simulation engines such as physx are not absolute constraints. Too large a force (such as the force of a kinematic rigid body) or too small a position solver iteration number will cause it to break away from the constraints.</p>
+<p>①Increase the number of steps of the position iterator to improve calculation accuracy</p>
+<p>② Set the bone attribute to connected, so that the bone is hard constrained to the tail of the parent, and only the rotation result of physx will be applied.</p>
+</section>
+<section id="why-does-jitter-occur">
+<h2>Why does jitter occur?<a class="headerlink" href="#why-does-jitter-occur" title="Link to this heading"></a></h2>
+<p>When a rigid body breaks away from a hard constraint, it will try to return to the position where the constraint should be, and will generate a large recovery force. At this time, if there is a kinematic rigid body that prevents it from returning to its supposed position or rotating, it will produce jittery simulation results.</p>
+<p>①Adjust the position of kinematic so that it does not conflict with the conditions of hard constraints</p>
+<p>② Take out the jittered part separately, disable the conflicting kinematic rigid body and recalculate it separately</p>
+</section>
+<section id="why-is-the-simulation-unable-to-move-despite-setting-upper-and-lower-displacement-limits">
+<h2>Why is the simulation unable to move despite setting upper and lower displacement limits?<a class="headerlink" href="#why-is-the-simulation-unable-to-move-despite-setting-upper-and-lower-displacement-limits" title="Link to this heading"></a></h2>
+<p>① Check whether connected is checked in the bone attributes. Connected is the option for blender to lock the bone displacement. Bones with this option checked cannot move in posture mode.</p>
+<p>② Whether the joint stiffness and the rigid body mass match. If the spring stiffness is too large or the rigid body mass is too small, the force will not be enough to move the rigid body, so it cannot move.</p>
+</section>
+<section id="what-should-i-do-if-the-fps-is-too-low-during-playback">
+<h2>What should I do if the FPS is too low during playback?<a class="headerlink" href="#what-should-i-do-if-the-fps-is-too-low-during-playback" title="Link to this heading"></a></h2>
+<p>① Playback without modify mode, in modify mode you can view the rigidbody shape, but the drawing api efficiency of the preview is not high, and some data need to be calculated in real time, so the playback speed will be slowed down when there are lots rigid bodies exist.</p>
+<p>②Try to disable setting keyframe option. Blender has performance issues in setting keyframes. When there are too many existing keyframes for an object or bone, the time required to set a keyframe will increase linearly with the number of existing keyframes. Therefore, when playback simulation, if there is a low fps, and checking the log found that the frame generation time of physx is also very short, so the cause of the lag is the performance problem of Blender's keyframe setting.</p>
+<p>③ Reduce the number of iteration steps. A reasonable number of iteration steps can improve the calculation speed.</p>
+<p>④Try to bake the animation into key frames and then play it.</p>
+<p>⑤ Try to divide the simulation into separate parts, and simulate them separately.</p>
+</section>
+<section id="why-can-t-i-move-rigid-body-bones-during-playback">
+<h2>Why can't I move rigid body bones during playback?<a class="headerlink" href="#why-can-t-i-move-rigid-body-bones-during-playback" title="Link to this heading"></a></h2>
+<p>① Check whether the bones you move have existing keyframes. In Blender, K-framed bones cannot be moved manually in live playback</p>
+<p>② Check whether the bone you move is a dynamic rigid body bone, because every dynamic playback frame will be controlled by physx, so the user cannot move it</p>
+</section>
+<section id="high-speed-movement-penetrate-rigidbody-issues">
+<h2>High speed movement penetrate rigidbody issues<a class="headerlink" href="#high-speed-movement-penetrate-rigidbody-issues" title="Link to this heading"></a></h2>
+<p>when a rigid body move in a very high speed, rigidbody will penetrate, and collision will not happen. To avoid this, physx has a feature call ccd. But in my practice, I have not seen such situation, and the ccd need addtional calculation, I did not add in bonx. So If you have a high speed rigidbody scene and penetration occur, you can send the blender project to let think about this feature.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="example.html" class="btn btn-neutral float-left" title="Parameters with Examples" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, oimoyu.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+  <span id="language-label" class="rst-current-version" data-toggle="rst-current-version">
+    Select Language
+    <span class="fa fa-caret-down"></span>
+  </span>
+  <div class="rst-other-versions">
+    <dl>
+      <dt>Languages</dt>
+      
+      <dd><a href="javascript:void(0)" class="switch-lang" data-lang="en">English</a></dd><br>
+      
+      <dd><a href="javascript:void(0)" class="switch-lang" data-lang="zh">中文</a></dd><br>
+      
+      <dd><a href="javascript:void(0)" class="switch-lang" data-lang="ja">日本語</a></dd><br>
+      
+    </dl>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var userLang = navigator.language || navigator.userLanguage;
+      if (userLang.startsWith('zh')) {
+        document.getElementById('language-label').textContent = '选择语言';
+      }
+      else if (userLang.startsWith('ja')) {
+        document.getElementById('language-label').textContent = '言語を選択';
+      }
+      else {
+        document.getElementById('language-label').textContent = 'Select Language';
+      }
+
+      document.querySelectorAll('.switch-lang').forEach(function (link) {
+        link.addEventListener('click', function () {
+          var target_lang_id = this.getAttribute('data-lang'); // 获取语言代码
+          var langs = ['en', 'zh', 'ja', ];
+
+      var current_lang_id = "";
+      for (var i = 0; i < langs.length; i++) {
+        if (window.location.pathname.indexOf("/" + langs[i] + "/") !== -1) {
+          current_lang_id = langs[i];
+          break;
+        }
+      }
+      if (!current_lang_id) {
+        alert("language not found");
+      } else {
+        window.location.pathname = window.location.pathname.replace(new RegExp("/" + current_lang_id + "/", "g"), "/" + target_lang_id + "/");
+      }
+
+
+    });
+
+      });
+
+    });
+  </script>
+
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

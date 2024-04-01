@@ -1,0 +1,89 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, oimoyu
+# This file is distributed under the same license as the Blender Bonex
+# Document package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Bonex Document \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-31 17:31+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/joint.rst:2
+msgid "Joint"
+msgstr ""
+
+#: ../../source/joint.rst:11
+msgid "Component of Joint"
+msgstr ""
+
+#: ../../source/joint.rst:12
+msgid ""
+"Within rigid Body modification interface, press \"C\", a rigid body will "
+"be created at position of the bone. If the bone has a parent, a joint "
+"will be created at the head of the bone to connect the parent bone, the "
+"child bone can rotate and move around the joints. The axis in the joint "
+"settings means the local axis of the bone (The local axis of the bone can"
+" be set to display in the armature properties armature->Data->Viewport "
+"Display->Axes). The center of mass of the rigidbody will be fixed at the "
+"tail of the bone, so the behavior of collision as a single rigidbody will"
+" be a bit strange without a parent bone."
+msgstr ""
+
+#: ../../source/joint.rst:14
+msgid ""
+"Joint between two rigidbody can be seen as a spring, two rigidbody is "
+"connected by spring force."
+msgstr ""
+
+#: ../../source/joint.rst:17
+msgid "Joint Properties"
+msgstr ""
+
+#: ../../source/joint.rst:19
+msgid "**Stiffness**: determine the stiffness of the spring."
+msgstr ""
+
+#: ../../source/joint.rst:21
+msgid "**Damping**: determine the damping of the spring."
+msgstr ""
+
+#: ../../source/joint.rst:31
+msgid ""
+"**Angle Limit**: hard constraint that limit the rigidbody relative "
+"rotation."
+msgstr ""
+
+#: ../../source/joint.rst:33
+msgid ""
+"**Distance Limit**: hard constraint that limit the rigidbody relative "
+"movement."
+msgstr ""
+
+#: ../../source/joint.rst:35
+msgid ""
+"**Hard constraints**: the distance constraints and angle constraints set "
+"in the panel. This is the constraint range you tell physx should not "
+"exceed. If too much force pushes him away from the hard constraint range,"
+" it will be subject to a large reaction force trying to return."
+msgstr ""
+
+#: ../../source/joint.rst:37
+msgid ""
+"**Soft constraints**: The springs connecting rigidbodies can be called "
+"soft constraints, that is, the stiffness and damping in the panel. It "
+"represents that the rigidbodies will be affected by the spring within the"
+" range of hard constraints."
+msgstr ""
+

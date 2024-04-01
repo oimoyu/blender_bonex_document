@@ -3,3 +3,4 @@ gettext/
 temp/
 source/_static/
 _sources/
+.doctrees

@@ -1,0 +1,154 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, oimoyu
+# This file is distributed under the same license as the Blender Bonex
+# Document package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Bonex Document \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-31 17:31+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/faq.rst:2
+msgid "FAQ"
+msgstr ""
+
+#: ../../source/faq.rst:6
+msgid ""
+"Why does relative displacement still appear after simulation even though "
+"the joint distance is set to 0?"
+msgstr ""
+
+#: ../../source/faq.rst:8
+msgid ""
+"The constraints of simulation engines such as physx are not absolute "
+"constraints. Too large a force (such as the force of a kinematic rigid "
+"body) or too small a position solver iteration number will cause it to "
+"break away from the constraints."
+msgstr ""
+
+#: ../../source/faq.rst:10
+msgid ""
+"①Increase the number of steps of the position iterator to improve "
+"calculation accuracy"
+msgstr ""
+
+#: ../../source/faq.rst:12
+msgid ""
+"② Set the bone attribute to connected, so that the bone is hard "
+"constrained to the tail of the parent, and only the rotation result of "
+"physx will be applied."
+msgstr ""
+
+#: ../../source/faq.rst:16
+msgid "Why does jitter occur?"
+msgstr ""
+
+#: ../../source/faq.rst:18
+msgid ""
+"When a rigid body breaks away from a hard constraint, it will try to "
+"return to the position where the constraint should be, and will generate "
+"a large recovery force. At this time, if there is a kinematic rigid body "
+"that prevents it from returning to its supposed position or rotating, it "
+"will produce jittery simulation results."
+msgstr ""
+
+#: ../../source/faq.rst:20
+msgid ""
+"①Adjust the position of kinematic so that it does not conflict with the "
+"conditions of hard constraints"
+msgstr ""
+
+#: ../../source/faq.rst:22
+msgid ""
+"② Take out the jittered part separately, disable the conflicting "
+"kinematic rigid body and recalculate it separately"
+msgstr ""
+
+#: ../../source/faq.rst:26
+msgid ""
+"Why is the simulation unable to move despite setting upper and lower "
+"displacement limits?"
+msgstr ""
+
+#: ../../source/faq.rst:27
+msgid ""
+"① Check whether connected is checked in the bone attributes. Connected is"
+" the option for blender to lock the bone displacement. Bones with this "
+"option checked cannot move in posture mode."
+msgstr ""
+
+#: ../../source/faq.rst:29
+msgid ""
+"② Whether the joint stiffness and the rigid body mass match. If the "
+"spring stiffness is too large or the rigid body mass is too small, the "
+"force will not be enough to move the rigid body, so it cannot move."
+msgstr ""
+
+#: ../../source/faq.rst:32
+msgid "What should I do if the FPS is too low during playback?"
+msgstr ""
+
+#: ../../source/faq.rst:33
+msgid ""
+"① Playback without modify mode, in modify mode you can view the rigidbody"
+" shape, but the drawing api efficiency of the preview is not high, and "
+"some data need to be calculated in real time, so the playback speed will "
+"be slowed down when there are lots rigid bodies exist."
+msgstr ""
+
+#: ../../source/faq.rst:35
+msgid ""
+"②Try to disable setting keyframe option. Blender has performance issues "
+"in setting keyframes. When there are too many existing keyframes for an "
+"object or bone, the time required to set a keyframe will increase "
+"linearly with the number of existing keyframes. Therefore, when playback "
+"simulation, if there is a low fps, and checking the log found that the "
+"frame generation time of physx is also very short, so the cause of the "
+"lag is the performance problem of Blender's keyframe setting."
+msgstr ""
+
+#: ../../source/faq.rst:37
+msgid ""
+"③ Reduce the number of iteration steps. A reasonable number of iteration "
+"steps can improve the calculation speed."
+msgstr ""
+
+#: ../../source/faq.rst:39
+msgid "④Try to bake the animation into key frames and then play it."
+msgstr ""
+
+#: ../../source/faq.rst:41
+msgid ""
+"⑤ Try to divide the simulation into separate parts, and simulate them "
+"separately."
+msgstr ""
+
+#: ../../source/faq.rst:44
+msgid "Why can't I move rigid body bones during playback?"
+msgstr ""
+
+#: ../../source/faq.rst:46
+msgid ""
+"① Check whether the bones you move have existing keyframes. In Blender, "
+"K-framed bones cannot be moved manually in live playback"
+msgstr ""
+
+#: ../../source/faq.rst:48
+msgid ""
+"② Check whether the bone you move is a dynamic rigid body bone, because "
+"every dynamic playback frame will be controlled by physx, so the user "
+"cannot move it"
+msgstr ""
+

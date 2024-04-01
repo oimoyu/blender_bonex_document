@@ -45,8 +45,16 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">介绍</a></li>
 <li class="toctree-l1"><a class="reference internal" href="get_start.html">Get start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rigidbody.html">Rigid body</a></li>
+<li class="toctree-l1"><a class="reference internal" href="joint.html">Joint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="force_field.html">Force Field</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scene.html">Scene Setting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simulation.html">Simulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tool.html">Tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example.html">Parameters with Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
 </ul>
 
         </div>
@@ -107,35 +115,60 @@
   </div>
   <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
   <span id="language-label" class="rst-current-version" data-toggle="rst-current-version">
-    Select Language 
+    Select Language
     <span class="fa fa-caret-down"></span>
   </span>
   <div class="rst-other-versions">
-	<dl>
-	  <dt>Languages</dt>
-		
-		  <dd><a href="en/index.html">English</a></dd><br>
-		
-		  <dd><a href="zh/index.html">中文</a></dd><br>
-		
-		  <dd><a href="ja/index.html">日本語</a></dd><br>
-		
-	</dl>
+    <dl>
+      <dt>Languages</dt>
+      
+      <dd><a href="javascript:void(0)" class="switch-lang" data-lang="en">English</a></dd><br>
+      
+      <dd><a href="javascript:void(0)" class="switch-lang" data-lang="zh">中文</a></dd><br>
+      
+      <dd><a href="javascript:void(0)" class="switch-lang" data-lang="ja">日本語</a></dd><br>
+      
+    </dl>
   </div>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  var userLang = navigator.language || navigator.userLanguage; 
-  if(userLang.startsWith('zh')) {
-    document.getElementById('language-label').textContent = '选择语言';
-  } 
-  else if(userLang.startsWith('ja')) {
-    document.getElementById('language-label').textContent = '言語を選択';
-  }
-  else {
-    document.getElementById('language-label').textContent = 'Select Language';
-  }
-});
-</script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var userLang = navigator.language || navigator.userLanguage;
+      if (userLang.startsWith('zh')) {
+        document.getElementById('language-label').textContent = '选择语言';
+      }
+      else if (userLang.startsWith('ja')) {
+        document.getElementById('language-label').textContent = '言語を選択';
+      }
+      else {
+        document.getElementById('language-label').textContent = 'Select Language';
+      }
+
+      document.querySelectorAll('.switch-lang').forEach(function (link) {
+        link.addEventListener('click', function () {
+          var target_lang_id = this.getAttribute('data-lang'); // 获取语言代码
+          var langs = ['en', 'zh', 'ja', ];
+
+      var current_lang_id = "";
+      for (var i = 0; i < langs.length; i++) {
+        if (window.location.pathname.indexOf("/" + langs[i] + "/") !== -1) {
+          current_lang_id = langs[i];
+          break;
+        }
+      }
+      if (!current_lang_id) {
+        alert("language not found");
+      } else {
+        window.location.pathname = window.location.pathname.replace(new RegExp("/" + current_lang_id + "/", "g"), "/" + target_lang_id + "/");
+      }
+
+
+    });
+
+      });
+
+    });
+  </script>
 
 </div><script>
       jQuery(function () {

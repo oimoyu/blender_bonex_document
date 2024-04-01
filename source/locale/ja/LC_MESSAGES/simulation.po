@@ -1,0 +1,58 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, oimoyu
+# This file is distributed under the same license as the Blender Bonex
+# Document package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Bonex Document \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-31 17:31+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/simulation.rst:2
+msgid "Simulation"
+msgstr ""
+
+#: ../../source/simulation.rst:10
+msgid ""
+"**Bake All**: click the button, the physics result will be baked into "
+"keyframe."
+msgstr ""
+
+#: ../../source/simulation.rst:12
+msgid "**Playback simulate**: If enable, simulate during playback."
+msgstr ""
+
+#: ../../source/simulation.rst:14
+msgid "**Bake range**: Set simulation range for baking."
+msgstr ""
+
+#: ../../source/simulation.rst:16
+msgid "**Selected Bone Only**: If enable, only selected bones will be simulated."
+msgstr ""
+
+#: ../../source/simulation.rst:18
+msgid ""
+"**Inherit Linear Velocity**: If enabled, linear velocity is calculated as"
+" the initial velocity based on the relative displacements of the two "
+"frames preceding the starting simulation frame."
+msgstr ""
+
+#: ../../source/simulation.rst:20
+msgid ""
+"**Debug**: If enable, simulated numbers are displayed in the PhysX Visual"
+" Debugger. PhysX Visual Debugger Download: https://developer.nvidia.com"
+"/physx-visual-debugger"
+msgstr ""
+

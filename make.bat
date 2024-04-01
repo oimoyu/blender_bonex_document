@@ -32,6 +32,9 @@ if "%1" == "html" goto html
 goto end
 
 :html
+rd /s /q docs
+echo docs has been removed.
+
 set SPHINXOPTS=-D language=en
 %SPHINXBUILD% -b html %SOURCEDIR% "docs\en" %SPHINXOPTS% %O%
 set SPHINXOPTS=-D language=zh

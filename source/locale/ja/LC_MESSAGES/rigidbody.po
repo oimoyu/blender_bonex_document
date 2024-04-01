@@ -1,0 +1,154 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, oimoyu
+# This file is distributed under the same license as the Blender Bonex
+# Document package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Bonex Document \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-31 17:31+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/rigidbody.rst:2
+msgid "Rigid body"
+msgstr ""
+
+#: ../../source/rigidbody.rst:5
+msgid "Basic usage"
+msgstr ""
+
+#: ../../source/rigidbody.rst:6
+msgid ""
+"In bone post mode, click the \"Start Modify\" button to access the Rigid "
+"Body modification interface. Within this interface, you have press \"C\" "
+"to set selected bones as rigid body bones, which allows them to be driven"
+" by physx during animations. Additionally, you can view the shape of the "
+"rigid body and change the properties of the selected rigid body bone in "
+"this mode."
+msgstr ""
+
+#: ../../source/rigidbody.rst:9
+msgid "Rigid body properties"
+msgstr ""
+
+#: ../../source/rigidbody.rst:17
+msgid ""
+"Within rigid Body modification interface, when you select a rigidody "
+"bone, you will see the property in the panel. You can change the value, "
+"then the setting will apply to the selected rigidbody bone."
+msgstr ""
+
+#: ../../source/rigidbody.rst:20
+msgid ""
+"**Dynamic**: A dynamic rigid body is a rigid body calculated by physx and"
+" will move under the action of force."
+msgstr ""
+
+#: ../../source/rigidbody.rst:22
+msgid ""
+"**Kinematic**: The kinematic rigid body is controlled by the user's key "
+"frame animation. Its movement is absolute and not affected by any force. "
+"And it can collide with the dynamic rigid body to make dynamic rigid body"
+" motion."
+msgstr ""
+
+#: ../../source/rigidbody.rst:32
+msgid "**Mass**: The mass of a rigid body, obeying various physical laws"
+msgstr ""
+
+#: ../../source/rigidbody.rst:34
+msgid ""
+"**Static Friction Coefficient**: the resistance to the start of motion "
+"between two surfaces."
+msgstr ""
+
+#: ../../source/rigidbody.rst:36
+msgid ""
+"**Dynamic Friction Coefficient**: the resistance to motion when two "
+"surfaces are already sliding against each other."
+msgstr ""
+
+#: ../../source/rigidbody.rst:38
+msgid "Friction Force only appear when the pressure exist."
+msgstr ""
+
+#: ../../source/rigidbody.rst:40
+msgid "**Bounce Coefficient**: reflects the elasticity of the collision."
+msgstr ""
+
+#: ../../source/rigidbody.rst:42
+msgid ""
+"**Rigidbody Group**: rigidbody belongs to which group. If empty is set, "
+"that means this rigidbody will not collide with any thing."
+msgstr ""
+
+#: ../../source/rigidbody.rst:44
+msgid "**Collision Group**: rigidbody will collide with which group."
+msgstr ""
+
+#: ../../source/rigidbody.rst:46
+msgid ""
+"If you want to disable the collision between a certain group of rigid "
+"bodies, then disable the collision group of their corresponding group."
+msgstr ""
+
+#: ../../source/rigidbody.rst:49
+msgid "Kinematic rigidbodies are not always needed"
+msgstr ""
+
+#: ../../source/rigidbody.rst:50
+msgid ""
+"If a bone is set to a dynamic rigid body and it has a parent bone, the "
+"dynamic bone will be still control by parent."
+msgstr ""
+
+#: ../../source/rigidbody.rst:53
+msgid "Modify the Shape of Rigidbody"
+msgstr ""
+
+#: ../../source/rigidbody.rst:54
+msgid ""
+"**Switch default shape**: Within rigid Body modification interface, press"
+" \"T\" to switch selected rigidbody shape. Press \"S\" to scale the "
+"rigidbody."
+msgstr ""
+
+#: ../../source/rigidbody.rst:64
+msgid ""
+"**Customize Rigidbody Shape**: Within rigid Body modification interface, "
+"press \"E\" to edit selected rigidbody. Physx's dynamic rigid body only "
+"supports convex polygons. If it is a concave polygon, it will be baked "
+"into a convex polygon according to the vertices. The baked shape can be "
+"observed in the Physx Visual Debugger. For physx, the calculation speed "
+"of custom mesh rigid bodies is not as fast as its default shape. If there"
+" are no special needs, try to use the default shape."
+msgstr ""
+
+#: ../../source/rigidbody.rst:74
+msgid ""
+"**Copy Rigidbody Shape**: Within rigid Body modification interface, press"
+" ctrl+\"M\" will copy the active rigidbody shape to other selected "
+"rigidbody bone."
+msgstr ""
+
+#: ../../source/rigidbody.rst:85
+msgid "Animation"
+msgstr ""
+
+#: ../../source/rigidbody.rst:86
+msgid ""
+"A kinimatic rigidbody can be set keyframe to move and rotate to drive the"
+" dynamic rigidbody."
+msgstr ""
+

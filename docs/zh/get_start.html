@@ -21,7 +21,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="搜索" href="search.html" />
-    <link rel="prev" title="Introduction" href="introduction.html" /> 
+    <link rel="next" title="Rigid body" href="rigidbody.html" />
+    <link rel="prev" title="介绍" href="introduction.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -44,7 +45,7 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">介绍</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Get start</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#update-a-new-version">Update a new version</a></li>
@@ -55,6 +56,14 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="rigidbody.html">Rigid body</a></li>
+<li class="toctree-l1"><a class="reference internal" href="joint.html">Joint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="force_field.html">Force Field</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scene.html">Scene Setting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simulation.html">Simulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tool.html">Tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example.html">Parameters with Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
 </ul>
 
         </div>
@@ -97,7 +106,12 @@
 </section>
 <section id="quick-start">
 <h2>Quick start<a class="headerlink" href="#quick-start" title="Link to this heading"></a></h2>
-<p>Create a bone. selected in pose mode. Click &quot;Start&quot;</p>
+<p>Create a bone.</p>
+<p>Click &quot;Start Modify&quot; to enter addon modify UI.</p>
+<p>Select bone in pose mode</p>
+<p>Press &quot;C&quot; to set the selected bone as rigidbody.</p>
+<p>Check the playback option.</p>
+<p>Start playing then you get a physics bone.</p>
 <video width="100%" controls src="../video/fast_start.mp4">
   Your browser does not support the video tag.
 </video></section>
@@ -109,7 +123,7 @@
 <p>①Check whether there are bone constraints that lock his position or rotation. If there are many bones and bone constraints, you can use the tools of this addon to turn off the bone constraints of the selected bones in batches.</p>
 <p>②Check whether there is a lock icon on the bone position in the N panel in pose mode. This will cause you to be unable to operate the bones in the user interface.</p>
 <p>③Check whether the bones without a parent have the connected option checked.</p>
-<p>Note: This addon is based on quaternion rotation (that is, the default rotation mode of Blender bones, ignore it if you have not changed this). When applying bone rotation, the bone rotation mode will be changed to quaternion.</p>
+<p><strong>Note</strong>: This addon is based on quaternion rotation (that is, the default rotation mode of Blender bones, ignore it if you have not changed this). When applying bone rotation, the bone rotation mode will be changed to quaternion.</p>
 </section>
 </section>
 </section>
@@ -118,7 +132,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
-        <a href="introduction.html" class="btn btn-neutral float-left" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="introduction.html" class="btn btn-neutral float-left" title="介绍" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="rigidbody.html" class="btn btn-neutral float-right" title="Rigid body" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -139,35 +154,60 @@
   </div>
   <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
   <span id="language-label" class="rst-current-version" data-toggle="rst-current-version">
-    Select Language 
+    Select Language
     <span class="fa fa-caret-down"></span>
   </span>
   <div class="rst-other-versions">
-	<dl>
-	  <dt>Languages</dt>
-		
-		  <dd><a href="en/index.html">English</a></dd><br>
-		
-		  <dd><a href="zh/index.html">中文</a></dd><br>
-		
-		  <dd><a href="ja/index.html">日本語</a></dd><br>
-		
-	</dl>
+    <dl>
+      <dt>Languages</dt>
+      
+      <dd><a href="javascript:void(0)" class="switch-lang" data-lang="en">English</a></dd><br>
+      
+      <dd><a href="javascript:void(0)" class="switch-lang" data-lang="zh">中文</a></dd><br>
+      
+      <dd><a href="javascript:void(0)" class="switch-lang" data-lang="ja">日本語</a></dd><br>
+      
+    </dl>
   </div>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  var userLang = navigator.language || navigator.userLanguage; 
-  if(userLang.startsWith('zh')) {
-    document.getElementById('language-label').textContent = '选择语言';
-  } 
-  else if(userLang.startsWith('ja')) {
-    document.getElementById('language-label').textContent = '言語を選択';
-  }
-  else {
-    document.getElementById('language-label').textContent = 'Select Language';
-  }
-});
-</script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var userLang = navigator.language || navigator.userLanguage;
+      if (userLang.startsWith('zh')) {
+        document.getElementById('language-label').textContent = '选择语言';
+      }
+      else if (userLang.startsWith('ja')) {
+        document.getElementById('language-label').textContent = '言語を選択';
+      }
+      else {
+        document.getElementById('language-label').textContent = 'Select Language';
+      }
+
+      document.querySelectorAll('.switch-lang').forEach(function (link) {
+        link.addEventListener('click', function () {
+          var target_lang_id = this.getAttribute('data-lang'); // 获取语言代码
+          var langs = ['en', 'zh', 'ja', ];
+
+      var current_lang_id = "";
+      for (var i = 0; i < langs.length; i++) {
+        if (window.location.pathname.indexOf("/" + langs[i] + "/") !== -1) {
+          current_lang_id = langs[i];
+          break;
+        }
+      }
+      if (!current_lang_id) {
+        alert("language not found");
+      } else {
+        window.location.pathname = window.location.pathname.replace(new RegExp("/" + current_lang_id + "/", "g"), "/" + target_lang_id + "/");
+      }
+
+
+    });
+
+      });
+
+    });
+  </script>
 
 </div><script>
       jQuery(function () {

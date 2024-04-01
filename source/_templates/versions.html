@@ -1,29 +1,54 @@
 <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
   <span id="language-label" class="rst-current-version" data-toggle="rst-current-version">
-    Select Language 
+    Select Language
     <span class="fa fa-caret-down"></span>
   </span>
   <div class="rst-other-versions">
-	<dl>
-	  <dt>{{ _('Languages') }}</dt>
-		{% for lang_id, lang_title in languages %}
-		  <dd><a href="{{ lang_id }}/index.html">{{ lang_title }}</a></dd><br>
-		{% endfor %}
-	</dl>
+    <dl>
+      <dt>{{ _('Languages') }}</dt>
+      {% for lang_id, lang_title in languages %}
+      <dd><a href="javascript:void(0)" class="switch-lang" data-lang="{{ lang_id }}">{{ lang_title }}</a></dd><br>
+      {% endfor %}
+    </dl>
   </div>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  var userLang = navigator.language || navigator.userLanguage; 
-  if(userLang.startsWith('zh')) {
-    document.getElementById('language-label').textContent = '选择语言';
-  } 
-  else if(userLang.startsWith('ja')) {
-    document.getElementById('language-label').textContent = '言語を選択';
-  }
-  else {
-    document.getElementById('language-label').textContent = 'Select Language';
-  }
-});
-</script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var userLang = navigator.language || navigator.userLanguage;
+      if (userLang.startsWith('zh')) {
+        document.getElementById('language-label').textContent = '选择语言';
+      }
+      else if (userLang.startsWith('ja')) {
+        document.getElementById('language-label').textContent = '言語を選択';
+      }
+      else {
+        document.getElementById('language-label').textContent = 'Select Language';
+      }
+
+      document.querySelectorAll('.switch-lang').forEach(function (link) {
+        link.addEventListener('click', function () {
+          var target_lang_id = this.getAttribute('data-lang'); // 获取语言代码
+          var langs = [{% for lang_id, lang_title in languages %}'{{ lang_id }}', {% endfor %}];
+
+      var current_lang_id = "";
+      for (var i = 0; i < langs.length; i++) {
+        if (window.location.pathname.indexOf("/" + langs[i] + "/") !== -1) {
+          current_lang_id = langs[i];
+          break;
+        }
+      }
+      if (!current_lang_id) {
+        alert("language not found");
+      } else {
+        window.location.pathname = window.location.pathname.replace(new RegExp("/" + current_lang_id + "/", "g"), "/" + target_lang_id + "/");
+      }
+
+
+    });
+
+      });
+
+    });
+  </script>
 
 </div>

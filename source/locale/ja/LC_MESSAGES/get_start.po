@@ -1,0 +1,134 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, oimoyu
+# This file is distributed under the same license as the Blender Bonex
+# Document package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Bonex Document \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-31 17:31+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/get_start.rst:2
+msgid "Get start"
+msgstr ""
+
+#: ../../source/get_start.rst:5
+msgid "Installation"
+msgstr ""
+
+#: ../../source/get_start.rst:6
+msgid "①download the addon .zip file."
+msgstr ""
+
+#: ../../source/get_start.rst:8
+msgid "②install it in blender prefrence -> addon"
+msgstr ""
+
+#: ../../source/get_start.rst:10
+msgid "③check check the addon to enable it."
+msgstr ""
+
+#: ../../source/get_start.rst:12
+msgid "④then you can see the addon settings in N panel."
+msgstr ""
+
+#: ../../source/get_start.rst:15
+msgid "Update a new version"
+msgstr ""
+
+#: ../../source/get_start.rst:16
+msgid "①remove the addon in blender prefrence -> addon"
+msgstr ""
+
+#: ../../source/get_start.rst:18
+msgid "②restart Blender"
+msgstr ""
+
+#: ../../source/get_start.rst:20
+msgid "③install it following the steps above to install"
+msgstr ""
+
+#: ../../source/get_start.rst:24
+msgid "Quick start"
+msgstr ""
+
+#: ../../source/get_start.rst:25
+msgid "Create a bone."
+msgstr ""
+
+#: ../../source/get_start.rst:27
+msgid "Click \"Start Modify\" to enter addon modify UI."
+msgstr ""
+
+#: ../../source/get_start.rst:29
+msgid "Select bone in pose mode"
+msgstr ""
+
+#: ../../source/get_start.rst:31
+msgid "Press \"C\" to set the selected bone as rigidbody."
+msgstr ""
+
+#: ../../source/get_start.rst:33
+msgid "Check the playback option."
+msgstr ""
+
+#: ../../source/get_start.rst:35
+msgid "Start playing then you get a physics bone."
+msgstr ""
+
+#: ../../source/get_start.rst:46
+msgid "Prerequisites before use"
+msgstr ""
+
+#: ../../source/get_start.rst:47
+msgid ""
+"Cause this addon will directly modify the position and rotation of the "
+"bones, before using it, please go to the bone pose mode to check whether "
+"the bones can be move or rotated manually by you."
+msgstr ""
+
+#: ../../source/get_start.rst:50
+msgid "If a bone cannot be move in pose mode"
+msgstr ""
+
+#: ../../source/get_start.rst:52
+msgid ""
+"①Check whether there are bone constraints that lock his position or "
+"rotation. If there are many bones and bone constraints, you can use the "
+"tools of this addon to turn off the bone constraints of the selected "
+"bones in batches."
+msgstr ""
+
+#: ../../source/get_start.rst:54
+msgid ""
+"②Check whether there is a lock icon on the bone position in the N panel "
+"in pose mode. This will cause you to be unable to operate the bones in "
+"the user interface."
+msgstr ""
+
+#: ../../source/get_start.rst:56
+msgid ""
+"③Check whether the bones without a parent have the connected option "
+"checked."
+msgstr ""
+
+#: ../../source/get_start.rst:58
+msgid ""
+"**Note**: This addon is based on quaternion rotation (that is, the "
+"default rotation mode of Blender bones, ignore it if you have not changed"
+" this). When applying bone rotation, the bone rotation mode will be "
+"changed to quaternion."
+msgstr ""
+

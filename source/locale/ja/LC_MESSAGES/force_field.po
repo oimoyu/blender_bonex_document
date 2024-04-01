@@ -1,0 +1,71 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, oimoyu
+# This file is distributed under the same license as the Blender Bonex
+# Document package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Bonex Document \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-31 17:31+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/force_field.rst:2
+msgid "Force Field"
+msgstr ""
+
+#: ../../source/force_field.rst:11
+msgid "Create Force Field"
+msgstr ""
+
+#: ../../source/force_field.rst:12
+msgid ""
+"click \"+\" button to create a force field, set the reference obj to an "
+"arrows empty object, then the force will be added to rigidbody."
+msgstr ""
+
+#: ../../source/force_field.rst:16
+msgid "Force Field setting"
+msgstr ""
+
+#: ../../source/force_field.rst:18
+msgid "**Name**: name of force field custom by user."
+msgstr ""
+
+#: ../../source/force_field.rst:20
+msgid ""
+"**Reference Object**: determine the force direction and magnitude. An "
+"arrows empty object is recommended, the scale of Z axis represents the "
+"force magnitude, and the direction of Z axis represents the force "
+"direction."
+msgstr ""
+
+#: ../../source/force_field.rst:22
+msgid ""
+"**Force Base Factor**: The magnitude of the force is determined by the "
+"scale of the reference object multiplied by the base factor."
+msgstr ""
+
+#: ../../source/force_field.rst:25
+msgid "Force Field animation"
+msgstr ""
+
+#: ../../source/force_field.rst:26
+msgid ""
+"You can set the scale of the force field corresponding to the empty "
+"object and set keyframes. During the simulation, the z axis scale will be"
+" captured and passed to the scene as the size of the force (note that "
+"setting keyframes here refers to setting keyframes for the scale of the "
+"empty object, not value in the addon panel)"
+msgstr ""
+

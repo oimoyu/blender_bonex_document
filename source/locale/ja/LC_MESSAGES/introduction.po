@@ -1,0 +1,210 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, oimoyu
+# This file is distributed under the same license as the Blender Bonex
+# Document package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Bonex Document \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-31 17:45+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/introduction.rst:2 ../../source/introduction.rst:5
+msgid "Introduction"
+msgstr ""
+
+#: ../../source/introduction.rst:6
+msgid ""
+"BoneX is a Blender addon helps you to create bone physics animation, "
+"driven by PhysX."
+msgstr ""
+
+#: ../../source/introduction.rst:9
+msgid "Why I develop this"
+msgstr ""
+
+#: ../../source/introduction.rst:10
+msgid ""
+"Vivid physics bring an unparalleled level of realism and depth to "
+"character animations. For those using Blender, many methods exist to "
+"achieve this, including cloth and rigid body simulations etc. In the "
+"realm of game engines, rigid body simulations often used for character "
+"physics. Despite my efforts to create a free addon "
+"`blender_skirt_rigid_generator "
+"<https://github.com/oimoyu/blender_skirt_rigid_generator>`_ based on "
+"Blender's rigid body simulation, it still with many problems. "
+"Consequently, I decided to develop this, leveraging the mature and "
+"reliable PhysX physics engine, which offers stable and fast result."
+msgstr ""
+
+#: ../../source/introduction.rst:13
+msgid "Advantage"
+msgstr ""
+
+#: ../../source/introduction.rst:14
+msgid ""
+"①Relying on the mature physics engine physx, the simulation is efficient "
+"and stable"
+msgstr ""
+
+#: ../../source/introduction.rst:16
+msgid ""
+"②There is no need to create any additional auxiliary empty objects or "
+"mesh objects. The addon will directly modify the displacement and "
+"rotation of the bones, eliminating the trouble of management."
+msgstr ""
+
+#: ../../source/introduction.rst:18
+msgid "③Collision group mask to control collision interaction supported"
+msgstr ""
+
+#: ../../source/introduction.rst:20
+msgid "④Custom collision body mesh supported"
+msgstr ""
+
+#: ../../source/introduction.rst:22
+msgid "⑤Real-time playback  interactions"
+msgstr ""
+
+#: ../../source/introduction.rst:24
+msgid "⑥Partial simulation supported, helps you improve detailed adjustments"
+msgstr ""
+
+#: ../../source/introduction.rst:26
+msgid "etc."
+msgstr ""
+
+#: ../../source/introduction.rst:29
+msgid "Why use a rigid body to simulate a skirt instead of cloth simulation?"
+msgstr ""
+
+#: ../../source/introduction.rst:30
+msgid ""
+"①Fast. The basic object of cloth simulation is mesh vertices, which "
+"requires a large amount of calculation, while the basic object of rigid "
+"body simulation is a small number of rigid bodies. In essence, it is a "
+"proxy method. Rigid body motion drives bone motion -> bones drive "
+"vertices motion."
+msgstr ""
+
+#: ../../source/introduction.rst:32
+msgid ""
+"② Stable and controllable. Rigid body simulation only needs to focus on a"
+" limited number of rigid bodies."
+msgstr ""
+
+#: ../../source/introduction.rst:34
+msgid ""
+"③Keep the shape. When making stylized characters, you need to make some "
+"exaggerated shapes that violate the laws of physics. If you use cloth "
+"simulation, these shapes will collapse with the collapse of the cloth. "
+"Rigid body simulation drives bones, and one bone can control many "
+"vertices. , which maintains their relative positions."
+msgstr ""
+
+#: ../../source/introduction.rst:36
+msgid ""
+"④Prevent mesh intersection. If cloth simulation is used for proxy, "
+"contact and mesh intersection are problems. The collision volume of the "
+"cloth is only a thin layer, while the collision volume of the rigid body "
+"can be defined by yourself. For a fluffy mesh, a larger collision volume "
+"can be made to prevent other meshes from intersecting the mold."
+msgstr ""
+
+#: ../../source/introduction.rst:38
+msgid "**Notice** that this this addon only support windows."
+msgstr ""
+
+#: ../../source/introduction.rst:41
+msgid "GPU"
+msgstr ""
+
+#: ../../source/introduction.rst:42
+msgid ""
+"Physx supports CUDA hardware acceleration. Indeed, the powerful parallel "
+"computing capability of the GPU can accelerate the calculation speed, but"
+" it does not reflect the advantage in the usage scenario of this plug-in."
+" When the CPU and GPU are used together, additional data processing "
+"overhead is required. For the calculation of very large and large rigid "
+"body particles, this overhead accounts for a very small proportion, which"
+" can reflect the acceleration advantage. However, if the number of rigid "
+"bodies is small, then additional The overhead may even slow down the "
+"calculation. And if you want to use GPU acceleration, you also need to "
+"come with a huge DLL file. And the performance bottleneck not lies in "
+"physx. For the above reasons, adding GPU acceleration function is not "
+"considered."
+msgstr ""
+
+#: ../../source/introduction.rst:45
+msgid "Reference"
+msgstr ""
+
+#: ../../source/introduction.rst:46
+msgid "`PhysX Document <https://nvidia-omniverse.github.io/PhysX/physx/5.3.0/>`_"
+msgstr ""
+
+#~ msgid ""
+#~ "①Fast. The basic object of cloth "
+#~ "simulation is mesh vertices, which "
+#~ "requires a large amount of calculation,"
+#~ " while the basic object of rigid "
+#~ "body simulation is a small number "
+#~ "of rigid bodies. In essence, it is"
+#~ " a proxy method. Rigid body motion"
+#~ " drives bone motion -> bones drive"
+#~ " vertices motion. ② Stable and "
+#~ "controllable. Rigid body simulation only "
+#~ "needs to focus on a limited number"
+#~ " of rigid bodies. ③Keep the shape."
+#~ " When making stylized characters, you "
+#~ "need to make some exaggerated shapes "
+#~ "that violate the laws of physics. "
+#~ "If you use cloth simulation, these "
+#~ "shapes will collapse with the collapse"
+#~ " of the cloth. Rigid body simulation"
+#~ " drives bones, and one bone can "
+#~ "control many vertices. , which maintains"
+#~ " their relative positions. ④Prevent mesh"
+#~ " intersection. If cloth simulation is "
+#~ "used for proxy, contact and mesh "
+#~ "intersection are problems. The collision "
+#~ "volume of the cloth is only a "
+#~ "thin layer, while the collision volume"
+#~ " of the rigid body can be "
+#~ "defined by yourself. For a fluffy "
+#~ "mesh, a larger collision volume can "
+#~ "be made to prevent other meshes "
+#~ "from intersecting the mold."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Vivid physics bring an unparalleled "
+#~ "level of realism and depth to "
+#~ "character animations. For those using "
+#~ "Blender, many methods exist to achieve"
+#~ " this, including cloth and rigid body"
+#~ " simulations etc. In the realm of "
+#~ "game engines, rigid body simulations "
+#~ "often used for character physics. "
+#~ "Despite my efforts to create a "
+#~ "free addon `blender_skirt_rigid_generator "
+#~ "<https://github.com/oimoyu/blender_skirt_rigid_generator>`_ "
+#~ "based on Blender's rigid body "
+#~ "simulation, it still with many problems."
+#~ " Consequently, I dedicated much time "
+#~ "to develop BoneX, leveraging the mature"
+#~ " and reliable PhysX physics engine, "
+#~ "which offers stable and fast result."
+#~ msgstr ""
+

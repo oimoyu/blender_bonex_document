@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Introduction &mdash; Blender Bonex Document 1.0.0 文档</title>
+  <title>介绍 &mdash; Blender Bonex Document 1.0.0 文档</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
 
@@ -45,14 +45,24 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
               <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#why-i-develop-this">Why I develop this</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#advantage">Advantage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#why-use-a-rigid-body-to-simulate-a-skirt-instead-of-cloth-simulation">Why use a rigid body to simulate a skirt instead of cloth simulation?</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">介绍</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">介绍</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#why-i-develop-this">我为什么开发这个插件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#advantage">优势</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#why-use-a-rigid-body-to-simulate-a-skirt-instead-of-cloth-simulation">为什么使用刚体来模拟裙子而不是布料模拟？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gpu">GPU</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#reference">Reference</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="get_start.html">Get start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rigidbody.html">Rigid body</a></li>
+<li class="toctree-l1"><a class="reference internal" href="joint.html">Joint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="force_field.html">Force Field</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scene.html">Scene Setting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simulation.html">Simulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tool.html">Tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example.html">Parameters with Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
 </ul>
 
         </div>
@@ -69,7 +79,7 @@
           <div role="navigation" aria-label="页面导航">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Introduction</li>
+      <li class="breadcrumb-item active">介绍</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -79,31 +89,40 @@
            <div itemprop="articleBody">
              
   <section id="introduction">
-<h1>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h1>
+<h1>介绍<a class="headerlink" href="#introduction" title="Link to this heading"></a></h1>
 <section id="id1">
-<h2>Introduction<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
-<p>BoneX is a Blender addon helps you to create bone physics.</p>
+<h2>介绍<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<p>BoneX 是一个 Blender插件，可帮助你创建骨骼动画，物理效果由 PhysX 驱动。</p>
 </section>
 <section id="why-i-develop-this">
-<h2>Why I develop this<a class="headerlink" href="#why-i-develop-this" title="Link to this heading"></a></h2>
-<p>Vivid physics bring an unparalleled level of realism and depth to character animations. For those using Blender, numerous methods exist to achieve this, including cloth and rigid body simulations etc. In the realm of game engines, rigid body simulations often used for character physics. Despite my efforts to create a free addon based on Blender's rigid body simulation, it faced many challenges. Consequently, I dedicated much time to develop BoneX, leveraging the mature and reliable PhysX physics engine, which offers stable and fast result.</p>
+<h2>我为什么开发这个插件<a class="headerlink" href="#why-i-develop-this" title="Link to this heading"></a></h2>
+<p>生动的物理效果能为角色动画带来无与伦比的真实感和深度。对于使用 Blender 的用户来说，有很多方法可以实现这一点，包括布料和刚体模拟等。在游戏引擎领域，刚体模拟常常被用于角色物理效果。尽管我曾努力创建了一个基于 Blender 刚体模拟的免费插件 <a class="reference external" href="https://github.com/oimoyu/blender_skirt_rigid_generator">https://github.com/oimoyu/blender_skirt_rigid_generator</a>，但仍然存在许多问题。因此，我决定开发这个插件，利用成熟可靠的 PhysX 物理引擎，可以提供稳定而快速的结果。</p>
 </section>
 <section id="advantage">
-<h2>Advantage<a class="headerlink" href="#advantage" title="Link to this heading"></a></h2>
-<p>Relying on the mature physics engine physx, the simulation is efficient and stable
-There is no need to create any additional auxiliary empty objects or mesh objects. The addon will directly modify the displacement and rotation of the bones, eliminating the trouble of management.
-Collision group mask to control collision interaction supported
-Custom collision body mesh supported
-Real-time playback  interactions
-Partial simulation supported, helps you improve detailed adjustments</p>
+<h2>优势<a class="headerlink" href="#advantage" title="Link to this heading"></a></h2>
+<p>①依托成熟的物理引擎 physx，模拟高效稳定</p>
+<p>②无需创建任何额外的辅助空对象或网格对象。插件会直接修改骨骼的位移和旋转，省去了管理的麻烦。</p>
+<p>③支持碰撞组遮罩，用于控制刚体的碰撞交互</p>
+<p>④支持自定义碰撞体网格</p>
+<p>⑤ 实时播放互动</p>
+<p>⑥支持部分模拟，帮助您完善细节调整</p>
+<p>etc.</p>
 </section>
 <section id="why-use-a-rigid-body-to-simulate-a-skirt-instead-of-cloth-simulation">
-<h2>Why use a rigid body to simulate a skirt instead of cloth simulation?<a class="headerlink" href="#why-use-a-rigid-body-to-simulate-a-skirt-instead-of-cloth-simulation" title="Link to this heading"></a></h2>
-<p>①Fast. The basic object of cloth simulation is mesh vertices, which requires a large amount of calculation, while the basic object of rigid body simulation is a small number of rigid bodies. In essence, it is a proxy method. Rigid body motion drives bone motion -&gt; bones drive vertices motion.
-② Stable and controllable. Rigid body simulation only needs to focus on a limited number of rigid bodies.
-③Keep the shape. When making stylized characters, you need to make some exaggerated shapes that violate the laws of physics. If you use cloth simulation, these shapes will collapse with the collapse of the cloth. Rigid body simulation drives bones, and one bone can control many vertices. , which maintains their relative positions.
-④Prevent mesh intersection. If cloth simulation is used for proxy, contact and mesh intersection are problems. The collision volume of the cloth is only a thin layer, while the collision volume of the rigid body can be defined by yourself. For a fluffy mesh, a larger collision volume can be made to prevent other meshes from intersecting the mold.</p>
-<p>Notice that only windows is supported.</p>
+<h2>为什么使用刚体来模拟裙子而不是布料模拟？<a class="headerlink" href="#why-use-a-rigid-body-to-simulate-a-skirt-instead-of-cloth-simulation" title="Link to this heading"></a></h2>
+<p>①快。 布料模拟的基本对象是网格顶点，计算量较大，而刚体模拟的基本对象是少量刚体。 本质上，它是一种代理方法。 刚体运动驱动骨骼运动 -&gt; 骨骼驱动顶点运动。</p>
+<p>②稳定可控。 刚体模拟只需关注有限数量的刚体。</p>
+<p>③保持形状。 在制作风格化的角色时，需要制作一些违反物理定律的夸张形状。 如果使用布料模拟，这些形状会随着布料的塌陷而塌陷。 刚体模拟驱动骨骼，一根骨骼可以控制多个顶点。 ，保持它们的相对位置。</p>
+<p>④防止网格交叉。 如果使用布料模拟作为代理，接触和网格交叉就会出现问题。 布料的碰撞体积只是薄薄的一层，而刚体的碰撞体积可以自己定义。 对于蓬松的网格，可以制作较大的碰撞体积，以防止其他网格与模具相交。</p>
+<p><strong>注意</strong> 这个插件仅支持Windows。</p>
+</section>
+<section id="gpu">
+<h2>GPU<a class="headerlink" href="#gpu" title="Link to this heading"></a></h2>
+<p>Physx 支持 CUDA 硬件加速。 确实，GPU强大的并行计算能力可以加快计算速度，但是在这个插件的使用场景中并不能体现出优势。 当CPU和GPU一起使用时，需要处理额外的数据开销。 对于非常多和大型刚体粒子的计算，这个开销占的比例很小，可以体现加速优势。 然而，如果刚体的数量很少，那么额外的开销甚至可能会减慢计算速度。 而如果要使用GPU加速，还需要自带巨大的DLL文件。 而且性能瓶颈并不在于physx。 由于上述原因，不考虑添加GPU加速功能。</p>
+</section>
+<section id="reference">
+<h2>Reference<a class="headerlink" href="#reference" title="Link to this heading"></a></h2>
+<p><a class="reference external" href="https://nvidia-omniverse.github.io/PhysX/physx/5.3.0/">PhysX Document</a></p>
 </section>
 </section>
 
@@ -133,35 +152,60 @@ Partial simulation supported, helps you improve detailed adjustments</p>
   </div>
   <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
   <span id="language-label" class="rst-current-version" data-toggle="rst-current-version">
-    Select Language 
+    Select Language
     <span class="fa fa-caret-down"></span>
   </span>
   <div class="rst-other-versions">
-	<dl>
-	  <dt>Languages</dt>
-		
-		  <dd><a href="en/index.html">English</a></dd><br>
-		
-		  <dd><a href="zh/index.html">中文</a></dd><br>
-		
-		  <dd><a href="ja/index.html">日本語</a></dd><br>
-		
-	</dl>
+    <dl>
+      <dt>Languages</dt>
+      
+      <dd><a href="javascript:void(0)" class="switch-lang" data-lang="en">English</a></dd><br>
+      
+      <dd><a href="javascript:void(0)" class="switch-lang" data-lang="zh">中文</a></dd><br>
+      
+      <dd><a href="javascript:void(0)" class="switch-lang" data-lang="ja">日本語</a></dd><br>
+      
+    </dl>
   </div>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  var userLang = navigator.language || navigator.userLanguage; 
-  if(userLang.startsWith('zh')) {
-    document.getElementById('language-label').textContent = '选择语言';
-  } 
-  else if(userLang.startsWith('ja')) {
-    document.getElementById('language-label').textContent = '言語を選択';
-  }
-  else {
-    document.getElementById('language-label').textContent = 'Select Language';
-  }
-});
-</script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var userLang = navigator.language || navigator.userLanguage;
+      if (userLang.startsWith('zh')) {
+        document.getElementById('language-label').textContent = '选择语言';
+      }
+      else if (userLang.startsWith('ja')) {
+        document.getElementById('language-label').textContent = '言語を選択';
+      }
+      else {
+        document.getElementById('language-label').textContent = 'Select Language';
+      }
+
+      document.querySelectorAll('.switch-lang').forEach(function (link) {
+        link.addEventListener('click', function () {
+          var target_lang_id = this.getAttribute('data-lang'); // 获取语言代码
+          var langs = ['en', 'zh', 'ja', ];
+
+      var current_lang_id = "";
+      for (var i = 0; i < langs.length; i++) {
+        if (window.location.pathname.indexOf("/" + langs[i] + "/") !== -1) {
+          current_lang_id = langs[i];
+          break;
+        }
+      }
+      if (!current_lang_id) {
+        alert("language not found");
+      } else {
+        window.location.pathname = window.location.pathname.replace(new RegExp("/" + current_lang_id + "/", "g"), "/" + target_lang_id + "/");
+      }
+
+
+    });
+
+      });
+
+    });
+  </script>
 
 </div><script>
       jQuery(function () {

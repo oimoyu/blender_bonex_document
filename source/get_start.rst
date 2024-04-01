@@ -22,7 +22,17 @@ Update a new version
 
 Quick start
 -----------
-Create a bone. selected in pose mode. Click "Start"
+Create a bone. 
+
+Click "Start Modify" to enter addon modify UI. 
+
+Select bone in pose mode
+
+Press "C" to set the selected bone as rigidbody.
+
+Check the playback option.
+
+Start playing then you get a physics bone.
 
 .. raw:: html
 
@@ -37,12 +47,13 @@ Prerequisites before use
 Cause this addon will directly modify the position and rotation of the bones, before using it, please go to the bone pose mode to check whether the bones can be move or rotated manually by you.
 
 If a bone cannot be move in pose mode
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 ①Check whether there are bone constraints that lock his position or rotation. If there are many bones and bone constraints, you can use the tools of this addon to turn off the bone constraints of the selected bones in batches.
 
 ②Check whether there is a lock icon on the bone position in the N panel in pose mode. This will cause you to be unable to operate the bones in the user interface.
 
 ③Check whether the bones without a parent have the connected option checked.
 
-Note: This addon is based on quaternion rotation (that is, the default rotation mode of Blender bones, ignore it if you have not changed this). When applying bone rotation, the bone rotation mode will be changed to quaternion.
+**Note**: This addon is based on quaternion rotation (that is, the default rotation mode of Blender bones, ignore it if you have not changed this). When applying bone rotation, the bone rotation mode will be changed to quaternion.
 

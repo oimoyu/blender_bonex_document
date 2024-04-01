@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blender_bonex_document \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-30 20:43+0800\n"
+"POT-Creation-Date: 2024-03-31 17:31+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh\n"
@@ -20,27 +20,23 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.14.0\n"
 
-#: ../../source/index.rst:9
-msgid "Contents:"
-msgstr ""
-
-#: ../../source/index.rst:7
-msgid "Welcome to blender_bonex_document's documentation!"
+#: ../../source/index.rst:2
+#, fuzzy
+msgid "Welcome to blender bonex document's documentation!"
 msgstr "test"
 
-#: ../../source/index.rst:16
-msgid "Indices and tables"
-msgstr ""
+#~ msgid "Contents:"
+#~ msgstr ""
 
-#: ../../source/index.rst:18
-msgid ":ref:`genindex`"
-msgstr ""
+#~ msgid "Indices and tables"
+#~ msgstr ""
 
-#: ../../source/index.rst:19
-msgid ":ref:`modindex`"
-msgstr ""
+#~ msgid ":ref:`genindex`"
+#~ msgstr ""
 
-#: ../../source/index.rst:20
-msgid ":ref:`search`"
-msgstr ""
+#~ msgid ":ref:`modindex`"
+#~ msgstr ""
+
+#~ msgid ":ref:`search`"
+#~ msgstr ""
 
