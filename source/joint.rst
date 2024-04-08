@@ -28,12 +28,16 @@ Joint Properties
 
 ......
 
-**Angle Limit**: hard constraint, which limits the rigidbody relative rotation.
+**Angle Limit**: hard constraint, which limits the rigidbody relative rotation. Due to the limitations of PhysX, only symmetrical angle constraints can be set. If you want to constrain only one side, you can add a kinematic rigid body to the parent bone and place it on the side you want to constrain to constrain the movement of the dynamic rigid body.
 
 **Distance Limit**: hard constraint, which limits the rigidbody relative movement.
 
 **Hard constraints**: the distance constraints and angle constraints set in the panel. This is the constraint range you tell physx should not exceed. If too much force pushes him away from the hard constraint range, it will be subject to a large reaction force trying to return.
 
 **Soft constraints**: The springs connecting rigidbodies can be called soft constraints, that is, the stiffness and damping in the panel. It represents that the rigidbodies will be affected by the spring within the range of hard constraints.
+
+The rotation of the bones in edit mode is important for joint, keep attention to it when you are creating armature.
+
+The initial position of the joint constraint is based on the rest position of the bones. You can reset bones to init position by pressing Alt+R Alt+G Alt+S. 
 
 

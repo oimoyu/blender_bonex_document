@@ -1,4 +1,4 @@
 Contact
 =========
 
-If any problem, contact mail: oimomanyu@gmail.com
+If you have any questions or suggestions, contact: oimomanyu@gmail.com

@@ -7,40 +7,43 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Blender Bonex Document \n"
+"Project-Id-Version: Blender Bonex Document\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-31 17:31+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: ja\n"
+"POT-Creation-Date: 2024-04-08 08:37+0800\n"
+"PO-Revision-Date: 2024-04-08 09:37+0800\n"
+"Last-Translator: \n"
 "Language-Team: ja <LL@li.org>\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "Generated-By: Babel 2.14.0\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: ../../source/force_field.rst:2
 msgid "Force Field"
-msgstr ""
+msgstr "力場"
 
 #: ../../source/force_field.rst:11
 msgid "Create Force Field"
-msgstr ""
+msgstr "力場の作成"
 
 #: ../../source/force_field.rst:12
 msgid ""
 "click \"+\" button to create a force field, set the reference obj to an "
 "arrows empty object, then the force will be added to rigidbody."
 msgstr ""
+"「+」ボタンをクリックして力場を作成し、参照オブジェクトを矢印の空のオブ"
+"ジェクトに設定すると、力が剛体に追加されます。"
 
 #: ../../source/force_field.rst:16
-msgid "Force Field setting"
-msgstr ""
+msgid "Force Field Setting"
+msgstr "力場の設定"
 
 #: ../../source/force_field.rst:18
 msgid "**Name**: name of force field custom by user."
-msgstr ""
+msgstr "**名前**: ユーザーがカスタムした力フィールドの名前。"
 
 #: ../../source/force_field.rst:20
 msgid ""
@@ -49,23 +52,33 @@ msgid ""
 "force magnitude, and the direction of Z axis represents the force "
 "direction."
 msgstr ""
+"**参照オブジェクト**: 力の方向と大きさを決定します。 矢印のない空のオブ"
+"ジェクトをお勧めします。Z 軸のスケールは力の大きさを表し、Z 軸の方向は力"
+"の方向を表します。"
 
 #: ../../source/force_field.rst:22
 msgid ""
 "**Force Base Factor**: The magnitude of the force is determined by the "
 "scale of the reference object multiplied by the base factor."
 msgstr ""
+"**力場基本係数**: 力の大きさは、参照オブジェクトのスケールに基本係数を乗"
+"じることによって決まります。"
 
 #: ../../source/force_field.rst:25
-msgid "Force Field animation"
-msgstr ""
+msgid "Animation"
+msgstr "アニメーション"
 
 #: ../../source/force_field.rst:26
 msgid ""
-"You can set the scale of the force field corresponding to the empty "
-"object and set keyframes. During the simulation, the z axis scale will be"
-" captured and passed to the scene as the size of the force (note that "
+"You can change the direction and size of the force field by setting "
+"keyframes for the rotation or scale of the empty object corresponding to "
+"the force field. During the simulation, the z axis scale will be "
+"captured and passed to the scene as the size of the force (note that "
 "setting keyframes here refers to setting keyframes for the scale of the "
 "empty object, not value in the addon panel)"
 msgstr ""
-
+"力の場の方向とサイズを変更するには、力場に対応する空のオブジェクトの回転"
+"またはスケールのキーフレームを設定します。 シミュレーション中に、Z 軸ス"
+"ケールがキャプチャされ、力のサイズとしてシーンに渡されます (ここでのキー"
+"フレームの設定は、アドオン パネルの値ではなく、空のオブジェクトのスケール"
+"のキーフレームの設定を指すことに注意してください)"

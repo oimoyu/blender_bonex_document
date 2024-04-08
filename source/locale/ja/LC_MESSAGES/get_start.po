@@ -7,90 +7,91 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Blender Bonex Document \n"
+"Project-Id-Version: Blender Bonex Document\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-31 17:31+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: ja\n"
+"POT-Creation-Date: 2024-04-08 08:37+0800\n"
+"PO-Revision-Date: 2024-04-08 09:42+0800\n"
+"Last-Translator: \n"
 "Language-Team: ja <LL@li.org>\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "Generated-By: Babel 2.14.0\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: ../../source/get_start.rst:2
 msgid "Get start"
-msgstr ""
+msgstr "スタートを切る"
 
 #: ../../source/get_start.rst:5
 msgid "Installation"
-msgstr ""
+msgstr "インストール"
 
 #: ../../source/get_start.rst:6
 msgid "①download the addon .zip file."
-msgstr ""
+msgstr "①アドオンの.zipファイルをダウンロードします。"
 
 #: ../../source/get_start.rst:8
 msgid "②install it in blender prefrence -> addon"
-msgstr ""
+msgstr "②blenderの設定→アドオンにインストールします"
 
 #: ../../source/get_start.rst:10
 msgid "③check check the addon to enable it."
-msgstr ""
+msgstr "③アドオンにチェックを入れて有効化します。"
 
 #: ../../source/get_start.rst:12
 msgid "④then you can see the addon settings in N panel."
-msgstr ""
+msgstr "④Nパネルにアドオンの設定が表示されます。"
 
 #: ../../source/get_start.rst:15
 msgid "Update a new version"
-msgstr ""
+msgstr "新しいバージョンを更新する"
 
 #: ../../source/get_start.rst:16
 msgid "①remove the addon in blender prefrence -> addon"
-msgstr ""
+msgstr "①Blenderの設定でアドオンを削除→アドオン"
 
 #: ../../source/get_start.rst:18
 msgid "②restart Blender"
-msgstr ""
+msgstr "②Blenderを再起動する"
 
 #: ../../source/get_start.rst:20
 msgid "③install it following the steps above to install"
-msgstr ""
+msgstr "③上記手順に従ってインストールしてください"
 
 #: ../../source/get_start.rst:24
 msgid "Quick start"
-msgstr ""
+msgstr "クイックスタート"
 
 #: ../../source/get_start.rst:25
 msgid "Create a bone."
-msgstr ""
+msgstr "ボーンを作成します。"
 
 #: ../../source/get_start.rst:27
 msgid "Click \"Start Modify\" to enter addon modify UI."
-msgstr ""
+msgstr "「変更開始」をクリックしてアドオン変更 UI に入ります。"
 
 #: ../../source/get_start.rst:29
 msgid "Select bone in pose mode"
-msgstr ""
+msgstr "ポーズモードでボーンを選択"
 
 #: ../../source/get_start.rst:31
 msgid "Press \"C\" to set the selected bone as rigidbody."
-msgstr ""
+msgstr "「C」を押して、選択したボーンを剛体として設定します。"
 
 #: ../../source/get_start.rst:33
 msgid "Check the playback option."
-msgstr ""
+msgstr "再生オプションをチェックします。"
 
 #: ../../source/get_start.rst:35
 msgid "Start playing then you get a physics bone."
-msgstr ""
+msgstr "プレイを開始すると、物理ボーンが得られます。"
 
 #: ../../source/get_start.rst:46
 msgid "Prerequisites before use"
-msgstr ""
+msgstr "使用前の前提条件"
 
 #: ../../source/get_start.rst:47
 msgid ""
@@ -98,37 +99,52 @@ msgid ""
 "bones, before using it, please go to the bone pose mode to check whether "
 "the bones can be move or rotated manually by you."
 msgstr ""
+"このアドオンはボーンの位置と回転を直接変更するため、使用する前にボーン"
+"ポーズモードに移動して、ボーンが手動で移動または回転できるかどうかを確認"
+"してください。"
 
 #: ../../source/get_start.rst:50
 msgid "If a bone cannot be move in pose mode"
-msgstr ""
+msgstr "ポーズモードでボーンを移動できない場合"
 
 #: ../../source/get_start.rst:52
 msgid ""
-"①Check whether there are bone constraints that lock his position or "
+"① Check whether there are bone constraints that lock his position or "
 "rotation. If there are many bones and bone constraints, you can use the "
 "tools of this addon to turn off the bone constraints of the selected "
 "bones in batches."
 msgstr ""
+"① 位置や回転をロックするボーン コンストレイントが存在するかどうかを確認し"
+"ます。 多数のボーンとボーン コンストレイントがある場合、このアドオンの"
+"ツールを使用して、選択したボーンのボーン コンストレイントをバッチでオフに"
+"することができます。"
 
 #: ../../source/get_start.rst:54
 msgid ""
-"②Check whether there is a lock icon on the bone position in the N panel "
+"② Check whether there is a lock icon on the bone position in the N panel "
 "in pose mode. This will cause you to be unable to operate the bones in "
-"the user interface."
+"the user interface(like R G S hotkey or Alt+R G S hotkey)."
 msgstr ""
+"②ポーズモードのNパネルのボーン位置に鍵アイコンがあるか確認してください。 "
+"これにより、ユーザー インターフェイス (R G S ホットキーや Alt+R G S ホッ"
+"トキーなど) でボーンを操作できなくなります。"
 
 #: ../../source/get_start.rst:56
 msgid ""
-"③Check whether the bones without a parent have the connected option "
+"③ Check whether the bones without a parent have the connected option "
 "checked."
 msgstr ""
+"③ 親のないボーンの\"connected\"オプションにチェックが入っているかどうかを"
+"確認します。"
 
 #: ../../source/get_start.rst:58
 msgid ""
 "**Note**: This addon is based on quaternion rotation (that is, the "
-"default rotation mode of Blender bones, ignore it if you have not changed"
-" this). When applying bone rotation, the bone rotation mode will be "
-"changed to quaternion."
+"default rotation mode of Blender bones, ignore it if you have not "
+"changed this). When applying bone rotation, the bone rotation mode will "
+"be changed to quaternion."
 msgstr ""
-
+"**注意**: このアドオンはクォータニオン回転に基づいています (つまり、"
+"Blender ボーンのデフォルトの回転モードです。これを変更していない場合は無"
+"視してください)。 ボーンの回転を適用すると、ボーンの回転モードがクォータ"
+"ニオンに変更されます。"

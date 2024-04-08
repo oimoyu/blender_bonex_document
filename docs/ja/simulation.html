@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Simulation &mdash; Blender Bonex Document 1.0.0 ドキュメント</title>
+  <title>シミュレーション &mdash; Blender Bonex Document 1.0.0 ドキュメント</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
 
@@ -22,8 +22,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="検索" href="search.html" />
-    <link rel="next" title="Tool" href="tool.html" />
-    <link rel="prev" title="Scene Setting" href="scene.html" /> 
+    <link rel="next" title="ツール" href="tool.html" />
+    <link rel="prev" title="シーン設定" href="scene.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -46,17 +46,17 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="get_start.html">Get start</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rigidbody.html">Rigid body</a></li>
-<li class="toctree-l1"><a class="reference internal" href="joint.html">Joint</a></li>
-<li class="toctree-l1"><a class="reference internal" href="force_field.html">Force Field</a></li>
-<li class="toctree-l1"><a class="reference internal" href="scene.html">Scene Setting</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Simulation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tool.html">Tool</a></li>
-<li class="toctree-l1"><a class="reference internal" href="example.html">Parameters with Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">序章</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get_start.html">スタートを切る</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rigidbody.html">剛体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="joint.html">ジョイント</a></li>
+<li class="toctree-l1"><a class="reference internal" href="force_field.html">力場</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scene.html">シーン設定</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">シミュレーション</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tool.html">ツール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example.html">パラメータと例</a></li>
 <li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contact.html">Contact</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact.html">連絡先</a></li>
 </ul>
 
         </div>
@@ -73,7 +73,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Simulation</li>
+      <li class="breadcrumb-item active">シミュレーション</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -83,25 +83,27 @@
            <div itemprop="articleBody">
              
   <section id="simulation">
-<h1>Simulation<a class="headerlink" href="#simulation" title="Link to this heading"></a></h1>
+<h1>シミュレーション<a class="headerlink" href="#simulation" title="Link to this heading"></a></h1>
 <a href="../image/simulation_setting.png" target="_blank">
     <img src="../image/simulation_setting.png" style="width: 20%;" />
-</a><p><strong>Bake All</strong>: click the button, the physics result will be baked into keyframe. There are 3 process phases. ①.gathering kinematic rigidbody data. ②.physx calculating process, if you check the debug option, you can see the progress in the PhysX Visual Debugger. In this process you can press ESC to stop bake. ③. Setting bone keyframe, this is a long progress, you should wait it patiently.</p>
-<p><strong>Playback simulate</strong>: If enable, simulate during playback.</p>
-<p><strong>Set Keyframe Mode</strong>: Blender Setting Keyframe has a big performance issuse. So I provide two way to set keyframe. &quot;Normal&quot;: set keyframe by advanced API, using more time. &quot;Fast&quot;: set keyframe by basic api, faster, but it will cause existing keyframes to become linear. &quot;Fast&quot; is a better choice if you won't be setting any keyframes manually on the bones that will be simulated.</p>
-<p><strong>Bake range</strong>: Set simulation range for baking.</p>
-<p><strong>Selected Bone Only</strong>: If enable, only selected bones will be simulated.</p>
-<p><strong>Inherit Linear Velocity</strong>: If enabled, linear velocity is calculated as the initial velocity based on the relative displacements of the two frames preceding the starting simulation frame.</p>
-<p><strong>Debug</strong>: If enable, simulated numbers are displayed in the PhysX Visual Debugger. PhysX Visual Debugger Download: <a class="reference external" href="https://developer.nvidia.com/physx-visual-debugger">https://developer.nvidia.com/physx-visual-debugger</a></p>
-<p><strong>Tip</strong>: To restore rest pose use Alt+R or Atl+G</p>
+</a><p><strong>すべてベイク</strong>: ボタンをクリックすると、物理演算結果がキーフレームにベイクされます。処理フェーズは3つあります。①kinematic剛体データの収集。②PhysXの計算プロセス。デバッグオプションをチェックすると、PhysXビジュアルデバッガで進行状況を見ることができます。この過程で ESC キーを押すとベイクを止めることができます。③. ボーンキーフレームの設定、これは長いので気長に待ちましょう。</p>
+<p><strong>再生シミュレート</strong>: 有効にすると、再生中にシミュレートされます。</p>
+<p><strong>キーフレーム モードの設定</strong>: Blender のキーフレーム設定には大きなパフォーマンスの問題があります。 そこで、キーフレームを設定する 2 つの方法を提供します。 「標準」: 高度な API によってキーフレームを設定し、より多くの時間を費やします。 「高速」: 基本 API によってキーフレームを設定します。より速くなりますが、既存のキーフレームが線形になります。 シミュレートされるボーンに手動でキーフレームを設定していない場合は、「高速」を選択することをお勧めします。</p>
+<p><strong>ベイク範囲</strong>: ベイクのシミュレーション範囲を設定します。 設定されていない場合、ベイク範囲はシーン フレーム範囲になります。</p>
+<p><strong>選択されたボーンのみ</strong>: 有効にすると、選択されたボーンのみがシミュレートされます。</p>
+<p><strong>線形速度を継承</strong>: 有効にすると、開始シミュレーション フレームに先行する 2 つのフレームの相対変位に基づいて、線形速度が初期速度として計算されます。</p>
+<p><strong>デバッグ</strong>: 有効にすると、シミュレートされた情報が PhysX Visual Debugger に表示されます。 PhysX Visual Debuggerのダウンロード: <a class="reference external" href="https://developer.nvidia.com/physx-visual-debugger">https://developer.nvidia.com/physx-visual-debugger</a></p>
+<video width="100%" controls src="../video/debug_demo.mp4">
+  Your browser does not support the video tag.
+</video><hr class="docutils" />
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="scene.html" class="btn btn-neutral float-left" title="Scene Setting" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="tool.html" class="btn btn-neutral float-right" title="Tool" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="scene.html" class="btn btn-neutral float-left" title="シーン設定" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="tool.html" class="btn btn-neutral float-right" title="ツール" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -127,7 +129,7 @@
   </span>
   <div class="rst-other-versions">
     <dl>
-      <dt>Languages</dt>
+      <dt>言語</dt>
       
       <dd><a href="javascript:void(0)" class="switch-lang" data-lang="en">English</a></dd><br>
       

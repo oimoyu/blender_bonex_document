@@ -7,18 +7,19 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Blender Bonex Document \n"
+"Project-Id-Version: Blender Bonex Document\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-31 17:31+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: ja\n"
+"POT-Creation-Date: 2024-04-08 08:37+0800\n"
+"PO-Revision-Date: 2024-04-08 09:34+0800\n"
+"Last-Translator: \n"
 "Language-Team: ja <LL@li.org>\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "Generated-By: Babel 2.14.0\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: ../../source/faq.rst:2
 msgid "FAQ"
@@ -26,23 +27,28 @@ msgstr ""
 
 #: ../../source/faq.rst:6
 msgid ""
-"Why does relative displacement still appear after simulation even though "
+"Why does relative displacement still occur after simulation even though "
 "the joint distance is set to 0?"
 msgstr ""
+"ジョイント距離が 0 に設定されているにもかかわらず、シミュレーション後に相"
+"対変位が依然として発生するのはなぜですか?"
 
 #: ../../source/faq.rst:8
 msgid ""
 "The constraints of simulation engines such as physx are not absolute "
 "constraints. Too large a force (such as the force of a kinematic rigid "
-"body) or too small a position solver iteration number will cause it to "
-"break away from the constraints."
+"body) or too small position solver iteration will cause it to break away "
+"from the constraints."
 msgstr ""
+"physx などのシミュレーション エンジンの制約は絶対的な制約ではありませ"
+"ん。 力 (運動学的剛体の力など) が大きすぎるか、位置ソルバーの反復が小さす"
+"ぎると、制約から外れてしまいます。"
 
 #: ../../source/faq.rst:10
 msgid ""
 "①Increase the number of steps of the position iterator to improve "
 "calculation accuracy"
-msgstr ""
+msgstr "①位置計算反復回数を増やして計算精度を向上させる"
 
 #: ../../source/faq.rst:12
 msgid ""
@@ -50,10 +56,12 @@ msgid ""
 "constrained to the tail of the parent, and only the rotation result of "
 "physx will be applied."
 msgstr ""
+"② ボーン属性を Connected に設定すると、ボーンは親の尾部にハード拘束され、"
+"physx の回転結果のみが適用されます。"
 
 #: ../../source/faq.rst:16
 msgid "Why does jitter occur?"
-msgstr ""
+msgstr "なぜジッターが発生するのでしょうか？"
 
 #: ../../source/faq.rst:18
 msgid ""
@@ -61,33 +69,43 @@ msgid ""
 "return to the position where the constraint should be, and will generate "
 "a large recovery force. At this time, if there is a kinematic rigid body "
 "that prevents it from returning to its supposed position or rotating, it "
-"will produce jittery simulation results."
+"will jitter in simulation results."
 msgstr ""
+"剛体は強い拘束から離れると、拘束があるべき位置に戻ろうとし、大きな復元力"
+"が発生します。 このとき、想定位置への復帰や回転を妨げるkinematic学的剛体"
+"があると、シミュレーション結果にジッターが生じます。"
 
 #: ../../source/faq.rst:20
 msgid ""
-"①Adjust the position of kinematic so that it does not conflict with the "
-"conditions of hard constraints"
-msgstr ""
+"① Adjust the position of kinematic so that it does not conflict with "
+"hard constraints"
+msgstr "①ハードコンストレイントに抵触しないようにkinematicの位置を調整する"
 
 #: ../../source/faq.rst:22
 msgid ""
 "② Take out the jittered part separately, disable the conflicting "
 "kinematic rigid body and recalculate it separately"
 msgstr ""
+"② ジッタ部分を別途取り出し、競合するkinematic剛体を無効にして別途再計算"
 
 #: ../../source/faq.rst:26
 msgid ""
 "Why is the simulation unable to move despite setting upper and lower "
 "displacement limits?"
 msgstr ""
+"変位の上限と下限を設定しているにもかかわらず、シミュレーションが移動でき"
+"ないのはなぜですか?"
 
 #: ../../source/faq.rst:27
 msgid ""
-"① Check whether connected is checked in the bone attributes. Connected is"
-" the option for blender to lock the bone displacement. Bones with this "
+"① Check whether connected is checked in the bone attributes. Connected "
+"is the option for blender to lock the bone displacement. Bones with this "
 "option checked cannot move in posture mode."
 msgstr ""
+"ボーンアトリビュートでconnectedがチェックされているか確認します。"
+"Connectedは、Blenderがボーンの変位を固定するためのオプションです。このオ"
+"プションがチェックされたボーンは、ポスチャーモードで動くことができませ"
+"ん。"
 
 #: ../../source/faq.rst:29
 msgid ""
@@ -95,18 +113,24 @@ msgid ""
 "spring stiffness is too large or the rigid body mass is too small, the "
 "force will not be enough to move the rigid body, so it cannot move."
 msgstr ""
+"ジョイント剛性と剛体質量が合っているかどうか。バネ剛性が大きすぎたり、剛"
+"体質量が小さすぎたりすると、剛体を動かす力が足りなくなり、動かせなくな"
+"る。"
 
 #: ../../source/faq.rst:32
 msgid "What should I do if the FPS is too low during playback?"
-msgstr ""
+msgstr "再生中の FPS が低すぎる場合はどうすればよいですか?"
 
 #: ../../source/faq.rst:33
 msgid ""
-"① Playback without modify mode, in modify mode you can view the rigidbody"
-" shape, but the drawing api efficiency of the preview is not high, and "
-"some data need to be calculated in real time, so the playback speed will "
-"be slowed down when there are lots rigid bodies exist."
+"① Playback without modify mode, in modify mode you can view the "
+"rigidbody shape, but the drawing api efficiency of the preview is not "
+"high, and some data need to be calculated in real time, so the playback "
+"speed will be slowed down when there are lots rigid bodies exist."
 msgstr ""
+"剛体モディファイモードでは剛体形状を見ることができますが、プレビューの描"
+"画効率は高くなく、リアルタイムで計算する必要があるデータもあるため、剛体"
+"が多く存在する場合は再生速度が遅くなります。"
 
 #: ../../source/faq.rst:35
 msgid ""
@@ -118,37 +142,71 @@ msgid ""
 "frame generation time of physx is also very short, so the cause of the "
 "lag is the performance problem of Blender's keyframe setting."
 msgstr ""
+"キーフレーム設定オプションを無効にしてみてください。Blenderにはキーフレー"
+"ムを設定する際のパフォーマンスの問題があります。オブジェクトやボーンに既"
+"存のキーフレームが多すぎる場合、キーフレームを設定するのに必要な時間は、"
+"既存のキーフレームの数に応じて線形に増加します。そのため、シミュレーショ"
+"ンを再生したときにfpsが低い場合、ログを確認するとphysxのフレーム生成時間"
+"も非常に短いことがわかり、ラグの原因はBlenderのキーフレーム設定のパフォー"
+"マンスの問題であることがわかりました。"
 
 #: ../../source/faq.rst:37
 msgid ""
 "③ Reduce the number of iteration steps. A reasonable number of iteration "
 "steps can improve the calculation speed."
 msgstr ""
+"③ 反復ステップ数を減らします。 適切な数の反復ステップにより、計算速度を向"
+"上させることができます。"
 
 #: ../../source/faq.rst:39
 msgid "④Try to bake the animation into key frames and then play it."
-msgstr ""
+msgstr "④アニメーションをキーフレームにベイクして再生してみます。"
 
 #: ../../source/faq.rst:41
 msgid ""
 "⑤ Try to divide the simulation into separate parts, and simulate them "
 "separately."
 msgstr ""
+"⑤ シミュレーションをいくつかの部分に分けて、別々にシミュレーションするよ"
+"うにしてください。"
 
 #: ../../source/faq.rst:44
 msgid "Why can't I move rigid body bones during playback?"
-msgstr ""
+msgstr "再生中にリジッド ボディ ボーンを移動できないのはなぜですか?"
 
 #: ../../source/faq.rst:46
 msgid ""
 "① Check whether the bones you move have existing keyframes. In Blender, "
-"K-framed bones cannot be moved manually in live playback"
+"bones with existing keyframes cannot be moved manually in playback"
 msgstr ""
+"① 移動するボーンに既存のキーフレームがあるかどうかを確認します。 Blender "
+"では、既存のキーフレームを持つボーンを再生時に手動で移動できません"
 
 #: ../../source/faq.rst:48
 msgid ""
 "② Check whether the bone you move is a dynamic rigid body bone, because "
-"every dynamic playback frame will be controlled by physx, so the user "
-"cannot move it"
+"every playback frame will be controlled by physx, so the user cannot "
+"move it"
 msgstr ""
+"動かすボーンがdynamic剛体ボーンであるかどうかを確認します。再生フレームご"
+"とにphysxで制御されるため、ユーザーは動かすことができません"
 
+#: ../../source/faq.rst:51
+msgid "High speed movement penetrate rigidbody issues"
+msgstr "高速移動が剛体の問題を貫通"
+
+#: ../../source/faq.rst:52
+msgid ""
+"when a rigid body move in a very high speed, rigidbody will penetrate, "
+"and collision will not happen. To avoid this, physx has a feature call "
+"ccd. But in my practice, I have not seen such situation, and the ccd "
+"need addtional calculation, so I did not add in bonx. But If you have a "
+"high speed rigidbody scene and penetration occur, you can send the "
+"blender project to me to let me think about this feature."
+msgstr ""
+"剛体が非常に高速で移動すると、剛体が貫通し、衝突が起こらなくなります。こ"
+"れを避けるために、physxにはccdという機能があります。しかし、私の練習で"
+"は、そのような状況は見たことがなく、ccdは追加計算が必要なので、bonxには追"
+"加しませんでした。しかし、もしあなたが高速のリジッドボディ・シーンを持っ"
+"ていて、ペネトレーションが発生するのであれば、私にこの機能について考えさ"
+"せるために、blenderのプロジェクトを送ることができます。"

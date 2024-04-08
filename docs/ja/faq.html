@@ -22,8 +22,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="検索" href="search.html" />
-    <link rel="next" title="Contact" href="contact.html" />
-    <link rel="prev" title="Parameters with Examples" href="example.html" /> 
+    <link rel="next" title="連絡先" href="contact.html" />
+    <link rel="prev" title="パラメータと例" href="example.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -46,25 +46,25 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="get_start.html">Get start</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rigidbody.html">Rigid body</a></li>
-<li class="toctree-l1"><a class="reference internal" href="joint.html">Joint</a></li>
-<li class="toctree-l1"><a class="reference internal" href="force_field.html">Force Field</a></li>
-<li class="toctree-l1"><a class="reference internal" href="scene.html">Scene Setting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="simulation.html">Simulation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tool.html">Tool</a></li>
-<li class="toctree-l1"><a class="reference internal" href="example.html">Parameters with Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">序章</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get_start.html">スタートを切る</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rigidbody.html">剛体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="joint.html">ジョイント</a></li>
+<li class="toctree-l1"><a class="reference internal" href="force_field.html">力場</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scene.html">シーン設定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simulation.html">シミュレーション</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tool.html">ツール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example.html">パラメータと例</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">FAQ</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#why-does-relative-displacement-still-appear-after-simulation-even-though-the-joint-distance-is-set-to-0">Why does relative displacement still appear after simulation even though the joint distance is set to 0?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#why-does-jitter-occur">Why does jitter occur?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#why-is-the-simulation-unable-to-move-despite-setting-upper-and-lower-displacement-limits">Why is the simulation unable to move despite setting upper and lower displacement limits?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#what-should-i-do-if-the-fps-is-too-low-during-playback">What should I do if the FPS is too low during playback?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#why-can-t-i-move-rigid-body-bones-during-playback">Why can't I move rigid body bones during playback?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#high-speed-movement-penetrate-rigidbody-issues">High speed movement penetrate rigidbody issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#why-does-relative-displacement-still-occur-after-simulation-even-though-the-joint-distance-is-set-to-0">ジョイント距離が 0 に設定されているにもかかわらず、シミュレーション後に相対変位が依然として発生するのはなぜですか?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#why-does-jitter-occur">なぜジッターが発生するのでしょうか？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#why-is-the-simulation-unable-to-move-despite-setting-upper-and-lower-displacement-limits">変位の上限と下限を設定しているにもかかわらず、シミュレーションが移動できないのはなぜですか?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what-should-i-do-if-the-fps-is-too-low-during-playback">再生中の FPS が低すぎる場合はどうすればよいですか?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#why-can-t-i-move-rigid-body-bones-during-playback">再生中にリジッド ボディ ボーンを移動できないのはなぜですか?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#high-speed-movement-penetrate-rigidbody-issues">高速移動が剛体の問題を貫通</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="contact.html">Contact</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact.html">連絡先</a></li>
 </ul>
 
         </div>
@@ -92,39 +92,39 @@
              
   <section id="faq">
 <h1>FAQ<a class="headerlink" href="#faq" title="Link to this heading"></a></h1>
-<section id="why-does-relative-displacement-still-appear-after-simulation-even-though-the-joint-distance-is-set-to-0">
-<h2>Why does relative displacement still appear after simulation even though the joint distance is set to 0?<a class="headerlink" href="#why-does-relative-displacement-still-appear-after-simulation-even-though-the-joint-distance-is-set-to-0" title="Link to this heading"></a></h2>
-<p>The constraints of simulation engines such as physx are not absolute constraints. Too large a force (such as the force of a kinematic rigid body) or too small a position solver iteration number will cause it to break away from the constraints.</p>
-<p>①Increase the number of steps of the position iterator to improve calculation accuracy</p>
-<p>② Set the bone attribute to connected, so that the bone is hard constrained to the tail of the parent, and only the rotation result of physx will be applied.</p>
+<section id="why-does-relative-displacement-still-occur-after-simulation-even-though-the-joint-distance-is-set-to-0">
+<h2>ジョイント距離が 0 に設定されているにもかかわらず、シミュレーション後に相対変位が依然として発生するのはなぜですか?<a class="headerlink" href="#why-does-relative-displacement-still-occur-after-simulation-even-though-the-joint-distance-is-set-to-0" title="Link to this heading"></a></h2>
+<p>physx などのシミュレーション エンジンの制約は絶対的な制約ではありません。 力 (運動学的剛体の力など) が大きすぎるか、位置ソルバーの反復が小さすぎると、制約から外れてしまいます。</p>
+<p>①位置計算反復回数を増やして計算精度を向上させる</p>
+<p>② ボーン属性を Connected に設定すると、ボーンは親の尾部にハード拘束され、physx の回転結果のみが適用されます。</p>
 </section>
 <section id="why-does-jitter-occur">
-<h2>Why does jitter occur?<a class="headerlink" href="#why-does-jitter-occur" title="Link to this heading"></a></h2>
-<p>When a rigid body breaks away from a hard constraint, it will try to return to the position where the constraint should be, and will generate a large recovery force. At this time, if there is a kinematic rigid body that prevents it from returning to its supposed position or rotating, it will produce jittery simulation results.</p>
-<p>①Adjust the position of kinematic so that it does not conflict with the conditions of hard constraints</p>
-<p>② Take out the jittered part separately, disable the conflicting kinematic rigid body and recalculate it separately</p>
+<h2>なぜジッターが発生するのでしょうか？<a class="headerlink" href="#why-does-jitter-occur" title="Link to this heading"></a></h2>
+<p>剛体は強い拘束から離れると、拘束があるべき位置に戻ろうとし、大きな復元力が発生します。 このとき、想定位置への復帰や回転を妨げるkinematic学的剛体があると、シミュレーション結果にジッターが生じます。</p>
+<p>①ハードコンストレイントに抵触しないようにkinematicの位置を調整する</p>
+<p>② ジッタ部分を別途取り出し、競合するkinematic剛体を無効にして別途再計算</p>
 </section>
 <section id="why-is-the-simulation-unable-to-move-despite-setting-upper-and-lower-displacement-limits">
-<h2>Why is the simulation unable to move despite setting upper and lower displacement limits?<a class="headerlink" href="#why-is-the-simulation-unable-to-move-despite-setting-upper-and-lower-displacement-limits" title="Link to this heading"></a></h2>
-<p>① Check whether connected is checked in the bone attributes. Connected is the option for blender to lock the bone displacement. Bones with this option checked cannot move in posture mode.</p>
-<p>② Whether the joint stiffness and the rigid body mass match. If the spring stiffness is too large or the rigid body mass is too small, the force will not be enough to move the rigid body, so it cannot move.</p>
+<h2>変位の上限と下限を設定しているにもかかわらず、シミュレーションが移動できないのはなぜですか?<a class="headerlink" href="#why-is-the-simulation-unable-to-move-despite-setting-upper-and-lower-displacement-limits" title="Link to this heading"></a></h2>
+<p>ボーンアトリビュートでconnectedがチェックされているか確認します。Connectedは、Blenderがボーンの変位を固定するためのオプションです。このオプションがチェックされたボーンは、ポスチャーモードで動くことができません。</p>
+<p>ジョイント剛性と剛体質量が合っているかどうか。バネ剛性が大きすぎたり、剛体質量が小さすぎたりすると、剛体を動かす力が足りなくなり、動かせなくなる。</p>
 </section>
 <section id="what-should-i-do-if-the-fps-is-too-low-during-playback">
-<h2>What should I do if the FPS is too low during playback?<a class="headerlink" href="#what-should-i-do-if-the-fps-is-too-low-during-playback" title="Link to this heading"></a></h2>
-<p>① Playback without modify mode, in modify mode you can view the rigidbody shape, but the drawing api efficiency of the preview is not high, and some data need to be calculated in real time, so the playback speed will be slowed down when there are lots rigid bodies exist.</p>
-<p>②Try to disable setting keyframe option. Blender has performance issues in setting keyframes. When there are too many existing keyframes for an object or bone, the time required to set a keyframe will increase linearly with the number of existing keyframes. Therefore, when playback simulation, if there is a low fps, and checking the log found that the frame generation time of physx is also very short, so the cause of the lag is the performance problem of Blender's keyframe setting.</p>
-<p>③ Reduce the number of iteration steps. A reasonable number of iteration steps can improve the calculation speed.</p>
-<p>④Try to bake the animation into key frames and then play it.</p>
-<p>⑤ Try to divide the simulation into separate parts, and simulate them separately.</p>
+<h2>再生中の FPS が低すぎる場合はどうすればよいですか?<a class="headerlink" href="#what-should-i-do-if-the-fps-is-too-low-during-playback" title="Link to this heading"></a></h2>
+<p>剛体モディファイモードでは剛体形状を見ることができますが、プレビューの描画効率は高くなく、リアルタイムで計算する必要があるデータもあるため、剛体が多く存在する場合は再生速度が遅くなります。</p>
+<p>キーフレーム設定オプションを無効にしてみてください。Blenderにはキーフレームを設定する際のパフォーマンスの問題があります。オブジェクトやボーンに既存のキーフレームが多すぎる場合、キーフレームを設定するのに必要な時間は、既存のキーフレームの数に応じて線形に増加します。そのため、シミュレーションを再生したときにfpsが低い場合、ログを確認するとphysxのフレーム生成時間も非常に短いことがわかり、ラグの原因はBlenderのキーフレーム設定のパフォーマンスの問題であることがわかりました。</p>
+<p>③ 反復ステップ数を減らします。 適切な数の反復ステップにより、計算速度を向上させることができます。</p>
+<p>④アニメーションをキーフレームにベイクして再生してみます。</p>
+<p>⑤ シミュレーションをいくつかの部分に分けて、別々にシミュレーションするようにしてください。</p>
 </section>
 <section id="why-can-t-i-move-rigid-body-bones-during-playback">
-<h2>Why can't I move rigid body bones during playback?<a class="headerlink" href="#why-can-t-i-move-rigid-body-bones-during-playback" title="Link to this heading"></a></h2>
-<p>① Check whether the bones you move have existing keyframes. In Blender, K-framed bones cannot be moved manually in live playback</p>
-<p>② Check whether the bone you move is a dynamic rigid body bone, because every dynamic playback frame will be controlled by physx, so the user cannot move it</p>
+<h2>再生中にリジッド ボディ ボーンを移動できないのはなぜですか?<a class="headerlink" href="#why-can-t-i-move-rigid-body-bones-during-playback" title="Link to this heading"></a></h2>
+<p>① 移動するボーンに既存のキーフレームがあるかどうかを確認します。 Blender では、既存のキーフレームを持つボーンを再生時に手動で移動できません</p>
+<p>動かすボーンがdynamic剛体ボーンであるかどうかを確認します。再生フレームごとにphysxで制御されるため、ユーザーは動かすことができません</p>
 </section>
 <section id="high-speed-movement-penetrate-rigidbody-issues">
-<h2>High speed movement penetrate rigidbody issues<a class="headerlink" href="#high-speed-movement-penetrate-rigidbody-issues" title="Link to this heading"></a></h2>
-<p>when a rigid body move in a very high speed, rigidbody will penetrate, and collision will not happen. To avoid this, physx has a feature call ccd. But in my practice, I have not seen such situation, and the ccd need addtional calculation, I did not add in bonx. So If you have a high speed rigidbody scene and penetration occur, you can send the blender project to let think about this feature.</p>
+<h2>高速移動が剛体の問題を貫通<a class="headerlink" href="#high-speed-movement-penetrate-rigidbody-issues" title="Link to this heading"></a></h2>
+<p>剛体が非常に高速で移動すると、剛体が貫通し、衝突が起こらなくなります。これを避けるために、physxにはccdという機能があります。しかし、私の練習では、そのような状況は見たことがなく、ccdは追加計算が必要なので、bonxには追加しませんでした。しかし、もしあなたが高速のリジッドボディ・シーンを持っていて、ペネトレーションが発生するのであれば、私にこの機能について考えさせるために、blenderのプロジェクトを送ることができます。</p>
 </section>
 </section>
 
@@ -132,8 +132,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="example.html" class="btn btn-neutral float-left" title="Parameters with Examples" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="contact.html" class="btn btn-neutral float-right" title="Contact" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="example.html" class="btn btn-neutral float-left" title="パラメータと例" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="contact.html" class="btn btn-neutral float-right" title="連絡先" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -159,7 +159,7 @@
   </span>
   <div class="rst-other-versions">
     <dl>
-      <dt>Languages</dt>
+      <dt>言語</dt>
       
       <dd><a href="javascript:void(0)" class="switch-lang" data-lang="en">English</a></dd><br>
       

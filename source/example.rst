@@ -22,10 +22,20 @@ Generally speaking, there is no need to twist, so the angle limit in the directi
 Example
 ------------
 
+Example video tutorials will be updated sequentially.
+
 Furry Ear and Tail
 ^^^^^^^^^^^^^^^^^^^^^^^
 For the tail, you want medium stiffness so it can bounce back, and medium damping so it looks more natural.
 For the ears, you can refer to the settings of the tail, but you can give higher damping to reflect the soft effect.
+
+.. raw:: html
+
+    <video width="100%" controls src="../video/sakamoto_demo.mp4">
+      Your browser does not support the video tag.
+    </video>
+
+......
 
 Hair
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -33,12 +43,37 @@ For hair, you need lower stiffness because hair is very soft, and higher damping
 
 Cloth
 ^^^^^^^^^^^^^^^^^^^^^^^
-For cloth, refer to the parameters of hair to increase gravity or stiffness
+For cloth, refer to the parameters of hair, and increase gravity or stiffness
+
+.. raw:: html
+
+    <video width="100%" controls src="../video/ballet_demo.mp4">
+      Your browser does not support the video tag.
+    </video>
+
+......
 
 Breast
 ^^^^^^^^^^^^^^^^^^^^^^^
 For the breast, a slightly higher stiffness is needed to produce a certain rocking effect and reflect elasticity. At the same time, adjusting the displacement limit slightly higher than 0 can achieve better physical effects.
 
+.. raw:: html
 
-需要注意的是，kinimatic刚体的父骨骼中，不应出现dynamic刚体。因为子骨骼的变换受到父骨骼的影响，而kinimatic刚体的运动又会影响dynamic刚体，导致循环作用，搞乱模拟结果。
-如果你仍然需要制作像两端挂绳一样的效果，那么尾部设置的kinimatic刚体需要使用copy transform骨骼约束，将其绑定到空物体上，使其位移和旋转钧脱离父骨骼的影响才能正常使用（要注意connected不要勾选，否则会锁定位置导致异常）
+    <video width="100%" controls src="../video/pudding_demo.mp4">
+      Your browser does not support the video tag.
+    </video>
+
+......
+
+Simple Ragdoll
+^^^^^^^^^^^^^^^^^^^^^^^
+
+.. raw:: html
+
+    <video width="100%" controls src="../video/ragdoll_demo.mp4">
+      Your browser does not support the video tag.
+    </video>
+
+......
+
+It should be noted that the dynamic rigid body should not appear in the parent bone of the kinimatic rigid body. Because in Blender, the transformation of the child bone is affected by the parent bone, and in PhysX, the movement of the kinimatic rigid body will affect the dynamic rigid body, which will lead to cyclic effects and mess up the simulation results. If you still want to create such an effect, then the kinimatic rigid body set at the tail needs to use "copy transform" bone constraints so that its displacement and rotation are free from the influence of the parent bone (note that connected is not checked, otherwise the displacement will be locking)

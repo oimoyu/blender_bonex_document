@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Joint &mdash; Blender Bonex Document 1.0.0 ドキュメント</title>
+  <title>ジョイント &mdash; Blender Bonex Document 1.0.0 ドキュメント</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
 
@@ -22,8 +22,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="検索" href="search.html" />
-    <link rel="next" title="Force Field" href="force_field.html" />
-    <link rel="prev" title="Rigid body" href="rigidbody.html" /> 
+    <link rel="next" title="力場" href="force_field.html" />
+    <link rel="prev" title="剛体" href="rigidbody.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -46,21 +46,21 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="get_start.html">Get start</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rigidbody.html">Rigid body</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Joint</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#component-of-joint">Component of Joint</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#joint-properties">Joint Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">序章</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get_start.html">スタートを切る</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rigidbody.html">剛体</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">ジョイント</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#component-of-joint">ジョイントの構成要素</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#joint-properties">ジョイントのプロパティ</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="force_field.html">Force Field</a></li>
-<li class="toctree-l1"><a class="reference internal" href="scene.html">Scene Setting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="simulation.html">Simulation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tool.html">Tool</a></li>
-<li class="toctree-l1"><a class="reference internal" href="example.html">Parameters with Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="force_field.html">力場</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scene.html">シーン設定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simulation.html">シミュレーション</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tool.html">ツール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example.html">パラメータと例</a></li>
 <li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contact.html">Contact</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact.html">連絡先</a></li>
 </ul>
 
         </div>
@@ -77,7 +77,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Joint</li>
+      <li class="breadcrumb-item active">ジョイント</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -87,25 +87,27 @@
            <div itemprop="articleBody">
              
   <section id="joint">
-<h1>Joint<a class="headerlink" href="#joint" title="Link to this heading"></a></h1>
+<h1>ジョイント<a class="headerlink" href="#joint" title="Link to this heading"></a></h1>
 <a href="../image/joint_setting.png" target="_blank">
     <img src="../image/joint_setting.png" style="width: 20%;" />
 </a><section id="component-of-joint">
-<h2>Component of Joint<a class="headerlink" href="#component-of-joint" title="Link to this heading"></a></h2>
-<p>Within rigid Body modification interface, press &quot;C&quot;, a rigid body will be created at position of the bone. If the bone has a parent, a joint will be created at the head of the bone to connect the parent bone, the child bone can rotate and move around the joints. The axis in the joint settings means the local axis of the bone (The local axis of the bone can be set to display in the armature properties armature-&gt;Data-&gt;Viewport Display-&gt;Axes). The center of mass of the rigidbody will be fixed at the tail of the bone, so the behavior of collision as a single rigidbody will be a bit strange without a parent bone.</p>
-<p>Joint between two rigidbody can be seen as a spring, two rigidbody is connected by spring force.</p>
+<h2>ジョイントの構成要素<a class="headerlink" href="#component-of-joint" title="Link to this heading"></a></h2>
+<p>剛体変更インターフェイス内で「C」を押すと、ボーンの位置に剛体が作成されます。 ボーンに親がある場合、ボーンの頭にジョイントが作成されて親ボーンに接続され、子ボーンはジョイントを中心に回転したり移動したりできます。 ジョイント設定の軸は、ボーンのローカル軸を意味します (ボーンのローカル軸は、アーマチュア プロパティの [アーマチュア] -&gt; [データ] -&gt; [ビューポート表示] -&gt; [軸] で表示するように設定できます)。 リジッドボディの質量中心はボーンの尾部に固定されるため、親ボーンがないと単一のリジッドボディとしての衝突の動作は少し奇妙になります。</p>
+<p>2 つの剛体間のジョイントはバネとして見ることができ、2 つの剛体はバネ力によって接続されます。</p>
 </section>
 <section id="joint-properties">
-<h2>Joint Properties<a class="headerlink" href="#joint-properties" title="Link to this heading"></a></h2>
-<p><strong>Stiffness</strong>: determine the stiffness of the spring.</p>
-<p><strong>Damping</strong>: determine the damping of the spring.</p>
+<h2>ジョイントのプロパティ<a class="headerlink" href="#joint-properties" title="Link to this heading"></a></h2>
+<p><strong>剛性</strong>: スプリングの剛性を決定します。</p>
+<p><strong>ダンピング</strong>: スプリングの減衰を決定します。</p>
 <video width="100%" controls src="../video/stiffness_damping.mp4">
   Your browser does not support the video tag.
 </video><hr class="docutils" />
-<p><strong>Angle Limit</strong>: hard constraint, which limits the rigidbody relative rotation.</p>
-<p><strong>Distance Limit</strong>: hard constraint, which limits the rigidbody relative movement.</p>
-<p><strong>Hard constraints</strong>: the distance constraints and angle constraints set in the panel. This is the constraint range you tell physx should not exceed. If too much force pushes him away from the hard constraint range, it will be subject to a large reaction force trying to return.</p>
-<p><strong>Soft constraints</strong>: The springs connecting rigidbodies can be called soft constraints, that is, the stiffness and damping in the panel. It represents that the rigidbodies will be affected by the spring within the range of hard constraints.</p>
+<p><strong>角度制限</strong>: ハードコンストレイント。剛体の相対回転を制限します。 PhysX の制限により、対称的な角度制約のみを設定できます。 片側のみを拘束したい場合は、kinematic剛体を親ボーンに追加し、拘束したい側に配置してdynamic剛体の動きを拘束できます。</p>
+<p><strong>距離制限</strong>: ハード コンストレイント。剛体の相対的な動きを制限します。</p>
+<p><strong>ハードコンストレイント</strong>: パネルに設定された距離制約と角度制約。 これは、physx が超えてはならないと指定する制約範囲です。 力が強すぎると、ハード拘束範囲から遠ざけられると、戻ろうとする大きな反力がかかります。</p>
+<p><strong>ソフト コンストレイント</strong>: 剛体を接続するスプリングはソフト コンストレイント、つまりパネル内の剛性とダンピングと呼ばれます。 これは、リジッドボディがハード制約の範囲内でスプリングの影響を受けることを表します。</p>
+<p>編集モードでのボーンの回転はジョイントにとって重要です。アーマチュアを作成するときは注意してください。</p>
+<p>ジョイント コンストレイントの初期位置は、ボーンの静止位置に基づいています。 Alt+R Alt+G Alt+S を押すと、ボーンを初期位置にリセットできます。</p>
 </section>
 </section>
 
@@ -113,8 +115,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="rigidbody.html" class="btn btn-neutral float-left" title="Rigid body" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="force_field.html" class="btn btn-neutral float-right" title="Force Field" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="rigidbody.html" class="btn btn-neutral float-left" title="剛体" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="force_field.html" class="btn btn-neutral float-right" title="力場" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -140,7 +142,7 @@
   </span>
   <div class="rst-other-versions">
     <dl>
-      <dt>Languages</dt>
+      <dt>言語</dt>
       
       <dd><a href="javascript:void(0)" class="switch-lang" data-lang="en">English</a></dd><br>
       

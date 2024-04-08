@@ -12,7 +12,7 @@ Create Force Field
 click "+" button to create a force field, set the reference obj to an arrows empty object, then the force will be added to rigidbody.
 
 
-Force Field setting
+Force Field Setting
 ----------------------
 
 **Name**: name of force field custom by user.
@@ -21,9 +21,9 @@ Force Field setting
 
 **Force Base Factor**: The magnitude of the force is determined by the scale of the reference object multiplied by the base factor.
 
-Force Field animation
+Animation
 ----------------------
-You can set the scale of the force field corresponding to the empty object and set keyframes. During the simulation, the z axis scale will be captured and passed to the scene as the size of the force (note that setting keyframes here refers to setting keyframes for the scale of the empty object, not value in the addon panel)
+You can change the direction and size of the force field by setting keyframes for the rotation or scale of the empty object corresponding to the force field. During the simulation, the z axis scale will be captured and passed to the scene as the size of the force (note that setting keyframes here refers to setting keyframes for the scale of the empty object, not value in the addon panel)
 
 .. raw:: html
 

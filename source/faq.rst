@@ -2,10 +2,10 @@ FAQ
 ===
 
 
-Why does relative displacement still appear after simulation even though the joint distance is set to 0?
+Why does relative displacement still occur after simulation even though the joint distance is set to 0?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The constraints of simulation engines such as physx are not absolute constraints. Too large a force (such as the force of a kinematic rigid body) or too small a position solver iteration number will cause it to break away from the constraints.
+The constraints of simulation engines such as physx are not absolute constraints. Too large a force (such as the force of a kinematic rigid body) or too small position solver iteration will cause it to break away from the constraints.
 
 ①Increase the number of steps of the position iterator to improve calculation accuracy
 
@@ -15,9 +15,9 @@ The constraints of simulation engines such as physx are not absolute constraints
 Why does jitter occur?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-When a rigid body breaks away from a hard constraint, it will try to return to the position where the constraint should be, and will generate a large recovery force. At this time, if there is a kinematic rigid body that prevents it from returning to its supposed position or rotating, it will produce jittery simulation results.
+When a rigid body breaks away from a hard constraint, it will try to return to the position where the constraint should be, and will generate a large recovery force. At this time, if there is a kinematic rigid body that prevents it from returning to its supposed position or rotating, it will jitter in simulation results.
 
-①Adjust the position of kinematic so that it does not conflict with the conditions of hard constraints
+① Adjust the position of kinematic so that it does not conflict with hard constraints
 
 ② Take out the jittered part separately, disable the conflicting kinematic rigid body and recalculate it separately
 
@@ -43,10 +43,10 @@ What should I do if the FPS is too low during playback?
 Why can't I move rigid body bones during playback?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-① Check whether the bones you move have existing keyframes. In Blender, K-framed bones cannot be moved manually in live playback
+① Check whether the bones you move have existing keyframes. In Blender, bones with existing keyframes cannot be moved manually in playback
 
-② Check whether the bone you move is a dynamic rigid body bone, because every dynamic playback frame will be controlled by physx, so the user cannot move it
+② Check whether the bone you move is a dynamic rigid body bone, because every playback frame will be controlled by physx, so the user cannot move it
 
 High speed movement penetrate rigidbody issues
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-when a rigid body move in a very high speed, rigidbody will penetrate, and collision will not happen. To avoid this, physx has a feature call ccd. But in my practice, I have not seen such situation, and the ccd need addtional calculation, I did not add in bonx. So If you have a high speed rigidbody scene and penetration occur, you can send the blender project to let think about this feature.
+when a rigid body move in a very high speed, rigidbody will penetrate, and collision will not happen. To avoid this, physx has a feature call ccd. But in my practice, I have not seen such situation, and the ccd need addtional calculation, so I did not add in bonx. But If you have a high speed rigidbody scene and penetration occur, you can send the blender project to me to let me think about this feature.

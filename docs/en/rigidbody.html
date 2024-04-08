@@ -92,7 +92,7 @@
 <h1>Rigid body<a class="headerlink" href="#rigid-body" title="Link to this heading"></a></h1>
 <section id="basic-usage">
 <h2>Basic usage<a class="headerlink" href="#basic-usage" title="Link to this heading"></a></h2>
-<p>In bone post mode, click the “Start Modify” button to access the Rigid Body modification interface. Within this interface, you have press “C” to set selected bones as rigid body bones, which allows them to be driven by physx during animations. Additionally, you can view the shape of the rigid body and change the properties of the selected rigid body bone in this mode.</p>
+<p>In bone pose mode, click the “Start Modify” button to access the Rigid Body modification interface. Within this interface, you have press “C” to set selected bones as rigid body bones, which allows them to be driven by physx during animations. Additionally, you can view the shape of the rigid body and change the properties of the selected rigid body bone in this mode.</p>
 </section>
 <section id="rigid-body-properties">
 <h2>Rigid body properties<a class="headerlink" href="#rigid-body-properties" title="Link to this heading"></a></h2>
@@ -111,19 +111,20 @@
 <p><strong>Bounce Coefficient</strong>: reflects the elasticity of the collision.</p>
 <p><strong>Rigidbody Group</strong>: rigidbody belongs to which group. If empty is set, that means this rigidbody will not collide with any thing.</p>
 <p><strong>Collision Group</strong>: rigidbody will collide with which group.</p>
-<p>If you want to disable the collision between a certain group of rigid bodies, then disable the collision group of their corresponding group.</p>
+<p>If you want to disable the collision internal a certain group, then disable the collision group of their corresponding group.</p>
 </section>
 <section id="kinematic-rigidbodies-are-not-always-needed">
 <h2>Kinematic rigidbodies are not always needed<a class="headerlink" href="#kinematic-rigidbodies-are-not-always-needed" title="Link to this heading"></a></h2>
-<p>If a bone is set to a dynamic rigid body and it has a parent bone, the dynamic bone will be still control by parent.</p>
+<p>If a bone is set to a dynamic rigid body and it has a parent bone, the dynamic bone will be still controlled by parent bone.</p>
 </section>
 <section id="modify-the-shape-of-rigidbody">
 <h2>Modify the Shape of Rigidbody<a class="headerlink" href="#modify-the-shape-of-rigidbody" title="Link to this heading"></a></h2>
-<p><strong>Switch default shape</strong>: Within rigid Body modification interface, press “T” to switch selected rigidbody shape. Press “S” to scale the rigidbody.</p>
+<p><strong>Switch default shape</strong>: Within rigid Body modification interface, press “T” to switch selected rigidbody shape.</p>
+<p>Press “S” to scale the rigidbody.</p>
 <video width="100%" controls src="../video/scale_rigidbody.mp4">
   Your browser does not support the video tag.
 </video><hr class="docutils" />
-<p><strong>Customize Rigidbody Shape</strong>: Within rigid Body modification interface, press “E” to edit selected rigidbody. Physx’s dynamic rigid body only supports convex polygons. If it is a concave polygon, it will be baked into a convex polygon according to the vertices. The baked shape can be observed in the Physx Visual Debugger. For physx, the calculation speed of custom mesh rigid bodies is not as fast as its default shape. If there are no special needs, try to use the default shape.</p>
+<p><strong>Customize Rigidbody Shape</strong>: Within rigid Body modification interface, press “E” to edit selected rigidbody. Physx’s dynamic rigid body only supports convex polygons. If it is a concave polygon, it will be baked into a convex polygon according to the vertices. The baked shape can be checked in the Physx Visual Debugger. For physx, the calculation the speed of custom mesh rigid bodies is not as fast as its default shape. If there are no special needs, try to use the default shape.</p>
 <video width="100%" controls src="../video/edit_shape.mp4">
   Your browser does not support the video tag.
 </video><hr class="docutils" />

@@ -49,11 +49,11 @@ Cause this addon will directly modify the position and rotation of the bones, be
 If a bone cannot be move in pose mode
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-①Check whether there are bone constraints that lock his position or rotation. If there are many bones and bone constraints, you can use the tools of this addon to turn off the bone constraints of the selected bones in batches.
+① Check whether there are bone constraints that lock his position or rotation. If there are many bones and bone constraints, you can use the tools of this addon to turn off the bone constraints of the selected bones in batches.
 
-②Check whether there is a lock icon on the bone position in the N panel in pose mode. This will cause you to be unable to operate the bones in the user interface.
+② Check whether there is a lock icon on the bone position in the N panel in pose mode. This will cause you to be unable to operate the bones in the user interface(like R G S hotkey or Alt+R G S hotkey).
 
-③Check whether the bones without a parent have the connected option checked.
+③ Check whether the bones without a parent have the connected option checked.
 
 **Note**: This addon is based on quaternion rotation (that is, the default rotation mode of Blender bones, ignore it if you have not changed this). When applying bone rotation, the bone rotation mode will be changed to quaternion.
 

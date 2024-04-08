@@ -7,40 +7,43 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Blender Bonex Document \n"
+"Project-Id-Version: Blender Bonex Document\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-31 17:31+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: zh\n"
+"POT-Creation-Date: 2024-04-08 08:37+0800\n"
+"PO-Revision-Date: 2024-04-08 08:52+0800\n"
+"Last-Translator: \n"
 "Language-Team: zh <LL@li.org>\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: zh\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "Generated-By: Babel 2.14.0\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: ../../source/force_field.rst:2
 msgid "Force Field"
-msgstr ""
+msgstr "力场"
 
 #: ../../source/force_field.rst:11
 msgid "Create Force Field"
-msgstr ""
+msgstr "创建力场"
 
 #: ../../source/force_field.rst:12
 msgid ""
 "click \"+\" button to create a force field, set the reference obj to an "
 "arrows empty object, then the force will be added to rigidbody."
 msgstr ""
+"创建力场点击“+”按钮创建力场，将参考对象设置为Single Arrow空对象，则力将添"
+"加到刚体上。"
 
 #: ../../source/force_field.rst:16
-msgid "Force Field setting"
-msgstr ""
+msgid "Force Field Setting"
+msgstr "力场设置"
 
 #: ../../source/force_field.rst:18
 msgid "**Name**: name of force field custom by user."
-msgstr ""
+msgstr "**名称**：用户自定义的力场名称。"
 
 #: ../../source/force_field.rst:20
 msgid ""
@@ -49,23 +52,28 @@ msgid ""
 "force magnitude, and the direction of Z axis represents the force "
 "direction."
 msgstr ""
+"**参考对象**：确定力的方向和大小。 推荐使用箭头空物体，Z轴的缩放代表力的"
+"大小，Z轴的方向代表力的方向。"
 
 #: ../../source/force_field.rst:22
 msgid ""
 "**Force Base Factor**: The magnitude of the force is determined by the "
 "scale of the reference object multiplied by the base factor."
-msgstr ""
+msgstr "**力基本系数**：力的大小由参考对象的缩放乘以基本系数确定。"
 
 #: ../../source/force_field.rst:25
-msgid "Force Field animation"
-msgstr ""
+msgid "Animation"
+msgstr "动画"
 
 #: ../../source/force_field.rst:26
 msgid ""
-"You can set the scale of the force field corresponding to the empty "
-"object and set keyframes. During the simulation, the z axis scale will be"
-" captured and passed to the scene as the size of the force (note that "
+"You can change the direction and size of the force field by setting "
+"keyframes for the rotation or scale of the empty object corresponding to "
+"the force field. During the simulation, the z axis scale will be "
+"captured and passed to the scene as the size of the force (note that "
 "setting keyframes here refers to setting keyframes for the scale of the "
 "empty object, not value in the addon panel)"
 msgstr ""
-
+"您可以通过设置力场对应的空物体的旋转或缩放关键帧来改变力场的方向和大小。 "
+"模拟过程中，会捕获z轴尺度并将其作为力的大小传递到场景中（注意这里设置关键"
+"帧是指为空物体的缩放设置关键帧，而不是插件面板中的系数值）"

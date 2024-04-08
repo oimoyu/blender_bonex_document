@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Scene Setting &mdash; Blender Bonex Document 1.0.0 文档</title>
+  <title>场景设置 &mdash; Blender Bonex Document 1.0.0 文档</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
 
@@ -21,8 +21,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="搜索" href="search.html" />
-    <link rel="next" title="Simulation" href="simulation.html" />
-    <link rel="prev" title="Force Field" href="force_field.html" /> 
+    <link rel="next" title="模拟" href="simulation.html" />
+    <link rel="prev" title="力场" href="force_field.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -46,16 +46,16 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">介绍</a></li>
-<li class="toctree-l1"><a class="reference internal" href="get_start.html">Get start</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rigidbody.html">Rigid body</a></li>
-<li class="toctree-l1"><a class="reference internal" href="joint.html">Joint</a></li>
-<li class="toctree-l1"><a class="reference internal" href="force_field.html">Force Field</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Scene Setting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="simulation.html">Simulation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tool.html">Tool</a></li>
-<li class="toctree-l1"><a class="reference internal" href="example.html">Parameters with Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contact.html">Contact</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get_start.html">开始</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rigidbody.html">刚体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="joint.html">关节</a></li>
+<li class="toctree-l1"><a class="reference internal" href="force_field.html">力场</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">场景设置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simulation.html">模拟</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tool.html">工具</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example.html">参数及示例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">常见问题</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact.html">联系</a></li>
 </ul>
 
         </div>
@@ -72,7 +72,7 @@
           <div role="navigation" aria-label="页面导航">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Scene Setting</li>
+      <li class="breadcrumb-item active">场景设置</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -82,21 +82,22 @@
            <div itemprop="articleBody">
              
   <section id="scene-setting">
-<h1>Scene Setting<a class="headerlink" href="#scene-setting" title="Link to this heading"></a></h1>
+<h1>场景设置<a class="headerlink" href="#scene-setting" title="Link to this heading"></a></h1>
 <a href="../image/scene_setting.png" target="_blank">
     <img src="../image/scene_setting.png" style="width: 20%;" />
-</a><p><strong>FPS</strong>: Consistent with blender, the higher the fps, the higher speed the scene will be.</p>
-<p><strong>Gravity</strong>: The force parallel to the Z axis is normally -9.81.</p>
-<p><strong>Position Iteration Number</strong>: The higher the value, the more accurate the location of the simulation results</p>
-<p><strong>Rotation Iteration Number</strong>: The higher the value, the more accurate the rotation of the simulation results</p>
+</a><p><strong>FPS</strong>：与 Blender 一致，FPS 越高，场景的速度就越快。 如果你想让你的场景看起来更快，你可以减少以加快时间的流逝。</p>
+<p><strong>重力</strong>：平行于全局 Z 轴的力，通常为 -9.81。</p>
+<p><strong>位置迭代次数</strong>：值越高，模拟结果的位置越准确。</p>
+<p><strong>速度迭代次数</strong>：值越高，模拟结果的速度越准确。</p>
+<p>长的刚体链需要增加迭代次数。</p>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
-        <a href="force_field.html" class="btn btn-neutral float-left" title="Force Field" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
-        <a href="simulation.html" class="btn btn-neutral float-right" title="Simulation" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="force_field.html" class="btn btn-neutral float-left" title="力场" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="simulation.html" class="btn btn-neutral float-right" title="模拟" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -122,7 +123,7 @@
   </span>
   <div class="rst-other-versions">
     <dl>
-      <dt>Languages</dt>
+      <dt>语言</dt>
       
       <dd><a href="javascript:void(0)" class="switch-lang" data-lang="en">English</a></dd><br>
       

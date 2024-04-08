@@ -7,32 +7,35 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Blender Bonex Document \n"
+"Project-Id-Version: Blender Bonex Document\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-31 17:31+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: ja\n"
+"POT-Creation-Date: 2024-04-08 08:42+0800\n"
+"PO-Revision-Date: 2024-04-08 09:22+0800\n"
+"Last-Translator: \n"
 "Language-Team: ja <LL@li.org>\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "Generated-By: Babel 2.14.0\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: ../../source/example.rst:2
 msgid "Parameters with Examples"
-msgstr ""
+msgstr "パラメータと例"
 
 #: ../../source/example.rst:5
 msgid "Parameters Tips"
-msgstr ""
+msgstr "パラメータのヒント"
 
 #: ../../source/example.rst:7
 msgid ""
 "**Parameter adjustment techniques, the following techniques are also "
 "applicable to other physics engines**"
 msgstr ""
+"**パラメータ調整テクニック、以下のテクニックは他の物理エンジンにも適用で"
+"きます**"
 
 #: ../../source/example.rst:9
 msgid ""
@@ -40,16 +43,23 @@ msgid ""
 "them to connect them two by one. You need to adjust the appropriate "
 "parameters to make it meet the results you want."
 msgstr ""
+"チェーン上の剛体については、それらの間にバネを置いて 2 つずつ接続するのと"
+"同じです。 希望の結果が得られるように、適切なパラメータを調整する必要があ"
+"ります。"
 
 #: ../../source/example.rst:11
 msgid ""
-"①The first is to maintain the shape. The rigid body chain will sag due to"
-" the influence of gravity. If you don’t want it to sag due to gravity, "
+"①The first is to maintain the shape. The rigid body chain will sag due "
+"to the influence of gravity. If you don’t want it to sag due to gravity, "
 "then adjust the gravity to 0, or reduce the mass or increase the "
 "stiffness of the connection (pay attention to the arrangement of the "
 "parameters, because one parameter changes will lead to other aspects "
 "changes)"
 msgstr ""
+"①1つ目は形状を維持することです。 剛体チェーンは重力の影響によりたわみま"
+"す。 重力によってたるみが生じたくない場合は、重力を 0 に調整するか、質量"
+"を減らすか接続の剛性を高めます (1 つのパラメーターの変更が他の側面に影響"
+"するため、パラメーターの配置に注意してください) 変更)"
 
 #: ../../source/example.rst:13
 msgid ""
@@ -65,17 +75,29 @@ msgid ""
 "stiffness shakes, it will rock back and forth around the initial "
 "position."
 msgstr ""
+"②質量とバネ剛性の関係。 剛体チェーンが揺れると、スプリング接続の力と剛体"
+"の慣性力の影響を受けます。 質量が大きいほど慣性力が大きくなり、揺れが良く"
+"なります。 バネの剛性が大きいほど、バネは変形するのに必要な力が大きくな"
+"り、揺れにくくなります。 たとえば、鉄片がバネに結び付けられ、一枚の紙がバ"
+"ネに結び付けられていると想像してください。 どっちがよく揺れますか？ バネ"
+"の剛性が大きいほど反発力も大きくなることに注意してください。 そのため、剛"
+"性の大きなバネは揺れると初期位置を中心に前後に揺れてしまいます。"
 
 #: ../../source/example.rst:15
 msgid ""
 "③The relationship between spring stiffness and damping. Damping is the "
 "force that prevents the spring from returning to the origin. The greater "
 "the damping, the greater the resistance (the resistance will not exceed "
-"the rebound force of the spring). It slows down the rebound due to spring"
-" stiffness, and is the parameter you want if you don't want the rigid "
-"body to rock back and forth around its initial position, or if you want "
-"the motion to look a little softer."
+"the rebound force of the spring). It slows down the rebound due to "
+"spring stiffness, and is the parameter you want if you don't want the "
+"rigid body to rock back and forth around its initial position, or if you "
+"want the motion to look a little softer."
 msgstr ""
+"③バネの剛性と減衰の関係。ダンピングとは、スプリングが元の位置に戻らないよ"
+"うにする力のことです。 ダンピングが大きいほど抵抗も大きくなります（抵抗は"
+"スプリングの反発力を超えません）。 バネの剛性によるリバウンドを遅くし、剛"
+"体が初期位置を中心に前後に揺れたくない場合、またはモーションを少し柔らか"
+"く見せたい場合に必要なパラメータです。"
 
 #: ../../source/example.rst:17
 msgid ""
@@ -88,65 +110,107 @@ msgid ""
 "the same spring stiffness takes more time to pull it, so it can reflect "
 "the feeling of being in the air."
 msgstr ""
+"質量と運動の関係。質量が大きいほど慣性力は大きくなる。物体が宙に浮いてい"
+"る感じを表現したいのであれば、逆に質量を大きくする必要がある。質量が小さ"
+"い剛体はバネの硬さに引っ張られてすぐに戻りやすく、宙に浮いている時間は長"
+"くない。質量が大きい物体は慣性力が大きく、同じバネの硬さでも引っ張るのに"
+"時間がかかるので、宙に浮いている感じを反映できる。"
 
 #: ../../source/example.rst:19
 msgid ""
 "Generally speaking, there is no need to twist, so the angle limit in the "
 "direction of the twist axis can be set to 0"
 msgstr ""
+"一般的にはねじる必要がないため、ねじり軸方向の角度制限を0に設定できます"
 
 #: ../../source/example.rst:23
 msgid "Example"
-msgstr ""
+msgstr "例"
 
-#: ../../source/example.rst:26
+#: ../../source/example.rst:25
+msgid "Example video tutorials will be updated sequentially."
+msgstr "サンプルビデオチュートリアルは順次更新されます。"
+
+#: ../../source/example.rst:28
 msgid "Furry Ear and Tail"
-msgstr ""
+msgstr "毛皮のような耳としっぽ"
 
-#: ../../source/example.rst:27
+#: ../../source/example.rst:29
 msgid ""
-"For the tail, you want medium stiffness so it can bounce back, and medium"
-" damping so it looks more natural. For the ears, you can refer to the "
-"settings of the tail, but you can give higher damping to reflect the soft"
-" effect."
+"For the tail, you want medium stiffness so it can bounce back, and "
+"medium damping so it looks more natural. For the ears, you can refer to "
+"the settings of the tail, but you can give higher damping to reflect the "
+"soft effect."
 msgstr ""
+"テールの場合は、跳ね返るように中程度の剛性が必要で、より自然に見えるよう"
+"に中程度の減衰が必要です。 耳についてはテールの設定を参照できますが、ソフ"
+"ト効果を反映するためにより高いダンピングを与えることができます。"
 
-#: ../../source/example.rst:31
+#: ../../source/example.rst:41
 msgid "Hair"
-msgstr ""
+msgstr "髪"
 
-#: ../../source/example.rst:32
+#: ../../source/example.rst:42
 msgid ""
 "For hair, you need lower stiffness because hair is very soft, and higher "
-"damping because hair is very light and subject to greater air resistance"
+"damping because hair is very light and subject to greater air "
+"resistance. And decrease the bounce Coefficient, cause hair is soft and "
+"light, when it collides with other things it will not bounce too much in "
+"real world."
 msgstr ""
+"髪の場合、髪は非常に柔らかいため、剛性は低くする必要があり、髪は非常に軽"
+"く、空気抵抗が大きいため、減衰は高くする必要があります。 また、バウンス係"
+"数を小さくすると、髪が柔らかくて軽くなり、現実世界では髪が他のものと衝突"
+"してもあまり跳ねなくなります。"
 
-#: ../../source/example.rst:35
+#: ../../source/example.rst:45
 msgid "Cloth"
-msgstr ""
+msgstr "布"
 
-#: ../../source/example.rst:36
+#: ../../source/example.rst:46
 msgid ""
-"For cloth, refer to the parameters of hair to increase gravity or "
+"For cloth, refer to the parameters of hair, and increase gravity or "
 "stiffness"
-msgstr ""
+msgstr "布の場合は髪のパラメータを参照し、重力や剛性を上げてください"
 
-#: ../../source/example.rst:39
+#: ../../source/example.rst:57
 msgid "Breast"
-msgstr ""
+msgstr "胸"
 
-#: ../../source/example.rst:40
+#: ../../source/example.rst:58
 msgid ""
 "For the breast, a slightly higher stiffness is needed to produce a "
 "certain rocking effect and reflect elasticity. At the same time, "
 "adjusting the displacement limit slightly higher than 0 can achieve "
 "better physical effects."
 msgstr ""
+"胸の場合、一定の揺れ効果を生み出し、弾力性を反映するには、わずかに高い剛"
+"性が必要です。 同時に、変位制限を 0 よりわずかに大きく調整すると、より良"
+"い物理的効果を得ることができます。"
 
-#: ../../source/example.rst:43
+#: ../../source/example.rst:69
+msgid "Simple Ragdoll"
+msgstr "シンプルなラグドール"
+
+#: ../../source/example.rst:79
 msgid ""
-"需要注意的是，kinimatic刚体的父骨骼中，不应出现dynamic刚体。因为子骨骼的变换受到父骨骼的影响，而kinimatic刚体的运动又会影响dynamic刚体，导致循环作用，搞乱模拟结果。"
-" 如果你仍然需要制作像两端挂绳一样的效果，那么尾部设置的kinimatic刚体需要使用copy "
-"transform骨骼约束，将其绑定到空物体上，使其位移和旋转钧脱离父骨骼的影响才能正常使用（要注意connected不要勾选，否则会锁定位置导致异常）"
+"It should be noted that the dynamic rigid body should not appear in the "
+"parent bone of the kinimatic rigid body. Because in Blender, the "
+"transformation of the child bone is affected by the parent bone, and in "
+"PhysX, the movement of the kinimatic rigid body will affect the dynamic "
+"rigid body, which will lead to cyclic effects and mess up the simulation "
+"results. If you still want to create such an effect, then the kinimatic "
+"rigid body set at the tail needs to use \"copy transform\" bone "
+"constraints so that its displacement and rotation are free from the "
+"influence of the parent bone (note that connected is not checked, "
+"otherwise the displacement will be locking)"
 msgstr ""
-
+"dynaimc剛体は、kinematic剛体の親ボーンに表示されないことに注意してくださ"
+"い。 Blender では子ボーンの変形は親ボーンの影響を受けますが、PhysX ではキ"
+"ニマティック リジッド ボディの動きがダイナミック リジッド ボディに影響を"
+"与えるため、周期的な効果が発生してシミュレーション結果が台無しになってし"
+"まいます。 それでもそのような効果を作成したい場合は、尾部に設定されたキニ"
+"マティック リジッド ボディに「コピー変換」ボーン コンストレイントを使用し"
+"て、その変位と回転が親ボーンの影響を受けないようにする必要があります"
+"(connectedがチェックされていないことに注意。そうでないと変位がロックされ"
+"る)"

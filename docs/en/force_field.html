@@ -51,8 +51,8 @@
 <li class="toctree-l1"><a class="reference internal" href="joint.html">Joint</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Force Field</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#create-force-field">Create Force Field</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#force-field-setting">Force Field setting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#force-field-animation">Force Field animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#force-field-setting">Force Field Setting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#animation">Animation</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="scene.html">Scene Setting</a></li>
@@ -95,14 +95,14 @@
 <p>click “+” button to create a force field, set the reference obj to an arrows empty object, then the force will be added to rigidbody.</p>
 </section>
 <section id="force-field-setting">
-<h2>Force Field setting<a class="headerlink" href="#force-field-setting" title="Link to this heading"></a></h2>
+<h2>Force Field Setting<a class="headerlink" href="#force-field-setting" title="Link to this heading"></a></h2>
 <p><strong>Name</strong>: name of force field custom by user.</p>
 <p><strong>Reference Object</strong>: determine the force direction and magnitude. An arrows empty object is recommended, the scale of Z axis represents the force magnitude, and the direction of Z axis represents the force direction.</p>
 <p><strong>Force Base Factor</strong>: The magnitude of the force is determined by the scale of the reference object multiplied by the base factor.</p>
 </section>
-<section id="force-field-animation">
-<h2>Force Field animation<a class="headerlink" href="#force-field-animation" title="Link to this heading"></a></h2>
-<p>You can set the scale of the force field corresponding to the empty object and set keyframes. During the simulation, the z axis scale will be captured and passed to the scene as the size of the force (note that setting keyframes here refers to setting keyframes for the scale of the empty object, not value in the addon panel)</p>
+<section id="animation">
+<h2>Animation<a class="headerlink" href="#animation" title="Link to this heading"></a></h2>
+<p>You can change the direction and size of the force field by setting keyframes for the rotation or scale of the empty object corresponding to the force field. During the simulation, the z axis scale will be captured and passed to the scene as the size of the force (note that setting keyframes here refers to setting keyframes for the scale of the empty object, not value in the addon panel)</p>
 <video width="100%" controls src="../video/force_field.mp4">
   Your browser does not support the video tag.
 </video></section>
