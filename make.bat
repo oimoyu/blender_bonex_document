@@ -56,6 +56,10 @@ rmdir /S /Q "docs\zh\_static\video"
 rmdir /S /Q "docs\ja\_static\image"
 rmdir /S /Q "docs\ja\_static\video"
 
+
+copy "%SOURCEDIR%\index.html" "docs\index.html"
+
+
 if not exist "docs\.nojekyll" echo.> docs\.nojekyll
 
 

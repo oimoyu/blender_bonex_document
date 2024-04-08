@@ -1,0 +1,22 @@
+<script>
+    var currentUrl = window.location.href;
+
+    var urlObject = new URL(currentUrl);
+    var pathname = urlObject.pathname;
+
+    if (!pathname.endsWith('/')) {
+        pathname = pathname.substring(0, pathname.lastIndexOf('/') + 1);
+    }
+
+
+    if (!pathname.endsWith('/')) {
+        pathname += '/';
+    }
+
+    var newPath = pathname + 'en/';
+
+    var newUrl = urlObject.origin + newPath;
+
+    window.location.href = newUrl;
+
+</script>
