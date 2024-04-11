@@ -56,6 +56,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="joint.html">关节</a></li>
+<li class="toctree-l1"><a class="reference internal" href="soft_connection.html">软连接</a></li>
 <li class="toctree-l1"><a class="reference internal" href="force_field.html">力场</a></li>
 <li class="toctree-l1"><a class="reference internal" href="scene.html">场景设置</a></li>
 <li class="toctree-l1"><a class="reference internal" href="simulation.html">模拟</a></li>
@@ -93,12 +94,14 @@
 <section id="basic-usage">
 <h2>基本用法<a class="headerlink" href="#basic-usage" title="Link to this heading"></a></h2>
 <p>在姿态模式下，点击“开始修改”按钮，进入刚体修改界面。 在此界面中，您可以按“C”将选定的骨骼设置为刚体骨骼，这允许它们在动画期间由 physx 驱动。 此外，您可以在此模式下查看刚体的形状并更改所选刚体骨骼的属性。</p>
+<p><strong>注意，当骨骼设置为刚体时，此插件将在骨骼调用驱动程序中创建一个空对象，并且该骨骼将完全跟踪到该驱动程序。 如果您想手动移动骨骼，可以查看工具面板进行更多操作。</strong></p>
 </section>
 <section id="rigid-body-properties">
 <h2>刚体属性<a class="headerlink" href="#rigid-body-properties" title="Link to this heading"></a></h2>
 <a href="../image/rigidbody_setting.png" target="_blank">
     <img src="../image/rigidbody_setting.png" style="width: 20%;" />
 </a><p>在刚体修改界面中，当您选择刚体骨骼时，您将在面板中看到该属性。 您可以更改该值，然后该设置将应用于选定的刚体骨骼。</p>
+<p><strong>刚体形状刷新间隔</strong>：如果您在刚体修改模式下感觉卡顿，请增加刷新间隔时间</p>
 <p><strong>Dynamic</strong>：dynamic刚体是通过physx计算的刚体，在力的作用下会移动。</p>
 <p><strong>Kinematic</strong>：kinematic学刚体由用户的关键帧动画控制。 它的运动是绝对的，不受任何力的影响。 并能与动态刚体发生碰撞，使dynamic刚体运动。</p>
 <video width="100%" controls src="../video/kinematic.mp4">
@@ -112,7 +115,11 @@
 <p><strong>刚体组</strong>：刚体属于哪个组。 如果设置为空，则意味着该刚体不会与任何物体发生碰撞。</p>
 <p><strong>碰撞组</strong>：刚体将与哪个组碰撞。</p>
 <p>如果要禁用某个组内部的碰撞，则禁用其对应组的碰撞组。</p>
-</section>
+<p>例如，我想禁用裙子自碰撞。 将刚体组设置为第二层启用，并将碰撞组第二层设置为禁用，即裙子在第二组中，裙子不会与第二组中的刚体发生碰撞。</p>
+<video width="100%" controls src="../video/set_collision_group.mp4">
+  Your browser does not support the video tag.
+</video></section>
+<hr class="docutils" />
 <section id="kinematic-rigidbodies-are-not-always-needed">
 <h2>Kinematic rigidbodies are not always needed<a class="headerlink" href="#kinematic-rigidbodies-are-not-always-needed" title="Link to this heading"></a></h2>
 <p>如果骨骼被设置为dynamic刚体并且它有父骨骼，则dynamic骨骼仍将受父骨骼控制。</p>

@@ -49,6 +49,7 @@
 <li class="toctree-l1"><a class="reference internal" href="get_start.html">Get start</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rigidbody.html">Rigid body</a></li>
 <li class="toctree-l1"><a class="reference internal" href="joint.html">Joint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="soft_connection.html">Soft Connection</a></li>
 <li class="toctree-l1"><a class="reference internal" href="force_field.html">Force Field</a></li>
 <li class="toctree-l1"><a class="reference internal" href="scene.html">Scene Setting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="simulation.html">Simulation</a></li>
@@ -57,10 +58,13 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">FAQ</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#why-does-relative-displacement-still-occur-after-simulation-even-though-the-joint-distance-is-set-to-0">Why does relative displacement still occur after simulation even though the joint distance is set to 0?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#why-does-jitter-occur">Why does jitter occur?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#why-did-the-simulation-stop-early-when-playback">Why did the simulation stop early when playback?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#why-is-the-simulation-unable-to-move-despite-setting-upper-and-lower-displacement-limits">Why is the simulation unable to move despite setting upper and lower displacement limits?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#what-should-i-do-if-the-fps-is-too-low-during-playback">What should I do if the FPS is too low during playback?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#why-can-t-i-move-rigid-body-bones-during-playback">Why can’t I move rigid body bones during playback?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what-should-i-do-if-the-laggy-in-rigidbody-modify-mode">What should I do if the laggy in rigidbody modify mode?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#why-can-t-rigidbody-bones-be-moved-manually">Why can’t rigidbody bones be moved manually?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#high-speed-movement-penetrate-rigidbody-issues">High speed movement penetrate rigidbody issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#why-this-addon-using-empty-obj-to-drive-bones">Why this addon using empty obj to drive bones?</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="contact.html">Contact</a></li>
@@ -94,15 +98,26 @@
 <section id="why-does-relative-displacement-still-occur-after-simulation-even-though-the-joint-distance-is-set-to-0">
 <h2>Why does relative displacement still occur after simulation even though the joint distance is set to 0?<a class="headerlink" href="#why-does-relative-displacement-still-occur-after-simulation-even-though-the-joint-distance-is-set-to-0" title="Link to this heading"></a></h2>
 <p>The constraints of simulation engines such as physx are not absolute constraints. Too large a force (such as the force of a kinematic rigid body) or too small position solver iteration will cause it to break away from the constraints.</p>
-<p>①Increase the number of steps of the position iterator to improve calculation accuracy</p>
+<p>① Increase the number of steps of the position iterator to improve simulation accuracy</p>
 <p>② Set the bone attribute to connected, so that the bone is hard constrained to the tail of the parent, and only the rotation result of physx will be applied.</p>
-</section>
+<a href="../image/connected_location.png" target="_blank">
+    <img src="../image/connected_location.png" style="width: 60%;" />
+</a></section>
 <section id="why-does-jitter-occur">
 <h2>Why does jitter occur?<a class="headerlink" href="#why-does-jitter-occur" title="Link to this heading"></a></h2>
 <p>When a rigid body breaks away from a hard constraint, it will try to return to the position where the constraint should be, and will generate a large recovery force. At this time, if there is a kinematic rigid body that prevents it from returning to its supposed position or rotating, it will jitter in simulation results.</p>
-<p>① Adjust the position of kinematic so that it does not conflict with hard constraints</p>
+<p>① Adjust the position of kinematic rigidbody so that it does not conflict with hard constraints</p>
 <p>② Take out the jittered part separately, disable the conflicting kinematic rigid body and recalculate it separately</p>
+<p>③ Adjust parmeter. Sometimes, even though you have relaxed the constraints, you may still find that there is some jitter when your thighs are raised and collide with the skirt. This may be because the rigid body is separated from the hard constraints due to friction. You can try to reduce the friction coefficient.</p>
 </section>
+<section id="why-did-the-simulation-stop-early-when-playback">
+<h2>Why did the simulation stop early when playback?<a class="headerlink" href="#why-did-the-simulation-stop-early-when-playback" title="Link to this heading"></a></h2>
+<p>Should be the frame step not continuous. This addon need to get every continuous frame to be simulated.</p>
+<p>① You may try to skip the frame when playback.</p>
+<p>② Check whether you select the “Play Every Frame” playback mode(in Timeline viewport -&gt; Playback -&gt; Sync)</p>
+<a href="../image/select_play_every_frame.png" target="_blank">
+    <img src="../image/select_play_every_frame.png" style="width: 60%;" />
+</a></section>
 <section id="why-is-the-simulation-unable-to-move-despite-setting-upper-and-lower-displacement-limits">
 <h2>Why is the simulation unable to move despite setting upper and lower displacement limits?<a class="headerlink" href="#why-is-the-simulation-unable-to-move-despite-setting-upper-and-lower-displacement-limits" title="Link to this heading"></a></h2>
 <p>① Check whether connected is checked in the bone attributes. Connected is the option for blender to lock the bone displacement. Bones with this option checked cannot move in posture mode.</p>
@@ -110,20 +125,36 @@
 </section>
 <section id="what-should-i-do-if-the-fps-is-too-low-during-playback">
 <h2>What should I do if the FPS is too low during playback?<a class="headerlink" href="#what-should-i-do-if-the-fps-is-too-low-during-playback" title="Link to this heading"></a></h2>
-<p>① Playback without modify mode, in modify mode you can view the rigidbody shape, but the drawing api efficiency of the preview is not high, and some data need to be calculated in real time, so the playback speed will be slowed down when there are lots rigid bodies exist.</p>
-<p>②Try to disable setting keyframe option. Blender has performance issues in setting keyframes. When there are too many existing keyframes for an object or bone, the time required to set a keyframe will increase linearly with the number of existing keyframes. Therefore, when playback simulation, if there is a low fps, and checking the log found that the frame generation time of physx is also very short, so the cause of the lag is the performance problem of Blender’s keyframe setting.</p>
-<p>③ Reduce the number of iteration steps. A reasonable number of iteration steps can improve the calculation speed.</p>
-<p>④Try to bake the animation into key frames and then play it.</p>
-<p>⑤ Try to divide the simulation into separate parts, and simulate them separately.</p>
+<p>① Try to hide your mesh. You can move the mesh to a collection to hide them, and playback with only armature.</p>
+<a href="../image/hide_mesh_collection.png" target="_blank">
+    <img src="../image/hide_mesh_collection.png" style="width: 100%;" />
+</a><p>② Try to remain only armature modifier. Some modifiers consume a lot of performance, like Geometry node, you can try to apply or disable them.</p>
+<p>③ Playback without rigidbody modify mode, in rigidbody modify mode you can view the rigidbody shape, but the drawing api efficiency of the preview is not high, and some data need to be calculated in real time, so the playback speed will be slowed down when there are lots rigid bodies exist.</p>
+<p>④ Reduce the number of iteration steps. A reasonable number of iteration steps can improve the calculation speed. You can use 1 iter number for playback, and use high iter number in final render.</p>
+<p>⑤ Try to bake the animation into key frames and then play it.</p>
+<p>⑥ Try to divide the simulation into separate parts, and simulate them separately.</p>
 </section>
-<section id="why-can-t-i-move-rigid-body-bones-during-playback">
-<h2>Why can’t I move rigid body bones during playback?<a class="headerlink" href="#why-can-t-i-move-rigid-body-bones-during-playback" title="Link to this heading"></a></h2>
-<p>① Check whether the bones you move have existing keyframes. In Blender, bones with existing keyframes cannot be moved manually in playback</p>
-<p>② Check whether the bone you move is a dynamic rigid body bone, because every playback frame will be controlled by physx, so the user cannot move it</p>
+<section id="what-should-i-do-if-the-laggy-in-rigidbody-modify-mode">
+<h2>What should I do if the laggy in rigidbody modify mode?<a class="headerlink" href="#what-should-i-do-if-the-laggy-in-rigidbody-modify-mode" title="Link to this heading"></a></h2>
+<p>① Increase refresh interval.</p>
+<p>② Select “Selected Bone Only” to only preview the selected rigidbody bone.</p>
+</section>
+<section id="why-can-t-rigidbody-bones-be-moved-manually">
+<h2>Why can’t rigidbody bones be moved manually?<a class="headerlink" href="#why-can-t-rigidbody-bones-be-moved-manually" title="Link to this heading"></a></h2>
+<p>① Because this addon drives bones by driver objects, you can move the driver obj to move bone.</p>
+<p>② If you want to temporarily move the bones manually, the toolbar has a disable driver constraint. Used in conjunction with the keyframing option, you can temporarily gain control of your bones.</p>
+<p>③ If you want to completely delete the driver, select the bone in rigid body modification mode and press Ctrl+Alt+Shift+C. This will delete the bone constraints and delete the driver object. Note that animation keyframes are set on the drive, so this operation will delete the animation.</p>
 </section>
 <section id="high-speed-movement-penetrate-rigidbody-issues">
 <h2>High speed movement penetrate rigidbody issues<a class="headerlink" href="#high-speed-movement-penetrate-rigidbody-issues" title="Link to this heading"></a></h2>
 <p>when a rigid body move in a very high speed, rigidbody will penetrate, and collision will not happen. To avoid this, physx has a feature call ccd. But in my practice, I have not seen such situation, and the ccd need addtional calculation, so I did not add in bonx. But If you have a high speed rigidbody scene and penetration occur, you can send the blender project to me to let me think about this feature.</p>
+</section>
+<section id="why-this-addon-using-empty-obj-to-drive-bones">
+<h2>Why this addon using empty obj to drive bones?<a class="headerlink" href="#why-this-addon-using-empty-obj-to-drive-bones" title="Link to this heading"></a></h2>
+<p>For those developer who want to do this. If you want to set transform for a obj with parent, you must call update() to ensure the parent matrix latest. But update() function will update from whole scene, if your scene is huge, the process will be extremely slow.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">bpy</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">view_layer</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+</pre></div>
+</div>
 </section>
 </section>
 

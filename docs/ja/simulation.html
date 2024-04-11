@@ -50,6 +50,7 @@
 <li class="toctree-l1"><a class="reference internal" href="get_start.html">スタートを切る</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rigidbody.html">剛体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="joint.html">ジョイント</a></li>
+<li class="toctree-l1"><a class="reference internal" href="soft_connection.html">ソフトコネクション</a></li>
 <li class="toctree-l1"><a class="reference internal" href="force_field.html">力場</a></li>
 <li class="toctree-l1"><a class="reference internal" href="scene.html">シーン設定</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">シミュレーション</a></li>
@@ -87,12 +88,16 @@
 <a href="../image/simulation_setting.png" target="_blank">
     <img src="../image/simulation_setting.png" style="width: 20%;" />
 </a><p><strong>すべてベイク</strong>: ボタンをクリックすると、物理演算結果がキーフレームにベイクされます。処理フェーズは3つあります。①kinematic剛体データの収集。②PhysXの計算プロセス。デバッグオプションをチェックすると、PhysXビジュアルデバッガで進行状況を見ることができます。この過程で ESC キーを押すとベイクを止めることができます。③. ボーンキーフレームの設定、これは長いので気長に待ちましょう。</p>
-<p><strong>再生シミュレート</strong>: 有効にすると、再生中にシミュレートされます。</p>
+<p><strong>再生シミュレート</strong>: 有効にすると、再生中にシミュレートされます。 単純なシーンでは再生はスムーズですが、重いシーンでは再生が非常に遅れることがあります。これを無効にして、アニメーションをキーフレームにベイクした後にアニメーションを再生してみてください。</p>
 <p><strong>キーフレーム モードの設定</strong>: Blender のキーフレーム設定には大きなパフォーマンスの問題があります。 そこで、キーフレームを設定する 2 つの方法を提供します。 「標準」: 高度な API によってキーフレームを設定し、より多くの時間を費やします。 「高速」: 基本 API によってキーフレームを設定します。より速くなりますが、既存のキーフレームが線形になります。 シミュレートされるボーンに手動でキーフレームを設定していない場合は、「高速」を選択することをお勧めします。</p>
 <p><strong>ベイク範囲</strong>: ベイクのシミュレーション範囲を設定します。 設定されていない場合、ベイク範囲はシーン フレーム範囲になります。</p>
-<p><strong>選択されたボーンのみ</strong>: 有効にすると、選択されたボーンのみがシミュレートされます。</p>
+<p><strong>選択されたボーンのみ</strong>: 有効にすると、選択されたボーンのみがシミュレートされて描画されます。</p>
 <p><strong>線形速度を継承</strong>: 有効にすると、開始シミュレーション フレームに先行する 2 つのフレームの相対変位に基づいて、線形速度が初期速度として計算されます。</p>
-<p><strong>デバッグ</strong>: 有効にすると、シミュレートされた情報が PhysX Visual Debugger に表示されます。 PhysX Visual Debuggerのダウンロード: <a class="reference external" href="https://developer.nvidia.com/physx-visual-debugger">https://developer.nvidia.com/physx-visual-debugger</a></p>
+<p><strong>スレッド数</strong>: シミュレーションで使用されるスレッドの数は、通常、CPU の物理コアの数です。</p>
+<p><strong>GPU</strong>: 有効にすると、アドオンは有効な GPU アクセラレーションを使用しようとします。 (2 つの DLL ファイルをダウンロードして、「physx.exe」の同じディレクトリに配置する必要があります)</p>
+<a href="../image/dll_location.png" target="_blank">
+    <img src="../image/dll_location.png" style="width: 60%;" />
+</a><p><strong>Debug</strong>: 有効にすると、アドオンは PhysX ビジュアル デバッガーに接続して、シミュレーションの詳細を表示しようとします。 PVD には追加の消費が必要であることに注意してください。必要でない場合は、無効にしてください。 PhysX ビジュアル デバッガーのダウンロード: <a class="reference external" href="https://developer.nvidia.com/physx-visual-debugger">https://developer.nvidia.com/physx-visual-debugger</a></p>
 <video width="100%" controls src="../video/debug_demo.mp4">
   Your browser does not support the video tag.
 </video><hr class="docutils" />

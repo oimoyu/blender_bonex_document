@@ -50,6 +50,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#why-i-develop-this">Why I develop this</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#advantage">Advantage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#why-use-a-rigid-body-to-simulate-a-skirt-instead-of-cloth-simulation">Why use a rigid body to simulate a skirt instead of cloth simulation?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#problems">Problems</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#gpu">GPU</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#reference">Reference</a></li>
 </ul>
@@ -57,6 +58,7 @@
 <li class="toctree-l1"><a class="reference internal" href="get_start.html">Get start</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rigidbody.html">Rigid body</a></li>
 <li class="toctree-l1"><a class="reference internal" href="joint.html">Joint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="soft_connection.html">Soft Connection</a></li>
 <li class="toctree-l1"><a class="reference internal" href="force_field.html">Force Field</a></li>
 <li class="toctree-l1"><a class="reference internal" href="scene.html">Scene Setting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="simulation.html">Simulation</a></li>
@@ -94,6 +96,9 @@
 <section id="id1">
 <h2>Introduction<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
 <p>BoneX is a Blender addon helps you to create bone physics animation, driven by PhysX. PhysX is a mature physics engine used in game field, like UE4, U3D. Relying on PhysX to generate stable rigid body simulations, you can create bone physics effects for character animation. You can modify the properties of the rigid body and set its connection stiffness, damping quality, etc. to achieve the physical effects you want.</p>
+<p>Platform Support: Windows</p>
+<p>Blender Version: 3.6+</p>
+<p>UI Language Support: English, 日本語, 中文</p>
 </section>
 <section id="why-i-develop-this">
 <h2>Why I develop this<a class="headerlink" href="#why-i-develop-this" title="Link to this heading"></a></h2>
@@ -101,25 +106,26 @@
 </section>
 <section id="advantage">
 <h2>Advantage<a class="headerlink" href="#advantage" title="Link to this heading"></a></h2>
-<p>①Relying on the mature physics engine physx, the simulation is efficient and stable</p>
-<p>②There is no need to create any additional auxiliary empty objects or mesh objects. The addon will directly modify the displacement and rotation of the bones, eliminating the trouble of management.</p>
-<p>③Collision group mask to control collision interaction supported</p>
-<p>④Custom collision body mesh supported</p>
-<p>⑤Real-time playback  interactions</p>
-<p>⑥Partial simulation supported, helps you improve detailed adjustments</p>
+<p>①Relying on the mature physics engine physx, the simulation is stable, with less jitter</p>
+<p>②Collision group mask to control collision interaction supported</p>
+<p>③Custom collision body mesh supported</p>
+<p>④Real-time playback  interactions</p>
+<p>⑤Partial simulation supported, helps you improve detailed adjustments</p>
 <p>etc.</p>
 </section>
 <section id="why-use-a-rigid-body-to-simulate-a-skirt-instead-of-cloth-simulation">
 <h2>Why use a rigid body to simulate a skirt instead of cloth simulation?<a class="headerlink" href="#why-use-a-rigid-body-to-simulate-a-skirt-instead-of-cloth-simulation" title="Link to this heading"></a></h2>
-<p>①Fast. The basic object of cloth simulation is mesh vertices, which requires a large amount of calculation, while the basic object of rigid body simulation is a small number of rigid bodies. In essence, it is a proxy method. Rigid body motion drives bone motion -&gt; bones drive vertices motion.</p>
-<p>② Stable and controllable. Rigid body simulation only needs to focus on a limited number of rigid bodies.</p>
-<p>③Keep the shape. When making stylized characters, you need to make some exaggerated shapes that violate the laws of physics. If you use cloth simulation, these shapes will collapse with the collapse of the cloth. Rigid body simulation drives bones, and one bone can control many vertices. , which maintains their relative positions.</p>
-<p>④Prevent mesh intersection. If cloth simulation is used for proxy, contact and mesh intersection are problems. The collision volume of the cloth is only a thin layer, while the collision volume of the rigid body can be defined by yourself. For a fluffy mesh, a larger collision volume can be made to prevent other meshes from intersecting the mold.</p>
-<p><strong>Notice</strong> that this this addon only support windows.</p>
+<p>① Stable and controllable. Rigid body simulation only needs to focus on a limited number of rigid bodies.</p>
+<p>② Keep the shape. When making stylized characters, you need to make some exaggerated shapes that violate the laws of physics. If you use cloth simulation, these shapes will collapse with the collapse of the cloth. Rigid body simulation drives bones, and one bone can control many vertices, which maintains their relative positions.</p>
+<p>③ Prevent mesh intersection. If cloth simulation is used for proxy, contact and mesh intersection are problems. The collision volume of cloth is only a thin layer, while the collision volume of the rigid body can be defined by yourself. For a fluffy mesh, a larger collision volume can be made to prevent other meshes from intersecting the mold.</p>
+</section>
+<section id="problems">
+<h2>Problems<a class="headerlink" href="#problems" title="Link to this heading"></a></h2>
+<p>This addon suitable for situations where there are not so many bones. Especially for mmd users, the efficiency of this addon is not as efficient as mmd rigid body. There is an obvious performance bottleneck in blender’s setting of object transformation. This addon is slow when dealing with some models that generate hundreds or thousands of bones for simulation.</p>
 </section>
 <section id="gpu">
 <h2>GPU<a class="headerlink" href="#gpu" title="Link to this heading"></a></h2>
-<p>Physx supports CUDA hardware acceleration. Indeed, the powerful parallel computing capability of the GPU can accelerate the calculation speed, but it does not reflect the advantage in the usage scenario of this plug-in. When the CPU and GPU are used together, additional data processing overhead is required. For the calculation of very large and large rigid body particles, this overhead accounts for a very small proportion, which can reflect the acceleration advantage. However, if the number of rigid bodies is small, then additional The overhead may even slow down the calculation. And if you want to use GPU acceleration, you also need to come with a huge DLL file. And the performance bottleneck not lies in physx. For the above reasons, adding GPU acceleration function is not considered.</p>
+<p>Physx supports CUDA hardware acceleration. When there are many rigid bodies or the number of iterations is large and the frame generation takes a long time, using the GPU will significantly increase the calculation speed. If you need to use the GPU acceleration function, you need to download “PhysXGpu_64.dll” and “PhysXDevice64.dll” and place them in the same location as “physx.exe” in the addon directory.</p>
 </section>
 <section id="reference">
 <h2>Reference<a class="headerlink" href="#reference" title="Link to this heading"></a></h2>

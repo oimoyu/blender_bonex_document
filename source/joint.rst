@@ -9,7 +9,7 @@ Joint
 
 Component of Joint
 ------------------------
-Within rigid Body modification interface, press "C", a rigid body will be created at position of the bone. If the bone has a parent, a joint will be created at the head of the bone to connect the parent bone, the child bone can rotate and move around the joints. The axis in the joint settings means the local axis of the bone (The local axis of the bone can be set to display in the armature properties armature->Data->Viewport Display->Axes). The center of mass of the rigidbody will be fixed at the tail of the bone, so the behavior of collision as a single rigidbody will be a bit strange without a parent bone.
+Within rigid Body modification interface, press "C", a rigid body will be created at position of the bone. If the bone has a parent, a joint will be created at the head of the bone to connect the parent bone, the child bone can rotate and move around the joints. If the bone don't have a parent, joints will not be created.The axis in the joint settings means the local axis of the bone (The local axis of the bone can be set to display in the armature properties armature->Data->Viewport Display->Axes). The center of mass of the rigidbody will be fixed at the tail of the bone, so the behavior of collision as a single rigidbody will be a bit strange without a parent bone.
 
 Joint between two rigidbody can be seen as a spring, two rigidbody is connected by spring force.
 

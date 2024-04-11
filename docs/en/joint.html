@@ -21,7 +21,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Force Field" href="force_field.html" />
+    <link rel="next" title="Soft Connection" href="soft_connection.html" />
     <link rel="prev" title="Rigid body" href="rigidbody.html" /> 
 </head>
 
@@ -53,6 +53,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#joint-properties">Joint Properties</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="soft_connection.html">Soft Connection</a></li>
 <li class="toctree-l1"><a class="reference internal" href="force_field.html">Force Field</a></li>
 <li class="toctree-l1"><a class="reference internal" href="scene.html">Scene Setting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="simulation.html">Simulation</a></li>
@@ -91,7 +92,7 @@
     <img src="../image/joint_setting.png" style="width: 20%;" />
 </a><section id="component-of-joint">
 <h2>Component of Joint<a class="headerlink" href="#component-of-joint" title="Link to this heading"></a></h2>
-<p>Within rigid Body modification interface, press “C”, a rigid body will be created at position of the bone. If the bone has a parent, a joint will be created at the head of the bone to connect the parent bone, the child bone can rotate and move around the joints. The axis in the joint settings means the local axis of the bone (The local axis of the bone can be set to display in the armature properties armature-&gt;Data-&gt;Viewport Display-&gt;Axes). The center of mass of the rigidbody will be fixed at the tail of the bone, so the behavior of collision as a single rigidbody will be a bit strange without a parent bone.</p>
+<p>Within rigid Body modification interface, press “C”, a rigid body will be created at position of the bone. If the bone has a parent, a joint will be created at the head of the bone to connect the parent bone, the child bone can rotate and move around the joints. If the bone don’t have a parent, joints will not be created.The axis in the joint settings means the local axis of the bone (The local axis of the bone can be set to display in the armature properties armature-&gt;Data-&gt;Viewport Display-&gt;Axes). The center of mass of the rigidbody will be fixed at the tail of the bone, so the behavior of collision as a single rigidbody will be a bit strange without a parent bone.</p>
 <p>Joint between two rigidbody can be seen as a spring, two rigidbody is connected by spring force.</p>
 </section>
 <section id="joint-properties">
@@ -115,7 +116,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="rigidbody.html" class="btn btn-neutral float-left" title="Rigid body" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="force_field.html" class="btn btn-neutral float-right" title="Force Field" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="soft_connection.html" class="btn btn-neutral float-right" title="Soft Connection" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

@@ -51,14 +51,12 @@
 <li class="toctree-l2"><a class="reference internal" href="#installation">インストール</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#update-a-new-version">新しいバージョンを更新する</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#quick-start">クイックスタート</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#prerequisites-before-use">使用前の前提条件</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#if-a-bone-cannot-be-move-in-pose-mode">ポーズモードでボーンを移動できない場合</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#keyframe-animation-notice">キーフレームアニメーションに関する注意事項</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="rigidbody.html">剛体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="joint.html">ジョイント</a></li>
+<li class="toctree-l1"><a class="reference internal" href="soft_connection.html">ソフトコネクション</a></li>
 <li class="toctree-l1"><a class="reference internal" href="force_field.html">力場</a></li>
 <li class="toctree-l1"><a class="reference internal" href="scene.html">シーン設定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="simulation.html">シミュレーション</a></li>
@@ -117,16 +115,10 @@
 <video width="100%" controls src="../video/fast_start.mp4">
   Your browser does not support the video tag.
 </video></section>
-<section id="prerequisites-before-use">
-<h2>使用前の前提条件<a class="headerlink" href="#prerequisites-before-use" title="Link to this heading"></a></h2>
-<p>このアドオンはボーンの位置と回転を直接変更するため、使用する前にボーンポーズモードに移動して、ボーンが手動で移動または回転できるかどうかを確認してください。</p>
-<section id="if-a-bone-cannot-be-move-in-pose-mode">
-<h3>ポーズモードでボーンを移動できない場合<a class="headerlink" href="#if-a-bone-cannot-be-move-in-pose-mode" title="Link to this heading"></a></h3>
-<p>① 位置や回転をロックするボーン コンストレイントが存在するかどうかを確認します。 多数のボーンとボーン コンストレイントがある場合、このアドオンのツールを使用して、選択したボーンのボーン コンストレイントをバッチでオフにすることができます。</p>
-<p>②ポーズモードのNパネルのボーン位置に鍵アイコンがあるか確認してください。 これにより、ユーザー インターフェイス (R G S ホットキーや Alt+R G S ホットキーなど) でボーンを操作できなくなります。</p>
-<p>③ 親のないボーンの&quot;connected&quot;オプションにチェックが入っているかどうかを確認します。</p>
-<p><strong>注意</strong>: このアドオンはクォータニオン回転に基づいています (つまり、Blender ボーンのデフォルトの回転モードです。これを変更していない場合は無視してください)。 ボーンの回転を適用すると、ボーンの回転モードがクォータニオンに変更されます。</p>
-</section>
+<hr class="docutils" />
+<section id="keyframe-animation-notice">
+<h2>キーフレームアニメーションに関する注意事項<a class="headerlink" href="#keyframe-animation-notice" title="Link to this heading"></a></h2>
+<p>このアドオンは空のオブジェクトを使用してボーン変換を実行するため、ボーン上にアニメーション キーフレームが表示されません。ボーンのキーフレームを編集したい場合は、ボーンを選択して「ドライバーに切り替える」をクリックしてさらに操作できます。</p>
 </section>
 </section>
 

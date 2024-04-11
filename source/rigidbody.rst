@@ -5,6 +5,8 @@ Basic usage
 -------------
 In bone pose mode, click the "Start Modify" button to access the Rigid Body modification interface. Within this interface, you have press "C" to set selected bones as rigid body bones, which allows them to be driven by physx during animations. Additionally, you can view the shape of the rigid body and change the properties of the selected rigid body bone in this mode.
 
+**note, that when a bone is set as rigid body, this addon will create a empty object at the bone call driver, and this bone will completely track to this driver. If you want to move bone manually, you can check the tool panel for more operation.**
+
 Rigid body properties
 --------------------------
 
@@ -16,6 +18,8 @@ Rigid body properties
 
 Within rigid Body modification interface, when you select a rigidody bone, you will see the property in the panel. You can change the value, then the setting will apply to the selected rigidbody bone.
 
+
+**Rigidbody Shape Refresh Interval**: If you feel laggy in rigidbody modify mode, increase refresh interval time
 
 **Dynamic**: A dynamic rigid body is a rigid body calculated by physx and will move under the action of force.
 
@@ -44,6 +48,17 @@ Friction Force only appear when the pressure exist.
 **Collision Group**: rigidbody will collide with which group.
 
 If you want to disable the collision internal a certain group, then disable the collision group of their corresponding group.
+
+For Example, I want to disable a skirt self collision. Set the rigidbody group to second layer enable, and set the collision group second layer disable, which means skirt is in second group, and skirt will not collide with rigidbody in second group.
+
+.. raw:: html
+
+    <video width="100%" controls src="../video/set_collision_group.mp4">
+      Your browser does not support the video tag.
+    </video>
+
+......
+
 
 Kinematic rigidbodies are not always needed
 ----------------------------------------------------

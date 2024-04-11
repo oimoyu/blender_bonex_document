@@ -50,14 +50,12 @@
 <li class="toctree-l2"><a class="reference internal" href="#installation">安装</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#update-a-new-version">更新新版本</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#quick-start">快速开始</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#prerequisites-before-use">使用前的先决条件</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#if-a-bone-cannot-be-move-in-pose-mode">如果骨骼无法在姿势模式下移动</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#keyframe-animation-notice">关键帧动画注意事项</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="rigidbody.html">刚体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="joint.html">关节</a></li>
+<li class="toctree-l1"><a class="reference internal" href="soft_connection.html">软连接</a></li>
 <li class="toctree-l1"><a class="reference internal" href="force_field.html">力场</a></li>
 <li class="toctree-l1"><a class="reference internal" href="scene.html">场景设置</a></li>
 <li class="toctree-l1"><a class="reference internal" href="simulation.html">模拟</a></li>
@@ -116,16 +114,10 @@
 <video width="100%" controls src="../video/fast_start.mp4">
   Your browser does not support the video tag.
 </video></section>
-<section id="prerequisites-before-use">
-<h2>使用前的先决条件<a class="headerlink" href="#prerequisites-before-use" title="Link to this heading"></a></h2>
-<p>由于该插件会直接修改骨骼的位置和旋转，因此在使用之前，请先进入骨骼姿势模式检查骨骼是否可以手动移动或旋转。</p>
-<section id="if-a-bone-cannot-be-move-in-pose-mode">
-<h3>如果骨骼无法在姿势模式下移动<a class="headerlink" href="#if-a-bone-cannot-be-move-in-pose-mode" title="Link to this heading"></a></h3>
-<p>① 检查是否有骨骼约束锁定其位置或旋转。 如果骨骼的骨骼约束较多，可以使用本插件的工具批量关闭所选骨骼的骨骼约束。</p>
-<p>② 检查姿势模式下N面板中骨骼位置是否有锁定图标。 这将导致您无法在用户界面中操作骨骼（如 R G S 热键或 Alt+R G S 热键）。</p>
-<p>③ 检查没有父级的骨骼是否勾选了connected选项。</p>
-<p><strong>注意</strong>：该插件基于四元数旋转（即Blender骨骼的默认旋转模式，如果没有更改则忽略它）。 应用骨骼旋转时，骨骼旋转模式将更改为四元数。</p>
-</section>
+<hr class="docutils" />
+<section id="keyframe-animation-notice">
+<h2>关键帧动画注意事项<a class="headerlink" href="#keyframe-animation-notice" title="Link to this heading"></a></h2>
+<p>该插件使用空对象来驱动骨骼变换，因此您在骨骼上看不到动画关键帧，当您想要编辑骨骼关键帧时，可以选择骨骼并单击“切换到驱动程序”进行进一步操作。</p>
 </section>
 </section>
 

@@ -50,6 +50,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#why-i-develop-this">我为什么开发这个插件</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#advantage">优势</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#why-use-a-rigid-body-to-simulate-a-skirt-instead-of-cloth-simulation">为什么使用刚体来模拟裙子而不是布料模拟？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#problems">问题</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#gpu">GPU</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#reference">Reference</a></li>
 </ul>
@@ -57,6 +58,7 @@
 <li class="toctree-l1"><a class="reference internal" href="get_start.html">开始</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rigidbody.html">刚体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="joint.html">关节</a></li>
+<li class="toctree-l1"><a class="reference internal" href="soft_connection.html">软连接</a></li>
 <li class="toctree-l1"><a class="reference internal" href="force_field.html">力场</a></li>
 <li class="toctree-l1"><a class="reference internal" href="scene.html">场景设置</a></li>
 <li class="toctree-l1"><a class="reference internal" href="simulation.html">模拟</a></li>
@@ -94,6 +96,9 @@
 <section id="id1">
 <h2>介绍<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
 <p>BoneX 是一个 Blender 插件，可帮助您创建由 PhysX 驱动的骨骼物理动画。 PhysX是一个成熟的物理引擎，应用于游戏领域，如UE4、U3D。 依靠PhysX生成稳定的刚体模拟，您可以为角色动画创建骨骼物理效果。 您可以修改刚体的属性并设置其连接刚度、阻尼质量等，以达到您想要的物理效果。</p>
+<p>Platform Support: Windows</p>
+<p>Blender Version: 3.6+</p>
+<p>UI Language Support: English, 日本語, 中文</p>
 </section>
 <section id="why-i-develop-this">
 <h2>我为什么开发这个插件<a class="headerlink" href="#why-i-develop-this" title="Link to this heading"></a></h2>
@@ -101,25 +106,26 @@
 </section>
 <section id="advantage">
 <h2>优势<a class="headerlink" href="#advantage" title="Link to this heading"></a></h2>
-<p>①依托成熟的物理引擎 physx，模拟高效稳定</p>
-<p>②无需创建任何额外的辅助空对象或网格对象。插件会直接修改骨骼的位移和旋转，省去了管理的麻烦。</p>
-<p>③支持碰撞组遮罩，用于控制刚体的碰撞交互</p>
-<p>④支持自定义碰撞体网格</p>
-<p>⑤ 实时播放互动</p>
-<p>⑥支持部分模拟，帮助您完善细节调整</p>
+<p>①依托成熟的物理引擎 physx，模拟稳定</p>
+<p>②支持碰撞组遮罩，用于控制刚体的碰撞交互</p>
+<p>③支持自定义碰撞体网格</p>
+<p>④ 实时播放互动</p>
+<p>⑤支持部分模拟，帮助您完善细节调整</p>
 <p>etc.</p>
 </section>
 <section id="why-use-a-rigid-body-to-simulate-a-skirt-instead-of-cloth-simulation">
 <h2>为什么使用刚体来模拟裙子而不是布料模拟？<a class="headerlink" href="#why-use-a-rigid-body-to-simulate-a-skirt-instead-of-cloth-simulation" title="Link to this heading"></a></h2>
-<p>①快。 布料模拟的基本对象是网格顶点，计算量较大，而刚体模拟的基本对象是少量刚体。 本质上，它是一种代理方法。 刚体运动驱动骨骼运动 -&gt; 骨骼驱动顶点运动。</p>
 <p>②稳定可控。 刚体模拟只需关注有限数量的刚体。</p>
-<p>③保持形状。 在制作风格化的角色时，需要制作一些违反物理定律的夸张形状。 如果使用布料模拟，这些形状会随着布料的塌陷而塌陷。 刚体模拟驱动骨骼，一根骨骼可以控制多个顶点。 ，保持它们的相对位置。</p>
-<p>④防止网格交叉。 如果使用布料模拟作为代理，接触和网格交叉就会出现问题。 布料的碰撞体积只是薄薄的一层，而刚体的碰撞体积可以自己定义。 对于蓬松的网格，可以制作较大的碰撞体积，以防止其他网格与模具相交。</p>
-<p><strong>注意</strong> 这个插件仅支持Windows。</p>
+<p>③ 保持形状。 在制作风格化的角色时，需要制作一些违反物理定律的夸张形状。 如果使用布料模拟，这些形状会随着布料的塌陷而塌陷。 刚体模拟驱动骨骼，一根骨骼可以控制多个顶点 ，保持它们的相对位置。</p>
+<p>④ 防止网格交叉。 如果使用布料模拟作为代理，接触和网格交叉就会出现问题。 布料的碰撞体积只是薄薄的一层，而刚体的碰撞体积可以自己定义。 对于蓬松的网格，可以制作较大的碰撞体积，以防止其他网格与模具相交。</p>
+</section>
+<section id="problems">
+<h2>问题<a class="headerlink" href="#problems" title="Link to this heading"></a></h2>
+<p>这个插件适合没有那么多骨头的情况。 尤其是对于mmd用户来说，这个addon的效率还不如mmd刚体那么高效。 Blender对物体变换的设置存在明显的性能瓶颈。 在处理一些生成数百或数千个骨骼进行模拟的模型时，此插件速度很慢。</p>
 </section>
 <section id="gpu">
 <h2>GPU<a class="headerlink" href="#gpu" title="Link to this heading"></a></h2>
-<p>Physx 支持 CUDA 硬件加速。 确实，GPU强大的并行计算能力可以加快计算速度，但是在这个插件的使用场景中并不能体现出优势。 当CPU和GPU一起使用时，需要处理额外的数据开销。 对于非常多和大型刚体粒子的计算，这个开销占的比例很小，可以体现加速优势。 然而，如果刚体的数量很少，那么额外的开销甚至可能会减慢计算速度。 而如果要使用GPU加速，还需要自带巨大的DLL文件。 而且性能瓶颈并不在于physx。 由于上述原因，不考虑添加GPU加速功能。</p>
+<p>Physx 支持 CUDA 硬件加速。 当刚体较多或迭代次数较多、帧生成时间较长时，使用GPU会显着提高计算速度。 如果需要使用GPU加速功能，需要下载“PhysXGpu_64.dll”和“PhysXDevice64.dll”并将其放置在addon目录中与“physx.exe”相同的位置。</p>
 </section>
 <section id="reference">
 <h2>Reference<a class="headerlink" href="#reference" title="Link to this heading"></a></h2>

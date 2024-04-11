@@ -15,4 +15,4 @@ Scene Setting
 
 **Velocity Iteration Number**: The higher the value, the more accurate the velocity of the simulation results.
 
-A long rigidbody chain need to increase iterations.
+A long rigidbody chain or model intersection need to increase iterations.

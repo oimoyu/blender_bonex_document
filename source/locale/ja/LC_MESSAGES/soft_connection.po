@@ -1,0 +1,50 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, oimoyu
+# This file is distributed under the same license as the Blender Bonex
+# Document package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Bonex Document\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-11 11:33+0800\n"
+"PO-Revision-Date: 2024-04-11 14:00+0800\n"
+"Last-Translator: \n"
+"Language-Team: ja <LL@li.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.14.0\n"
+"X-Generator: Poedit 3.4.2\n"
+
+#: ../../source/soft_connection.rst:2
+msgid "Soft Connection"
+msgstr "ソフトコネクション"
+
+#: ../../source/soft_connection.rst:4
+msgid ""
+"Soft connection is a spring, which constraint two rigidbody. But soft "
+"connection only constraint location. Often used for lateral constraints "
+"on skirts or cloaks to prevent excessive mesh deformation. If you wan to "
+"make the floating widget, set the joint instead, because soft connection "
+"can not constraint angle."
+msgstr ""
+"ソフトコネクションはスプリングのようなもので、二つの剛体を拘束します。し"
+"かし、ソフト接続は位置のみを制約します。スカートやマントの側面制約によく"
+"使用され、過度なメッシュ変形を防ぎます。浮遊するウィジェットを作成したい"
+"場合は、ソフトコネクションではなくジョイントを設定してください。ソフトコ"
+"ネクションは角度を制約できません。"
+
+#: ../../source/soft_connection.rst:6
+msgid ""
+"In rigidbody modify mode, you can press Ctrl+W to add soft connection in "
+"batch(skirt using \"tube\" option, cope using \"plane\" option, create "
+"single soft connection using \"pair\" option)"
+msgstr ""
+"剛体変更モードでは、Ctrl+Wを押してバッチにソフト接続を追加できます（「管"
+"状」オプションを使用してスカート、「平面」オプションを使用して対処し、"
+"「ペア」オプションを使用して単一のソフト接続を作成します）"

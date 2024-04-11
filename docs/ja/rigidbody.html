@@ -57,6 +57,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="joint.html">ジョイント</a></li>
+<li class="toctree-l1"><a class="reference internal" href="soft_connection.html">ソフトコネクション</a></li>
 <li class="toctree-l1"><a class="reference internal" href="force_field.html">力場</a></li>
 <li class="toctree-l1"><a class="reference internal" href="scene.html">シーン設定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="simulation.html">シミュレーション</a></li>
@@ -94,12 +95,14 @@
 <section id="basic-usage">
 <h2>基本的な使い方<a class="headerlink" href="#basic-usage" title="Link to this heading"></a></h2>
 <p>ボーン ポーズ モードでは、[変更開始] ボタンをクリックして、剛体変更インターフェイスにアクセスします。 このインターフェイス内で、「C」を押して選択したボーンを剛体ボーンとして設定し、アニメーション中に physx によってボーンを駆動できるようにします。 さらに、このモードでは、剛体の形状を表示したり、選択した剛体 ボーンのプロパティを変更したりすることができます。</p>
+<p><strong>ボーンが剛体として設定されている場合、このアドオンはボーン呼び出しドライバーで空のオブジェクトを作成し、このボーンはこのドライバーを完全に追跡することに注意してください。 ボーンを手動で移動する場合は、ツール パネルで詳細な操作を確認できます。</strong></p>
 </section>
 <section id="rigid-body-properties">
 <h2>剛体のプロパティ<a class="headerlink" href="#rigid-body-properties" title="Link to this heading"></a></h2>
 <a href="../image/rigidbody_setting.png" target="_blank">
     <img src="../image/rigidbody_setting.png" style="width: 20%;" />
 </a><p>剛体変更インターフェイス内で剛体ボーンを選択すると、パネルにプロパティが表示されます。 値を変更すると、その設定が選択した 剛体ボーンに適用されます。</p>
+<p><strong>剛体形状の更新間隔</strong>: 剛体 変更モードで遅れを感じる場合は、リフレッシュ間隔時間を増やしてください</p>
 <p><strong>Dynamic</strong>: dynamic剛体は、physx によって計算された剛体であり、力の作用下で動きます。</p>
 <p><strong>Kinematic</strong>: kinematic剛体は、ユーザーのキーフレーム アニメーションによって制御されます。 その動きは絶対的であり、いかなる力にも影響されません。 また、dynamic剛体と衝突してdynamic剛体運動を行うことができます。</p>
 <video width="100%" controls src="../video/kinematic.mp4">
@@ -113,7 +116,11 @@
 <p><strong>剛体グループ</strong>: 剛体がどのグループに属しているか。 空が設定されている場合、この剛体は何とも衝突しないことを意味します。</p>
 <p><strong>コリジョングループ</strong>: 剛体はどのグループと衝突します。</p>
 <p>特定のグループ内のコリジョンを無効にしたい場合は、対応するコリジョングループを無効にします。</p>
-</section>
+<p>たとえば、スカートの自己衝突を無効にしたいとします。 リジッドボディ グループを 2 番目のレイヤを有効に設定し、衝突グループの 2 番目のレイヤを無効に設定します。つまり、スカートは 2 番目のグループにあり、スカートは 2 番目のグループのリジッドボディと衝突しません。</p>
+<video width="100%" controls src="../video/set_collision_group.mp4">
+  Your browser does not support the video tag.
+</video></section>
+<hr class="docutils" />
 <section id="kinematic-rigidbodies-are-not-always-needed">
 <h2>kinematic剛体は必ずしも必要というわけではありません<a class="headerlink" href="#kinematic-rigidbodies-are-not-always-needed" title="Link to this heading"></a></h2>
 <p>ボーンがdynamic剛体に設定されており、それに親ボーンがある場合、ダイナミック ボーンは依然として親ボーンによって制御されます。</p>

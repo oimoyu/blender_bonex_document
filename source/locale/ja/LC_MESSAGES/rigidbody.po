@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Bonex Document\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-08 09:03+0800\n"
-"PO-Revision-Date: 2024-04-08 10:14+0800\n"
+"POT-Creation-Date: 2024-04-11 09:45+0800\n"
+"PO-Revision-Date: 2024-04-11 13:53+0800\n"
 "Last-Translator: \n"
 "Language-Team: ja <LL@li.org>\n"
 "Language: ja\n"
@@ -44,11 +44,23 @@ msgstr ""
 "ボーンを駆動できるようにします。 さらに、このモードでは、剛体の形状を表示"
 "したり、選択した剛体 ボーンのプロパティを変更したりすることができます。"
 
-#: ../../source/rigidbody.rst:9
+#: ../../source/rigidbody.rst:8
+msgid ""
+"**note, that when a bone is set as rigid body, this addon will create a "
+"empty object at the bone call driver, and this bone will completely "
+"track to this driver. If you want to move bone manually, you can check "
+"the tool panel for more operation.**"
+msgstr ""
+"**ボーンが剛体として設定されている場合、このアドオンはボーン呼び出しドラ"
+"イバーで空のオブジェクトを作成し、このボーンはこのドライバーを完全に追跡"
+"することに注意してください。 ボーンを手動で移動する場合は、ツール パネル"
+"で詳細な操作を確認できます。**"
+
+#: ../../source/rigidbody.rst:11
 msgid "Rigid body properties"
 msgstr "剛体のプロパティ"
 
-#: ../../source/rigidbody.rst:17
+#: ../../source/rigidbody.rst:19
 msgid ""
 "Within rigid Body modification interface, when you select a rigidody "
 "bone, you will see the property in the panel. You can change the value, "
@@ -58,7 +70,15 @@ msgstr ""
 "表示されます。 値を変更すると、その設定が選択した 剛体ボーンに適用されま"
 "す。"
 
-#: ../../source/rigidbody.rst:20
+#: ../../source/rigidbody.rst:22
+msgid ""
+"**Rigidbody Shape Refresh Interval**: If you feel laggy in rigidbody "
+"modify mode, increase refresh interval time"
+msgstr ""
+"**剛体形状の更新間隔**: 剛体 変更モードで遅れを感じる場合は、リフレッシュ"
+"間隔時間を増やしてください"
+
+#: ../../source/rigidbody.rst:24
 msgid ""
 "**Dynamic**: A dynamic rigid body is a rigid body calculated by physx "
 "and will move under the action of force."
@@ -66,7 +86,7 @@ msgstr ""
 "**Dynamic**: dynamic剛体は、physx によって計算された剛体であり、力の作用"
 "下で動きます。"
 
-#: ../../source/rigidbody.rst:22
+#: ../../source/rigidbody.rst:26
 msgid ""
 "**Kinematic**: The kinematic rigid body is controlled by the user's key "
 "frame animation. Its movement is absolute and not affected by any force. "
@@ -77,17 +97,17 @@ msgstr ""
 "よって制御されます。 その動きは絶対的であり、いかなる力にも影響されませ"
 "ん。 また、dynamic剛体と衝突してdynamic剛体運動を行うことができます。"
 
-#: ../../source/rigidbody.rst:32
+#: ../../source/rigidbody.rst:36
 msgid "**Mass**: The mass of a rigid body, obeying various physical laws"
 msgstr "**質量**: さまざまな物理法則に従う剛体の質量"
 
-#: ../../source/rigidbody.rst:34
+#: ../../source/rigidbody.rst:38
 msgid ""
 "**Static Friction Coefficient**: the resistance to the start of motion "
 "between two surfaces."
 msgstr "**静摩擦係数**: 2 つの表面間の動きの開始に対する抵抗。"
 
-#: ../../source/rigidbody.rst:36
+#: ../../source/rigidbody.rst:40
 msgid ""
 "**Dynamic Friction Coefficient**: the resistance to motion when two "
 "surfaces are already sliding against each other."
@@ -95,15 +115,15 @@ msgstr ""
 "**動摩擦係数**: 2 つの表面がすでに互いに滑り合っているときの動きに対する"
 "抵抗。"
 
-#: ../../source/rigidbody.rst:38
+#: ../../source/rigidbody.rst:42
 msgid "Friction Force only appear when the pressure exist."
 msgstr "摩擦力は圧力が存在する場合にのみ現れます。"
 
-#: ../../source/rigidbody.rst:40
+#: ../../source/rigidbody.rst:44
 msgid "**Bounce Coefficient**: reflects the elasticity of the collision."
 msgstr "**バウンス係数**: 衝突の弾性を反映します。"
 
-#: ../../source/rigidbody.rst:42
+#: ../../source/rigidbody.rst:46
 msgid ""
 "**Rigidbody Group**: rigidbody belongs to which group. If empty is set, "
 "that means this rigidbody will not collide with any thing."
@@ -111,11 +131,11 @@ msgstr ""
 "**剛体グループ**: 剛体がどのグループに属しているか。 空が設定されている場"
 "合、この剛体は何とも衝突しないことを意味します。"
 
-#: ../../source/rigidbody.rst:44
+#: ../../source/rigidbody.rst:48
 msgid "**Collision Group**: rigidbody will collide with which group."
 msgstr "**コリジョングループ**: 剛体はどのグループと衝突します。"
 
-#: ../../source/rigidbody.rst:46
+#: ../../source/rigidbody.rst:50
 msgid ""
 "If you want to disable the collision internal a certain group, then "
 "disable the collision group of their corresponding group."
@@ -123,11 +143,23 @@ msgstr ""
 "特定のグループ内のコリジョンを無効にしたい場合は、対応するコリジョング"
 "ループを無効にします。"
 
-#: ../../source/rigidbody.rst:49
+#: ../../source/rigidbody.rst:52
+msgid ""
+"For Example, I want to disable a skirt self collision. Set the rigidbody "
+"group to second layer enable, and set the collision group second layer "
+"disable, which means skirt is in second group, and skirt will not "
+"collide with rigidbody in second group."
+msgstr ""
+"たとえば、スカートの自己衝突を無効にしたいとします。 リジッドボディ グ"
+"ループを 2 番目のレイヤを有効に設定し、衝突グループの 2 番目のレイヤを無"
+"効に設定します。つまり、スカートは 2 番目のグループにあり、スカートは 2 "
+"番目のグループのリジッドボディと衝突しません。"
+
+#: ../../source/rigidbody.rst:62
 msgid "Kinematic rigidbodies are not always needed"
 msgstr "kinematic剛体は必ずしも必要というわけではありません"
 
-#: ../../source/rigidbody.rst:50
+#: ../../source/rigidbody.rst:63
 msgid ""
 "If a bone is set to a dynamic rigid body and it has a parent bone, the "
 "dynamic bone will be still controlled by parent bone."
@@ -135,11 +167,11 @@ msgstr ""
 "ボーンがdynamic剛体に設定されており、それに親ボーンがある場合、ダイナミッ"
 "ク ボーンは依然として親ボーンによって制御されます。"
 
-#: ../../source/rigidbody.rst:53
+#: ../../source/rigidbody.rst:66
 msgid "Modify the Shape of Rigidbody"
 msgstr "剛体の形状を変更する"
 
-#: ../../source/rigidbody.rst:54
+#: ../../source/rigidbody.rst:67
 msgid ""
 "**Switch default shape**: Within rigid Body modification interface, "
 "press \"T\" to switch selected rigidbody shape."
@@ -147,11 +179,11 @@ msgstr ""
 "**デフォルトの形状を切り替える**: 剛体変更インターフェイス内で、「T」を押"
 "して、選択したリジッド ボディの形状を切り替えます。"
 
-#: ../../source/rigidbody.rst:56
+#: ../../source/rigidbody.rst:69
 msgid "Press \"S\" to scale the rigidbody."
 msgstr "「S」を押して剛体をスケールします。"
 
-#: ../../source/rigidbody.rst:66
+#: ../../source/rigidbody.rst:79
 msgid ""
 "**Customize Rigidbody Shape**: Within rigid Body modification interface, "
 "press \"E\" to edit selected rigidbody. Physx's dynamic rigid body only "
@@ -169,7 +201,7 @@ msgstr ""
 "ど速くありません。 特別な必要がない場合は、デフォルトの形状を使用してみて"
 "ください。"
 
-#: ../../source/rigidbody.rst:76
+#: ../../source/rigidbody.rst:89
 msgid ""
 "**Copy Rigidbody Shape**: Within rigid Body modification interface, "
 "press ctrl+\"M\" will copy the active rigidbody shape to other selected "
@@ -178,11 +210,11 @@ msgstr ""
 "**剛体シェイプのコピー**: 剛体変更インターフェイス内で Ctrl+「M」を押す"
 "と、アクティブな剛体シェイプが選択した他の剛体ボーンにコピーされます。"
 
-#: ../../source/rigidbody.rst:87
+#: ../../source/rigidbody.rst:100
 msgid "Animation"
 msgstr "アニメーション"
 
-#: ../../source/rigidbody.rst:88
+#: ../../source/rigidbody.rst:101
 msgid ""
 "A kinimatic rigidbody can be set keyframe to move and rotate to drive "
 "the dynamic rigidbody."

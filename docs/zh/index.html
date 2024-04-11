@@ -48,6 +48,7 @@
 <li class="toctree-l1"><a class="reference internal" href="get_start.html">开始</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rigidbody.html">刚体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="joint.html">关节</a></li>
+<li class="toctree-l1"><a class="reference internal" href="soft_connection.html">软连接</a></li>
 <li class="toctree-l1"><a class="reference internal" href="force_field.html">力场</a></li>
 <li class="toctree-l1"><a class="reference internal" href="scene.html">场景设置</a></li>
 <li class="toctree-l1"><a class="reference internal" href="simulation.html">模拟</a></li>
@@ -89,6 +90,7 @@
 <li class="toctree-l2"><a class="reference internal" href="introduction.html#why-i-develop-this">我为什么开发这个插件</a></li>
 <li class="toctree-l2"><a class="reference internal" href="introduction.html#advantage">优势</a></li>
 <li class="toctree-l2"><a class="reference internal" href="introduction.html#why-use-a-rigid-body-to-simulate-a-skirt-instead-of-cloth-simulation">为什么使用刚体来模拟裙子而不是布料模拟？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#problems">问题</a></li>
 <li class="toctree-l2"><a class="reference internal" href="introduction.html#gpu">GPU</a></li>
 <li class="toctree-l2"><a class="reference internal" href="introduction.html#reference">Reference</a></li>
 </ul>
@@ -97,10 +99,7 @@
 <li class="toctree-l2"><a class="reference internal" href="get_start.html#installation">安装</a></li>
 <li class="toctree-l2"><a class="reference internal" href="get_start.html#update-a-new-version">更新新版本</a></li>
 <li class="toctree-l2"><a class="reference internal" href="get_start.html#quick-start">快速开始</a></li>
-<li class="toctree-l2"><a class="reference internal" href="get_start.html#prerequisites-before-use">使用前的先决条件</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="get_start.html#if-a-bone-cannot-be-move-in-pose-mode">如果骨骼无法在姿势模式下移动</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="get_start.html#keyframe-animation-notice">关键帧动画注意事项</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="rigidbody.html">刚体</a><ul>
@@ -116,6 +115,7 @@
 <li class="toctree-l2"><a class="reference internal" href="joint.html#joint-properties">关节属性</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="soft_connection.html">软连接</a></li>
 <li class="toctree-l1"><a class="reference internal" href="force_field.html">力场</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="force_field.html#create-force-field">创建力场</a></li>
 <li class="toctree-l2"><a class="reference internal" href="force_field.html#force-field-setting">力场设置</a></li>
@@ -140,10 +140,13 @@
 <li class="toctree-l1"><a class="reference internal" href="faq.html">常见问题</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#why-does-relative-displacement-still-occur-after-simulation-even-though-the-joint-distance-is-set-to-0">为什么关节距离设置为0，仿真后仍然出现相对位移？</a></li>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#why-does-jitter-occur">为什么会出现抖动？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#why-did-the-simulation-stop-early-when-playback">为什么回放时模拟提前停止？</a></li>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#why-is-the-simulation-unable-to-move-despite-setting-upper-and-lower-displacement-limits">为什么尽管设置了位移上限和下限，模拟仍无法移动？</a></li>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#what-should-i-do-if-the-fps-is-too-low-during-playback">播放时FPS太低怎么办？</a></li>
-<li class="toctree-l2"><a class="reference internal" href="faq.html#why-can-t-i-move-rigid-body-bones-during-playback">为什么我在播放过程中无法移动刚体骨骼？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#what-should-i-do-if-the-laggy-in-rigidbody-modify-mode">刚体编辑模式下卡顿怎么办？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#why-can-t-rigidbody-bones-be-moved-manually">为什么无法手动移动刚体骨骼？</a></li>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#high-speed-movement-penetrate-rigidbody-issues">高速运动穿透刚体问题</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#why-this-addon-using-empty-obj-to-drive-bones">为什么这个插件使用空 obj 来驱动骨骼？</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="contact.html">联系</a></li>

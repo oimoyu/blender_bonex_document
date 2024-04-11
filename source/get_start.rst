@@ -39,21 +39,12 @@ Start playing then you get a physics bone.
     <video width="100%" controls src="../video/fast_start.mp4">
       Your browser does not support the video tag.
     </video>
+    
+......
+
+Keyframe Animation Notice
+------------------------------------------------
+This addon use empty objects to drive bone transform, so you can not see the animation keyframe on your bones, when you want to edit keyframe of bones, you can select bones and click the "Switch To Driver" to further operation.
 
 
-
-Prerequisites before use
-------------------------
-Cause this addon will directly modify the position and rotation of the bones, before using it, please go to the bone pose mode to check whether the bones can be move or rotated manually by you.
-
-If a bone cannot be move in pose mode
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-① Check whether there are bone constraints that lock his position or rotation. If there are many bones and bone constraints, you can use the tools of this addon to turn off the bone constraints of the selected bones in batches.
-
-② Check whether there is a lock icon on the bone position in the N panel in pose mode. This will cause you to be unable to operate the bones in the user interface(like R G S hotkey or Alt+R G S hotkey).
-
-③ Check whether the bones without a parent have the connected option checked.
-
-**Note**: This addon is based on quaternion rotation (that is, the default rotation mode of Blender bones, ignore it if you have not changed this). When applying bone rotation, the bone rotation mode will be changed to quaternion.
 

@@ -22,7 +22,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="検索" href="search.html" />
-    <link rel="next" title="力場" href="force_field.html" />
+    <link rel="next" title="ソフトコネクション" href="soft_connection.html" />
     <link rel="prev" title="剛体" href="rigidbody.html" /> 
 </head>
 
@@ -54,6 +54,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#joint-properties">ジョイントのプロパティ</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="soft_connection.html">ソフトコネクション</a></li>
 <li class="toctree-l1"><a class="reference internal" href="force_field.html">力場</a></li>
 <li class="toctree-l1"><a class="reference internal" href="scene.html">シーン設定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="simulation.html">シミュレーション</a></li>
@@ -92,7 +93,7 @@
     <img src="../image/joint_setting.png" style="width: 20%;" />
 </a><section id="component-of-joint">
 <h2>ジョイントの構成要素<a class="headerlink" href="#component-of-joint" title="Link to this heading"></a></h2>
-<p>剛体変更インターフェイス内で「C」を押すと、ボーンの位置に剛体が作成されます。 ボーンに親がある場合、ボーンの頭にジョイントが作成されて親ボーンに接続され、子ボーンはジョイントを中心に回転したり移動したりできます。 ジョイント設定の軸は、ボーンのローカル軸を意味します (ボーンのローカル軸は、アーマチュア プロパティの [アーマチュア] -&gt; [データ] -&gt; [ビューポート表示] -&gt; [軸] で表示するように設定できます)。 リジッドボディの質量中心はボーンの尾部に固定されるため、親ボーンがないと単一のリジッドボディとしての衝突の動作は少し奇妙になります。</p>
+<p>剛体変更インターフェース内で「C」を押すと、ボーンの位置に剛体が作成されます。 ボーンに親がある場合、ボーンの頭にジョイントが作成されて親ボーンに接続され、子ボーンはジョイントを中心に回転したり移動したりできます。 ボーンに親がない場合、ジョイントは作成されません。ジョイント設定の軸は、ボーンのローカル軸を意味します (ボーンのローカル軸は、アーマチュアのプロパティで表示されるように設定できます。アーマチュア -&gt; データ - &gt;ビューポート表示 -&gt; 軸)。 リジッドボディの質量中心はボーンの尾部に固定されるため、親ボーンがないと単一のリジッドボディとしての衝突の動作は少し奇妙になります。</p>
 <p>2 つの剛体間のジョイントはバネとして見ることができ、2 つの剛体はバネ力によって接続されます。</p>
 </section>
 <section id="joint-properties">
@@ -116,7 +117,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="rigidbody.html" class="btn btn-neutral float-left" title="剛体" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="force_field.html" class="btn btn-neutral float-right" title="力場" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="soft_connection.html" class="btn btn-neutral float-right" title="ソフトコネクション" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

@@ -49,6 +49,7 @@
 <li class="toctree-l1"><a class="reference internal" href="get_start.html">Get start</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rigidbody.html">Rigid body</a></li>
 <li class="toctree-l1"><a class="reference internal" href="joint.html">Joint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="soft_connection.html">Soft Connection</a></li>
 <li class="toctree-l1"><a class="reference internal" href="force_field.html">Force Field</a></li>
 <li class="toctree-l1"><a class="reference internal" href="scene.html">Scene Setting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="simulation.html">Simulation</a></li>
@@ -83,8 +84,13 @@
              
   <section id="tool">
 <h1>Tool<a class="headerlink" href="#tool" title="Link to this heading"></a></h1>
-<p><strong>Disable Selected Bone Constraint</strong>: disable selected bones’ all bone constraints by setting the influence to 0.</p>
-<p><strong>Enable Selected Bone Constraint</strong>: enable selected bones’ all bone constraints by setting the influence to 1.</p>
+<p><strong>Show All</strong>: Show all bones’ driver.</p>
+<p><strong>Hide All</strong>: Hide all bones’ driver.</p>
+<p><strong>Select All</strong>: Select all bones’ driver. The keyframe is setting on the driver, you can delete or edit animation keyframe in driver.</p>
+<p><strong>Switch To Driver</strong>: If you select pose bones, it will switch to object mode and select driver objects. If you select driver objects, it will switch to pose mode and select corresponding pose bones.</p>
+<p><strong>Reset Pose Bone</strong>: Reset selected pose bones location and rotation. The rigidbody bones is completely controlled by driver objects. If you want to reset pose bones transform to initial, click this.</p>
+<p><strong>Disable Selected Bone Constraint</strong>: disable selected bones’ driver constraints by setting the influence to 0.</p>
+<p><strong>Enable Selected Bone Constraint</strong>: enable selected bones’ driver constraints by setting the influence to 1.</p>
 <p>Tip: Many keyframes whose influence cannot be distinguished can be found in the curve editor. If you want to clear the keyframes, you can place the mouse on the input box of the influence and right-click to clear the keyframes.</p>
 </section>
 

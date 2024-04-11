@@ -49,6 +49,7 @@
 <li class="toctree-l1"><a class="reference internal" href="get_start.html">スタートを切る</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rigidbody.html">剛体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="joint.html">ジョイント</a></li>
+<li class="toctree-l1"><a class="reference internal" href="soft_connection.html">ソフトコネクション</a></li>
 <li class="toctree-l1"><a class="reference internal" href="force_field.html">力場</a></li>
 <li class="toctree-l1"><a class="reference internal" href="scene.html">シーン設定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="simulation.html">シミュレーション</a></li>
@@ -90,6 +91,7 @@
 <li class="toctree-l2"><a class="reference internal" href="introduction.html#why-i-develop-this">これを開発した理由</a></li>
 <li class="toctree-l2"><a class="reference internal" href="introduction.html#advantage">利点</a></li>
 <li class="toctree-l2"><a class="reference internal" href="introduction.html#why-use-a-rigid-body-to-simulate-a-skirt-instead-of-cloth-simulation">スカートのシミュレーションに布地シミュレーションではなくリジッド ボディを使用するのはなぜですか?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#problems">問題</a></li>
 <li class="toctree-l2"><a class="reference internal" href="introduction.html#gpu">GPU</a></li>
 <li class="toctree-l2"><a class="reference internal" href="introduction.html#reference">Reference</a></li>
 </ul>
@@ -98,10 +100,7 @@
 <li class="toctree-l2"><a class="reference internal" href="get_start.html#installation">インストール</a></li>
 <li class="toctree-l2"><a class="reference internal" href="get_start.html#update-a-new-version">新しいバージョンを更新する</a></li>
 <li class="toctree-l2"><a class="reference internal" href="get_start.html#quick-start">クイックスタート</a></li>
-<li class="toctree-l2"><a class="reference internal" href="get_start.html#prerequisites-before-use">使用前の前提条件</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="get_start.html#if-a-bone-cannot-be-move-in-pose-mode">ポーズモードでボーンを移動できない場合</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="get_start.html#keyframe-animation-notice">キーフレームアニメーションに関する注意事項</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="rigidbody.html">剛体</a><ul>
@@ -117,6 +116,7 @@
 <li class="toctree-l2"><a class="reference internal" href="joint.html#joint-properties">ジョイントのプロパティ</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="soft_connection.html">ソフトコネクション</a></li>
 <li class="toctree-l1"><a class="reference internal" href="force_field.html">力場</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="force_field.html#create-force-field">力場の作成</a></li>
 <li class="toctree-l2"><a class="reference internal" href="force_field.html#force-field-setting">力場の設定</a></li>
@@ -141,10 +141,13 @@
 <li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#why-does-relative-displacement-still-occur-after-simulation-even-though-the-joint-distance-is-set-to-0">ジョイント距離が 0 に設定されているにもかかわらず、シミュレーション後に相対変位が依然として発生するのはなぜですか?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#why-does-jitter-occur">なぜジッターが発生するのでしょうか？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#why-did-the-simulation-stop-early-when-playback">再生時にシミュレーションが早期に停止したのはなぜですか?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#why-is-the-simulation-unable-to-move-despite-setting-upper-and-lower-displacement-limits">変位の上限と下限を設定しているにもかかわらず、シミュレーションが移動できないのはなぜですか?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#what-should-i-do-if-the-fps-is-too-low-during-playback">再生中の FPS が低すぎる場合はどうすればよいですか?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="faq.html#why-can-t-i-move-rigid-body-bones-during-playback">再生中にリジッド ボディ ボーンを移動できないのはなぜですか?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#what-should-i-do-if-the-laggy-in-rigidbody-modify-mode">剛体変更モードでラグが発生した場合はどうすればよいですか?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#why-can-t-rigidbody-bones-be-moved-manually">剛体ボーンを手動で移動できないのはなぜですか?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#high-speed-movement-penetrate-rigidbody-issues">高速移動が剛体の問題を貫通</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#why-this-addon-using-empty-obj-to-drive-bones">なぜこのアドオンは空の obj を使用してボーンを駆動するのでしょうか?</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="contact.html">連絡先</a></li>

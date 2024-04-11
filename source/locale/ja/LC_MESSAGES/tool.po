@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Bonex Document\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-08 08:37+0800\n"
-"PO-Revision-Date: 2024-04-08 10:20+0800\n"
+"POT-Creation-Date: 2024-04-11 11:36+0800\n"
+"PO-Revision-Date: 2024-04-11 14:06+0800\n"
 "Last-Translator: \n"
 "Language-Team: ja <LL@li.org>\n"
 "Language: ja\n"
@@ -26,22 +26,59 @@ msgid "Tool"
 msgstr "ツール"
 
 #: ../../source/tool.rst:4
-msgid ""
-"**Disable Selected Bone Constraint**: disable selected bones' all bone "
-"constraints by setting the influence to 0."
-msgstr ""
-"**選択したボーン コンストレイントを無効にする**: インフルエンスを 0 に設"
-"定して、選択したボーンのすべてのボーン コンストレイントを無効にします。"
+msgid "**Show All**: Show all bones' driver."
+msgstr "**すべて表示する**：すべての骨のドライバーを表示します。"
 
 #: ../../source/tool.rst:6
-msgid ""
-"**Enable Selected Bone Constraint**: enable selected bones' all bone "
-"constraints by setting the influence to 1."
-msgstr ""
-"**選択したボーン コンストレイントを有効にする**: インフルエンスを 1 に設"
-"定して、選択したボーンのすべてのボーン コンストレイントを有効にします。"
+msgid "**Hide All**: Hide all bones' driver."
+msgstr "**すべてを隠す**：すべての骨のドライバーを非表示にします。"
 
 #: ../../source/tool.rst:8
+msgid ""
+"**Select All**: Select all bones' driver. The keyframe is setting on the "
+"driver, you can delete or edit animation keyframe in driver."
+msgstr ""
+"**すべてを選択**：すべての骨のドライバーを選択します。 キーフレームはドラ"
+"イバーに設定されており、ドライバーのアニメーションキーフレームを削除また"
+"は編集できます。"
+
+#: ../../source/tool.rst:10
+msgid ""
+"**Switch To Driver**: If you select pose bones, it will switch to object "
+"mode and select driver objects. If you select driver objects, it will "
+"switch to pose mode and select corresponding pose bones."
+msgstr ""
+"**ドライバーに切り替える**：姿勢骨を選択すると、オブジェクトモードに切り"
+"替えてドライバーオブジェクトを選択します。 ドライバーオブジェクトを選択す"
+"ると、姿勢モードに切り替わり、対応する姿勢骨を選択します。"
+
+#: ../../source/tool.rst:12
+msgid ""
+"**Reset Pose Bone**: Reset selected pose bones location and rotation. "
+"The rigidbody bones is completely controlled by driver objects. If you "
+"want to reset pose bones transform to initial, click this."
+msgstr ""
+"**ポーズボーンをリセット**：選択したポーズボーンの位置と回転をリセットし"
+"ます。 剛体の骨は、ドライバーオブジェクトによって完全に制御されます。 "
+"ポーズ骨変換を初期にリセットする場合は、これをクリックしてください。"
+
+#: ../../source/tool.rst:14
+msgid ""
+"**Disable Selected Bone Constraint**: disable selected bones' driver "
+"constraints by setting the influence to 0."
+msgstr ""
+"**選択したボーンのコンストレイントを無効にする**：影響を0に設定することに"
+"より、選択した骨のドライバー制約を無効にします。"
+
+#: ../../source/tool.rst:16
+msgid ""
+"**Enable Selected Bone Constraint**: enable selected bones' driver "
+"constraints by setting the influence to 1."
+msgstr ""
+"**選択したボーンのコンストレイントを有効にする**: 影響を1に設定することに"
+"より、選択した骨のドライバー制約を有効にします。"
+
+#: ../../source/tool.rst:18
 msgid ""
 "Tip: Many keyframes whose influence cannot be distinguished can be found "
 "in the curve editor. If you want to clear the keyframes, you can place "

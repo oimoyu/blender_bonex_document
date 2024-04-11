@@ -56,6 +56,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="joint.html">Joint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="soft_connection.html">Soft Connection</a></li>
 <li class="toctree-l1"><a class="reference internal" href="force_field.html">Force Field</a></li>
 <li class="toctree-l1"><a class="reference internal" href="scene.html">Scene Setting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="simulation.html">Simulation</a></li>
@@ -93,12 +94,14 @@
 <section id="basic-usage">
 <h2>Basic usage<a class="headerlink" href="#basic-usage" title="Link to this heading"></a></h2>
 <p>In bone pose mode, click the “Start Modify” button to access the Rigid Body modification interface. Within this interface, you have press “C” to set selected bones as rigid body bones, which allows them to be driven by physx during animations. Additionally, you can view the shape of the rigid body and change the properties of the selected rigid body bone in this mode.</p>
+<p><strong>note, that when a bone is set as rigid body, this addon will create a empty object at the bone call driver, and this bone will completely track to this driver. If you want to move bone manually, you can check the tool panel for more operation.</strong></p>
 </section>
 <section id="rigid-body-properties">
 <h2>Rigid body properties<a class="headerlink" href="#rigid-body-properties" title="Link to this heading"></a></h2>
 <a href="../image/rigidbody_setting.png" target="_blank">
     <img src="../image/rigidbody_setting.png" style="width: 20%;" />
 </a><p>Within rigid Body modification interface, when you select a rigidody bone, you will see the property in the panel. You can change the value, then the setting will apply to the selected rigidbody bone.</p>
+<p><strong>Rigidbody Shape Refresh Interval</strong>: If you feel laggy in rigidbody modify mode, increase refresh interval time</p>
 <p><strong>Dynamic</strong>: A dynamic rigid body is a rigid body calculated by physx and will move under the action of force.</p>
 <p><strong>Kinematic</strong>: The kinematic rigid body is controlled by the user’s key frame animation. Its movement is absolute and not affected by any force. And it can collide with the dynamic rigid body to make dynamic rigid body motion.</p>
 <video width="100%" controls src="../video/kinematic.mp4">
@@ -112,7 +115,11 @@
 <p><strong>Rigidbody Group</strong>: rigidbody belongs to which group. If empty is set, that means this rigidbody will not collide with any thing.</p>
 <p><strong>Collision Group</strong>: rigidbody will collide with which group.</p>
 <p>If you want to disable the collision internal a certain group, then disable the collision group of their corresponding group.</p>
-</section>
+<p>For Example, I want to disable a skirt self collision. Set the rigidbody group to second layer enable, and set the collision group second layer disable, which means skirt is in second group, and skirt will not collide with rigidbody in second group.</p>
+<video width="100%" controls src="../video/set_collision_group.mp4">
+  Your browser does not support the video tag.
+</video></section>
+<hr class="docutils" />
 <section id="kinematic-rigidbodies-are-not-always-needed">
 <h2>Kinematic rigidbodies are not always needed<a class="headerlink" href="#kinematic-rigidbodies-are-not-always-needed" title="Link to this heading"></a></h2>
 <p>If a bone is set to a dynamic rigid body and it has a parent bone, the dynamic bone will be still controlled by parent bone.</p>

@@ -48,6 +48,7 @@
 <li class="toctree-l1"><a class="reference internal" href="get_start.html">Get start</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rigidbody.html">Rigid body</a></li>
 <li class="toctree-l1"><a class="reference internal" href="joint.html">Joint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="soft_connection.html">Soft Connection</a></li>
 <li class="toctree-l1"><a class="reference internal" href="force_field.html">Force Field</a></li>
 <li class="toctree-l1"><a class="reference internal" href="scene.html">Scene Setting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="simulation.html">Simulation</a></li>
@@ -89,6 +90,7 @@
 <li class="toctree-l2"><a class="reference internal" href="introduction.html#why-i-develop-this">Why I develop this</a></li>
 <li class="toctree-l2"><a class="reference internal" href="introduction.html#advantage">Advantage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="introduction.html#why-use-a-rigid-body-to-simulate-a-skirt-instead-of-cloth-simulation">Why use a rigid body to simulate a skirt instead of cloth simulation?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#problems">Problems</a></li>
 <li class="toctree-l2"><a class="reference internal" href="introduction.html#gpu">GPU</a></li>
 <li class="toctree-l2"><a class="reference internal" href="introduction.html#reference">Reference</a></li>
 </ul>
@@ -97,10 +99,7 @@
 <li class="toctree-l2"><a class="reference internal" href="get_start.html#installation">Installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="get_start.html#update-a-new-version">Update a new version</a></li>
 <li class="toctree-l2"><a class="reference internal" href="get_start.html#quick-start">Quick start</a></li>
-<li class="toctree-l2"><a class="reference internal" href="get_start.html#prerequisites-before-use">Prerequisites before use</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="get_start.html#if-a-bone-cannot-be-move-in-pose-mode">If a bone cannot be move in pose mode</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="get_start.html#keyframe-animation-notice">Keyframe Animation Notice</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="rigidbody.html">Rigid body</a><ul>
@@ -116,6 +115,7 @@
 <li class="toctree-l2"><a class="reference internal" href="joint.html#joint-properties">Joint Properties</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="soft_connection.html">Soft Connection</a></li>
 <li class="toctree-l1"><a class="reference internal" href="force_field.html">Force Field</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="force_field.html#create-force-field">Create Force Field</a></li>
 <li class="toctree-l2"><a class="reference internal" href="force_field.html#force-field-setting">Force Field Setting</a></li>
@@ -140,10 +140,13 @@
 <li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#why-does-relative-displacement-still-occur-after-simulation-even-though-the-joint-distance-is-set-to-0">Why does relative displacement still occur after simulation even though the joint distance is set to 0?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#why-does-jitter-occur">Why does jitter occur?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#why-did-the-simulation-stop-early-when-playback">Why did the simulation stop early when playback?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#why-is-the-simulation-unable-to-move-despite-setting-upper-and-lower-displacement-limits">Why is the simulation unable to move despite setting upper and lower displacement limits?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#what-should-i-do-if-the-fps-is-too-low-during-playback">What should I do if the FPS is too low during playback?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="faq.html#why-can-t-i-move-rigid-body-bones-during-playback">Why can’t I move rigid body bones during playback?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#what-should-i-do-if-the-laggy-in-rigidbody-modify-mode">What should I do if the laggy in rigidbody modify mode?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#why-can-t-rigidbody-bones-be-moved-manually">Why can’t rigidbody bones be moved manually?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#high-speed-movement-penetrate-rigidbody-issues">High speed movement penetrate rigidbody issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#why-this-addon-using-empty-obj-to-drive-bones">Why this addon using empty obj to drive bones?</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="contact.html">Contact</a></li>

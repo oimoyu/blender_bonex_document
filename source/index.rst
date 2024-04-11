@@ -8,6 +8,7 @@ Welcome to blender bonex document's documentation!
    get_start
    rigidbody
    joint
+   soft_connection
    force_field
    scene
    simulation

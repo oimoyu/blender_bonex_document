@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Bonex Document\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-08 09:03+0800\n"
-"PO-Revision-Date: 2024-04-08 09:04+0800\n"
+"POT-Creation-Date: 2024-04-11 09:45+0800\n"
+"PO-Revision-Date: 2024-04-11 11:29+0800\n"
 "Last-Translator: \n"
 "Language-Team: zh <LL@li.org>\n"
 "Language: zh\n"
@@ -42,11 +42,22 @@ msgstr ""
 "按“C”将选定的骨骼设置为刚体骨骼，这允许它们在动画期间由 physx 驱动。 此"
 "外，您可以在此模式下查看刚体的形状并更改所选刚体骨骼的属性。"
 
-#: ../../source/rigidbody.rst:9
+#: ../../source/rigidbody.rst:8
+msgid ""
+"**note, that when a bone is set as rigid body, this addon will create a "
+"empty object at the bone call driver, and this bone will completely "
+"track to this driver. If you want to move bone manually, you can check "
+"the tool panel for more operation.**"
+msgstr ""
+"**注意，当骨骼设置为刚体时，此插件将在骨骼调用驱动程序中创建一个空对象，"
+"并且该骨骼将完全跟踪到该驱动程序。 如果您想手动移动骨骼，可以查看工具面板"
+"进行更多操作。**"
+
+#: ../../source/rigidbody.rst:11
 msgid "Rigid body properties"
 msgstr "刚体属性"
 
-#: ../../source/rigidbody.rst:17
+#: ../../source/rigidbody.rst:19
 msgid ""
 "Within rigid Body modification interface, when you select a rigidody "
 "bone, you will see the property in the panel. You can change the value, "
@@ -55,14 +66,21 @@ msgstr ""
 "在刚体修改界面中，当您选择刚体骨骼时，您将在面板中看到该属性。 您可以更改"
 "该值，然后该设置将应用于选定的刚体骨骼。"
 
-#: ../../source/rigidbody.rst:20
+#: ../../source/rigidbody.rst:22
+msgid ""
+"**Rigidbody Shape Refresh Interval**: If you feel laggy in rigidbody "
+"modify mode, increase refresh interval time"
+msgstr ""
+"**刚体形状刷新间隔**：如果您在刚体修改模式下感觉卡顿，请增加刷新间隔时间"
+
+#: ../../source/rigidbody.rst:24
 msgid ""
 "**Dynamic**: A dynamic rigid body is a rigid body calculated by physx "
 "and will move under the action of force."
 msgstr ""
 "**Dynamic**：dynamic刚体是通过physx计算的刚体，在力的作用下会移动。"
 
-#: ../../source/rigidbody.rst:22
+#: ../../source/rigidbody.rst:26
 msgid ""
 "**Kinematic**: The kinematic rigid body is controlled by the user's key "
 "frame animation. Its movement is absolute and not affected by any force. "
@@ -72,31 +90,31 @@ msgstr ""
 "**Kinematic**：kinematic学刚体由用户的关键帧动画控制。 它的运动是绝对的，"
 "不受任何力的影响。 并能与动态刚体发生碰撞，使dynamic刚体运动。"
 
-#: ../../source/rigidbody.rst:32
+#: ../../source/rigidbody.rst:36
 msgid "**Mass**: The mass of a rigid body, obeying various physical laws"
 msgstr "**质量**：刚体的质量，遵守各种物理定律"
 
-#: ../../source/rigidbody.rst:34
+#: ../../source/rigidbody.rst:38
 msgid ""
 "**Static Friction Coefficient**: the resistance to the start of motion "
 "between two surfaces."
 msgstr "**静摩擦系数**：两个表面之间开始运动的阻力。"
 
-#: ../../source/rigidbody.rst:36
+#: ../../source/rigidbody.rst:40
 msgid ""
 "**Dynamic Friction Coefficient**: the resistance to motion when two "
 "surfaces are already sliding against each other."
 msgstr "**动态摩擦系数**：两个表面已经相互滑动时的运动阻力。"
 
-#: ../../source/rigidbody.rst:38
+#: ../../source/rigidbody.rst:42
 msgid "Friction Force only appear when the pressure exist."
 msgstr "摩擦力只有在压力存在时才会出现。"
 
-#: ../../source/rigidbody.rst:40
+#: ../../source/rigidbody.rst:44
 msgid "**Bounce Coefficient**: reflects the elasticity of the collision."
 msgstr "**弹跳系数**：反映碰撞的弹性。"
 
-#: ../../source/rigidbody.rst:42
+#: ../../source/rigidbody.rst:46
 msgid ""
 "**Rigidbody Group**: rigidbody belongs to which group. If empty is set, "
 "that means this rigidbody will not collide with any thing."
@@ -104,21 +122,31 @@ msgstr ""
 "**刚体组**：刚体属于哪个组。 如果设置为空，则意味着该刚体不会与任何物体发"
 "生碰撞。"
 
-#: ../../source/rigidbody.rst:44
+#: ../../source/rigidbody.rst:48
 msgid "**Collision Group**: rigidbody will collide with which group."
 msgstr "**碰撞组**：刚体将与哪个组碰撞。"
 
-#: ../../source/rigidbody.rst:46
+#: ../../source/rigidbody.rst:50
 msgid ""
 "If you want to disable the collision internal a certain group, then "
 "disable the collision group of their corresponding group."
 msgstr "如果要禁用某个组内部的碰撞，则禁用其对应组的碰撞组。"
 
-#: ../../source/rigidbody.rst:49
+#: ../../source/rigidbody.rst:52
+msgid ""
+"For Example, I want to disable a skirt self collision. Set the rigidbody "
+"group to second layer enable, and set the collision group second layer "
+"disable, which means skirt is in second group, and skirt will not "
+"collide with rigidbody in second group."
+msgstr ""
+"例如，我想禁用裙子自碰撞。 将刚体组设置为第二层启用，并将碰撞组第二层设置"
+"为禁用，即裙子在第二组中，裙子不会与第二组中的刚体发生碰撞。"
+
+#: ../../source/rigidbody.rst:62
 msgid "Kinematic rigidbodies are not always needed"
 msgstr ""
 
-#: ../../source/rigidbody.rst:50
+#: ../../source/rigidbody.rst:63
 msgid ""
 "If a bone is set to a dynamic rigid body and it has a parent bone, the "
 "dynamic bone will be still controlled by parent bone."
@@ -126,21 +154,21 @@ msgstr ""
 "如果骨骼被设置为dynamic刚体并且它有父骨骼，则dynamic骨骼仍将受父骨骼控"
 "制。"
 
-#: ../../source/rigidbody.rst:53
+#: ../../source/rigidbody.rst:66
 msgid "Modify the Shape of Rigidbody"
 msgstr "修改碰撞体的形状"
 
-#: ../../source/rigidbody.rst:54
+#: ../../source/rigidbody.rst:67
 msgid ""
 "**Switch default shape**: Within rigid Body modification interface, "
 "press \"T\" to switch selected rigidbody shape."
 msgstr "**切换形状**：在刚体修改界面中，按“T”键可以切换选定的刚体形状。"
 
-#: ../../source/rigidbody.rst:56
+#: ../../source/rigidbody.rst:69
 msgid "Press \"S\" to scale the rigidbody."
 msgstr "按“S”缩放刚体。"
 
-#: ../../source/rigidbody.rst:66
+#: ../../source/rigidbody.rst:79
 msgid ""
 "**Customize Rigidbody Shape**: Within rigid Body modification interface, "
 "press \"E\" to edit selected rigidbody. Physx's dynamic rigid body only "
@@ -155,7 +183,7 @@ msgstr ""
 "以在 Physx Visual Debugger 中检查烘焙的形状。 对于physx，自定义网格刚体的"
 "计算速度不如其默认形状快。 如果没有特殊需要，尽量使用默认形状。"
 
-#: ../../source/rigidbody.rst:76
+#: ../../source/rigidbody.rst:89
 msgid ""
 "**Copy Rigidbody Shape**: Within rigid Body modification interface, "
 "press ctrl+\"M\" will copy the active rigidbody shape to other selected "
@@ -164,11 +192,11 @@ msgstr ""
 "**复制刚体形状**：在刚体修改界面中，按ctrl+“M”会将活动的刚体形状复制到其"
 "他选定的刚体骨骼。"
 
-#: ../../source/rigidbody.rst:87
+#: ../../source/rigidbody.rst:100
 msgid "Animation"
 msgstr "动画"
 
-#: ../../source/rigidbody.rst:88
+#: ../../source/rigidbody.rst:101
 msgid ""
 "A kinimatic rigidbody can be set keyframe to move and rotate to drive "
 "the dynamic rigidbody."
