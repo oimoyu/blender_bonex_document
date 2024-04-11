@@ -31,10 +31,10 @@ Simulation
 
 **Debug**: If enable, addon will try to connect to the PhysX Visual Debugger and display the simulation detail on it.(Only work for debug of addon version, ignore it if you don't need it) Notice, that the PVD need additional consumption, if not neccessary, disable it.
 
-.. raw:: html
+.. .. raw:: html
 
-    <video width="100%" controls src="../video/debug_demo.mp4">
-      Your browser does not support the video tag.
-    </video>
+..     <video width="100%" controls src="../video/debug_demo.mp4">
+..       Your browser does not support the video tag.
+..     </video>
 
-......
+.. ......
