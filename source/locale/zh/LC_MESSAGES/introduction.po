@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Bonex Document\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-11 11:26+0800\n"
-"PO-Revision-Date: 2024-04-11 11:38+0800\n"
+"POT-Creation-Date: 2024-04-11 15:59+0800\n"
+"PO-Revision-Date: 2024-04-11 16:00+0800\n"
 "Last-Translator: \n"
 "Language-Team: zh <LL@li.org>\n"
 "Language: zh\n"
@@ -39,11 +39,23 @@ msgstr ""
 "可以为角色动画创建骨骼物理效果。 您可以修改刚体的属性并设置其连接刚度、阻尼质量"
 "等，以达到您想要的物理效果。"
 
-#: ../../source/introduction.rst:9
+#: ../../source/introduction.rst:8
+msgid "Platform Support: Windows"
+msgstr ""
+
+#: ../../source/introduction.rst:10
+msgid "Blender Version: 3.6+"
+msgstr ""
+
+#: ../../source/introduction.rst:12
+msgid "UI Language Support: English, 日本語, 中文"
+msgstr ""
+
+#: ../../source/introduction.rst:15
 msgid "Why I develop this"
 msgstr "我为什么开发这个插件"
 
-#: ../../source/introduction.rst:10
+#: ../../source/introduction.rst:16
 msgid ""
 "Vivid physics bring an unparalleled level of realism and depth to character "
 "animations. For those using Blender, many methods exist to achieve this, "
@@ -62,47 +74,47 @@ msgstr ""
 "此，我决定开发这个插件，利用成熟可靠的 PhysX 物理引擎，可以提供稳定而快速的结"
 "果。"
 
-#: ../../source/introduction.rst:13
+#: ../../source/introduction.rst:19
 msgid "Advantage"
 msgstr "优势"
 
-#: ../../source/introduction.rst:14
+#: ../../source/introduction.rst:20
 msgid ""
 "①Relying on the mature physics engine physx, the simulation is stable, with "
 "less jitter"
 msgstr "①依托成熟的物理引擎 physx，模拟稳定"
 
-#: ../../source/introduction.rst:16
+#: ../../source/introduction.rst:22
 msgid "②Collision group mask to control collision interaction supported"
 msgstr "②支持碰撞组遮罩，用于控制刚体的碰撞交互"
 
-#: ../../source/introduction.rst:18
+#: ../../source/introduction.rst:24
 msgid "③Custom collision body mesh supported"
 msgstr "③支持自定义碰撞体网格"
 
-#: ../../source/introduction.rst:20
+#: ../../source/introduction.rst:26
 msgid "④Real-time playback  interactions"
 msgstr "④ 实时播放互动"
 
-#: ../../source/introduction.rst:22
+#: ../../source/introduction.rst:28
 msgid "⑤Partial simulation supported, helps you improve detailed adjustments"
 msgstr "⑤支持部分模拟，帮助您完善细节调整"
 
-#: ../../source/introduction.rst:24
+#: ../../source/introduction.rst:30
 msgid "etc."
 msgstr "etc."
 
-#: ../../source/introduction.rst:27
+#: ../../source/introduction.rst:33
 msgid "Why use a rigid body to simulate a skirt instead of cloth simulation?"
 msgstr "为什么使用刚体来模拟裙子而不是布料模拟？"
 
-#: ../../source/introduction.rst:28
+#: ../../source/introduction.rst:34
 msgid ""
 "① Stable and controllable. Rigid body simulation only needs to focus on a "
 "limited number of rigid bodies."
 msgstr "②稳定可控。 刚体模拟只需关注有限数量的刚体。"
 
-#: ../../source/introduction.rst:30
+#: ../../source/introduction.rst:36
 msgid ""
 "② Keep the shape. When making stylized characters, you need to make some "
 "exaggerated shapes that violate the laws of physics. If you use cloth "
@@ -114,7 +126,7 @@ msgstr ""
 "用布料模拟，这些形状会随着布料的塌陷而塌陷。 刚体模拟驱动骨骼，一根骨骼可以控制"
 "多个顶点 ，保持它们的相对位置。"
 
-#: ../../source/introduction.rst:32
+#: ../../source/introduction.rst:38
 msgid ""
 "③ Prevent mesh intersection. If cloth simulation is used for proxy, contact "
 "and mesh intersection are problems. The collision volume of cloth is only a "
@@ -125,18 +137,6 @@ msgstr ""
 "④ 防止网格交叉。 如果使用布料模拟作为代理，接触和网格交叉就会出现问题。 布料的"
 "碰撞体积只是薄薄的一层，而刚体的碰撞体积可以自己定义。 对于蓬松的网格，可以制作"
 "较大的碰撞体积，以防止其他网格与模具相交。"
-
-#: ../../source/introduction.rst:34
-msgid "Platform Support: Windows"
-msgstr ""
-
-#: ../../source/introduction.rst:36
-msgid "Blender Version: 3.6+"
-msgstr ""
-
-#: ../../source/introduction.rst:38
-msgid "UI Language Support: English, 日本語, 中文"
-msgstr ""
 
 #: ../../source/introduction.rst:41
 msgid "Problems"
@@ -160,16 +160,18 @@ msgstr ""
 
 #: ../../source/introduction.rst:46
 msgid ""
-"Physx supports CUDA hardware acceleration. When there are many rigid bodies or "
-"the number of iterations is large and the frame generation takes a long time, "
+"Generally you don't need it, the performance bottleneck is not in physx. Physx "
+"supports CUDA hardware acceleration. When there are many rigid bodies or the "
+"number of iterations is large and the frame generation takes a long time, "
 "using the GPU will significantly increase the calculation speed. If you need "
 "to use the GPU acceleration function, you need to download \"PhysXGpu_64.dll\" "
 "and \"PhysXDevice64.dll\" and place them in the same location as \"physx.exe\" "
 "in the addon directory."
 msgstr ""
-"Physx 支持 CUDA 硬件加速。 当刚体较多或迭代次数较多、帧生成时间较长时，使用GPU"
-"会显着提高计算速度。 如果需要使用GPU加速功能，需要下载“PhysXGpu_64."
-"dll”和“PhysXDevice64.dll”并将其放置在addon目录中与“physx.exe”相同的位置。"
+"一般情况下你不需要它，性能瓶颈不在physx。Physx 支持 CUDA 硬件加速。 当刚体较多"
+"或迭代次数较多、帧生成时间较长时，使用GPU会显着提高计算速度。 如果需要使用GPU加"
+"速功能，需要下载“PhysXGpu_64.dll”和“PhysXDevice64.dll”并将其放置在addon目录中"
+"与“physx.exe”相同的位置。"
 
 #: ../../source/introduction.rst:49
 msgid "Reference"

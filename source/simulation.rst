@@ -29,7 +29,7 @@ Simulation
         <img src="../image/dll_location.png" style="width: 60%;" />
     </a>
 
-**Debug**: If enable, addon will try to connect to the PhysX Visual Debugger and display the simulation detail on it. Notice, that the PVD need additional consumption, if not neccessary, disable it. PhysX Visual Debugger Download: https://developer.nvidia.com/physx-visual-debugger
+**Debug**: If enable, addon will try to connect to the PhysX Visual Debugger and display the simulation detail on it.(Only work for debug of addon version, ignore it if you don't need it) Notice, that the PVD need additional consumption, if not neccessary, disable it.
 
 .. raw:: html
 

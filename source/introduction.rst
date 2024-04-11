@@ -43,7 +43,7 @@ This addon suitable for situations where there are not so many bones. Especially
 
 GPU
 ------
-Physx supports CUDA hardware acceleration. When there are many rigid bodies or the number of iterations is large and the frame generation takes a long time, using the GPU will significantly increase the calculation speed. If you need to use the GPU acceleration function, you need to download "PhysXGpu_64.dll" and "PhysXDevice64.dll" and place them in the same location as "physx.exe" in the addon directory.
+Generally you don't need it, the performance bottleneck is not in physx. Physx supports CUDA hardware acceleration. When there are many rigid bodies or the number of iterations is large and the frame generation takes a long time, using the GPU will significantly increase the calculation speed. If you need to use the GPU acceleration function, you need to download "PhysXGpu_64.dll" and "PhysXDevice64.dll" and place them in the same location as "physx.exe" in the addon directory.
 
 Reference
 ------------
