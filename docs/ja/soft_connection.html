@@ -50,7 +50,10 @@
 <li class="toctree-l1"><a class="reference internal" href="get_start.html">スタートを切る</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rigidbody.html">剛体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="joint.html">ジョイント</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">ソフトコネクション</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">ソフトコネクション</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#in-rigidbody-modify-mode">剛体変更モードの場合</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="force_field.html">力場</a></li>
 <li class="toctree-l1"><a class="reference internal" href="scene.html">シーン設定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="simulation.html">シミュレーション</a></li>
@@ -85,11 +88,17 @@
              
   <section id="soft-connection">
 <h1>ソフトコネクション<a class="headerlink" href="#soft-connection" title="Link to this heading"></a></h1>
-<p>ソフトコネクションはスプリングのようなもので、二つの剛体を拘束します。しかし、ソフト接続は位置のみを制約します。スカートやマントの側面制約によく使用され、過度なメッシュ変形を防ぎます。浮遊するウィジェットを作成したい場合は、ソフトコネクションではなくジョイントを設定してください。ソフトコネクションは角度を制約できません。</p>
-<p>剛体変更モードでは、Ctrl+Wを押してバッチにソフト接続を追加できます（「管状」オプションを使用してスカート、「平面」オプションを使用して対処し、「ペア」オプションを使用して単一のソフト接続を作成します）</p>
+<p>ソフトコネクションはスプリングのようなもので、二つの剛体を拘束します。しかし、ソフトコネクションは位置のみを制約します。スカートやマントの側面制約によく使用され、過度なメッシュ変形を防ぎます。浮遊するウィジェットを作成したい場合は、ソフトコネクションではなくジョイントを設定してください。ソフトコネクションは角度を制約できません。</p>
+<p>剛体変更モードでは、Ctrl+Wを押してバッチに ソフトコネクション を追加できます（「チューブ」オプションを使用してスカート、「プレーン」オプションを使用して対処し、「ペア」オプションを使用して単一のソフト接続を作成します）</p>
 <video width="100%" controls src="../video/create_soft_connection.mp4">
   Your browser does not support the video tag.
 </video><hr class="docutils" />
+<section id="in-rigidbody-modify-mode">
+<h2>剛体変更モードの場合<a class="headerlink" href="#in-rigidbody-modify-mode" title="Link to this heading"></a></h2>
+<p>Ctrl+W、ソフトコネクションを作成します。 「ペア」では、選択した 2 つの剛体ボーンにソフトコネクションを設定します。 「チューブ」と「プレーン」、複数のボーン チェーンのソフトコネクションを設定します (複数のボーン チェーンには同じ数のボーンが必要です)。スカートには「チューブ」、マントまたは髪には「プレーン」を使用します。</p>
+<p>Shift+W、選択した剛体ボーンのソフトコネクション プロパティを設定します。</p>
+<p>Alt+W、選択した剛体ボーンのソフトコネクションを削除します。</p>
+</section>
 </section>
 
 

@@ -98,6 +98,20 @@ Press "S" to scale the rigidbody.
 
 ......
 
+In Rigidbody Modify Mode, Drawing Visible Settings
+------------------------------------------------------------
+Ctrl+L, Toggle whether to display rigidbody shape edges
+
+F, Toggle whether to display rigidbody shape faces
+
+H, Toggle whether to hide rigidbody
+
+W, Toggle whether to display rigidbody soft connection
+
+Ctrl+F,Toggle whether to display rigidbody in front.
+
+Ctrl+H,Toggle whether to only display visible pose bone rigidbody shape. You can set this option to only view the visible pose bone corresponding rigidbody shape when there is too much.
+
 Animation
 -----------
 A kinimatic rigidbody can be set keyframe to move and rotate to drive the dynamic rigidbody.

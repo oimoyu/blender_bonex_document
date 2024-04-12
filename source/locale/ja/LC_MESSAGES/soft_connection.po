@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Bonex Document\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-11 11:33+0800\n"
-"PO-Revision-Date: 2024-04-11 14:00+0800\n"
+"POT-Creation-Date: 2024-04-12 21:36+0800\n"
+"PO-Revision-Date: 2024-04-12 21:40+0800\n"
 "Last-Translator: \n"
 "Language-Team: ja <LL@li.org>\n"
 "Language: ja\n"
@@ -27,24 +27,36 @@ msgstr "ソフトコネクション"
 
 #: ../../source/soft_connection.rst:4
 msgid ""
-"Soft connection is a spring, which constraint two rigidbody. But soft "
-"connection only constraint location. Often used for lateral constraints "
-"on skirts or cloaks to prevent excessive mesh deformation. If you wan to "
-"make the floating widget, set the joint instead, because soft connection "
-"can not constraint angle."
+"Soft connection is a spring, which constraint two rigidbody. But soft connection only constraint location. Often used for lateral constraints on skirts or cloaks to "
+"prevent excessive mesh deformation. If you wan to make the floating widget, set the joint instead, because soft connection can not constraint angle."
 msgstr ""
-"ソフトコネクションはスプリングのようなもので、二つの剛体を拘束します。し"
-"かし、ソフト接続は位置のみを制約します。スカートやマントの側面制約によく"
-"使用され、過度なメッシュ変形を防ぎます。浮遊するウィジェットを作成したい"
-"場合は、ソフトコネクションではなくジョイントを設定してください。ソフトコ"
-"ネクションは角度を制約できません。"
+"ソフトコネクションはスプリングのようなもので、二つの剛体を拘束します。しかし、ソフトコネクションは位置のみを制約します。スカートやマントの側面制約によく使用され、過度なメッ"
+"シュ変形を防ぎます。浮遊するウィジェットを作成したい場合は、ソフトコネクションではなくジョイントを設定してください。ソフトコネクションは角度を制約できません。"
 
 #: ../../source/soft_connection.rst:6
 msgid ""
-"In rigidbody modify mode, you can press Ctrl+W to add soft connection in "
-"batch(skirt using \"tube\" option, cope using \"plane\" option, create "
-"single soft connection using \"pair\" option)"
+"In rigidbody modify mode, you can press Ctrl+W to add soft connection in batch(skirt using \"tube\" option, cope using \"plane\" option, create single soft connection "
+"using \"pair\" option)"
 msgstr ""
-"剛体変更モードでは、Ctrl+Wを押してバッチにソフト接続を追加できます（「管"
-"状」オプションを使用してスカート、「平面」オプションを使用して対処し、"
-"「ペア」オプションを使用して単一のソフト接続を作成します）"
+"剛体変更モードでは、Ctrl+Wを押してバッチに ソフトコネクション を追加できます（「チューブ」オプションを使用してスカート、「プレーン」オプションを使用して対処し、「ペア」オプ"
+"ションを使用して単一のソフト接続を作成します）"
+
+#: ../../source/soft_connection.rst:18
+msgid "In Rigidbody Modify Mode"
+msgstr "剛体変更モードの場合"
+
+#: ../../source/soft_connection.rst:19
+msgid ""
+"Ctrl+W, create soft connection. \"Pair\", set soft connection to two selected two rigidbody bone. \"Tube\" and \"plane\", set soft connection for multiple bone chain "
+"(multiple bone chains should have the same number of bones), \"Tube\" for skirt, \"Plane\" for cloak or hair."
+msgstr ""
+"Ctrl+W、ソフトコネクションを作成します。 「ペア」では、選択した 2 つの剛体ボーンにソフトコネクションを設定します。 「チューブ」と「プレーン」、複数のボーン チェーンのソフト"
+"コネクションを設定します (複数のボーン チェーンには同じ数のボーンが必要です)。スカートには「チューブ」、マントまたは髪には「プレーン」を使用します。"
+
+#: ../../source/soft_connection.rst:21
+msgid "Shift+W, set selected rigidobdy bone soft connection property."
+msgstr "Shift+W、選択した剛体ボーンのソフトコネクション プロパティを設定します。"
+
+#: ../../source/soft_connection.rst:23
+msgid "Alt+W, delete selected rigidobdy bone soft connection."
+msgstr "Alt+W、選択した剛体ボーンのソフトコネクションを削除します。"

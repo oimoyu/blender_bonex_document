@@ -13,3 +13,11 @@ In rigidbody modify mode, you can press Ctrl+W to add soft connection in batch(s
 
 ......
 
+
+In Rigidbody Modify Mode
+---------------------------
+Ctrl+W, create soft connection. "Pair", set soft connection to two selected two rigidbody bone. "Tube" and "plane", set soft connection for multiple bone chain (multiple bone chains should have the same number of bones), "Tube" for skirt, "Plane" for cloak or hair.
+
+Shift+W, set selected rigidobdy bone soft connection property.
+
+Alt+W, delete selected rigidobdy bone soft connection.

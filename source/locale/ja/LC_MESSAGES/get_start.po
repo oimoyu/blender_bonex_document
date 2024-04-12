@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Bonex Document\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-11 09:45+0800\n"
-"PO-Revision-Date: 2024-04-11 12:51+0800\n"
+"POT-Creation-Date: 2024-04-12 21:18+0800\n"
+"PO-Revision-Date: 2024-04-12 21:31+0800\n"
 "Last-Translator: \n"
 "Language-Team: ja <LL@li.org>\n"
 "Language: ja\n"
@@ -89,11 +89,11 @@ msgstr "再生オプションをチェックします。"
 msgid "Start playing then you get a physics bone."
 msgstr "プレイを開始すると、物理ボーンが得られます。"
 
-#: ../../source/get_start.rst:44
+#: ../../source/get_start.rst:46
 msgid "Keyframe Animation Notice"
 msgstr "キーフレームアニメーションに関する注意事項"
 
-#: ../../source/get_start.rst:45
+#: ../../source/get_start.rst:47
 msgid ""
 "This addon use empty objects to drive bone transform, so you can not see the animation "
 "keyframe on your bones, when you want to edit keyframe of bones, you can select bones "
@@ -102,6 +102,40 @@ msgstr ""
 "このアドオンは空のオブジェクトを使用してボーン変換を実行するため、ボーン上にアニメーショ"
 "ン キーフレームが表示されません。ボーンのキーフレームを編集したい場合は、ボーンを選択し"
 "て「ドライバーに切り替える」をクリックしてさらに操作できます。"
+
+#: ../../source/get_start.rst:51
+msgid "Enter Rigidbody Modify Mode"
+msgstr "剛体変更モードに入る"
+
+#: ../../source/get_start.rst:52
+msgid ""
+"Click addon panel button \"Start Modify\" to enter the rigidbody modify mode. In this "
+"mode you you will see operation prompts on the left. You can enable rigidbody, disable "
+"rigidbody and change rigidbody settings."
+msgstr ""
+"アドオンパネルボタン「変更の開始」をクリックして、剛体変更モードに入ります。 このモード"
+"では、左側に操作プロンプトが表示されます。 剛体 を有効にしたり、剛体 を無効にしたり、剛"
+"体 設定を変更したりできます。"
+
+#: ../../source/get_start.rst:56
+msgid "In Rigidbody Modify Mode"
+msgstr "剛体変更モードの場合"
+
+#: ../../source/get_start.rst:58
+msgid "C, set the selected bone as rigidbody."
+msgstr "「C」を押して、選択したボーンを剛体として設定します。"
+
+#: ../../source/get_start.rst:60
+msgid ""
+"V, unset the selected bone as rigidbody, but the rigidbody and joint data still keep "
+"till next time set it to be rigidbody"
+msgstr ""
+"V、選択したボーンを剛体として設定解除しますが、次回剛体に設定するまで剛体とジョイントの"
+"データは保持されます"
+
+#: ../../source/get_start.rst:62
+msgid "Ctrl+Alt+Shift+C, Clear selected bone rigidbody data completely."
+msgstr "Ctrl+Alt+Shift+C、選択したボーン 剛体 データを完全にクリアします。"
 
 #~ msgid "Prerequisites before use"
 #~ msgstr "使用前の前提条件"

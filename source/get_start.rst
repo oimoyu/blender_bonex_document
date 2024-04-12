@@ -47,4 +47,17 @@ Keyframe Animation Notice
 This addon use empty objects to drive bone transform, so you can not see the animation keyframe on your bones, when you want to edit keyframe of bones, you can select bones and click the "Switch To Driver" to further operation.
 
 
+Enter Rigidbody Modify Mode
+------------------------------
+Click addon panel button "Start Modify" to enter the rigidbody modify mode. In this mode you you will see operation prompts on the left. You can enable rigidbody, disable rigidbody and change rigidbody settings.
+
+
+In Rigidbody Modify Mode
+------------------------------
+
+C, set the selected bone as rigidbody.
+
+V, unset the selected bone as rigidbody, but the rigidbody and joint data still keep till next time set it to be rigidbody
+
+Ctrl+Alt+Shift+C, Clear selected bone rigidbody data completely.
 

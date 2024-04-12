@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Bonex Document\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-11 09:45+0800\n"
-"PO-Revision-Date: 2024-04-11 11:24+0800\n"
+"POT-Creation-Date: 2024-04-12 21:18+0800\n"
+"PO-Revision-Date: 2024-04-12 21:19+0800\n"
 "Last-Translator: \n"
 "Language-Team: zh <LL@li.org>\n"
 "Language: zh\n"
@@ -89,11 +89,11 @@ msgstr "检查播放选项。"
 msgid "Start playing then you get a physics bone."
 msgstr "勾选播放选项。"
 
-#: ../../source/get_start.rst:44
+#: ../../source/get_start.rst:46
 msgid "Keyframe Animation Notice"
 msgstr "关键帧动画注意事项"
 
-#: ../../source/get_start.rst:45
+#: ../../source/get_start.rst:47
 msgid ""
 "This addon use empty objects to drive bone transform, so you can not see the "
 "animation keyframe on your bones, when you want to edit keyframe of bones, you "
@@ -101,6 +101,38 @@ msgid ""
 msgstr ""
 "该插件使用空对象来驱动骨骼变换，因此您在骨骼上看不到动画关键帧，当您想要编辑骨骼"
 "关键帧时，可以选择骨骼并单击“切换到驱动程序”进行进一步操作。"
+
+#: ../../source/get_start.rst:51
+msgid "Enter Rigidbody Modify Mode"
+msgstr "进入刚体编辑模式"
+
+#: ../../source/get_start.rst:52
+msgid ""
+"Click addon panel button \"Start Modify\" to enter the rigidbody modify mode. In "
+"this mode you you will see operation prompts on the left. You can enable "
+"rigidbody, disable rigidbody and change rigidbody settings."
+msgstr ""
+"单击插件面板按钮“开始修改”进入刚体修改模式。 在此模式下，您将在左侧看到操作提"
+"示。 您可以启用刚体、禁用刚体以及更改刚体设置。"
+
+#: ../../source/get_start.rst:56
+msgid "In Rigidbody Modify Mode"
+msgstr "在刚体修改模式下"
+
+#: ../../source/get_start.rst:58
+msgid "C, set the selected bone as rigidbody."
+msgstr "按“C”将选定的骨骼设置为刚体。"
+
+#: ../../source/get_start.rst:60
+msgid ""
+"V, unset the selected bone as rigidbody, but the rigidbody and joint data still "
+"keep till next time set it to be rigidbody"
+msgstr ""
+"V，将选中的骨骼取消设置为刚体，但刚体和关节数据仍然保留，直到下次设置为刚体"
+
+#: ../../source/get_start.rst:62
+msgid "Ctrl+Alt+Shift+C, Clear selected bone rigidbody data completely."
+msgstr "Ctrl+Alt+Shift+C，完全清除选定的骨骼刚体数据。"
 
 #~ msgid "Prerequisites before use"
 #~ msgstr "使用前的先决条件"
