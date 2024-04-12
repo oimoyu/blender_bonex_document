@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Introduction &mdash; Blender Bonex Document 1.0.0 documentation</title>
+  <title>Joint &mdash; Blender Bonex Document 1.0.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
 
@@ -20,9 +20,7 @@
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Get start" href="get_start.html" />
-    <link rel="prev" title="Welcome to blender bonex document’s documentation!" href="index.html" /> 
+    <link rel="search" title="Search" href="search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -44,16 +42,8 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#why-i-develop-this">Why I develop this</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#advantage">Advantage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#why-use-a-rigid-body-to-simulate-a-skirt-instead-of-cloth-simulation">Why use a rigid body to simulate a skirt instead of cloth simulation?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#gpu">GPU</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#reference">Reference</a></li>
-</ul>
-</li>
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="get_start.html">Get start</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rigidbody.html">Rigid body</a></li>
 <li class="toctree-l1"><a class="reference internal" href="joint.html">Joint</a></li>
@@ -81,7 +71,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Introduction</li>
+      <li class="breadcrumb-item active">Joint</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -90,51 +80,45 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="introduction">
-<h1>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h1>
-<section id="id1">
-<h2>Introduction<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
-<p>BoneX is a Blender addon helps you to create bone physics animation, driven by PhysX. PhysX is a mature physics engine used in game field, like UE4, U3D. Relying on PhysX to generate stable rigid body simulations, you can create bone physics effects for character animation. You can modify the properties of the rigid body and set its connection stiffness, damping quality, etc. to achieve the physical effects you want.</p>
-<p>Platform Support: Windows</p>
-<p>Blender Version: 3.6+</p>
-<p>UI Language Support: English, 日本語, 中文</p>
+  <section id="joint">
+<h1>Joint<a class="headerlink" href="#joint" title="Link to this heading"></a></h1>
+<p>Click addon panel button “Start Modify” to enter the rigidbody modify mode. In this mode you you will see operation prompts on the left. You can enable rigidbody, disable rigidbody and change rigidbody settings.</p>
+<section id="enable-disable-rigidbody">
+<h2>Enable/Disable Rigidbody<a class="headerlink" href="#enable-disable-rigidbody" title="Link to this heading"></a></h2>
+<p>C, set the selected bone as rigidbody.</p>
+<p>V, unset the selected bone as rigidbody, but the rigidbody and joint data still keep till set it to be rigidbody</p>
+<p>Ctrl+Alt+Shift+C, Clear selected bone rigidbody data.</p>
 </section>
-<section id="why-i-develop-this">
-<h2>Why I develop this<a class="headerlink" href="#why-i-develop-this" title="Link to this heading"></a></h2>
-<p>Vivid physics bring an unparalleled level of realism and depth to character animations. For those using Blender, many methods exist to achieve this, including cloth and rigid body simulations etc. In the realm of game engines, rigid body simulations often used for character physics. Despite my efforts to create a free addon <a class="reference external" href="https://github.com/oimoyu/blender_skirt_rigid_generator">blender_skirt_rigid_generator</a> based on Blender’s rigid body simulation, it still with many problems. Consequently, I decided to develop this, leveraging the mature and reliable PhysX physics engine, which offers stable and fast result.</p>
+<section id="drawing-visible-settings">
+<h2>Drawing Visible Settings<a class="headerlink" href="#drawing-visible-settings" title="Link to this heading"></a></h2>
+<p>Ctrl+L, Toggle display rigidbody shape edges</p>
+<p>F, Toggle display rigidbody shape edges</p>
+<p>H, Toggle hide rigidbody</p>
+<p>W, Toggle display rigidbody soft connection</p>
+<p>Ctrl+F,Toggle display rigidbody infront.</p>
+<p>Ctrl+H,Toggle display rigidbody visible pose bone rigidbody shape. You can only view the visible pose bone corresponding rigidbody shape when there is too much.</p>
 </section>
-<section id="advantage">
-<h2>Advantage<a class="headerlink" href="#advantage" title="Link to this heading"></a></h2>
-<p>①Relying on the mature physics engine physx, the simulation is stable, with less jitter</p>
-<p>②Collision group mask to control collision interaction supported</p>
-<p>③Custom collision body mesh supported</p>
-<p>④Real-time playback  interactions</p>
-<p>⑤Partial simulation supported, helps you improve detailed adjustments</p>
-<p>etc.</p>
+<section id="editing-rigidbody">
+<h2>Editing Rigidbody<a class="headerlink" href="#editing-rigidbody" title="Link to this heading"></a></h2>
+<p>T, Switch to default shape, with box and capsule.</p>
+<p>S, Scale shape.</p>
+<p>E, Edit shape in mesh edit mode.</p>
 </section>
-<section id="why-use-a-rigid-body-to-simulate-a-skirt-instead-of-cloth-simulation">
-<h2>Why use a rigid body to simulate a skirt instead of cloth simulation?<a class="headerlink" href="#why-use-a-rigid-body-to-simulate-a-skirt-instead-of-cloth-simulation" title="Link to this heading"></a></h2>
-<p>① Stable and controllable. Rigid body simulation only needs to focus on a limited number of rigid bodies.</p>
-<p>② Keep the shape. When making stylized characters, you need to make some exaggerated shapes that violate the laws of physics. If you use cloth simulation, these shapes will collapse with the collapse of the cloth. Rigid body simulation drives bones, and one bone can control many vertices, which maintains their relative positions.</p>
-<p>③ Prevent mesh intersection. If cloth simulation is used for proxy, contact and mesh intersection are problems. The collision volume of cloth is only a thin layer, while the collision volume of the rigid body can be defined by yourself. For a fluffy mesh, a larger collision volume can be made to prevent other meshes from intersecting the mold.</p>
+<section id="soft-connection-settings">
+<h2>Soft Connection Settings<a class="headerlink" href="#soft-connection-settings" title="Link to this heading"></a></h2>
+<p>Ctrl+W</p>
+<p>Shift+W</p>
+<p>Alt+W</p>
 </section>
-<section id="gpu">
-<h2>GPU<a class="headerlink" href="#gpu" title="Link to this heading"></a></h2>
-<p>Generally you don’t need it, the performance bottleneck is not in physx, and this may cause counterproductive(in my test). Physx supports CUDA hardware acceleration. When there are many rigid bodies or the number of iterations is large and the frame generation takes a long time, using the GPU will significantly increase the calculation speed. If you need to use the GPU acceleration function, you need to download “PhysXGpu_64.dll” and “PhysXDevice64.dll” and place them in the same location as “physx.exe” in the addon directory.</p>
-</section>
-<section id="reference">
-<h2>Reference<a class="headerlink" href="#reference" title="Link to this heading"></a></h2>
-<p><a class="reference external" href="https://nvidia-omniverse.github.io/PhysX/physx/5.3.0/">PhysX Document</a></p>
+<section id="additional-bone-constraint-settings">
+<h2>Additional Bone Constraint Settings<a class="headerlink" href="#additional-bone-constraint-settings" title="Link to this heading"></a></h2>
 </section>
 </section>
 
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to blender bonex document’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="get_start.html" class="btn btn-neutral float-right" title="Get start" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 

@@ -51,7 +51,6 @@
 <li class="toctree-l2"><a class="reference internal" href="#why-i-develop-this">これを開発した理由</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#advantage">利点</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#why-use-a-rigid-body-to-simulate-a-skirt-instead-of-cloth-simulation">スカートのシミュレーションに布地シミュレーションではなくリジッド ボディを使用するのはなぜですか?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#problems">問題</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#gpu">GPU</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#reference">Reference</a></li>
 </ul>
@@ -119,10 +118,6 @@
 <p>① 安定して制御可能。 剛体シミュレーションは、限られた数の剛体に焦点を合わせるだけです。</p>
 <p>② 形を保つ。スタイライズされたキャラクターを作る場合、物理法則に反するような大げさな形を作る必要があります。布シミュレーションを使うと、このような形状は布の崩壊とともに崩れてしまいます。剛体シミュレーションはボーンを駆動し、1つのボーンが多数の頂点を制御できます。ボーンシミュレーションは、ボーン間の相対的な位置関係を維持します。</p>
 <p>③ メッシュの交差を防ぐ。プロキシに布シミュレーションを使用する場合、接触とメッシュの交差が問題となる。布のコリジョンボリュームは薄いレイヤーでしかないが、剛体のコリジョンボリュームは自分で定義できる。フワフワしたメッシュの場合、コリジョンボリュームを大きくすることで、他のメッシュがモールドと交差するのを防ぐことができる。</p>
-</section>
-<section id="problems">
-<h2>問題<a class="headerlink" href="#problems" title="Link to this heading"></a></h2>
-<p>このアドオンは、骨がそれほど多くない状況に適しています。 特にMMDユーザーにとって、このアドオンの効率はMMD剛体ほど効率的ではありません。 Blenderオブジェクト変換には明らかなパフォーマンスボトルネックが適用されます。 このアドオンは、シミュレーションのために数百または数千の骨を生成するいくつかのモデルを扱うときに遅くなります。</p>
 </section>
 <section id="gpu">
 <h2>GPU<a class="headerlink" href="#gpu" title="Link to this heading"></a></h2>

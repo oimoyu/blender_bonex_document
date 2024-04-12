@@ -37,9 +37,6 @@ Why use a rigid body to simulate a skirt instead of cloth simulation?
 
 ③ Prevent mesh intersection. If cloth simulation is used for proxy, contact and mesh intersection are problems. The collision volume of cloth is only a thin layer, while the collision volume of the rigid body can be defined by yourself. For a fluffy mesh, a larger collision volume can be made to prevent other meshes from intersecting the mold.
 
-Problems
-------------------------
-This addon suitable for situations where there are not so many bones. Especially for mmd users, the efficiency of this addon is not as efficient as mmd rigid body. There is an obvious performance bottleneck in blender's setting of object transformation. This addon is slow when dealing with some models that generate hundreds or thousands of bones for simulation.
 
 GPU
 ------
