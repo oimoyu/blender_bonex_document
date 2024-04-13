@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="ja" data-content_root="./">
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ツール &mdash; Blender Bonex Document 1.0.0 ドキュメント</title>
+  <title>Additional Constraint &mdash; Blender Bonex Document 1.0.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
 
@@ -15,15 +15,14 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=90d9a163"></script>
+        <script src="_static/documentation_options.js?v=a12e3537"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-        <script src="_static/translations.js?v=4dbe4bdc"></script>
     <script src="_static/js/theme.js"></script>
-    <link rel="index" title="索引" href="genindex.html" />
-    <link rel="search" title="検索" href="search.html" />
-    <link rel="next" title="パラメータと例" href="example.html" />
-    <link rel="prev" title="シミュレーション" href="simulation.html" /> 
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Force Field" href="force_field.html" />
+    <link rel="prev" title="Soft Connection" href="soft_connection.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -46,19 +45,23 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">序章</a></li>
-<li class="toctree-l1"><a class="reference internal" href="get_start.html">スタートを切る</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rigidbody.html">剛体</a></li>
-<li class="toctree-l1"><a class="reference internal" href="joint.html">ジョイント</a></li>
-<li class="toctree-l1"><a class="reference internal" href="soft_connection.html">ソフトコネクション</a></li>
-<li class="toctree-l1"><a class="reference internal" href="additional_constraint.html">追加のコンストレイント</a></li>
-<li class="toctree-l1"><a class="reference internal" href="force_field.html">力場</a></li>
-<li class="toctree-l1"><a class="reference internal" href="scene.html">シーン設定</a></li>
-<li class="toctree-l1"><a class="reference internal" href="simulation.html">シミュレーション</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">ツール</a></li>
-<li class="toctree-l1"><a class="reference internal" href="example.html">パラメータと例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get_start.html">Get start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rigidbody.html">Rigid body</a></li>
+<li class="toctree-l1"><a class="reference internal" href="joint.html">Joint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="soft_connection.html">Soft Connection</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Additional Constraint</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#in-rigidbody-modify-mode">In rigidbody modify mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#constraint-in-addon-bonex">Constraint In addon BoneX</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="force_field.html">Force Field</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scene.html">Scene Setting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simulation.html">Simulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tool.html">Tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example.html">Parameters with Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contact.html">連絡先</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact.html">Contact</a></li>
 </ul>
 
         </div>
@@ -75,7 +78,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">ツール</li>
+      <li class="breadcrumb-item active">Additional Constraint</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -84,24 +87,35 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="tool">
-<h1>ツール<a class="headerlink" href="#tool" title="Link to this heading"></a></h1>
-<p><strong>すべて表示する</strong>：すべての骨のドライバーを表示します。</p>
-<p><strong>すべてを隠す</strong>：すべての骨のドライバーを非表示にします。</p>
-<p><strong>すべてを選択</strong>：すべての骨のドライバーを選択します。 キーフレームはドライバーに設定されており、ドライバーのアニメーションキーフレームを削除または編集できます。</p>
-<p><strong>ドライバーに切り替える</strong>：姿勢骨を選択すると、オブジェクトモードに切り替えてドライバーオブジェクトを選択します。 ドライバーオブジェクトを選択すると、姿勢モードに切り替わり、対応する姿勢骨を選択します。</p>
-<p><strong>ポーズボーンをリセット</strong>：選択したポーズボーンの位置と回転をリセットします。 剛体の骨は、ドライバーオブジェクトによって完全に制御されます。 ポーズ骨変換を初期にリセットする場合は、これをクリックしてください。</p>
-<p><strong>選択したボーンのコンストレイントを無効にする</strong>：影響を0に設定することにより、選択した骨のドライバー制約を無効にします。</p>
-<p><strong>選択したボーンのコンストレイントを有効にする</strong>: 影響を1に設定することにより、選択した骨のドライバー制約を有効にします。</p>
-<p>ヒント: カーブ エディタでは、影響を区別できないキーフレームが多数見つかります。 キーフレームをクリアしたい場合は、インフルエンスの入力ボックスにマウスを置き、右クリックしてキーフレームをクリアします。</p>
+  <section id="additional-constraint">
+<h1>Additional Constraint<a class="headerlink" href="#additional-constraint" title="Link to this heading"></a></h1>
+<p>Sometimes you may notice that the hard constraint in physx is not “hard” (physx hard constraint setting is in rigidbody-&gt;joint “angle limit” and “distance limit”). It may be push away from hard constraint when dynamic rigidbody is subjected to a large force.</p>
+<p>To avoid this, we should add constraint additional bone constraint in blender.</p>
+<p>① In blender, every bone has a property call “connected”, this will lock pose bone location from anything.</p>
+<p>② Using additional constraint comes with this addon. “connected” only work for a limited scene, if you want a more option to constraint, use additional constraint function in this addon.</p>
+<section id="in-rigidbody-modify-mode">
+<h2>In rigidbody modify mode<a class="headerlink" href="#in-rigidbody-modify-mode" title="Link to this heading"></a></h2>
+<p>Ctrl+Q, Create additional constraint for selected pose bone.</p>
+<p>Alt+Q, Delete additional constraint for selected pose bone.</p>
+<video width="100%" controls src="../video/additional_constraint.mp4">
+  Your browser does not support the video tag.
+</video><hr class="docutils" />
+<p>Notice: If you use additional constraint in blender, this addon rigidbody modify mode may not show the real rigidobdy shape location and rotation, the real rigid body transformation is reflected in the driver , to view real transform of rigidbody shape, you should disable additional constraint or you can check driver object directly.</p>
+</section>
+<section id="constraint-in-addon-bonex">
+<h2>Constraint In addon BoneX<a class="headerlink" href="#constraint-in-addon-bonex" title="Link to this heading"></a></h2>
+<p>For every dynamic rigidbody, we use the “COPY LOCATION” bone contraint to make sure dynamic bone’s location and rotatioin are tracked to the driver object(if “connected” option is on, only rotation will be tracked to driver object). Additional constraints is based on driver constraints to prevent bones from being pushed away from hard constraints.</p>
+<a href="../image/bone_constraint.png" target="_blank">
+    <img src="../image/bone_constraint.png" style="width: 50%;" />
+</a></section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="simulation.html" class="btn btn-neutral float-left" title="シミュレーション" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="example.html" class="btn btn-neutral float-right" title="パラメータと例" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="soft_connection.html" class="btn btn-neutral float-left" title="Soft Connection" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="force_field.html" class="btn btn-neutral float-right" title="Force Field" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -127,7 +141,7 @@
   </span>
   <div class="rst-other-versions">
     <dl>
-      <dt>言語</dt>
+      <dt>Languages</dt>
       
       <dd><a href="javascript:void(0)" class="switch-lang" data-lang="en">English</a></dd><br>
       

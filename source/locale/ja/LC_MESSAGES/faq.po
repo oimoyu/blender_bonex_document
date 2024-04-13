@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Bonex Document\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-11 11:22+0800\n"
-"PO-Revision-Date: 2024-04-11 12:50+0800\n"
+"POT-Creation-Date: 2024-04-13 15:25+0800\n"
+"PO-Revision-Date: 2024-04-13 15:32+0800\n"
 "Last-Translator: \n"
 "Language-Team: ja <LL@li.org>\n"
 "Language: ja\n"
@@ -41,25 +41,29 @@ msgstr "① 位置計算反復回数を増やして計算精度を向上させ�
 msgid "② Set the bone attribute to connected, so that the bone is hard constrained to the tail of the parent, and only the rotation result of physx will be applied."
 msgstr "② ボーン属性を Connected に設定すると、ボーンは親の尾部にハード拘束され、physx の回転結果のみが適用されます。"
 
-#: ../../source/faq.rst:16
+#: ../../source/faq.rst:14
+msgid "③ Set additional constraints. More detail see additional constraint document."
+msgstr "③ 追加のコンストレイントを設定します。 詳細については、追加のコンストレイント ドキュメントを参照してください。"
+
+#: ../../source/faq.rst:23
 msgid "Why does jitter occur?"
 msgstr "なぜジッターが発生するのでしょうか？"
 
-#: ../../source/faq.rst:18
+#: ../../source/faq.rst:25
 msgid ""
 "When a rigid body breaks away from a hard constraint, it will try to return to the position where the constraint should be, and will generate a large recovery force. At this time, if there is a kinematic rigid body that prevents it from returning to its "
 "supposed position or rotating, it will jitter in simulation results."
 msgstr "剛体は強い拘束から離れると、拘束があるべき位置に戻ろうとし、大きな復元力が発生します。 このとき、想定位置への復帰や回転を妨げるkinematic学的剛体があると、シミュレーション結果にジッターが生じます。"
 
-#: ../../source/faq.rst:20
+#: ../../source/faq.rst:27
 msgid "① Adjust the position of kinematic rigidbody so that it does not conflict with hard constraints"
 msgstr "①ハードコンストレイントに抵触しないようにkinematicの位置を調整する"
 
-#: ../../source/faq.rst:22
+#: ../../source/faq.rst:29
 msgid "② Take out the jittered part separately, disable the conflicting kinematic rigid body and recalculate it separately"
 msgstr "② ジッタ部分を別途取り出し、競合するkinematic剛体を無効にして別途再計算"
 
-#: ../../source/faq.rst:24
+#: ../../source/faq.rst:31
 msgid ""
 "③ Adjust parmeter. Sometimes, even though you have relaxed the constraints, you may still find that there is some jitter when your thighs are raised and collide with the skirt. This may be because the rigid body is separated from the hard constraints due "
 "to friction. You can try to reduce the friction coefficient."
@@ -67,89 +71,89 @@ msgstr ""
 "③ パラメータを調整します。 場合によっては、拘束を緩めたにもかかわらず、太ももが上がってスカートと衝突するときに多少の震えが生じることがあります。 これは、摩擦によって剛体がハードな拘束から切り離されたためと考えられます。 摩擦係数を下げることを試みることがで"
 "きます。"
 
-#: ../../source/faq.rst:27
+#: ../../source/faq.rst:34
 msgid "Why did the simulation stop early when playback?"
 msgstr "再生時にシミュレーションが早期に停止したのはなぜですか?"
 
-#: ../../source/faq.rst:28
+#: ../../source/faq.rst:35
 msgid "Should be the frame step not continuous. This addon need to get every continuous frame to be simulated."
 msgstr "フレーム ステップが連続していない必要があります。 このアドオンは、シミュレートされるすべての連続フレームを取得する必要があります。"
 
-#: ../../source/faq.rst:30
+#: ../../source/faq.rst:37
 msgid "① You may try to skip the frame when playback."
 msgstr "① 再生時にフレームを飛ばそうとする場合があります。"
 
-#: ../../source/faq.rst:32
+#: ../../source/faq.rst:39
 msgid "② Check whether you select the \"Play Every Frame\" playback mode(in Timeline viewport -> Playback -> Sync)"
 msgstr "② 再生モードが「フレームごとに再生」を選択しているかどうかを確認します（タイムラインビューポート -> 再生 -> 同期）"
 
-#: ../../source/faq.rst:41
+#: ../../source/faq.rst:48
 msgid "Why is the simulation unable to move despite setting upper and lower displacement limits?"
 msgstr "変位の上限と下限を設定しているにもかかわらず、シミュレーションが移動できないのはなぜですか?"
 
-#: ../../source/faq.rst:42
+#: ../../source/faq.rst:49
 msgid "① Check whether connected is checked in the bone attributes. Connected is the option for blender to lock the bone displacement. Bones with this option checked cannot move in posture mode."
 msgstr "ボーンアトリビュートでconnectedがチェックされているか確認します。Connectedは、Blenderがボーンの変位を固定するためのオプションです。このオプションがチェックされたボーンは、ポスチャーモードで動くことができません。"
 
-#: ../../source/faq.rst:44
+#: ../../source/faq.rst:51
 msgid "② Whether the joint stiffness and the rigid body mass match. If the spring stiffness is too large or the rigid body mass is too small, the force will not be enough to move the rigid body, so it cannot move."
 msgstr "ジョイント剛性と剛体質量が合っているかどうか。バネ剛性が大きすぎたり、剛体質量が小さすぎたりすると、剛体を動かす力が足りなくなり、動かせなくなる。"
 
-#: ../../source/faq.rst:47
+#: ../../source/faq.rst:54
 msgid "What should I do if the FPS is too low during playback?"
 msgstr "再生中の FPS が低すぎる場合はどうすればよいですか?"
 
-#: ../../source/faq.rst:49
+#: ../../source/faq.rst:56
 msgid "① Try to hide your mesh. You can move the mesh to a collection to hide them, and playback with only armature."
 msgstr "①メッシュを非表示にしてみます。 メッシュをコレクションに移動して非表示にし、アーマチュアのみで再生することができます。"
 
-#: ../../source/faq.rst:57
+#: ../../source/faq.rst:64
 msgid "② Try to remain only armature modifier. Some modifiers consume a lot of performance, like Geometry node, you can try to apply or disable them."
 msgstr "② アーマチュアモディファイアのみを残すようにしてください。 ジオメトリ ノードなど、一部のモディファイアはパフォーマンスを大量に消費するため、それらを適用または無効にすることができます。"
 
-#: ../../source/faq.rst:59
+#: ../../source/faq.rst:66
 msgid ""
 "③ Playback without rigidbody modify mode, in rigidbody modify mode you can view the rigidbody shape, but the drawing api efficiency of the preview is not high, and some data need to be calculated in real time, so the playback speed will be slowed down when "
 "there are lots rigid bodies exist."
 msgstr "③ 剛体変更モードなしで再生すると、剛体変更モードでは 剛体シェイプを表示できますが、プレビューの描画 API 効率が高くなく、一部のデータはリアルタイムで計算する必要があるため、再生速度が遅くなります。"
 
-#: ../../source/faq.rst:61
+#: ../../source/faq.rst:68
 msgid "④ Reduce the number of iteration steps. A reasonable number of iteration steps can improve the calculation speed. You can use 1 iter number for playback, and use high iter number in final render."
 msgstr "④ 反復ステップ数を減らします。 適切な数の反復ステップにより、計算速度を向上させることができます。 再生には 1 つの iter 番号を使用し、最終レンダリングでは高い iter 番号を使用できます。"
 
-#: ../../source/faq.rst:63
+#: ../../source/faq.rst:70
 msgid "⑤ Try to bake the animation into key frames and then play it."
 msgstr "⑤ アニメーションをキーフレームにベイクしてから再生してみます。"
 
-#: ../../source/faq.rst:65
+#: ../../source/faq.rst:72
 msgid "⑥ Try to divide the simulation into separate parts, and simulate them separately."
 msgstr "⑥ シミュレーションをいくつかの部分に分けて、別々にシミュレーションするようにしてください。"
 
-#: ../../source/faq.rst:68
+#: ../../source/faq.rst:75
 msgid "What should I do if the laggy in rigidbody modify mode?"
 msgstr "剛体変更モードでラグが発生した場合はどうすればよいですか?"
 
-#: ../../source/faq.rst:69
+#: ../../source/faq.rst:76
 msgid "① Increase refresh interval."
 msgstr "① 更新間隔を長くします。"
 
-#: ../../source/faq.rst:71
+#: ../../source/faq.rst:78
 msgid "② Select \"Selected Bone Only\" to only preview the selected rigidbody bone."
 msgstr "②「選択したボーンのみ」を選択すると、選択した剛体ボーンのみをプレビューします。"
 
-#: ../../source/faq.rst:74
+#: ../../source/faq.rst:81
 msgid "Why can't rigidbody bones be moved manually?"
 msgstr "剛体ボーンを手動で移動できないのはなぜですか?"
 
-#: ../../source/faq.rst:75
+#: ../../source/faq.rst:82
 msgid "① Because this addon drives bones by driver objects, you can move the driver obj to move bone."
 msgstr "① このアドオンはドライバーオブジェクトでボーンを駆動するので、ドライバーオブジェクトを動かしてボーンを動かすことができます。"
 
-#: ../../source/faq.rst:77
+#: ../../source/faq.rst:84
 msgid "② If you want to temporarily move the bones manually, the toolbar has a disable driver constraint. Used in conjunction with the keyframing option, you can temporarily gain control of your bones."
 msgstr "② 一時的にボーンを手動で移動したい場合は、ツールバーにドライバーを無効にする制約があります。 キーフレーム オプションと組み合わせて使用すると、一時的にボーンを制御できるようになります。"
 
-#: ../../source/faq.rst:79
+#: ../../source/faq.rst:86
 msgid ""
 "③ If you want to completely delete the driver, select the bone in rigid body modification mode and press Ctrl+Alt+Shift+C. This will delete the bone constraints and delete the driver object. Note that animation keyframes are set on the drive, so this "
 "operation will delete the animation."
@@ -157,11 +161,11 @@ msgstr ""
 "③ドライバーを完全に削除したい場合は、剛体変更モードでボーンを選択し、Ctrl+Alt+Shift+Cを押します。 これにより、ボーン コンストレイントが削除され、ドライバー オブジェクトが削除されます。 アニメーションのキーフレームはドライブ上に設定されているため、この操作に"
 "よりアニメーションが削除されることに注意してください。"
 
-#: ../../source/faq.rst:82
+#: ../../source/faq.rst:89
 msgid "High speed movement penetrate rigidbody issues"
 msgstr "高速移動が剛体の問題を貫通"
 
-#: ../../source/faq.rst:83
+#: ../../source/faq.rst:90
 msgid ""
 "when a rigid body move in a very high speed, rigidbody will penetrate, and collision will not happen. To avoid this, physx has a feature call ccd. But in my practice, I have not seen such situation, and the ccd need addtional calculation, so I did not add "
 "in bonx. But If you have a high speed rigidbody scene and penetration occur, you can send the blender project to me to let me think about this feature."
@@ -169,11 +173,11 @@ msgstr ""
 "剛体が非常に高速で移動すると、剛体が貫通し、衝突が起こらなくなります。これを避けるために、physxにはccdという機能があります。しかし、私の練習では、そのような状況は見たことがなく、ccdは追加計算が必要なので、bonxには追加しませんでした。しかし、もしあなたが高速"
 "のリジッドボディ・シーンを持っていて、ペネトレーションが発生するのであれば、私にこの機能について考えさせるために、blenderのプロジェクトを送ることができます。"
 
-#: ../../source/faq.rst:86
+#: ../../source/faq.rst:93
 msgid "Why this addon using empty obj to drive bones?"
 msgstr "なぜこのアドオンは空の obj を使用してボーンを駆動するのでしょうか?"
 
-#: ../../source/faq.rst:87
+#: ../../source/faq.rst:94
 msgid ""
 "For those developer who want to do this. If you want to set transform for a obj with parent, you must call update() to ensure the parent matrix latest. But update() function will update from whole scene, if your scene is huge, the process will be extremely "
 "slow."

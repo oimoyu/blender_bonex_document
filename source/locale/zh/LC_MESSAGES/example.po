@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Bonex Document\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-08 08:42+0800\n"
-"PO-Revision-Date: 2024-04-08 08:44+0800\n"
+"POT-Creation-Date: 2024-04-13 16:31+0800\n"
+"PO-Revision-Date: 2024-04-13 16:34+0800\n"
 "Last-Translator: \n"
 "Language-Team: zh <LL@li.org>\n"
 "Language: zh\n"
@@ -106,23 +106,38 @@ msgstr ""
 
 #: ../../source/example.rst:19
 msgid ""
+"⑤The scale is important. The simulation is carried out in accordance with the "
+"laws of physics. For example, when giving a rigid body to the breast bone, you "
+"may find that it cannot shake up and down. You may need to consider whether "
+"the scaling is too small, resulting in the bone being too short and the center "
+"of mass moment arm being too short. In this case You can try to enlarge the "
+"model, but this is often troublesome, then you can try increasing the mass of "
+"the rigidbody or decrease stiffness."
+msgstr ""
+"⑤缩放尺寸很重要。 模拟是根据物理定律进行的。 例如，当给胸骨赋予刚体时，你可能会"
+"发现它无法上下晃动。 你可能需要考虑是否缩放太小，导致骨骼太短，质心力臂太短。 "
+"在这种情况下你可以尝试放大模型，但这往往很麻烦，那么你可以尝试增加刚体的质量或"
+"降低刚度。"
+
+#: ../../source/example.rst:21
+msgid ""
 "Generally speaking, there is no need to twist, so the angle limit in the "
 "direction of the twist axis can be set to 0"
 msgstr "一般来说不需要扭转，所以扭转轴方向的角度限制可以设置为0"
 
-#: ../../source/example.rst:23
+#: ../../source/example.rst:25
 msgid "Example"
 msgstr "案例"
 
-#: ../../source/example.rst:25
+#: ../../source/example.rst:27
 msgid "Example video tutorials will be updated sequentially."
 msgstr "示例视频教程将陆续更新。"
 
-#: ../../source/example.rst:28
+#: ../../source/example.rst:30
 msgid "Furry Ear and Tail"
 msgstr "毛茸茸的耳朵和尾巴"
 
-#: ../../source/example.rst:29
+#: ../../source/example.rst:31
 msgid ""
 "For the tail, you want medium stiffness so it can bounce back, and medium "
 "damping so it looks more natural. For the ears, you can refer to the settings "
@@ -131,11 +146,11 @@ msgstr ""
 "对于尾部，您需要中等硬度，这样它可以反弹，中等阻尼，这样它看起来更自然。 对于耳"
 "朵，可以参考尾部的设置，但可以给予更高的阻尼，以体现柔软的效果。"
 
-#: ../../source/example.rst:41
+#: ../../source/example.rst:43
 msgid "Hair"
 msgstr "毛发"
 
-#: ../../source/example.rst:42
+#: ../../source/example.rst:44
 msgid ""
 "For hair, you need lower stiffness because hair is very soft, and higher "
 "damping because hair is very light and subject to greater air resistance. And "
@@ -146,20 +161,20 @@ msgstr ""
 "并且受到更大的空气阻力。 并降低反弹系数，因为头发柔软且轻，当它与其他物体碰撞"
 "时，它在现实世界中不会反弹太多。"
 
-#: ../../source/example.rst:45
+#: ../../source/example.rst:47
 msgid "Cloth"
 msgstr "布料"
 
-#: ../../source/example.rst:46
+#: ../../source/example.rst:48
 msgid ""
 "For cloth, refer to the parameters of hair, and increase gravity or stiffness"
 msgstr "对于布料，参考头发的参数，并增加重力或硬度"
 
-#: ../../source/example.rst:57
+#: ../../source/example.rst:59
 msgid "Breast"
 msgstr "胸部"
 
-#: ../../source/example.rst:58
+#: ../../source/example.rst:60
 msgid ""
 "For the breast, a slightly higher stiffness is needed to produce a certain "
 "rocking effect and reflect elasticity. At the same time, adjusting the "
@@ -168,11 +183,11 @@ msgstr ""
 "对于胸部来说，需要稍高的刚度，才能产生一定的摇摆效果，体现弹性。 同时，将位移限"
 "制调整为略高于0，可以达到更好的物理效果。"
 
-#: ../../source/example.rst:69
+#: ../../source/example.rst:71
 msgid "Simple Ragdoll"
 msgstr "简单的布娃娃系统"
 
-#: ../../source/example.rst:79
+#: ../../source/example.rst:81
 msgid ""
 "It should be noted that the dynamic rigid body should not appear in the parent "
 "bone of the kinimatic rigid body. Because in Blender, the transformation of "

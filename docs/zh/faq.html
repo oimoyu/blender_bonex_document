@@ -50,6 +50,7 @@
 <li class="toctree-l1"><a class="reference internal" href="rigidbody.html">刚体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="joint.html">关节</a></li>
 <li class="toctree-l1"><a class="reference internal" href="soft_connection.html">软连接</a></li>
+<li class="toctree-l1"><a class="reference internal" href="additional_constraint.html">附加约束</a></li>
 <li class="toctree-l1"><a class="reference internal" href="force_field.html">力场</a></li>
 <li class="toctree-l1"><a class="reference internal" href="scene.html">场景设置</a></li>
 <li class="toctree-l1"><a class="reference internal" href="simulation.html">模拟</a></li>
@@ -100,6 +101,7 @@
 <p>physx等仿真引擎的约束并不是绝对的约束。 太大的力（例如kinematic刚体的力）或太小的位置求解器迭代都会导致其脱离约束。</p>
 <p>① 增加位置迭代器的步数，提高计算精度</p>
 <p>② 设置骨骼属性为connected，使骨骼硬约束在parent的尾部，并且只应用physx的旋转结果。</p>
+<p>③ 设置附加约束。 更多详细信息请参阅附加约束文档。</p>
 <a href="../image/connected_location.png" target="_blank">
     <img src="../image/connected_location.png" style="width: 60%;" />
 </a></section>

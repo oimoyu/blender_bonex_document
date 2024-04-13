@@ -16,6 +16,8 @@ For rigid bodies on a chain, it is equivalent to having a spring between them to
 
 ④The relationship between mass and motion. The greater the mass, the greater the inertial force. If you want to express the feeling of an object staying in the air, counter-intuitively, you need to increase the mass, because a rigid body with a small mass is more likely to be pulled by the spring stiffness and return quickly, the time in the air is not long, and an object with a larger mass has a larger inertial force, and the same spring stiffness takes more time to pull it, so it can reflect the feeling of being in the air.
 
+⑤The scale is important. The simulation is carried out in accordance with the laws of physics. For example, when giving a rigid body to the breast bone, you may find that it cannot shake up and down. You may need to consider whether the scaling is too small, resulting in the bone being too short and the center of mass moment arm being too short. In this case You can try to enlarge the model, but this is often troublesome, then you can try increasing the mass of the rigidbody or decrease stiffness.
+
 Generally speaking, there is no need to twist, so the angle limit in the direction of the twist axis can be set to 0
 
 

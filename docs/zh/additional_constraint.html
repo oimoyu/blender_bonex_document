@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>联系 &mdash; Blender Bonex Document 1.0.0 文档</title>
+  <title>附加约束 &mdash; Blender Bonex Document 1.0.0 文档</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
 
@@ -21,7 +21,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="搜索" href="search.html" />
-    <link rel="prev" title="常见问题" href="faq.html" /> 
+    <link rel="next" title="力场" href="force_field.html" />
+    <link rel="prev" title="软连接" href="soft_connection.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -49,14 +50,18 @@
 <li class="toctree-l1"><a class="reference internal" href="rigidbody.html">刚体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="joint.html">关节</a></li>
 <li class="toctree-l1"><a class="reference internal" href="soft_connection.html">软连接</a></li>
-<li class="toctree-l1"><a class="reference internal" href="additional_constraint.html">附加约束</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">附加约束</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#in-rigidbody-modify-mode">在刚体修改模式下</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#constraint-in-addon-bonex">插件 BoneX 中的约束</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="force_field.html">力场</a></li>
 <li class="toctree-l1"><a class="reference internal" href="scene.html">场景设置</a></li>
 <li class="toctree-l1"><a class="reference internal" href="simulation.html">模拟</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tool.html">工具</a></li>
 <li class="toctree-l1"><a class="reference internal" href="example.html">参数及示例</a></li>
 <li class="toctree-l1"><a class="reference internal" href="faq.html">常见问题</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">联系</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact.html">联系</a></li>
 </ul>
 
         </div>
@@ -73,7 +78,7 @@
           <div role="navigation" aria-label="页面导航">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">联系</li>
+      <li class="breadcrumb-item active">附加约束</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -82,16 +87,35 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="contact">
-<h1>联系<a class="headerlink" href="#contact" title="Link to this heading"></a></h1>
-<p>如果您有任何问题或建议，联系：<a class="reference external" href="mailto:oimomanyu&#37;&#52;&#48;gmail&#46;com">oimomanyu<span>&#64;</span>gmail<span>&#46;</span>com</a></p>
+  <section id="additional-constraint">
+<h1>附加约束<a class="headerlink" href="#additional-constraint" title="Link to this heading"></a></h1>
+<p>有时你可能会注意到physx中的硬约束并不“硬”（physx硬约束设置是在rigidbody-&gt;joint“角度限制”和“距离限制”中）。 当dynamic刚体受到很大的力时，它可能会被推离硬约束。</p>
+<p>为了避免这种情况，我们应该在Blender中添加额外的骨骼约束。</p>
+<p>① 在搅拌机中，每个骨骼都有一个称为“相连项”的属性，这将锁定姿势骨骼位置。</p>
+<p>② 使用此插件附带的附加约束。 “相连项”仅适用于有限的场景，如果您想要更多约束选项，请使用此插件中的附加约束功能。</p>
+<section id="in-rigidbody-modify-mode">
+<h2>在刚体修改模式下<a class="headerlink" href="#in-rigidbody-modify-mode" title="Link to this heading"></a></h2>
+<p>Ctrl+Q，为选定的姿势骨骼创建附加约束。</p>
+<p>Alt+Q，删除所选姿势骨骼的附加约束。</p>
+<video width="100%" controls src="../video/additional_constraint.mp4">
+  Your browser does not support the video tag.
+</video><hr class="docutils" />
+<p>注意：如果您在搅拌机中使用附加约束，此附加刚体修改模式可能不会显示真实的刚体形状位置和旋转，真实的刚体变换反映在驱动器上，要查看刚体形状的真实变换，应禁用附加约束，或者可以直接检查驱动器对象。</p>
+</section>
+<section id="constraint-in-addon-bonex">
+<h2>插件 BoneX 中的约束<a class="headerlink" href="#constraint-in-addon-bonex" title="Link to this heading"></a></h2>
+<p>对于每个dynamic刚体，我们使用“复制位置”骨骼约束来确保dynamic刚体骨骼的位置和旋转被跟踪到驱动器对象（如果“相连项”选项打开，则仅旋转将被跟踪到驱动程序对象）。 附加约束基于驱动器约束，防止骨骼被推离硬约束。</p>
+<a href="../image/bone_constraint.png" target="_blank">
+    <img src="../image/bone_constraint.png" style="width: 50%;" />
+</a></section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
-        <a href="faq.html" class="btn btn-neutral float-left" title="常见问题" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="soft_connection.html" class="btn btn-neutral float-left" title="软连接" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="force_field.html" class="btn btn-neutral float-right" title="力场" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

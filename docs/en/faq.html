@@ -50,6 +50,7 @@
 <li class="toctree-l1"><a class="reference internal" href="rigidbody.html">Rigid body</a></li>
 <li class="toctree-l1"><a class="reference internal" href="joint.html">Joint</a></li>
 <li class="toctree-l1"><a class="reference internal" href="soft_connection.html">Soft Connection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="additional_constraint.html">Additional Constraint</a></li>
 <li class="toctree-l1"><a class="reference internal" href="force_field.html">Force Field</a></li>
 <li class="toctree-l1"><a class="reference internal" href="scene.html">Scene Setting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="simulation.html">Simulation</a></li>
@@ -100,6 +101,7 @@
 <p>The constraints of simulation engines such as physx are not absolute constraints. Too large a force (such as the force of a kinematic rigid body) or too small position solver iteration will cause it to break away from the constraints.</p>
 <p>① Increase the number of steps of the position iterator to improve simulation accuracy</p>
 <p>② Set the bone attribute to connected, so that the bone is hard constrained to the tail of the parent, and only the rotation result of physx will be applied.</p>
+<p>③ Set additional constraints. More detail see additional constraint document.</p>
 <a href="../image/connected_location.png" target="_blank">
     <img src="../image/connected_location.png" style="width: 60%;" />
 </a></section>

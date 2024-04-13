@@ -9,6 +9,7 @@ Welcome to blender bonex document's documentation!
    rigidbody
    joint
    soft_connection
+   additional_constraint
    force_field
    scene
    simulation

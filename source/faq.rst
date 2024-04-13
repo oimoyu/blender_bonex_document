@@ -11,6 +11,8 @@ The constraints of simulation engines such as physx are not absolute constraints
 
 ② Set the bone attribute to connected, so that the bone is hard constrained to the tail of the parent, and only the rotation result of physx will be applied.
 
+③ Set additional constraints. More detail see additional constraint document.
+
 .. raw:: html
 
     <a href="../image/connected_location.png" target="_blank">

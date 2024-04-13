@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Bonex Document\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-11 11:22+0800\n"
-"PO-Revision-Date: 2024-04-11 11:23+0800\n"
+"POT-Creation-Date: 2024-04-13 15:25+0800\n"
+"PO-Revision-Date: 2024-04-13 15:26+0800\n"
 "Last-Translator: \n"
 "Language-Team: zh <LL@li.org>\n"
 "Language: zh\n"
@@ -55,11 +55,16 @@ msgstr ""
 "② 设置骨骼属性为connected，使骨骼硬约束在parent的尾部，并且只应用physx的旋转结"
 "果。"
 
-#: ../../source/faq.rst:16
+#: ../../source/faq.rst:14
+msgid ""
+"③ Set additional constraints. More detail see additional constraint document."
+msgstr "③ 设置附加约束。 更多详细信息请参阅附加约束文档。"
+
+#: ../../source/faq.rst:23
 msgid "Why does jitter occur?"
 msgstr "为什么会出现抖动？"
 
-#: ../../source/faq.rst:18
+#: ../../source/faq.rst:25
 msgid ""
 "When a rigid body breaks away from a hard constraint, it will try to return to "
 "the position where the constraint should be, and will generate a large recovery "
@@ -70,19 +75,19 @@ msgstr ""
 "当刚体脱离硬约束时，它会尝试返回到约束应在的位置，并会产生很大的恢复力。 此时，如"
 "果存在kinematic刚体阻止其返回到应有的位置或旋转，则仿真结果就会出现抖动。"
 
-#: ../../source/faq.rst:20
+#: ../../source/faq.rst:27
 msgid ""
 "① Adjust the position of kinematic rigidbody so that it does not conflict with "
 "hard constraints"
 msgstr "① 调整kinematic刚体的位置，使其不与硬约束冲突"
 
-#: ../../source/faq.rst:22
+#: ../../source/faq.rst:29
 msgid ""
 "② Take out the jittered part separately, disable the conflicting kinematic rigid "
 "body and recalculate it separately"
 msgstr "② 单独取出抖动部分，禁用冲突的运动刚体，单独重新计算"
 
-#: ../../source/faq.rst:24
+#: ../../source/faq.rst:31
 msgid ""
 "③ Adjust parmeter. Sometimes, even though you have relaxed the constraints, you "
 "may still find that there is some jitter when your thighs are raised and collide "
@@ -93,33 +98,33 @@ msgstr ""
 "会发现有些抖动。 这可能是因为刚体由于摩擦而脱离了硬约束。 您可以尝试降低摩擦系"
 "数。"
 
-#: ../../source/faq.rst:27
+#: ../../source/faq.rst:34
 msgid "Why did the simulation stop early when playback?"
 msgstr "为什么回放时模拟提前停止？"
 
-#: ../../source/faq.rst:28
+#: ../../source/faq.rst:35
 msgid ""
 "Should be the frame step not continuous. This addon need to get every continuous "
 "frame to be simulated."
 msgstr "应该是帧步不连续。 该插件需要模拟每个连续帧。"
 
-#: ../../source/faq.rst:30
+#: ../../source/faq.rst:37
 msgid "① You may try to skip the frame when playback."
 msgstr "① 你可能是在播放过程中尝试跳过关键帧。"
 
-#: ../../source/faq.rst:32
+#: ../../source/faq.rst:39
 msgid ""
 "② Check whether you select the \"Play Every Frame\" playback mode(in Timeline "
 "viewport -> Playback -> Sync)"
 msgstr "② 检查是否选择“播放每一帧”播放模式（在时间轴视口->播放->同步）"
 
-#: ../../source/faq.rst:41
+#: ../../source/faq.rst:48
 msgid ""
 "Why is the simulation unable to move despite setting upper and lower "
 "displacement limits?"
 msgstr "为什么尽管设置了位移上限和下限，模拟仍无法移动？"
 
-#: ../../source/faq.rst:42
+#: ../../source/faq.rst:49
 msgid ""
 "① Check whether connected is checked in the bone attributes. Connected is the "
 "option for blender to lock the bone displacement. Bones with this option checked "
@@ -128,7 +133,7 @@ msgstr ""
 "① 检查骨骼属性中是否勾选connected。 Connected 是 Blender 锁定骨骼位移的选项。 选"
 "中此选项的骨骼无法在姿势模式下移动。"
 
-#: ../../source/faq.rst:44
+#: ../../source/faq.rst:51
 msgid ""
 "② Whether the joint stiffness and the rigid body mass match. If the spring "
 "stiffness is too large or the rigid body mass is too small, the force will not "
@@ -137,18 +142,18 @@ msgstr ""
 "②关节刚度与刚体质量是否匹配。 如果弹簧刚度太大或刚体质量太小，则力不足以移动刚"
 "体，因此它无法移动。"
 
-#: ../../source/faq.rst:47
+#: ../../source/faq.rst:54
 msgid "What should I do if the FPS is too low during playback?"
 msgstr "播放时FPS太低怎么办？"
 
-#: ../../source/faq.rst:49
+#: ../../source/faq.rst:56
 msgid ""
 "① Try to hide your mesh. You can move the mesh to a collection to hide them, and "
 "playback with only armature."
 msgstr ""
 "① 尝试隐藏您的网格。 您可以将网格移动到集合中以隐藏它们，并仅使用骨架进行播放。"
 
-#: ../../source/faq.rst:57
+#: ../../source/faq.rst:64
 msgid ""
 "② Try to remain only armature modifier. Some modifiers consume a lot of "
 "performance, like Geometry node, you can try to apply or disable them."
@@ -156,7 +161,7 @@ msgstr ""
 "② 尽量只保留骨架修改器。 有些修改器会消耗大量性能，例如几何节点，您可以尝试应用或"
 "禁用它们。"
 
-#: ../../source/faq.rst:59
+#: ../../source/faq.rst:66
 msgid ""
 "③ Playback without rigidbody modify mode, in rigidbody modify mode you can view "
 "the rigidbody shape, but the drawing api efficiency of the preview is not high, "
@@ -166,7 +171,7 @@ msgstr ""
 "③ 不要在刚体修改模式下播放，在刚体修改模式下可以查看刚体形状，但是预览的绘图api效"
 "率不高，而且有些数据需要实时计算，所以有很多刚体的时候播放速度会变慢 。"
 
-#: ../../source/faq.rst:61
+#: ../../source/faq.rst:68
 msgid ""
 "④ Reduce the number of iteration steps. A reasonable number of iteration steps "
 "can improve the calculation speed. You can use 1 iter number for playback, and "
@@ -175,39 +180,39 @@ msgstr ""
 "③ 减少迭代步数。 合理的迭代步数可以提高计算速度。可以尝试在播放中使用1迭代步数，"
 "在最后烘焙时使用更高的迭代步数。"
 
-#: ../../source/faq.rst:63
+#: ../../source/faq.rst:70
 msgid "⑤ Try to bake the animation into key frames and then play it."
 msgstr "④ 尝试将动画烘焙到关键帧中然后播放。"
 
-#: ../../source/faq.rst:65
+#: ../../source/faq.rst:72
 msgid ""
 "⑥ Try to divide the simulation into separate parts, and simulate them separately."
 msgstr "⑤ 尽量将模拟分成单独的部分，分别进行模拟。"
 
-#: ../../source/faq.rst:68
+#: ../../source/faq.rst:75
 msgid "What should I do if the laggy in rigidbody modify mode?"
 msgstr "刚体编辑模式下卡顿怎么办？"
 
-#: ../../source/faq.rst:69
+#: ../../source/faq.rst:76
 msgid "① Increase refresh interval."
 msgstr "① 增加刚体形状刷新间隔。"
 
-#: ../../source/faq.rst:71
+#: ../../source/faq.rst:78
 msgid ""
 "② Select \"Selected Bone Only\" to only preview the selected rigidbody bone."
 msgstr "② 选择“仅选定的骨骼”仅预览选定的刚体骨骼。"
 
-#: ../../source/faq.rst:74
+#: ../../source/faq.rst:81
 msgid "Why can't rigidbody bones be moved manually?"
 msgstr "为什么无法手动移动刚体骨骼？"
 
-#: ../../source/faq.rst:75
+#: ../../source/faq.rst:82
 msgid ""
 "① Because this addon drives bones by driver objects, you can move the driver obj "
 "to move bone."
 msgstr "① 由于该插件通过驱动物体驱动骨骼，因此可以通过移动驱动物体来移动骨骼。"
 
-#: ../../source/faq.rst:77
+#: ../../source/faq.rst:84
 msgid ""
 "② If you want to temporarily move the bones manually, the toolbar has a disable "
 "driver constraint. Used in conjunction with the keyframing option, you can "
@@ -216,7 +221,7 @@ msgstr ""
 "② 如果想临时手动移动骨骼，工具栏有禁用驱动器约束。 与关键帧选项结合使用，您可以暂"
 "时获得对骨骼的控制。"
 
-#: ../../source/faq.rst:79
+#: ../../source/faq.rst:86
 msgid ""
 "③ If you want to completely delete the driver, select the bone in rigid body "
 "modification mode and press Ctrl+Alt+Shift+C. This will delete the bone "
@@ -227,11 +232,11 @@ msgstr ""
 "将删除骨骼约束并删除驱动程序对象。 请注意，动画关键帧是在驱动器上设置的，因此此操"
 "作也将删除动画。"
 
-#: ../../source/faq.rst:82
+#: ../../source/faq.rst:89
 msgid "High speed movement penetrate rigidbody issues"
 msgstr "高速运动穿透刚体问题"
 
-#: ../../source/faq.rst:83
+#: ../../source/faq.rst:90
 msgid ""
 "when a rigid body move in a very high speed, rigidbody will penetrate, and "
 "collision will not happen. To avoid this, physx has a feature call ccd. But in "
@@ -245,11 +250,11 @@ msgstr ""
 "所以我没有在bonx中添加。 但如果你有一个高速刚体场景并发生渗透，你可以将搅拌器项目"
 "发送给我，让我考虑这个功能。"
 
-#: ../../source/faq.rst:86
+#: ../../source/faq.rst:93
 msgid "Why this addon using empty obj to drive bones?"
 msgstr "为什么这个插件使用空 obj 来驱动骨骼？"
 
-#: ../../source/faq.rst:87
+#: ../../source/faq.rst:94
 msgid ""
 "For those developer who want to do this. If you want to set transform for a obj "
 "with parent, you must call update() to ensure the parent matrix latest. But "

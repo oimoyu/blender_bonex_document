@@ -51,6 +51,7 @@
 <li class="toctree-l1"><a class="reference internal" href="rigidbody.html">剛体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="joint.html">ジョイント</a></li>
 <li class="toctree-l1"><a class="reference internal" href="soft_connection.html">ソフトコネクション</a></li>
+<li class="toctree-l1"><a class="reference internal" href="additional_constraint.html">追加のコンストレイント</a></li>
 <li class="toctree-l1"><a class="reference internal" href="force_field.html">力場</a></li>
 <li class="toctree-l1"><a class="reference internal" href="scene.html">シーン設定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="simulation.html">シミュレーション</a></li>
@@ -101,6 +102,7 @@
 <p>physx などのシミュレーション エンジンの制約は絶対的な制約ではありません。 力 (運動学的剛体の力など) が大きすぎるか、位置ソルバーの反復が小さすぎると、制約から外れてしまいます。</p>
 <p>① 位置計算反復回数を増やして計算精度を向上させる</p>
 <p>② ボーン属性を Connected に設定すると、ボーンは親の尾部にハード拘束され、physx の回転結果のみが適用されます。</p>
+<p>③ 追加のコンストレイントを設定します。 詳細については、追加のコンストレイント ドキュメントを参照してください。</p>
 <a href="../image/connected_location.png" target="_blank">
     <img src="../image/connected_location.png" style="width: 60%;" />
 </a></section>

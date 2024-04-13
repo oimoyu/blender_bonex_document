@@ -50,6 +50,7 @@
 <li class="toctree-l1"><a class="reference internal" href="rigidbody.html">刚体</a></li>
 <li class="toctree-l1"><a class="reference internal" href="joint.html">关节</a></li>
 <li class="toctree-l1"><a class="reference internal" href="soft_connection.html">软连接</a></li>
+<li class="toctree-l1"><a class="reference internal" href="additional_constraint.html">附加约束</a></li>
 <li class="toctree-l1"><a class="reference internal" href="force_field.html">力场</a></li>
 <li class="toctree-l1"><a class="reference internal" href="scene.html">场景设置</a></li>
 <li class="toctree-l1"><a class="reference internal" href="simulation.html">模拟</a></li>
@@ -103,6 +104,7 @@
 <p>②质量与弹簧刚度的关系。 当刚体链条晃动时，它受到弹簧连接力和刚体惯性力的影响。 质量越大，惯性力越大，晃动效果越好； 弹簧刚度越大，弹簧变形所需的力就越大，就越难晃动。 例如，想象一块铁绑在弹簧上，一张纸绑在弹簧上。 哪个抖得比较好？ 需要注意的是，弹簧的刚度越大，回弹力越大。 因此，当大刚度的弹簧晃动时，会围绕初始位置来回晃动。</p>
 <p>③弹簧刚度与阻尼的关系。 阻尼是阻止弹簧返回原点的力。 阻尼越大，阻力越大（阻力不会超过弹簧的回弹力）。 它会因弹簧刚度而减慢回弹速度，如果您不希望刚体围绕其初始位置来回摇动，或者如果您希望运动看起来更柔和一些，那么它就是您需要的参数。</p>
 <p>④质量与运动的关系。 质量越大，惯性力越大。 如果你想表达物体停留在空中的感觉，与直觉相反，你需要增加质量，因为质量小的刚体更容易被弹簧刚度拉动并快速返回，时间 在空气中停留的时间不长，质量越大的物体惯性力就越大，同样的弹簧刚度拉动它需要的时间也就越多，所以更能体现在空中的感觉。</p>
+<p>⑤缩放尺寸很重要。 模拟是根据物理定律进行的。 例如，当给胸骨赋予刚体时，你可能会发现它无法上下晃动。 你可能需要考虑是否缩放太小，导致骨骼太短，质心力臂太短。 在这种情况下你可以尝试放大模型，但这往往很麻烦，那么你可以尝试增加刚体的质量或降低刚度。</p>
 <p>一般来说不需要扭转，所以扭转轴方向的角度限制可以设置为0</p>
 </section>
 <section id="example">
