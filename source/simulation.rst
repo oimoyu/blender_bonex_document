@@ -7,7 +7,7 @@ Simulation
         <img src="../image/simulation_setting.png" style="width: 20%;" />
     </a>
 
-**Bake All**: click the button, the physics result will be baked into keyframe. There are 3 process phases. ①.gathering kinematic rigidbody data. ②.physx calculating process, if you check the debug option, you can see the progress in the PhysX Visual Debugger. In this process you can press ESC to stop bake. ③. Setting bone keyframe, this is a long progress, you should wait it patiently.
+**Bake All**: click the button, the physics result will be baked into keyframe. There are 3 process phases. ①.gathering kinematic rigidbody data. ②.physx calculating process, in this process you can press ESC to stop bake. ③. Setting bone keyframe, this is a long progress, you should wait it patiently.
 
 **Playback simulate**: If enable, simulate during playback. For simple scene, playback may be smooth, but in a heavy scene, playback may be very laggy, youcan try to disable this, and play animation after bake animation into keyframe.
 
@@ -21,15 +21,15 @@ Simulation
 
 **Threads Number**: The number of threads used in simulation is generally the number of physical cores of the CPU.
 
-**GPU**: If enable, addon will try to use enable GPU acceleration. (Need to download and place two DLL file at the same directory of "physx.exe")
+.. **GPU**: If enable, addon will try to use enable GPU acceleration. (Need to download and place two DLL file at the same directory of "physx.exe")
 
-.. raw:: html
+.. .. raw:: html
 
-    <a href="../image/dll_location.png" target="_blank">
-        <img src="../image/dll_location.png" style="width: 60%;" />
-    </a>
+..     <a href="../image/dll_location.png" target="_blank">
+..         <img src="../image/dll_location.png" style="width: 60%;" />
+..     </a>
 
-**Debug**: If enable, addon will try to connect to the PhysX Visual Debugger and display the simulation detail on it.(Only work for debug of addon version, ignore it if you don't need it) Notice, that the PVD need additional consumption, if not neccessary, disable it.
+.. **Debug**: If enable, addon will try to connect to the PhysX Visual Debugger and display the simulation detail on it.(Only work for debug of addon version, ignore it if you don't need it) Notice, that the PVD need additional consumption, if not neccessary, disable it.
 
 .. .. raw:: html
 
