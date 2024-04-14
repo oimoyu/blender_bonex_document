@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Bonex Document\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-13 16:31+0800\n"
-"PO-Revision-Date: 2024-04-13 16:33+0800\n"
+"POT-Creation-Date: 2024-04-14 19:43+0800\n"
+"PO-Revision-Date: 2024-04-14 19:44+0800\n"
 "Last-Translator: \n"
 "Language-Team: ja <LL@li.org>\n"
 "Language: ja\n"
@@ -133,11 +133,19 @@ msgstr "布"
 msgid "For cloth, refer to the parameters of hair, and increase gravity or stiffness"
 msgstr "布の場合は髪のパラメータを参照し、重力や剛性を上げてください"
 
-#: ../../source/example.rst:59
+#: ../../source/example.rst:58
+msgid ""
+"Tips for skirt bones, if your skir bones' roll is not correct, you can select bones in edit mode, and \"Shift+N -> Cursor\" (maybe is not perfect but it is faster than edit "
+"manually)"
+msgstr ""
+"スカート ボーンに関するヒント。スカート ボーンのロールが正しくない場合は、編集モードでボーンを選択し、「Shift+N -> カーソル」を実行します (完璧ではないかもしれませんが、手動で"
+"編集するよりも高速です)。"
+
+#: ../../source/example.rst:61
 msgid "Breast"
 msgstr "胸"
 
-#: ../../source/example.rst:60
+#: ../../source/example.rst:62
 msgid ""
 "For the breast, a slightly higher stiffness is needed to produce a certain rocking effect and reflect elasticity. At the same time, adjusting the displacement limit slightly "
 "higher than 0 can achieve better physical effects."
@@ -145,11 +153,11 @@ msgstr ""
 "胸の場合、一定の揺れ効果を生み出し、弾力性を反映するには、わずかに高い剛性が必要です。 同時に、変位制限を 0 よりわずかに大きく調整すると、より良い物理的効果を得ることができま"
 "す。"
 
-#: ../../source/example.rst:71
+#: ../../source/example.rst:73
 msgid "Simple Ragdoll"
 msgstr "シンプルなラグドール"
 
-#: ../../source/example.rst:81
+#: ../../source/example.rst:83
 msgid ""
 "It should be noted that the dynamic rigid body should not appear in the parent bone of the kinimatic rigid body. Because in Blender, the transformation of the child bone is "
 "affected by the parent bone, and in PhysX, the movement of the kinimatic rigid body will affect the dynamic rigid body, which will lead to cyclic effects and mess up the "

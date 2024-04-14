@@ -59,7 +59,6 @@ For Example, I want to disable a skirt self collision. Set the rigidbody group t
 
 ......
 
-
 Kinematic rigidbodies are not always needed
 ----------------------------------------------------
 If a bone is set to a dynamic rigid body and it has a parent bone, the dynamic bone will be still controlled by parent bone.

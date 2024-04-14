@@ -55,6 +55,8 @@ For cloth, refer to the parameters of hair, and increase gravity or stiffness
 
 ......
 
+Tips for skirt bones, if your skir bones' roll is not correct, you can select bones in edit mode, and "Shift+N -> Cursor" (maybe is not perfect but it is faster than edit manually)
+
 Breast
 ^^^^^^^^^^^^^^^^^^^^^^^
 For the breast, a slightly higher stiffness is needed to produce a certain rocking effect and reflect elasticity. At the same time, adjusting the displacement limit slightly higher than 0 can achieve better physical effects.
