@@ -24,7 +24,6 @@ Alt+Q, Delete additional constraint for selected pose bone.
 
 ......
 
-Notice: If you use additional constraint in blender, this addon rigidbody modify mode may not show the real rigidobdy shape location and rotation, the real rigid body transformation is reflected in the driver , to view real transform of rigidbody shape, you should disable additional constraint or you can check driver object directly. 
 
 Constraint In addon BoneX 
 -------------------------------
