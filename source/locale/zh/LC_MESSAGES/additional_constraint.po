@@ -9,16 +9,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Bonex Document\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-15 11:45+0800\n"
-"PO-Revision-Date: 2024-04-13 15:52+0800\n"
+"POT-Creation-Date: 2024-04-16 21:34+0800\n"
+"PO-Revision-Date: 2024-04-16 21:35+0800\n"
 "Last-Translator: \n"
-"Language: zh\n"
 "Language-Team: zh <LL@li.org>\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: zh\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "Generated-By: Babel 2.14.0\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: ../../source/additional_constraint.rst:2
 msgid "Additional Constraint"
@@ -26,71 +27,72 @@ msgstr "附加约束"
 
 #: ../../source/additional_constraint.rst:4
 msgid ""
-"Sometimes you may notice that the hard constraint in physx is not "
-"\"hard\" (physx hard constraint setting is in rigidbody->joint \"angle "
-"limit\" and \"distance limit\"). It may be push away from hard constraint"
-" when dynamic rigidbody is subjected to a large force."
+"Sometimes you may notice that the hard constraint in physx is not \"hard\" (physx hard constraint setting "
+"is in rigidbody->joint \"angle limit\" and \"distance limit\"). It may be push away from hard constraint "
+"when dynamic rigidbody is subjected to a large force."
 msgstr ""
-"有时你可能会注意到physx中的硬约束并不“硬”（physx硬约束设置是在rigidbody->joint“角度限制”和“距离限制”中）。 "
-"当dynamic刚体受到很大的力时，它可能会被推离硬约束。"
+"有时你可能会注意到physx中的硬约束并不“硬”（physx硬约束设置是在rigidbody->joint“角度限制”和“距离限"
+"制”中）。 当dynamic刚体受到很大的力时，它可能会被推离硬约束。"
 
 #: ../../source/additional_constraint.rst:6
-msgid ""
-"To avoid this, we should add constraint additional bone constraint in "
-"blender."
+msgid "To avoid this, we should add constraint additional bone constraint in blender."
 msgstr "为了避免这种情况，我们应该在Blender中添加额外的骨骼约束。"
 
 #: ../../source/additional_constraint.rst:8
 msgid ""
-"① In blender, every bone has a property call \"connected\", this will "
-"lock pose bone location from anything."
+"① In blender, every bone has a property call \"connected\", this will lock pose bone location from "
+"anything."
 msgstr "① 在搅拌机中，每个骨骼都有一个称为“相连项”的属性，这将锁定姿势骨骼位置。"
 
 #: ../../source/additional_constraint.rst:10
 msgid ""
-"② Using additional constraint comes with this addon. \"connected\" only "
-"work for a limited scene, if you want a more option to constraint, use "
-"additional constraint function in this addon."
-msgstr "② 使用此插件附带的附加约束。 “相连项”仅适用于有限的场景，如果您想要更多约束选项，请使用此插件中的附加约束功能。"
+"② Using additional constraint comes with this addon. \"connected\" only work for a limited scene, if you "
+"want a more option to constraint, use additional constraint function in this addon."
+msgstr ""
+"② 使用此插件附带的附加约束。 “相连项”仅适用于有限的场景，如果您想要更多约束选项，请使用此插件中的附加约束"
+"功能。"
 
-#: ../../source/additional_constraint.rst:13
+#: ../../source/additional_constraint.rst:12
+msgid ""
+"**Additional constraints are added in batches. Pay special attention to the axis of the bones. For "
+"example: if your bones are obtained by symmetry, then their axis will also be flipped. At this time, when "
+"adding additional constraints, pay special attention to the axis. direction, if it is indeed flipped, "
+"then you need to add constraint separately**"
+msgstr ""
+"**附加约束是批量添加的。 特别注意骨骼的轴方向。 例如：如果你的骨骼是通过对称获得的，那么它们的轴也会被翻"
+"转。 这时，在添加附加约束时，要特别注意轴方向方向，如果确实翻转了，那么需要分别单独的添加约束**"
+
+#: ../../source/additional_constraint.rst:15
 msgid "In rigidbody modify mode"
 msgstr "在刚体修改模式下"
 
-#: ../../source/additional_constraint.rst:15
+#: ../../source/additional_constraint.rst:17
 msgid "Ctrl+Q, Create additional constraint for selected pose bone."
 msgstr "Ctrl+Q，为选定的姿势骨骼创建附加约束。"
 
-#: ../../source/additional_constraint.rst:17
+#: ../../source/additional_constraint.rst:19
 msgid "Alt+Q, Delete additional constraint for selected pose bone."
 msgstr "Alt+Q，删除所选姿势骨骼的附加约束。"
 
-#: ../../source/additional_constraint.rst:29
+#: ../../source/additional_constraint.rst:31
 msgid "Constraint In addon BoneX"
 msgstr "插件 BoneX 中的约束"
 
-#: ../../source/additional_constraint.rst:30
+#: ../../source/additional_constraint.rst:32
 msgid ""
-"For every dynamic rigidbody, we use the \"COPY LOCATION\" bone contraint "
-"to make sure dynamic bone's location and rotatioin are tracked to the "
-"driver object(if \"connected\" option is on, only rotation will be "
-"tracked to driver object). Additional constraints is based on driver "
-"constraints to prevent bones from being pushed away from hard "
-"constraints."
+"For every dynamic rigidbody, we use the \"COPY LOCATION\" bone contraint to make sure dynamic bone's "
+"location and rotatioin are tracked to the driver object(if \"connected\" option is on, only rotation will "
+"be tracked to driver object). Additional constraints is based on driver constraints to prevent bones from "
+"being pushed away from hard constraints."
 msgstr ""
-"对于每个dynamic刚体，我们使用“复制位置”骨骼约束来确保dynamic刚体骨骼的位置和旋转被跟踪到驱动器对象（如果“相连项”选项打开，则仅旋转将被跟踪到驱动程序对象）。"
-" 附加约束基于驱动器约束，防止骨骼被推离硬约束。"
+"对于每个dynamic刚体，我们使用“复制位置”骨骼约束来确保dynamic刚体骨骼的位置和旋转被跟踪到驱动器对象（如"
+"果“相连项”选项打开，则仅旋转将被跟踪到驱动程序对象）。 附加约束基于驱动器约束，防止骨骼被推离硬约束。"
 
 #~ msgid ""
-#~ "Notice: If you use additional constraint"
-#~ " in blender, this addon rigidbody "
-#~ "modify mode may not show the real"
-#~ " rigidobdy shape location and rotation, "
-#~ "the real rigid body transformation is"
-#~ " reflected in the driver , to "
-#~ "view real transform of rigidbody shape,"
-#~ " you should disable additional constraint"
-#~ " or you can check driver object "
-#~ "directly."
-#~ msgstr "注意：如果您在搅拌机中使用附加约束，此附加刚体修改模式可能不会显示真实的刚体形状位置和旋转，真实的刚体变换反映在驱动器上，要查看刚体形状的真实变换，应禁用附加约束，或者可以直接检查驱动器对象。"
-
+#~ "Notice: If you use additional constraint in blender, this addon rigidbody modify mode may not show the "
+#~ "real rigidobdy shape location and rotation, the real rigid body transformation is reflected in the "
+#~ "driver , to view real transform of rigidbody shape, you should disable additional constraint or you "
+#~ "can check driver object directly."
+#~ msgstr ""
+#~ "注意：如果您在搅拌机中使用附加约束，此附加刚体修改模式可能不会显示真实的刚体形状位置和旋转，真实的刚体"
+#~ "变换反映在驱动器上，要查看刚体形状的真实变换，应禁用附加约束，或者可以直接检查驱动器对象。"

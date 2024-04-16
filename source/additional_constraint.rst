@@ -9,6 +9,8 @@ To avoid this, we should add constraint additional bone constraint in blender.
 
 ② Using additional constraint comes with this addon. "connected" only work for a limited scene, if you want a more option to constraint, use additional constraint function in this addon.
 
+**Additional constraints are added in batches. Pay special attention to the axis of the bones. For example: if your bones are obtained by symmetry, then their axis will also be flipped. At this time, when adding additional constraints, pay special attention to the axis. direction, if it is indeed flipped, then you need to add constraint separately**
+
 In rigidbody modify mode
 -------------------------------
 
