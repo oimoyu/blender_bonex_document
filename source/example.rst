@@ -4,6 +4,8 @@ Parameters with Examples
 Parameters Tips
 ------------------------
 
+**Before Start: Rigidbody parameters is not real time pass, cause it is consume performance. You need to restart playback to see rigidbody parameters changed result.**
+
 **Parameter adjustment techniques, the following techniques are also applicable to other physics engines**
 
 For rigid bodies on a chain, it is equivalent to having a spring between them to connect them two by one. You need to adjust the appropriate parameters to make it meet the results you want.
@@ -80,4 +82,4 @@ Simple Ragdoll
 
 ......
 
-It should be noted that the dynamic rigid body should not appear in the parent bone of the kinimatic rigid body. Because in Blender, the transformation of the child bone is affected by the parent bone, and in PhysX, the movement of the kinimatic rigid body will affect the dynamic rigid body, which will lead to cyclic effects and mess up the simulation results. If you still want to create such an effect, then the kinimatic rigid body set at the tail needs to use "copy transform" bone constraints so that its displacement and rotation are free from the influence of the parent bone (note that connected is not checked, otherwise the displacement will be locking)
+It should be noted that the dynamic rigid body should not appear in the parent bone of the kinimatic rigid body. Because in Blender, the transformation of the child bone is affected by the parent bone, and in PhysX, the movement of the kinimatic rigid body will affect the dynamic rigid body, which will lead to cyclic effects and mess up the simulation results. If you still want to create such an effect, then the kinimatic rigid body set at the tail needs to use "copy transform" bone constraints so that its displacement and rotation are free from the influence of the parent bone (note that connected is not checked, otherwise the displacement will be locking). Or you can use soft connection to get this.

@@ -98,6 +98,7 @@
 <h1>参数及示例<a class="headerlink" href="#parameters-with-examples" title="Link to this heading"></a></h1>
 <section id="parameters-tips">
 <h2>参数提示<a class="headerlink" href="#parameters-tips" title="Link to this heading"></a></h2>
+<p><strong>开始之前：刚体参数不是实时传递的，因为它会消耗性能。 您需要重新启动播放才能看到刚体参数更改的结果。</strong></p>
 <p><strong>参数调整技巧，以下技巧也适用于其他物理引擎</strong></p>
 <p>对于链条上的刚体来说，相当于它们之间有一个弹簧，将它们两个一一连接起来。 您需要调整适当的参数，使其达到您想要的结果。</p>
 <p>①首先是保持形状。 刚体链条会因重力的影响而下垂。 如果不想因为重力而下垂，那么将重力调整为0，或者减少质量或者增加连接的刚度（注意参数的安排，因为一个参数的变化会导致其他方面的变化）</p>
@@ -141,7 +142,7 @@
 <video width="100%" controls src="../video/ragdoll_demo.mp4">
   Your browser does not support the video tag.
 </video><hr class="docutils" />
-<p>需要注意的是，dynamic刚体不应出现在kenimatic刚体的父骨骼中。 因为在Blender中，子骨骼的变换受到父骨骼的影响，而在PhysX中，kenimatic刚体的移动会影响dynamic刚体，从而导致循环作用，搞乱模拟结果。 如果你仍然想创造这样的效果，那么尾部设置的运动学刚体需要使用“copy transform”骨骼约束，使其位移和旋转脱离父骨骼的影响（注意不勾选connected ，否则位移将被锁定）</p>
+<p>需要注意的是，dynamic刚体不应出现在kenimatic刚体的父骨骼中。 因为在Blender中，子骨骼的变换受到父骨骼的影响，而在PhysX中，kenimatic刚体的移动会影响dynamic刚体，从而导致循环作用，搞乱模拟结果。 如果你仍然想创造这样的效果，那么尾部设置的运动学刚体需要使用“copy transform”骨骼约束，使其位移和旋转脱离父骨骼的影响（注意不勾选connected ，否则位移将被锁定）。或者您可以使用软连接来实现这一点。</p>
 </section>
 </section>
 </section>

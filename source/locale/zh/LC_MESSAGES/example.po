@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Bonex Document\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-14 19:43+0800\n"
-"PO-Revision-Date: 2024-04-14 19:45+0800\n"
+"POT-Creation-Date: 2024-04-16 14:05+0800\n"
+"PO-Revision-Date: 2024-04-16 14:05+0800\n"
 "Last-Translator: \n"
 "Language-Team: zh <LL@li.org>\n"
 "Language: zh\n"
@@ -31,11 +31,20 @@ msgstr "参数提示"
 
 #: ../../source/example.rst:7
 msgid ""
+"**Before Start: Rigidbody parameters is not real time pass, cause it is "
+"consume performance. You need to restart playback to see rigidbody parameters "
+"changed result.**"
+msgstr ""
+"**开始之前：刚体参数不是实时传递的，因为它会消耗性能。 您需要重新启动播放才能看"
+"到刚体参数更改的结果。**"
+
+#: ../../source/example.rst:9
+msgid ""
 "**Parameter adjustment techniques, the following techniques are also "
 "applicable to other physics engines**"
 msgstr "**参数调整技巧，以下技巧也适用于其他物理引擎**"
 
-#: ../../source/example.rst:9
+#: ../../source/example.rst:11
 msgid ""
 "For rigid bodies on a chain, it is equivalent to having a spring between them "
 "to connect them two by one. You need to adjust the appropriate parameters to "
@@ -44,7 +53,7 @@ msgstr ""
 "对于链条上的刚体来说，相当于它们之间有一个弹簧，将它们两个一一连接起来。 您需要"
 "调整适当的参数，使其达到您想要的结果。"
 
-#: ../../source/example.rst:11
+#: ../../source/example.rst:13
 msgid ""
 "①The first is to maintain the shape. The rigid body chain will sag due to the "
 "influence of gravity. If you don’t want it to sag due to gravity, then adjust "
@@ -56,7 +65,7 @@ msgstr ""
 "重力调整为0，或者减少质量或者增加连接的刚度（注意参数的安排，因为一个参数的变化"
 "会导致其他方面的变化）"
 
-#: ../../source/example.rst:13
+#: ../../source/example.rst:15
 msgid ""
 "②The relationship between mass and spring stiffness. When a rigid body chain "
 "shakes, it is affected by the force of the spring connection and the inertial "
@@ -75,7 +84,7 @@ msgstr ""
 "意的是，弹簧的刚度越大，回弹力越大。 因此，当大刚度的弹簧晃动时，会围绕初始位置"
 "来回晃动。"
 
-#: ../../source/example.rst:15
+#: ../../source/example.rst:17
 msgid ""
 "③The relationship between spring stiffness and damping. Damping is the force "
 "that prevents the spring from returning to the origin. The greater the "
@@ -89,7 +98,7 @@ msgstr ""
 "会超过弹簧的回弹力）。 它会因弹簧刚度而减慢回弹速度，如果您不希望刚体围绕其初始"
 "位置来回摇动，或者如果您希望运动看起来更柔和一些，那么它就是您需要的参数。"
 
-#: ../../source/example.rst:17
+#: ../../source/example.rst:19
 msgid ""
 "④The relationship between mass and motion. The greater the mass, the greater "
 "the inertial force. If you want to express the feeling of an object staying in "
@@ -104,7 +113,7 @@ msgstr ""
 "在空气中停留的时间不长，质量越大的物体惯性力就越大，同样的弹簧刚度拉动它需要的"
 "时间也就越多，所以更能体现在空中的感觉。"
 
-#: ../../source/example.rst:19
+#: ../../source/example.rst:21
 msgid ""
 "⑤The scale is important. The simulation is carried out in accordance with the "
 "laws of physics. For example, when giving a rigid body to the breast bone, you "
@@ -119,25 +128,25 @@ msgstr ""
 "在这种情况下你可以尝试放大模型，但这往往很麻烦，那么你可以尝试增加刚体的质量或"
 "降低刚度。"
 
-#: ../../source/example.rst:21
+#: ../../source/example.rst:23
 msgid ""
 "Generally speaking, there is no need to twist, so the angle limit in the "
 "direction of the twist axis can be set to 0"
 msgstr "一般来说不需要扭转，所以扭转轴方向的角度限制可以设置为0"
 
-#: ../../source/example.rst:25
+#: ../../source/example.rst:27
 msgid "Example"
 msgstr "案例"
 
-#: ../../source/example.rst:27
+#: ../../source/example.rst:29
 msgid "Example video tutorials will be updated sequentially."
 msgstr "示例视频教程将陆续更新。"
 
-#: ../../source/example.rst:30
+#: ../../source/example.rst:32
 msgid "Furry Ear and Tail"
 msgstr "毛茸茸的耳朵和尾巴"
 
-#: ../../source/example.rst:31
+#: ../../source/example.rst:33
 msgid ""
 "For the tail, you want medium stiffness so it can bounce back, and medium "
 "damping so it looks more natural. For the ears, you can refer to the settings "
@@ -146,11 +155,11 @@ msgstr ""
 "对于尾部，您需要中等硬度，这样它可以反弹，中等阻尼，这样它看起来更自然。 对于耳"
 "朵，可以参考尾部的设置，但可以给予更高的阻尼，以体现柔软的效果。"
 
-#: ../../source/example.rst:43
+#: ../../source/example.rst:45
 msgid "Hair"
 msgstr "毛发"
 
-#: ../../source/example.rst:44
+#: ../../source/example.rst:46
 msgid ""
 "For hair, you need lower stiffness because hair is very soft, and higher "
 "damping because hair is very light and subject to greater air resistance. And "
@@ -161,16 +170,16 @@ msgstr ""
 "并且受到更大的空气阻力。 并降低反弹系数，因为头发柔软且轻，当它与其他物体碰撞"
 "时，它在现实世界中不会反弹太多。"
 
-#: ../../source/example.rst:47
+#: ../../source/example.rst:49
 msgid "Cloth"
 msgstr "布料"
 
-#: ../../source/example.rst:48
+#: ../../source/example.rst:50
 msgid ""
 "For cloth, refer to the parameters of hair, and increase gravity or stiffness"
 msgstr "对于布料，参考头发的参数，并增加重力或硬度"
 
-#: ../../source/example.rst:58
+#: ../../source/example.rst:60
 msgid ""
 "Tips for skirt bones, if your skir bones' roll is not correct, you can select "
 "bones in edit mode, and \"Shift+N -> Cursor\" (maybe is not perfect but it is "
@@ -179,11 +188,11 @@ msgstr ""
 "裙骨小技巧，如果你的裙骨的轴向不正确，可以在编辑模式下选择骨骼，然后“Shift+N -"
 "> 游标”（可能不太完美，但比手动编辑要快）"
 
-#: ../../source/example.rst:61
+#: ../../source/example.rst:63
 msgid "Breast"
 msgstr "胸部"
 
-#: ../../source/example.rst:62
+#: ../../source/example.rst:64
 msgid ""
 "For the breast, a slightly higher stiffness is needed to produce a certain "
 "rocking effect and reflect elasticity. At the same time, adjusting the "
@@ -192,11 +201,11 @@ msgstr ""
 "对于胸部来说，需要稍高的刚度，才能产生一定的摇摆效果，体现弹性。 同时，将位移限"
 "制调整为略高于0，可以达到更好的物理效果。"
 
-#: ../../source/example.rst:73
+#: ../../source/example.rst:75
 msgid "Simple Ragdoll"
 msgstr "简单的布娃娃系统"
 
-#: ../../source/example.rst:83
+#: ../../source/example.rst:85
 msgid ""
 "It should be noted that the dynamic rigid body should not appear in the parent "
 "bone of the kinimatic rigid body. Because in Blender, the transformation of "
@@ -206,10 +215,11 @@ msgid ""
 "create such an effect, then the kinimatic rigid body set at the tail needs to "
 "use \"copy transform\" bone constraints so that its displacement and rotation "
 "are free from the influence of the parent bone (note that connected is not "
-"checked, otherwise the displacement will be locking)"
+"checked, otherwise the displacement will be locking). Or you can use soft "
+"connection to get this."
 msgstr ""
 "需要注意的是，dynamic刚体不应出现在kenimatic刚体的父骨骼中。 因为在Blender中，"
 "子骨骼的变换受到父骨骼的影响，而在PhysX中，kenimatic刚体的移动会影响dynamic刚"
 "体，从而导致循环作用，搞乱模拟结果。 如果你仍然想创造这样的效果，那么尾部设置的"
 "运动学刚体需要使用“copy transform”骨骼约束，使其位移和旋转脱离父骨骼的影响（注"
-"意不勾选connected ，否则位移将被锁定）"
+"意不勾选connected ，否则位移将被锁定）。或者您可以使用软连接来实现这一点。"

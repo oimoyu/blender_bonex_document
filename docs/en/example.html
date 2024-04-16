@@ -98,6 +98,7 @@
 <h1>Parameters with Examples<a class="headerlink" href="#parameters-with-examples" title="Link to this heading"></a></h1>
 <section id="parameters-tips">
 <h2>Parameters Tips<a class="headerlink" href="#parameters-tips" title="Link to this heading"></a></h2>
+<p><strong>Before Start: Rigidbody parameters is not real time pass, cause it is consume performance. You need to restart playback to see rigidbody parameters changed result.</strong></p>
 <p><strong>Parameter adjustment techniques, the following techniques are also applicable to other physics engines</strong></p>
 <p>For rigid bodies on a chain, it is equivalent to having a spring between them to connect them two by one. You need to adjust the appropriate parameters to make it meet the results you want.</p>
 <p>①The first is to maintain the shape. The rigid body chain will sag due to the influence of gravity. If you don’t want it to sag due to gravity, then adjust the gravity to 0, or reduce the mass or increase the stiffness of the connection (pay attention to the arrangement of the parameters, because one parameter changes will lead to other aspects changes)</p>
@@ -142,7 +143,7 @@ For the ears, you can refer to the settings of the tail, but you can give higher
 <video width="100%" controls src="../video/ragdoll_demo.mp4">
   Your browser does not support the video tag.
 </video><hr class="docutils" />
-<p>It should be noted that the dynamic rigid body should not appear in the parent bone of the kinimatic rigid body. Because in Blender, the transformation of the child bone is affected by the parent bone, and in PhysX, the movement of the kinimatic rigid body will affect the dynamic rigid body, which will lead to cyclic effects and mess up the simulation results. If you still want to create such an effect, then the kinimatic rigid body set at the tail needs to use “copy transform” bone constraints so that its displacement and rotation are free from the influence of the parent bone (note that connected is not checked, otherwise the displacement will be locking)</p>
+<p>It should be noted that the dynamic rigid body should not appear in the parent bone of the kinimatic rigid body. Because in Blender, the transformation of the child bone is affected by the parent bone, and in PhysX, the movement of the kinimatic rigid body will affect the dynamic rigid body, which will lead to cyclic effects and mess up the simulation results. If you still want to create such an effect, then the kinimatic rigid body set at the tail needs to use “copy transform” bone constraints so that its displacement and rotation are free from the influence of the parent bone (note that connected is not checked, otherwise the displacement will be locking). Or you can use soft connection to get this.</p>
 </section>
 </section>
 </section>
