@@ -11,6 +11,12 @@ To avoid this, we should add constraint additional bone constraint in blender.
 
 **Additional constraints are added in batches. Pay special attention to the axis of the bones. For example: if your bones are obtained by symmetry, then their axis will also be flipped. At this time, when adding additional constraints, pay special attention to the axis. direction, if it is indeed flipped, then you need to add constraint separately**
 
+.. raw:: html
+
+    <a href="../image/sym_bone_axis_flip.png" target="_blank">
+        <img src="../image/sym_bone_axis_flip.png" style="width: 50%;" />
+    </a>
+
 In rigidbody modify mode
 -------------------------------
 
