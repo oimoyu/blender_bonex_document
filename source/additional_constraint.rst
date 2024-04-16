@@ -14,7 +14,7 @@ To avoid this, we should add constraint additional bone constraint in blender.
 .. raw:: html
 
     <a href="../image/sym_bone_axis_flip.png" target="_blank">
-        <img src="../image/sym_bone_axis_flip.png" style="width: 50%;" />
+        <img src="../image/sym_bone_axis_flip.png" style="width: 80%;" />
     </a>
 
 In rigidbody modify mode
