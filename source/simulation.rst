@@ -7,7 +7,7 @@ Simulation
         <img src="../image/simulation_setting.png" style="width: 20%;" />
     </a>
 
-**Bake All**: click the button, the physics result will be baked into keyframe. There are 3 process phases. ①.gathering kinematic rigidbody data. ②.physx calculating process, in this process you can press ESC to stop bake. ③. Setting bone keyframe, this is a long progress, you should wait it patiently.
+**Bake All**: click the button, the physics result will be baked into keyframe. There are 3 process phases. ①.gathering kinematic rigidbody data. ②.physx calculating process, in this process you can press ESC to stop bake. ③. Setting driver objects keyframe, this is a long progress, you should wait it patiently.
 
 **Playback simulate**: If enable, simulate during playback. For simple scene, playback may be smooth, but in a heavy scene, playback may be very laggy, youcan try to disable this, and play animation after bake animation into keyframe.
 

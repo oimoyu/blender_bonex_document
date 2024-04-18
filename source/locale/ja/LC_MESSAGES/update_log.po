@@ -1,0 +1,50 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, oimoyu
+# This file is distributed under the same license as the Blender Bonex
+# Document package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Blender Bonex Document \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-18 14:50+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/update_log.rst:2
+msgid "Update Log"
+msgstr ""
+
+#: ../../source/update_log.rst:4
+msgid ""
+"1.0.1 Give up directly modifying bone attributes. The parent matrix "
+"cannot be updated immediately, so the performance is very poor. Use empty"
+" object driver instead. Add soft connections to constrain the horizontal "
+"connections of the skirt or cape."
+msgstr ""
+
+#: ../../source/update_log.rst:6
+msgid "1.0.2 add additional constraint, fix ui mistake"
+msgstr ""
+
+#: ../../source/update_log.rst:8
+msgid ""
+"1.0.3 fix create plane soft connection issue. fix rigidbody draw problem,"
+" now the rigidbody drawing result is the real transform"
+msgstr ""
+
+#: ../../source/update_log.rst:10
+msgid ""
+"1.0.4 Optimized the cleaning of soft connection, optimized the drawing "
+"and display of soft connection."
+msgstr ""
+

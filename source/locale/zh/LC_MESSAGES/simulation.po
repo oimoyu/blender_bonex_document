@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Bonex Document\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-13 08:41+0800\n"
-"PO-Revision-Date: 2024-04-13 08:42+0800\n"
+"POT-Creation-Date: 2024-04-18 14:50+0800\n"
+"PO-Revision-Date: 2024-04-18 14:50+0800\n"
 "Last-Translator: \n"
 "Language-Team: zh <LL@li.org>\n"
 "Language: zh\n"
@@ -30,12 +30,12 @@ msgid ""
 "**Bake All**: click the button, the physics result will be baked into "
 "keyframe. There are 3 process phases. ①.gathering kinematic rigidbody "
 "data. ②.physx calculating process, in this process you can press ESC to "
-"stop bake. ③. Setting bone keyframe, this is a long progress, you should "
-"wait it patiently."
+"stop bake. ③. Setting driver objects keyframe, this is a long progress, "
+"you should wait it patiently."
 msgstr ""
 "**全部烘焙**：点击该按钮，物理结果将被烘焙到关键帧中。 有 3 个过程阶段。 "
 "①.收集运动学刚体数据。 ②.physx计算过程， 在此过程中可以按ESC键停止烘烤。 "
-"③. 设置骨骼关键帧，这是一个漫长的过程，需要耐心等待。"
+"③. 设置驱动器物体的关键帧，这是一个漫长的过程，需要耐心等待。"
 
 #: ../../source/simulation.rst:12
 msgid ""
@@ -64,18 +64,24 @@ msgstr ""
 
 #: ../../source/simulation.rst:16
 msgid ""
+"Keyframe is setting on driver objects, if you want keyframe on bones, go "
+"to \"Pose -> Animation -> Bake Action -> Clear Constraint\""
+msgstr ""
+
+#: ../../source/simulation.rst:18
+msgid ""
 "**Bake range**: Set simulation range for baking. If not set bake range "
 "will be scene frame range."
 msgstr ""
 "**烘焙范围**：设置烘焙的模拟范围。 如果没有设置烘焙范围将是场景帧范围。"
 
-#: ../../source/simulation.rst:18
+#: ../../source/simulation.rst:20
 msgid ""
 "**Selected Bone Only**: If enable, only selected bones will be simulated "
 "and draw."
 msgstr "**仅选定骨骼**：如果启用，则仅模拟和绘制选定的骨骼。"
 
-#: ../../source/simulation.rst:20
+#: ../../source/simulation.rst:22
 msgid ""
 "**Inherit Linear Velocity**: If enabled, linear velocity is calculated "
 "as the initial velocity based on the relative displacements of the two "
@@ -84,7 +90,7 @@ msgstr ""
 "**继承线速度**：如果启用，线速度将根据起始模拟帧之前两帧的相对位移计算为"
 "初始速度。"
 
-#: ../../source/simulation.rst:22
+#: ../../source/simulation.rst:24
 msgid ""
 "**Threads Number**: The number of threads used in simulation is "
 "generally the number of physical cores of the CPU."

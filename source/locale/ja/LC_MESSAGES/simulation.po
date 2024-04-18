@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Bonex Document\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-13 08:41+0800\n"
-"PO-Revision-Date: 2024-04-13 08:42+0800\n"
+"POT-Creation-Date: 2024-04-18 14:50+0800\n"
+"PO-Revision-Date: 2024-04-18 14:51+0800\n"
 "Last-Translator: \n"
 "Language-Team: ja <LL@li.org>\n"
 "Language: ja\n"
@@ -30,13 +30,14 @@ msgid ""
 "**Bake All**: click the button, the physics result will be baked into "
 "keyframe. There are 3 process phases. ①.gathering kinematic rigidbody "
 "data. ②.physx calculating process, in this process you can press ESC to "
-"stop bake. ③. Setting bone keyframe, this is a long progress, you should "
-"wait it patiently."
+"stop bake. ③. Setting driver objects keyframe, this is a long progress, "
+"you should wait it patiently."
 msgstr ""
 "**すべてベイク**: ボタンをクリックすると、物理演算結果がキーフレームにベ"
 "イクされます。処理フェーズは3つあります。①kinematic剛体データの収集。"
 "②PhysXの計算プロセス，この過程で ESC キーを押すとベイクを止めることができ"
-"ます。③. ボーンキーフレームの設定、これは長いので気長に待ちましょう。"
+"ます。③. ドライバーオブジェクトキーフレームの設定、これは長いので気長に待"
+"ちましょう。"
 
 #: ../../source/simulation.rst:12
 msgid ""
@@ -69,13 +70,19 @@ msgstr ""
 
 #: ../../source/simulation.rst:16
 msgid ""
+"Keyframe is setting on driver objects, if you want keyframe on bones, go "
+"to \"Pose -> Animation -> Bake Action -> Clear Constraint\""
+msgstr ""
+
+#: ../../source/simulation.rst:18
+msgid ""
 "**Bake range**: Set simulation range for baking. If not set bake range "
 "will be scene frame range."
 msgstr ""
 "**ベイク範囲**: ベイクのシミュレーション範囲を設定します。 設定されていな"
 "い場合、ベイク範囲はシーン フレーム範囲になります。"
 
-#: ../../source/simulation.rst:18
+#: ../../source/simulation.rst:20
 msgid ""
 "**Selected Bone Only**: If enable, only selected bones will be simulated "
 "and draw."
@@ -83,7 +90,7 @@ msgstr ""
 "**選択されたボーンのみ**: 有効にすると、選択されたボーンのみがシミュレー"
 "トされて描画されます。"
 
-#: ../../source/simulation.rst:20
+#: ../../source/simulation.rst:22
 msgid ""
 "**Inherit Linear Velocity**: If enabled, linear velocity is calculated "
 "as the initial velocity based on the relative displacements of the two "
@@ -93,7 +100,7 @@ msgstr ""
 "る 2 つのフレームの相対変位に基づいて、線形速度が初期速度として計算されま"
 "す。"
 
-#: ../../source/simulation.rst:22
+#: ../../source/simulation.rst:24
 msgid ""
 "**Threads Number**: The number of threads used in simulation is "
 "generally the number of physical cores of the CPU."
