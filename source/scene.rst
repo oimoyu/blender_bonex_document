@@ -7,7 +7,7 @@ Scene Setting
         <img src="../image/scene_setting.png" style="width: 20%;" />
     </a>
 
-**FPS**: Consistent with blender, the higher the fps, the higher speed the scene will be. If you want your scene looks faster, you can decrease to speed up the passage of time.
+**FPS**: Should be consistent with blender, the higher the fps, the higher speed the scene will be. If you want your scene looks faster, you can decrease to speed up the passage of time.
 
 **Gravity**: The force parallel to the global Z axis is normally -9.81.
 
