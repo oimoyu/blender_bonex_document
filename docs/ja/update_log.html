@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" data-content_root="./">
+<html class="writer-html5" lang="ja" data-content_root="./">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tool &mdash; Blender Bonex Document 1.0.0 documentation</title>
+  <title>Update Log &mdash; Blender Bonex Document 1.0.0 ドキュメント</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
 
@@ -15,14 +15,14 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=a12e3537"></script>
+        <script src="_static/documentation_options.js?v=90d9a163"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/translations.js?v=4dbe4bdc"></script>
     <script src="_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Parameters with Examples" href="example.html" />
-    <link rel="prev" title="Simulation" href="simulation.html" /> 
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="検索" href="search.html" />
+    <link rel="prev" title="連絡先" href="contact.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -45,20 +45,20 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="get_start.html">Get start</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rigidbody.html">Rigid body</a></li>
-<li class="toctree-l1"><a class="reference internal" href="joint.html">Joint</a></li>
-<li class="toctree-l1"><a class="reference internal" href="soft_connection.html">Soft Connection</a></li>
-<li class="toctree-l1"><a class="reference internal" href="additional_constraint.html">Additional Constraint</a></li>
-<li class="toctree-l1"><a class="reference internal" href="force_field.html">Force Field</a></li>
-<li class="toctree-l1"><a class="reference internal" href="scene.html">Scene Setting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="simulation.html">Simulation</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Tool</a></li>
-<li class="toctree-l1"><a class="reference internal" href="example.html">Parameters with Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">序章</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get_start.html">スタートを切る</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rigidbody.html">剛体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="joint.html">ジョイント</a></li>
+<li class="toctree-l1"><a class="reference internal" href="soft_connection.html">ソフトコネクション</a></li>
+<li class="toctree-l1"><a class="reference internal" href="additional_constraint.html">追加のコンストレイント</a></li>
+<li class="toctree-l1"><a class="reference internal" href="force_field.html">力場</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scene.html">シーン設定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simulation.html">シミュレーション</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tool.html">ツール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example.html">パラメータと例</a></li>
 <li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contact.html">Contact</a></li>
-<li class="toctree-l1"><a class="reference internal" href="update_log.html">Update Log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact.html">連絡先</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Update Log</a></li>
 </ul>
 
         </div>
@@ -75,7 +75,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Tool</li>
+      <li class="breadcrumb-item active">Update Log</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -84,24 +84,19 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="tool">
-<h1>Tool<a class="headerlink" href="#tool" title="Link to this heading"></a></h1>
-<p><strong>Show All</strong>: Show all bones’ driver.</p>
-<p><strong>Hide All</strong>: Hide all bones’ driver.</p>
-<p><strong>Select All</strong>: Select all bones’ driver. The keyframe is setting on the driver, you can delete or edit animation keyframe in driver.</p>
-<p><strong>Switch To Driver</strong>: If you select pose bones, it will switch to object mode and select driver objects. If you select driver objects, it will switch to pose mode and select corresponding pose bones.</p>
-<p><strong>Reset Pose Bone</strong>: Reset selected pose bones location and rotation. The rigidbody bones is completely controlled by driver objects. If you want to reset pose bones transform to initial, click this.</p>
-<p><strong>Disable Selected Bone Constraint</strong>: disable selected bones’ driver constraints by setting the influence to 0.</p>
-<p><strong>Enable Selected Bone Constraint</strong>: enable selected bones’ driver constraints by setting the influence to 1.</p>
-<p>Tip: Many keyframes whose influence cannot be distinguished can be found in the curve editor. If you want to clear the keyframes, you can place the mouse on the input box of the influence and right-click to clear the keyframes.</p>
+  <section id="update-log">
+<h1>Update Log<a class="headerlink" href="#update-log" title="Link to this heading"></a></h1>
+<p>1.0.1 Give up directly modifying bone attributes. The parent matrix cannot be updated immediately, so the performance is very poor. Use empty object driver instead. Add soft connections to constrain the horizontal connections of the skirt or cape.</p>
+<p>1.0.2 add additional constraint, fix ui mistake</p>
+<p>1.0.3 fix create plane soft connection issue. fix rigidbody draw problem, now the rigidbody drawing result is the real transform</p>
+<p>1.0.4 Optimized the cleaning of soft connection, optimized the drawing and display of soft connection.</p>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="simulation.html" class="btn btn-neutral float-left" title="Simulation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="example.html" class="btn btn-neutral float-right" title="Parameters with Examples" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="contact.html" class="btn btn-neutral float-left" title="連絡先" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
@@ -127,7 +122,7 @@
   </span>
   <div class="rst-other-versions">
     <dl>
-      <dt>Languages</dt>
+      <dt>言語</dt>
       
       <dd><a href="javascript:void(0)" class="switch-lang" data-lang="en">English</a></dd><br>
       

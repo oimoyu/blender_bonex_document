@@ -59,6 +59,7 @@
 <li class="toctree-l1"><a class="reference internal" href="example.html">パラメータと例</a></li>
 <li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contact.html">連絡先</a></li>
+<li class="toctree-l1"><a class="reference internal" href="update_log.html">Update Log</a></li>
 </ul>
 
         </div>
@@ -91,6 +92,7 @@
 </a><p><strong>すべてベイク</strong>: ボタンをクリックすると、物理演算結果がキーフレームにベイクされます。処理フェーズは3つあります。①kinematic剛体データの収集。②PhysXの計算プロセス，この過程で ESC キーを押すとベイクを止めることができます。③. ボーンキーフレームの設定、これは長いので気長に待ちましょう。</p>
 <p><strong>再生シミュレート</strong>: 有効にすると、再生中にシミュレートされます。 単純なシーンでは再生はスムーズですが、重いシーンでは再生が非常に遅れることがあります。これを無効にして、アニメーションをキーフレームにベイクした後にアニメーションを再生してみてください。</p>
 <p><strong>キーフレーム モードの設定</strong>: Blender のキーフレーム設定には大きなパフォーマンスの問題があります。 そこで、キーフレームを設定する 2 つの方法を提供します。 「標準」: 高度な API によってキーフレームを設定し、より多くの時間を費やします。 「高速」: 基本 API によってキーフレームを設定します。より速くなりますが、既存のキーフレームが線形になります。 シミュレートされるボーンに手動でキーフレームを設定していない場合は、「高速」を選択することをお勧めします。</p>
+<p>Keyframe is setting on driver objects, if you want keyframe on bones, go to &quot;Pose -&gt; Animation -&gt; Bake Action -&gt; Clear Constraint&quot;</p>
 <p><strong>ベイク範囲</strong>: ベイクのシミュレーション範囲を設定します。 設定されていない場合、ベイク範囲はシーン フレーム範囲になります。</p>
 <p><strong>選択されたボーンのみ</strong>: 有効にすると、選択されたボーンのみがシミュレートされて描画されます。</p>
 <p><strong>線形速度を継承</strong>: 有効にすると、開始シミュレーション フレームに先行する 2 つのフレームの相対変位に基づいて、線形速度が初期速度として計算されます。</p>
