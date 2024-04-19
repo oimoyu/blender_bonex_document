@@ -43,7 +43,7 @@ For the ears, you can refer to the settings of the tail, but you can give higher
 
 Hair
 ^^^^^^^^^^^^^^^^^^^^^^^
-For hair, you need lower stiffness because hair is very soft, and higher damping because hair is very light and subject to greater air resistance. And decrease the bounce Coefficient, cause hair is soft and light, when it collides with other things it will not bounce too much in real world.
+For hair, you need lower stiffness because hair is very soft, and higher rigidbody damping(not spring damping) because hair is very light and subject to greater air resistance. And decrease the bounce Coefficient, cause hair is soft and light, when it collides with other things it will not bounce too much in real world.
 
 Cloth
 ^^^^^^^^^^^^^^^^^^^^^^^

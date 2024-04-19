@@ -9,16 +9,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Bonex Document\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-14 19:43+0800\n"
-"PO-Revision-Date: 2024-04-12 21:25+0800\n"
+"POT-Creation-Date: 2024-04-19 23:08+0800\n"
+"PO-Revision-Date: 2024-04-19 23:11+0800\n"
 "Last-Translator: \n"
-"Language: zh\n"
 "Language-Team: zh <LL@li.org>\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: zh\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "Generated-By: Babel 2.14.0\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: ../../source/rigidbody.rst:2
 msgid "Rigid body"
@@ -32,23 +33,25 @@ msgstr "基本用法"
 msgid ""
 "In bone pose mode, click the \"Start Modify\" button to access the Rigid "
 "Body modification interface. Within this interface, you have press \"C\" "
-"to set selected bones as rigid body bones, which allows them to be driven"
-" by physx during animations. Additionally, you can view the shape of the "
+"to set selected bones as rigid body bones, which allows them to be driven "
+"by physx during animations. Additionally, you can view the shape of the "
 "rigid body and change the properties of the selected rigid body bone in "
 "this mode."
 msgstr ""
-"在姿态模式下，点击“开始修改”按钮，进入刚体修改界面。 在此界面中，您可以按“C”将选定的骨骼设置为刚体骨骼，这允许它们在动画期间由 physx "
-"驱动。 此外，您可以在此模式下查看刚体的形状并更改所选刚体骨骼的属性。"
+"在姿态模式下，点击“开始修改”按钮，进入刚体修改界面。 在此界面中，您可以"
+"按“C”将选定的骨骼设置为刚体骨骼，这允许它们在动画期间由 physx 驱动。 此"
+"外，您可以在此模式下查看刚体的形状并更改所选刚体骨骼的属性。"
 
 #: ../../source/rigidbody.rst:8
 msgid ""
 "**note, that when a bone is set as rigid body, this addon will create a "
-"empty object at the bone call driver, and this bone will completely track"
-" to this driver. If you want to move bone manually, you can check the "
-"tool panel for more operation.**"
+"empty object at the bone call driver, and this bone will completely track "
+"to this driver. If you want to move bone manually, you can check the tool "
+"panel for more operation.**"
 msgstr ""
-"**注意，当骨骼设置为刚体时，此插件将在骨骼调用驱动程序中创建一个空对象，并且该骨骼将完全跟踪到该驱动程序。 "
-"如果您想手动移动骨骼，可以查看工具面板进行更多操作。**"
+"**注意，当骨骼设置为刚体时，此插件将在骨骼调用驱动程序中创建一个空对象，并"
+"且该骨骼将完全跟踪到该驱动程序。 如果您想手动移动骨骼，可以查看工具面板进"
+"行更多操作。**"
 
 #: ../../source/rigidbody.rst:11
 msgid "Rigid body properties"
@@ -59,29 +62,32 @@ msgid ""
 "Within rigid Body modification interface, when you select a rigidody "
 "bone, you will see the property in the panel. You can change the value, "
 "then the setting will apply to the selected rigidbody bone."
-msgstr "在刚体修改界面中，当您选择刚体骨骼时，您将在面板中看到该属性。 您可以更改该值，然后该设置将应用于选定的刚体骨骼。"
+msgstr ""
+"在刚体修改界面中，当您选择刚体骨骼时，您将在面板中看到该属性。 您可以更改"
+"该值，然后该设置将应用于选定的刚体骨骼。"
 
 #: ../../source/rigidbody.rst:22
 msgid ""
 "**Rigidbody Shape Refresh Interval**: If you feel laggy in rigidbody "
 "modify mode, increase refresh interval time"
-msgstr "**刚体形状刷新间隔**：如果您在刚体修改模式下感觉卡顿，请增加刷新间隔时间"
+msgstr ""
+"**刚体形状刷新间隔**：如果您在刚体修改模式下感觉卡顿，请增加刷新间隔时间"
 
 #: ../../source/rigidbody.rst:24
 msgid ""
-"**Dynamic**: A dynamic rigid body is a rigid body calculated by physx and"
-" will move under the action of force."
+"**Dynamic**: A dynamic rigid body is a rigid body calculated by physx and "
+"will move under the action of force."
 msgstr "**Dynamic**：dynamic刚体是通过physx计算的刚体，在力的作用下会移动。"
 
 #: ../../source/rigidbody.rst:26
 msgid ""
 "**Kinematic**: The kinematic rigid body is controlled by the user's key "
 "frame animation. Its movement is absolute and not affected by any force. "
-"And it can collide with the dynamic rigid body to make dynamic rigid body"
-" motion."
+"And it can collide with the dynamic rigid body to make dynamic rigid body "
+"motion."
 msgstr ""
-"**Kinematic**：kinematic学刚体由用户的关键帧动画控制。 它的运动是绝对的，不受任何力的影响。 "
-"并能与动态刚体发生碰撞，使dynamic刚体运动。"
+"**Kinematic**：kinematic学刚体由用户的关键帧动画控制。 它的运动是绝对的，"
+"不受任何力的影响。 并能与动态刚体发生碰撞，使dynamic刚体运动。"
 
 #: ../../source/rigidbody.rst:36
 msgid "**Mass**: The mass of a rigid body, obeying various physical laws"
@@ -89,140 +95,146 @@ msgstr "**质量**：刚体的质量，遵守各种物理定律"
 
 #: ../../source/rigidbody.rst:38
 msgid ""
+"**Damping**: Resistance encountered during rigid body motion, simulating "
+"air resistance"
+msgstr "**阻尼**：刚体运动时遇到的阻力，模拟空气阻力"
+
+#: ../../source/rigidbody.rst:40
+msgid ""
 "**Static Friction Coefficient**: the resistance to the start of motion "
 "between two surfaces."
 msgstr "**静摩擦系数**：两个表面之间开始运动的阻力。"
 
-#: ../../source/rigidbody.rst:40
+#: ../../source/rigidbody.rst:42
 msgid ""
 "**Dynamic Friction Coefficient**: the resistance to motion when two "
 "surfaces are already sliding against each other."
 msgstr "**动态摩擦系数**：两个表面已经相互滑动时的运动阻力。"
 
-#: ../../source/rigidbody.rst:42
+#: ../../source/rigidbody.rst:44
 msgid "Friction Force only appear when the pressure exist."
 msgstr "摩擦力只有在压力存在时才会出现。"
 
-#: ../../source/rigidbody.rst:44
+#: ../../source/rigidbody.rst:46
 msgid "**Bounce Coefficient**: reflects the elasticity of the collision."
 msgstr "**弹跳系数**：反映碰撞的弹性。"
 
-#: ../../source/rigidbody.rst:46
+#: ../../source/rigidbody.rst:48
 msgid ""
 "**Rigidbody Group**: rigidbody belongs to which group. If empty is set, "
 "that means this rigidbody will not collide with any thing."
-msgstr "**刚体组**：刚体属于哪个组。 如果设置为空，则意味着该刚体不会与任何物体发生碰撞。"
+msgstr ""
+"**刚体组**：刚体属于哪个组。 如果设置为空，则意味着该刚体不会与任何物体发"
+"生碰撞。"
 
-#: ../../source/rigidbody.rst:48
+#: ../../source/rigidbody.rst:50
 msgid "**Collision Group**: rigidbody will collide with which group."
 msgstr "**碰撞组**：刚体将与哪个组碰撞。"
 
-#: ../../source/rigidbody.rst:50
+#: ../../source/rigidbody.rst:52
 msgid ""
 "If you want to disable the collision internal a certain group, then "
 "disable the collision group of their corresponding group."
 msgstr "如果要禁用某个组内部的碰撞，则禁用其对应组的碰撞组。"
 
-#: ../../source/rigidbody.rst:52
+#: ../../source/rigidbody.rst:54
 msgid ""
 "For Example, I want to disable a skirt self collision. Set the rigidbody "
 "group to second layer enable, and set the collision group second layer "
-"disable, which means skirt is in second group, and skirt will not collide"
-" with rigidbody in second group."
-msgstr "例如，我想禁用裙子自碰撞。 将刚体组设置为第二层启用，并将碰撞组第二层设置为禁用，即裙子在第二组中，裙子不会与第二组中的刚体发生碰撞。"
+"disable, which means skirt is in second group, and skirt will not collide "
+"with rigidbody in second group."
+msgstr ""
+"例如，我想禁用裙子自碰撞。 将刚体组设置为第二层启用，并将碰撞组第二层设置"
+"为禁用，即裙子在第二组中，裙子不会与第二组中的刚体发生碰撞。"
 
-#: ../../source/rigidbody.rst:63
+#: ../../source/rigidbody.rst:65
 msgid "Kinematic rigidbodies are not always needed"
 msgstr ""
 
-#: ../../source/rigidbody.rst:64
+#: ../../source/rigidbody.rst:66
 msgid ""
 "If a bone is set to a dynamic rigid body and it has a parent bone, the "
 "dynamic bone will be still controlled by parent bone."
-msgstr "如果骨骼被设置为dynamic刚体并且它有父骨骼，则dynamic骨骼仍将受父骨骼控制。"
+msgstr ""
+"如果骨骼被设置为dynamic刚体并且它有父骨骼，则dynamic骨骼仍将受父骨骼控制。"
 
-#: ../../source/rigidbody.rst:67
+#: ../../source/rigidbody.rst:69
 msgid "Modify the Shape of Rigidbody"
 msgstr "修改碰撞体的形状"
 
-#: ../../source/rigidbody.rst:68
+#: ../../source/rigidbody.rst:70
 msgid ""
-"**Switch default shape**: Within rigid Body modification interface, press"
-" \"T\" to switch selected rigidbody shape."
+"**Switch default shape**: Within rigid Body modification interface, press "
+"\"T\" to switch selected rigidbody shape."
 msgstr "**切换形状**：在刚体修改界面中，按“T”键可以切换选定的刚体形状。"
 
-#: ../../source/rigidbody.rst:70
+#: ../../source/rigidbody.rst:72
 msgid "Press \"S\" to scale the rigidbody."
 msgstr "按“S”缩放刚体。"
 
-#: ../../source/rigidbody.rst:80
+#: ../../source/rigidbody.rst:82
 msgid ""
 "**Customize Rigidbody Shape**: Within rigid Body modification interface, "
 "press \"E\" to edit selected rigidbody. Physx's dynamic rigid body only "
 "supports convex polygons. If it is a concave polygon, it will be baked "
 "into a convex polygon according to the vertices. The baked shape can be "
 "checked in the Physx Visual Debugger. For physx, the calculation the "
-"speed of custom mesh rigid bodies is not as fast as its default shape. If"
-" there are no special needs, try to use the default shape."
+"speed of custom mesh rigid bodies is not as fast as its default shape. If "
+"there are no special needs, try to use the default shape."
 msgstr ""
-"**自定义刚体形状**：在刚体修改界面中，按“E”可以编辑选定的刚体。 Physx 的动态刚体仅支持凸多边形。 "
-"如果是凹多边形，则会根据顶点烘焙成凸多边形。 可以在 Physx Visual Debugger 中检查烘焙的形状。 "
-"对于physx，自定义网格刚体的计算速度不如其默认形状快。 如果没有特殊需要，尽量使用默认形状。"
+"**自定义刚体形状**：在刚体修改界面中，按“E”可以编辑选定的刚体。 Physx 的动"
+"态刚体仅支持凸多边形。 如果是凹多边形，则会根据顶点烘焙成凸多边形。 可以"
+"在 Physx Visual Debugger 中检查烘焙的形状。 对于physx，自定义网格刚体的计"
+"算速度不如其默认形状快。 如果没有特殊需要，尽量使用默认形状。"
 
-#: ../../source/rigidbody.rst:90
+#: ../../source/rigidbody.rst:92
 msgid ""
-"**Copy Rigidbody Shape**: Within rigid Body modification interface, press"
-" ctrl+\"M\" will copy the active rigidbody shape to other selected "
+"**Copy Rigidbody Shape**: Within rigid Body modification interface, press "
+"ctrl+\"M\" will copy the active rigidbody shape to other selected "
 "rigidbody bone."
-msgstr "**复制刚体形状**：在刚体修改界面中，按ctrl+“M”会将活动的刚体形状复制到其他选定的刚体骨骼。"
+msgstr ""
+"**复制刚体形状**：在刚体修改界面中，按ctrl+“M”会将活动的刚体形状复制到其他"
+"选定的刚体骨骼。"
 
-#: ../../source/rigidbody.rst:101
+#: ../../source/rigidbody.rst:103
 msgid "In Rigidbody Modify Mode, Drawing Visible Settings"
 msgstr "在刚体修改模式下，绘图可见性设置"
 
-#: ../../source/rigidbody.rst:102
+#: ../../source/rigidbody.rst:104
 msgid "Ctrl+L, Toggle whether to display rigidbody shape edges"
 msgstr "Ctrl+L，切换是否显示刚体形状的边"
 
-#: ../../source/rigidbody.rst:104
+#: ../../source/rigidbody.rst:106
 msgid "F, Toggle whether to display rigidbody shape faces"
 msgstr "F、切换是否显示刚体形状的面"
 
-#: ../../source/rigidbody.rst:106
+#: ../../source/rigidbody.rst:108
 msgid "H, Toggle whether to hide rigidbody"
 msgstr "H、切换是否隐藏刚体"
 
-#: ../../source/rigidbody.rst:108
+#: ../../source/rigidbody.rst:110
 msgid "W, Toggle whether to display rigidbody soft connection"
 msgstr "W, 切换是否显示刚体软连接"
 
-#: ../../source/rigidbody.rst:110
+#: ../../source/rigidbody.rst:112
 msgid "Ctrl+F,Toggle whether to display rigidbody in front."
 msgstr "Ctrl+F,切换是否在前面显示刚体。"
 
-#: ../../source/rigidbody.rst:112
+#: ../../source/rigidbody.rst:114
 msgid ""
 "Ctrl+H,Toggle whether to only display visible pose bone rigidbody shape. "
 "You can set this option to only view the visible pose bone corresponding "
 "rigidbody shape when there is too much."
-msgstr "Ctrl+H,切换是否仅显示可见姿势骨骼刚体形状。 您可以设置此选项，以便在刚体形状过多时仅查看可见姿势骨骼对应的刚体形状。"
+msgstr ""
+"Ctrl+H,切换是否仅显示可见姿势骨骼刚体形状。 您可以设置此选项，以便在刚体形"
+"状过多时仅查看可见姿势骨骼对应的刚体形状。"
 
-#: ../../source/rigidbody.rst:115
+#: ../../source/rigidbody.rst:117
 msgid "Animation"
 msgstr "动画"
 
-#: ../../source/rigidbody.rst:116
+#: ../../source/rigidbody.rst:118
 msgid ""
-"A kinimatic rigidbody can be set keyframe to move and rotate to drive the"
-" dynamic rigidbody."
+"A kinimatic rigidbody can be set keyframe to move and rotate to drive the "
+"dynamic rigidbody."
 msgstr "kinematic刚体可以通过设置关键帧来移动和旋转来驱动dynamic刚体。"
-
-#~ msgid ""
-#~ "Tips for skirt bones, if your skir"
-#~ " bones' roll is not correct, you "
-#~ "can select bones in edit mode, and"
-#~ " \"Shift+N -> Cursor\" (maybe is not"
-#~ " perfect but it is faster than "
-#~ "edit manually)"
-#~ msgstr ""
-

@@ -35,6 +35,8 @@ Within rigid Body modification interface, when you select a rigidody bone, you w
 
 **Mass**: The mass of a rigid body, obeying various physical laws
 
+**Damping**: Resistance encountered during rigid body motion, simulating air resistance
+
 **Static Friction Coefficient**: the resistance to the start of motion between two surfaces.
 
 **Dynamic Friction Coefficient**: the resistance to motion when two surfaces are already sliding against each other.

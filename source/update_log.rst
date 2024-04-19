@@ -8,3 +8,5 @@ Update Log
 1.0.3 fix create plane soft connection issue. fix rigidbody draw problem, now the rigidbody drawing result is the real transform
 
 1.0.4 Optimized the cleaning of soft connection, optimized the drawing and display of soft connection.
+
+1.0.5 Add rigidbody damping to simulate air resistance especially for cloth or hair.
