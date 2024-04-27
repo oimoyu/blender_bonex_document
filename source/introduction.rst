@@ -4,6 +4,7 @@ Introduction
 Product Page
 ---------------
 `Product Page <https://blendermarket.com/products/bonex>`_
+`Video Tutorial <https://www.youtube.com/watch?v=b4DywevBe-s>`_
 
 
 Introduction
