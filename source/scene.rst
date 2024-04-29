@@ -11,6 +11,17 @@ Scene Setting
 
 **Gravity**: The force parallel to the global Z axis is normally -9.81.
 
+
+**Sub Step Number**: Split one animation frame into multiple small frames, and simulation them. Used to solve the penetration problem of high-speed moving objects. This is performance heavy operation,if not necessary, set it as 1.
+
+.. raw:: html
+
+    <video width="100%" controls src="../video/sub_step_num.mp4">
+      Your browser does not support the video tag.
+    </video>
+
+......
+
 **Position Iteration Number**: The higher the value, the more accurate the location of the simulation results.
 
 **Velocity Iteration Number**: The higher the value, the more accurate the velocity of the simulation results.

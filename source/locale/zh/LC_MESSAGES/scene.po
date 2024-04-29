@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Bonex Document\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-18 18:10+0800\n"
-"PO-Revision-Date: 2024-04-18 18:12+0800\n"
+"POT-Creation-Date: 2024-04-29 20:19+0800\n"
+"PO-Revision-Date: 2024-04-29 20:20+0800\n"
 "Last-Translator: \n"
 "Language-Team: zh <LL@li.org>\n"
 "Language: zh\n"
@@ -38,19 +38,29 @@ msgstr ""
 msgid "**Gravity**: The force parallel to the global Z axis is normally -9.81."
 msgstr "**重力**：平行于全局 Z 轴的力，通常为 -9.81。"
 
-#: ../../source/scene.rst:14
+#: ../../source/scene.rst:15
+msgid ""
+"**Sub Step Number**: Split one animation frame into multiple small frames, "
+"and simulation them. Used to solve the penetration problem of high-speed "
+"moving objects. This is performance heavy operation,if not necessary, set it "
+"as 1."
+msgstr ""
+"**子步数**: 将一个动画帧拆分成多个小帧，然后进行模拟。用于解决高速运动物体的"
+"穿透问题。这是性能消耗很大的操作，如无必要，请设置为1。"
+
+#: ../../source/scene.rst:25
 msgid ""
 "**Position Iteration Number**: The higher the value, the more accurate the "
 "location of the simulation results."
 msgstr "**位置迭代次数**：值越高，模拟结果的位置越准确。"
 
-#: ../../source/scene.rst:16
+#: ../../source/scene.rst:27
 msgid ""
 "**Velocity Iteration Number**: The higher the value, the more accurate the "
 "velocity of the simulation results."
 msgstr "**速度迭代次数**：值越高，模拟结果的速度越准确。"
 
-#: ../../source/scene.rst:18
+#: ../../source/scene.rst:29
 msgid ""
 "A long rigidbody chain or model intersection need to increase iterations, "
 "because long chains require iterative diffusion to obtain accurate positions."

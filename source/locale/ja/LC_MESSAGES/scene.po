@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Bonex Document\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-18 18:10+0800\n"
-"PO-Revision-Date: 2024-04-18 18:11+0800\n"
+"POT-Creation-Date: 2024-04-29 20:19+0800\n"
+"PO-Revision-Date: 2024-04-29 20:21+0800\n"
 "Last-Translator: \n"
 "Language-Team: ja <LL@li.org>\n"
 "Language: ja\n"
@@ -39,7 +39,19 @@ msgstr ""
 msgid "**Gravity**: The force parallel to the global Z axis is normally -9.81."
 msgstr "**重力**: グローバル Z 軸に平行な力は通常 -9.81 です。"
 
-#: ../../source/scene.rst:14
+#: ../../source/scene.rst:15
+msgid ""
+"**Sub Step Number**: Split one animation frame into multiple small frames, "
+"and simulation them. Used to solve the penetration problem of high-speed "
+"moving objects. This is performance heavy operation,if not necessary, set it "
+"as 1."
+msgstr ""
+"**サブステップ数**: 1 つのアニメーション フレームを複数の小さなフレームに分割"
+"し、シミュレーションします。高速移動するオブジェクトの貫通問題を解決するため"
+"に使用されます。これはパフォーマンスに大きな負荷がかかる操作なので、必要ない"
+"場合は 1 に設定してください。"
+
+#: ../../source/scene.rst:25
 msgid ""
 "**Position Iteration Number**: The higher the value, the more accurate the "
 "location of the simulation results."
@@ -47,7 +59,7 @@ msgstr ""
 "**位置反復数**: 値が大きいほど、シミュレーション結果の位置がより正確になりま"
 "す。"
 
-#: ../../source/scene.rst:16
+#: ../../source/scene.rst:27
 msgid ""
 "**Velocity Iteration Number**: The higher the value, the more accurate the "
 "velocity of the simulation results."
@@ -55,7 +67,7 @@ msgstr ""
 "**速度反復数**: 値が大きいほど、シミュレーション結果の速度がより正確になりま"
 "す。"
 
-#: ../../source/scene.rst:18
+#: ../../source/scene.rst:29
 msgid ""
 "A long rigidbody chain or model intersection need to increase iterations, "
 "because long chains require iterative diffusion to obtain accurate positions."
