@@ -16,3 +16,5 @@ Update Log
 1.0.7 Add sub-step function, for high speed rigidbody penetration problem. If not necessary, set keep it to 1.
 
 1.0.8 Add preset function for save rigidbody params
+
+1.0.9 optimize rigidbody shape display, same group has same color.
