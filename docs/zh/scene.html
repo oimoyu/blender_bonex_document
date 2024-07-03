@@ -91,6 +91,11 @@
 </a><p><strong>FPS</strong>：应该与 Blender 一致，FPS 越高，场景的速度就越快。 如果你想让你的场景看起来更快，你可以减少以加快时间的流逝。</p>
 <p><strong>重力</strong>：平行于全局 Z 轴的力，通常为 -9.81。</p>
 <p><strong>子步数</strong>: 将一个动画帧拆分成多个小帧，然后进行模拟。用于解决高速运动物体的穿透问题。这是性能消耗很大的操作，如无必要，请设置为1。</p>
+<p>Sub step means more accurate simulation, but sometimes you may find that the rigidbody never end after increasing this, if this is not you want, you can decrease sub step or increase damping.</p>
+<p>Never end movement issues explan: the inaccurate simulation means inaccurate numerical calculation, which will lead the small number is truncated, this means more energy is loosing over time. On the other hand, too accurate means the energy that should be lost is retained, so the simulation results show that it is more inclined to motion. If you want something like the spring toy below, this is absolute you need.</p>
+<a href="../image/ikun.png" target="_blank">
+    <img src="../image/ikun.png" style="width: 20%;" />
+</a><p>The video below shows when a high-speed object moving, increase the sub step means the movement is split into small movement, so the rigidbody can interact.</p>
 <video width="100%" controls src="../video/sub_step_num.mp4">
   Your browser does not support the video tag.
 </video><hr class="docutils" />

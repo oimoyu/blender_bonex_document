@@ -92,6 +92,11 @@
 </a><p>Blender と一致するべきです。fps が高いほど、シーンの速度も速くなる傾向があります。 シーンをより速く見せたい場合は、値を減らして時間の経過を速くすることができます。</p>
 <p><strong>重力</strong>: グローバル Z 軸に平行な力は通常 -9.81 です。</p>
 <p><strong>サブステップ数</strong>: 1 つのアニメーション フレームを複数の小さなフレームに分割し、シミュレーションします。高速移動するオブジェクトの貫通問題を解決するために使用されます。これはパフォーマンスに大きな負荷がかかる操作なので、必要ない場合は 1 に設定してください。</p>
+<p>Sub step means more accurate simulation, but sometimes you may find that the rigidbody never end after increasing this, if this is not you want, you can decrease sub step or increase damping.</p>
+<p>Never end movement issues explan: the inaccurate simulation means inaccurate numerical calculation, which will lead the small number is truncated, this means more energy is loosing over time. On the other hand, too accurate means the energy that should be lost is retained, so the simulation results show that it is more inclined to motion. If you want something like the spring toy below, this is absolute you need.</p>
+<a href="../image/ikun.png" target="_blank">
+    <img src="../image/ikun.png" style="width: 20%;" />
+</a><p>The video below shows when a high-speed object moving, increase the sub step means the movement is split into small movement, so the rigidbody can interact.</p>
 <video width="100%" controls src="../video/sub_step_num.mp4">
   Your browser does not support the video tag.
 </video><hr class="docutils" />
