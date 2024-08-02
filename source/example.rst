@@ -87,5 +87,5 @@ It should be noted that the dynamic rigid body should not appear in the parent b
 
 .. raw:: html
 
-    <a href="../project/necklace.blend" download>Necklance Example Download</a>
+    <a href="../project/necklace.blend" download style="font-size: 24px; font-weight: bold;">Necklance Example Download</a>
     <br />
