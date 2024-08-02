@@ -148,7 +148,11 @@
 <section id="necklace">
 <h3>Necklace<a class="headerlink" href="#necklace" title="Link to this heading"></a></h3>
 <a href="../project/necklace.blend" download style="font-size: 24px; font-weight: bold;">Necklace Example Download</a>
-<br /><p>需要注意的是，dynamic刚体不应出现在kenimatic刚体的父骨骼中。 因为在Blender中，子骨骼的变换受到父骨骼的影响，而在PhysX中，kenimatic刚体的移动会影响dynamic刚体，从而导致循环作用，搞乱模拟结果。 如果你仍然想创造这样的效果，那么尾部设置的运动学刚体需要使用“copy transform”骨骼约束，使其位移和旋转脱离父骨骼的影响（注意不勾选connected ，否则位移将被锁定）。或者您可以使用软连接来实现这一点。</p>
+<br /><hr class="docutils" />
+<video width="100%" controls src="../video/necklace.mp4">
+  Your browser does not support the video tag.
+</video><hr class="docutils" />
+<p>需要注意的是，dynamic刚体不应出现在kenimatic刚体的父骨骼中。 因为在Blender中，子骨骼的变换受到父骨骼的影响，而在PhysX中，kenimatic刚体的移动会影响dynamic刚体，从而导致循环作用，搞乱模拟结果。 如果你仍然想创造这样的效果，那么尾部设置的运动学刚体需要使用“copy transform”骨骼约束，使其位移和旋转脱离父骨骼的影响（注意不勾选connected ，否则位移将被锁定）。或者您可以使用软连接来实现这一点。</p>
 </section>
 </section>
 </section>
