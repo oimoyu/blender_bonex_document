@@ -64,6 +64,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#cloth">布</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#breast">胸</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#simple-ragdoll">シンプルなラグドール</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#necklace">Necklace</a></li>
 </ul>
 </li>
 </ul>
@@ -143,10 +144,13 @@
 <h3>シンプルなラグドール<a class="headerlink" href="#simple-ragdoll" title="Link to this heading"></a></h3>
 <video width="100%" controls src="../video/ragdoll_demo.mp4">
   Your browser does not support the video tag.
-</video><hr class="docutils" />
-<p>dynaimc剛体は、kinematic剛体の親ボーンに表示されないことに注意してください。 Blender では子ボーンの変形は親ボーンの影響を受けますが、PhysX ではキニマティック リジッド ボディの動きがダイナミック リジッド ボディに影響を与えるため、周期的な効果が発生してシミュレーション結果が台無しになってしまいます。 それでもそのような効果を作成したい場合は、尾部に設定されたキニマティック リジッド ボディに「コピー変換」ボーン コンストレイントを使用して、その変位と回転が親ボーンの影響を受けないようにする必要があります(connectedがチェックされていないことに注意。そうでないと変位がロックされる)。または、ソフトコネクションを使用してこれを取得することもできます。</p>
-<a href="../project/necklace.blend" download style="font-size: 24px; font-weight: bold;">Necklance Example Download</a>
-<br /></section>
+</video></section>
+<hr class="docutils" />
+<section id="necklace">
+<h3>Necklace<a class="headerlink" href="#necklace" title="Link to this heading"></a></h3>
+<a href="../project/necklace.blend" download style="font-size: 24px; font-weight: bold;">Necklace Example Download</a>
+<br /><p>dynaimc剛体は、kinematic剛体の親ボーンに表示されないことに注意してください。 Blender では子ボーンの変形は親ボーンの影響を受けますが、PhysX ではキニマティック リジッド ボディの動きがダイナミック リジッド ボディに影響を与えるため、周期的な効果が発生してシミュレーション結果が台無しになってしまいます。 それでもそのような効果を作成したい場合は、尾部に設定されたキニマティック リジッド ボディに「コピー変換」ボーン コンストレイントを使用して、その変位と回転が親ボーンの影響を受けないようにする必要があります(connectedがチェックされていないことに注意。そうでないと変位がロックされる)。または、ソフトコネクションを使用してこれを取得することもできます。</p>
+</section>
 </section>
 </section>
 
