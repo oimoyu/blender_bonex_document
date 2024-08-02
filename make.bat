@@ -47,14 +47,19 @@ if exist docs\video rmdir /S /Q "docs\video"
 xcopy /E /I "%SOURCEDIR%\_static\video" "docs\video"
 if exist docs\image rmdir /S /Q "docs\image"
 xcopy /E /I "%SOURCEDIR%\_static\image" "docs\image"
+if exist docs\project rmdir /S /Q "docs\project"
+xcopy /E /I "%SOURCEDIR%\_static\project" "docs\project"
 
 echo Deleting image and video folders from localization directories...
 rmdir /S /Q "docs\en\_static\image"
 rmdir /S /Q "docs\en\_static\video"
+rmdir /S /Q "docs\en\_static\project"
 rmdir /S /Q "docs\zh\_static\image"
 rmdir /S /Q "docs\zh\_static\video"
+rmdir /S /Q "docs\zh\_static\project"
 rmdir /S /Q "docs\ja\_static\image"
 rmdir /S /Q "docs\ja\_static\video"
+rmdir /S /Q "docs\ja\_static\project"
 
 
 copy "%SOURCEDIR%\index.html" "docs\index.html"
