@@ -14,7 +14,7 @@ BoneX is a Blender addon helps you to create bone physics animation, driven by P
 
 Platform Support: Windows
 
-Blender Version: 3.6+
+Blender Version: 3.6.7+ (below 3.6.7, realtime simulation is not available)
 
 UI Language Support: English, 日本語, 中文
 

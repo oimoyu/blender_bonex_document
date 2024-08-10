@@ -20,3 +20,5 @@ Update Log
 1.0.9 optimize rigidbody shape display, same group has same color.
 
 1.0.10 Fix custom mesh with scaled armature wrong scale issue.
+
+1.0.11 Allow 3.6.7 lower version install, but realtime simulation is not available.
