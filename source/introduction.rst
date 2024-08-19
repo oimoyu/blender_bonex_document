@@ -12,9 +12,9 @@ Introduction
 ------------
 BoneX is a Blender addon helps you to create bone physics animation, driven by PhysX. PhysX is a mature physics engine used in game field, like UE4, U3D. Relying on PhysX to generate stable rigid body simulations, you can create bone physics effects for character animation. You can modify the properties of the rigid body and set its connection stiffness, damping quality, etc. to achieve the physical effects you want.
 
-Platform Support: Windows
+Platform Support: Only Windows
 
-Blender Version: 3.6.7+ (below 3.6.7, realtime simulation is not available)
+Blender Version: 3.6.1+ (below 3.6.1, although it can be installed, but realtime simulation is not available) (Goo Engine 3.6 is based on Blender 3.6.1 which can use realtime simulation)
 
 UI Language Support: English, 日本語, 中文
 
