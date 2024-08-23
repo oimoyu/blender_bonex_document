@@ -96,7 +96,9 @@ Necklace
 
     <a href="../project/necklace.blend" download style="font-size: 24px; font-weight: bold;">Necklace Example Download</a>
     <br />
-    
+
+It should be noted that the dynamic rigid body should not appear in the parent bone of the kinimatic rigid body. Because in Blender, the transformation of the child bone is affected by the parent bone, and in PhysX, the movement of the kinimatic rigid body will affect the dynamic rigid body, which will lead to cyclic effects and mess up the simulation results. If you still want to create such an effect, then the kinimatic rigid body set at the tail needs to use "copy transform" bone constraints so that its displacement and rotation are free from the influence of the parent bone (note that connected is not checked, otherwise the displacement will be locking). Or you can use soft connection to get this.
+
 ......
 
 Trickcal Character Demo
@@ -114,8 +116,4 @@ Trickcal Character Demo
     <a href="../project/烈車拳_release.blend" download style="font-size: 24px; font-weight: bold;">Picora Example Download</a>
     <br />
 
-
-
-
-It should be noted that the dynamic rigid body should not appear in the parent bone of the kinimatic rigid body. Because in Blender, the transformation of the child bone is affected by the parent bone, and in PhysX, the movement of the kinimatic rigid body will affect the dynamic rigid body, which will lead to cyclic effects and mess up the simulation results. If you still want to create such an effect, then the kinimatic rigid body set at the tail needs to use "copy transform" bone constraints so that its displacement and rotation are free from the influence of the parent bone (note that connected is not checked, otherwise the displacement will be locking). Or you can use soft connection to get this.
-
+......
