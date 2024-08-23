@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>剛体 &mdash; Blender Bonex Document 1.0.0 ドキュメント</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=90d9a163"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/translations.js?v=4dbe4bdc"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="検索" href="search.html" />
+    <link rel="next" title="ジョイント" href="joint.html" />
+    <link rel="prev" title="スタートを切る" href="get_start.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Blender Bonex Document
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">序章</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get_start.html">スタートを切る</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">剛体</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#basic-usage">基本的な使い方</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rigid-body-properties">剛体のプロパティ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#kinematic-rigidbodies-are-not-always-needed">kinematic剛体は必ずしも必要というわけではありません</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#modify-the-shape-of-rigidbody">剛体の形状を変更する</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#in-rigidbody-modify-mode-drawing-visible-settings">剛体変更モードでの描画の表示設定</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#animation">アニメーション</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="joint.html">ジョイント</a></li>
+<li class="toctree-l1"><a class="reference internal" href="soft_connection.html">ソフトコネクション</a></li>
+<li class="toctree-l1"><a class="reference internal" href="additional_constraint.html">追加のコンストレイント</a></li>
+<li class="toctree-l1"><a class="reference internal" href="force_field.html">力場</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scene.html">シーン設定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simulation.html">シミュレーション</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tool.html">ツール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example.html">パラメータと例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="update_log.html">Update Log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact.html">連絡先</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Blender Bonex Document</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">剛体</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="rigid-body">
+<h1>剛体<a class="headerlink" href="#rigid-body" title="Link to this heading"></a></h1>
+<section id="basic-usage">
+<h2>基本的な使い方<a class="headerlink" href="#basic-usage" title="Link to this heading"></a></h2>
+<p>ボーン ポーズ モードでは、[変更開始] ボタンをクリックして、剛体変更インターフェイスにアクセスします。 このインターフェイス内で、「C」を押して選択したボーンを剛体ボーンとして設定し、アニメーション中に physx によってボーンを駆動できるようにします。 さらに、このモードでは、剛体の形状を表示したり、選択した剛体 ボーンのプロパティを変更したりすることができます。</p>
+<p><strong>ボーンが剛体として設定されている場合、このアドオンはボーン呼び出しドライバーで空のオブジェクトを作成し、このボーンはこのドライバーを完全に追跡することに注意してください。 ボーンを手動で移動する場合は、ツール パネルで詳細な操作を確認できます。</strong></p>
+</section>
+<section id="rigid-body-properties">
+<h2>剛体のプロパティ<a class="headerlink" href="#rigid-body-properties" title="Link to this heading"></a></h2>
+<a href="../image/rigidbody_setting.png" target="_blank">
+    <img src="../image/rigidbody_setting.png" style="width: 20%;" />
+</a><p>剛体変更インターフェイス内で剛体ボーンを選択すると、パネルにプロパティが表示されます。 値を変更すると、その設定が選択した 剛体ボーンに適用されます。</p>
+<p><strong>剛体形状の更新間隔</strong>: 剛体 変更モードで遅れを感じる場合は、リフレッシュ間隔時間を増やしてください</p>
+<p><strong>Dynamic</strong>: dynamic剛体は、physx によって計算された剛体であり、力の作用下で動きます。</p>
+<p><strong>Kinematic</strong>: kinematic剛体は、ユーザーのキーフレーム アニメーションによって制御されます。 その動きは絶対的であり、いかなる力にも影響されません。 また、dynamic剛体と衝突してdynamic剛体運動を行うことができます。</p>
+<video width="100%" controls src="../video/kinematic.mp4">
+  Your browser does not support the video tag.
+</video><hr class="docutils" />
+<p><strong>質量</strong>: さまざまな物理法則に従う剛体の質量</p>
+<p><strong>ダンピング</strong>: 空気抵抗をシミュレートする、剛体運動中に発生する抵抗</p>
+<p><strong>静摩擦係数</strong>: 2 つの表面間の動きの開始に対する抵抗。</p>
+<p><strong>動摩擦係数</strong>: 2 つの表面がすでに互いに滑り合っているときの動きに対する抵抗。</p>
+<p>摩擦力は圧力が存在する場合にのみ現れます。</p>
+<p><strong>バウンス係数</strong>: 衝突の弾性を反映します。</p>
+<p><strong>剛体グループ</strong>: 剛体がどのグループに属しているか。 空が設定されている場合、この剛体は何とも衝突しないことを意味します。</p>
+<p><strong>コリジョングループ</strong>: 剛体はどのグループと衝突します。</p>
+<p>特定のグループ内のコリジョンを無効にしたい場合は、対応するコリジョングループを無効にします。</p>
+<p>たとえば、スカートの自己衝突を無効にしたいとします。 リジッドボディ グループを 2 番目のレイヤを有効に設定し、衝突グループの 2 番目のレイヤを無効に設定します。つまり、スカートは 2 番目のグループにあり、スカートは 2 番目のグループのリジッドボディと衝突しません。</p>
+<video width="100%" controls src="../video/set_collision_group.mp4">
+  Your browser does not support the video tag.
+</video></section>
+<hr class="docutils" />
+<section id="kinematic-rigidbodies-are-not-always-needed">
+<h2>kinematic剛体は必ずしも必要というわけではありません<a class="headerlink" href="#kinematic-rigidbodies-are-not-always-needed" title="Link to this heading"></a></h2>
+<p>ボーンがdynamic剛体に設定されており、それに親ボーンがある場合、ダイナミック ボーンは依然として親ボーンによって制御されます。</p>
+</section>
+<section id="modify-the-shape-of-rigidbody">
+<h2>剛体の形状を変更する<a class="headerlink" href="#modify-the-shape-of-rigidbody" title="Link to this heading"></a></h2>
+<p><strong>デフォルトの形状を切り替える</strong>: 剛体変更インターフェイス内で、「T」を押して、選択したリジッド ボディの形状を切り替えます。</p>
+<p>「S」を押して剛体をスケールします。</p>
+<video width="100%" controls src="../video/scale_rigidbody.mp4">
+  Your browser does not support the video tag.
+</video><hr class="docutils" />
+<p><strong>剛体形状のカスタマイズ</strong>: 剛体変更インターフェイス内で、「E」を押して、選択した剛体を編集します。 Physx のdynamic剛体は凸ポリゴンのみをサポートします。 凹ポリゴンの場合は頂点に合わせて凸ポリゴンにベイク処理されます。 ベイクした形状は Physx Visual Debugger で確認できます。 physx の場合、カスタム メッシュ リジッド ボディの計算速度は、デフォルトのシェイプほど速くありません。 特別な必要がない場合は、デフォルトの形状を使用してみてください。</p>
+<video width="100%" controls src="../video/edit_shape.mp4">
+  Your browser does not support the video tag.
+</video><hr class="docutils" />
+<p><strong>剛体シェイプのコピー</strong>: 剛体変更インターフェイス内で Ctrl+「M」を押すと、アクティブな剛体シェイプが選択した他の剛体ボーンにコピーされます。</p>
+<video width="100%" controls src="../video/copy_shape.mp4">
+  Your browser does not support the video tag.
+</video></section>
+<hr class="docutils" />
+<section id="in-rigidbody-modify-mode-drawing-visible-settings">
+<h2>剛体変更モードでの描画の表示設定<a class="headerlink" href="#in-rigidbody-modify-mode-drawing-visible-settings" title="Link to this heading"></a></h2>
+<p>Ctrl+L、剛体シェイプのエッジを表示するかどうかを切り替えます</p>
+<p>F、剛体形状の面を表示するかどうかを切り替えます</p>
+<p>H、剛体を非表示にするかどうかを切り替えます</p>
+<p>W、剛体ソフトコネクションを表示するかどうかを切り替えます</p>
+<p>Ctrl+F、剛体を前面に表示するかどうかを切り替えます。</p>
+<p>Ctrl+H、可視のポーズ ボーン剛体シェイプのみを表示するかどうかを切り替えます。 このオプションを設定すると、剛体 シェイプに対応する表示されているポーズ ボーンのみが表示されるようになります。</p>
+</section>
+<section id="animation">
+<h2>アニメーション<a class="headerlink" href="#animation" title="Link to this heading"></a></h2>
+<p>kinematic剛体を移動および回転するキーフレームを設定して、dynamic剛体を駆動できます。</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="get_start.html" class="btn btn-neutral float-left" title="スタートを切る" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="joint.html" class="btn btn-neutral float-right" title="ジョイント" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, oimoyu.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+  <span id="language-label" class="rst-current-version" data-toggle="rst-current-version">
+    Select Language
+    <span class="fa fa-caret-down"></span>
+  </span>
+  <div class="rst-other-versions">
+    <dl>
+      <dt>言語</dt>
+      
+      <dd><a href="javascript:void(0)" class="switch-lang" data-lang="en">English</a></dd><br>
+      
+      <dd><a href="javascript:void(0)" class="switch-lang" data-lang="zh">中文</a></dd><br>
+      
+      <dd><a href="javascript:void(0)" class="switch-lang" data-lang="ja">日本語</a></dd><br>
+      
+    </dl>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var userLang = navigator.language || navigator.userLanguage;
+      if (userLang.startsWith('zh')) {
+        document.getElementById('language-label').textContent = '选择语言';
+      }
+      else if (userLang.startsWith('ja')) {
+        document.getElementById('language-label').textContent = '言語を選択';
+      }
+      else {
+        document.getElementById('language-label').textContent = 'Select Language';
+      }
+
+      document.querySelectorAll('.switch-lang').forEach(function (link) {
+        link.addEventListener('click', function () {
+          var target_lang_id = this.getAttribute('data-lang'); // 获取语言代码
+          var langs = ['en', 'zh', 'ja', ];
+
+      var current_lang_id = "";
+      for (var i = 0; i < langs.length; i++) {
+        if (window.location.pathname.indexOf("/" + langs[i] + "/") !== -1) {
+          current_lang_id = langs[i];
+          break;
+        }
+      }
+      if (!current_lang_id) {
+        alert("language not found");
+      } else {
+        window.location.pathname = window.location.pathname.replace(new RegExp("/" + current_lang_id + "/", "g"), "/" + target_lang_id + "/");
+      }
+
+
+    });
+
+      });
+
+    });
+  </script>
+
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

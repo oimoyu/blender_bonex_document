@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>パラメータと例 &mdash; Blender Bonex Document 1.0.0 ドキュメント</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=90d9a163"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/translations.js?v=4dbe4bdc"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="検索" href="search.html" />
+    <link rel="next" title="FAQ" href="faq.html" />
+    <link rel="prev" title="ツール" href="tool.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Blender Bonex Document
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">序章</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get_start.html">スタートを切る</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rigidbody.html">剛体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="joint.html">ジョイント</a></li>
+<li class="toctree-l1"><a class="reference internal" href="soft_connection.html">ソフトコネクション</a></li>
+<li class="toctree-l1"><a class="reference internal" href="additional_constraint.html">追加のコンストレイント</a></li>
+<li class="toctree-l1"><a class="reference internal" href="force_field.html">力場</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scene.html">シーン設定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simulation.html">シミュレーション</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tool.html">ツール</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">パラメータと例</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#parameters-tips">パラメータのヒント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example">例</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#furry-ear-and-tail">毛皮のような耳としっぽ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hair">髪</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cloth">布</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#breast">胸</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#simple-ragdoll">シンプルなラグドール</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#necklace">Necklace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#trickcal-character-demo">Trickcal Character Demo</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="update_log.html">Update Log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact.html">連絡先</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Blender Bonex Document</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">パラメータと例</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="parameters-with-examples">
+<h1>パラメータと例<a class="headerlink" href="#parameters-with-examples" title="Link to this heading"></a></h1>
+<section id="parameters-tips">
+<h2>パラメータのヒント<a class="headerlink" href="#parameters-tips" title="Link to this heading"></a></h2>
+<p><strong>開始前: 剛体 パラメータはリアルタイムではありません。パフォーマンスを消費するためです。 Rigidbody パラメータの変更結果を確認するには、再生を再開する必要があります。</strong></p>
+<p><strong>パラメータ調整テクニック、以下のテクニックは他の物理エンジンにも適用できます</strong></p>
+<p>チェーン上の剛体については、それらの間にバネを置いて 2 つずつ接続するのと同じです。 希望の結果が得られるように、適切なパラメータを調整する必要があります。</p>
+<p>①1つ目は形状を維持することです。 剛体チェーンは重力の影響によりたわみます。 重力によってたるみが生じたくない場合は、重力を 0 に調整するか、質量を減らすか接続の剛性を高めます (1 つのパラメーターの変更が他の側面に影響するため、パラメーターの配置に注意してください) 変更)</p>
+<p>②質量とバネ剛性の関係。 剛体チェーンが揺れると、スプリング接続の力と剛体の慣性力の影響を受けます。 質量が大きいほど慣性力が大きくなり、揺れが良くなります。 バネの剛性が大きいほど、バネは変形するのに必要な力が大きくなり、揺れにくくなります。 たとえば、鉄片がバネに結び付けられ、一枚の紙がバネに結び付けられていると想像してください。 どっちがよく揺れますか？ バネの剛性が大きいほど反発力も大きくなることに注意してください。 そのため、剛性の大きなバネは揺れると初期位置を中心に前後に揺れてしまいます。</p>
+<p>③バネの剛性と減衰の関係。ダンピングとは、スプリングが元の位置に戻らないようにする力のことです。 ダンピングが大きいほど抵抗も大きくなります（抵抗はスプリングの反発力を超えません）。 バネの剛性によるリバウンドを遅くし、剛体が初期位置を中心に前後に揺れたくない場合、またはモーションを少し柔らかく見せたい場合に必要なパラメータです。</p>
+<p>質量と運動の関係。質量が大きいほど慣性力は大きくなる。物体が宙に浮いている感じを表現したいのであれば、逆に質量を大きくする必要がある。質量が小さい剛体はバネの硬さに引っ張られてすぐに戻りやすく、宙に浮いている時間は長くない。質量が大きい物体は慣性力が大きく、同じバネの硬さでも引っ張るのに時間がかかるので、宙に浮いている感じを反映できる。</p>
+<p>⑤スケールは重要です。 シミュレーションは物理法則に従って実行されます。 たとえば、胸の骨に剛体を与えると、上下に振ることができない場合があります。 スケーリングが小さすぎてボーンが短すぎたり、重心モーメント アームが短すぎたりする可能性があるかどうかを考慮する必要がある場合があります。 この場合、モデルを拡大してみることもできますが、これは多くの場合面倒なので、剛体の質量を増やすか、剛性を下げることを試みることができます。</p>
+<p>一般的にはねじる必要がないため、ねじり軸方向の角度制限を0に設定できます</p>
+</section>
+<section id="example">
+<h2>例<a class="headerlink" href="#example" title="Link to this heading"></a></h2>
+<p>サンプルビデオチュートリアルは順次更新されます。</p>
+<section id="furry-ear-and-tail">
+<h3>毛皮のような耳としっぽ<a class="headerlink" href="#furry-ear-and-tail" title="Link to this heading"></a></h3>
+<p>テールの場合は、跳ね返るように中程度の剛性が必要で、より自然に見えるように中程度の減衰が必要です。 耳についてはテールの設定を参照できますが、ソフト効果を反映するためにより高いダンピングを与えることができます。</p>
+<video width="100%" controls src="../video/sakamoto_demo.mp4">
+  Your browser does not support the video tag.
+</video></section>
+<hr class="docutils" />
+<section id="hair">
+<h3>髪<a class="headerlink" href="#hair" title="Link to this heading"></a></h3>
+<p>髪の場合、髪は非常に柔らかいため、剛性は低くする必要があり、髪は非常に軽く、空気抵抗が大きいため、剛体ダンピング（スプリングダンピングではありません）は高くする必要があります。 また、バウンス係数を小さくすると、髪が柔らかくて軽くなり、現実世界では髪が他のものと衝突してもあまり跳ねなくなります。</p>
+</section>
+<section id="cloth">
+<h3>布<a class="headerlink" href="#cloth" title="Link to this heading"></a></h3>
+<p>布の場合は髪のパラメータを参照し、重力や剛性を上げてください</p>
+<video width="100%" controls src="../video/ballet_demo.mp4">
+  Your browser does not support the video tag.
+</video><hr class="docutils" />
+<p>スカート ボーンに関するヒント。スカート ボーンのロールが正しくない場合は、編集モードでボーンを選択し、「Shift+N -&gt; カーソル」を実行します (完璧ではないかもしれませんが、手動で編集するよりも高速です)。</p>
+</section>
+<section id="breast">
+<h3>胸<a class="headerlink" href="#breast" title="Link to this heading"></a></h3>
+<p>胸の場合、一定の揺れ効果を生み出し、弾力性を反映するには、わずかに高い剛性が必要です。 同時に、変位制限を 0 よりわずかに大きく調整すると、より良い物理的効果を得ることができます。</p>
+<video width="100%" controls src="../video/pudding_demo.mp4">
+  Your browser does not support the video tag.
+</video></section>
+<hr class="docutils" />
+<section id="simple-ragdoll">
+<h3>シンプルなラグドール<a class="headerlink" href="#simple-ragdoll" title="Link to this heading"></a></h3>
+<video width="100%" controls src="../video/ragdoll_demo.mp4">
+  Your browser does not support the video tag.
+</video></section>
+<hr class="docutils" />
+<section id="necklace">
+<h3>Necklace<a class="headerlink" href="#necklace" title="Link to this heading"></a></h3>
+<video width="100%" controls src="../video/necklace.mp4">
+  Your browser does not support the video tag.
+</video><a href="../project/necklace.blend" download style="font-size: 24px; font-weight: bold;">Necklace Example Download</a>
+<br /></section>
+<section id="trickcal-character-demo">
+<h3>Trickcal Character Demo<a class="headerlink" href="#trickcal-character-demo" title="Link to this heading"></a></h3>
+<video width="100%" controls src="../video/picora_demo.mp4">
+  Your browser does not support the video tag.
+</video><a href="../project/烈車拳_release.blend" download style="font-size: 24px; font-weight: bold;">Necklace Example Download</a>
+<br /><p>dynaimc剛体は、kinematic剛体の親ボーンに表示されないことに注意してください。 Blender では子ボーンの変形は親ボーンの影響を受けますが、PhysX ではキニマティック リジッド ボディの動きがダイナミック リジッド ボディに影響を与えるため、周期的な効果が発生してシミュレーション結果が台無しになってしまいます。 それでもそのような効果を作成したい場合は、尾部に設定されたキニマティック リジッド ボディに「コピー変換」ボーン コンストレイントを使用して、その変位と回転が親ボーンの影響を受けないようにする必要があります(connectedがチェックされていないことに注意。そうでないと変位がロックされる)。または、ソフトコネクションを使用してこれを取得することもできます。</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="tool.html" class="btn btn-neutral float-left" title="ツール" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="faq.html" class="btn btn-neutral float-right" title="FAQ" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, oimoyu.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+  <span id="language-label" class="rst-current-version" data-toggle="rst-current-version">
+    Select Language
+    <span class="fa fa-caret-down"></span>
+  </span>
+  <div class="rst-other-versions">
+    <dl>
+      <dt>言語</dt>
+      
+      <dd><a href="javascript:void(0)" class="switch-lang" data-lang="en">English</a></dd><br>
+      
+      <dd><a href="javascript:void(0)" class="switch-lang" data-lang="zh">中文</a></dd><br>
+      
+      <dd><a href="javascript:void(0)" class="switch-lang" data-lang="ja">日本語</a></dd><br>
+      
+    </dl>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var userLang = navigator.language || navigator.userLanguage;
+      if (userLang.startsWith('zh')) {
+        document.getElementById('language-label').textContent = '选择语言';
+      }
+      else if (userLang.startsWith('ja')) {
+        document.getElementById('language-label').textContent = '言語を選択';
+      }
+      else {
+        document.getElementById('language-label').textContent = 'Select Language';
+      }
+
+      document.querySelectorAll('.switch-lang').forEach(function (link) {
+        link.addEventListener('click', function () {
+          var target_lang_id = this.getAttribute('data-lang'); // 获取语言代码
+          var langs = ['en', 'zh', 'ja', ];
+
+      var current_lang_id = "";
+      for (var i = 0; i < langs.length; i++) {
+        if (window.location.pathname.indexOf("/" + langs[i] + "/") !== -1) {
+          current_lang_id = langs[i];
+          break;
+        }
+      }
+      if (!current_lang_id) {
+        alert("language not found");
+      } else {
+        window.location.pathname = window.location.pathname.replace(new RegExp("/" + current_lang_id + "/", "g"), "/" + target_lang_id + "/");
+      }
+
+
+    });
+
+      });
+
+    });
+  </script>
+
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
