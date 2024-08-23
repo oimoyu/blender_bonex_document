@@ -109,7 +109,7 @@ Trickcal Character Demo
 
 .. raw:: html
 
-    <a href="../project/烈車拳_release.blend" download style="font-size: 24px; font-weight: bold;">Necklace Example Download</a>
+    <a href="../project/烈車拳_release.blend" download style="font-size: 24px; font-weight: bold;">Picora Example Download</a>
     <br />
 
 
