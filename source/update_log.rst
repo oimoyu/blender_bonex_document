@@ -22,3 +22,5 @@ Update Log
 1.0.10 Fix custom mesh with scaled armature wrong scale issue.
 
 1.0.11 Allow 3.6.1 lower version install, but realtime simulation is not available.
+
+1.0.12 fix physx default behavior, by default, two rigid bodies connected by a joint do not collide with each other
