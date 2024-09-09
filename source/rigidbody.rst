@@ -45,6 +45,8 @@ Friction Force only appear when the pressure exist.
 
 **Bounce Coefficient**: reflects the elasticity of the collision.
 
+**Enable Gravity**: Controls whether the rigid body is affected by gravity.
+
 **Rigidbody Group**: rigidbody belongs to which group. If empty is set, that means this rigidbody will not collide with any thing.
 
 **Collision Group**: rigidbody will collide with which group.
