@@ -27,6 +27,8 @@ Self Collision Issue
 ------------------------------------------------
 Sometimes you may find out that the rigid body stiffness of the same bone chain is very large. This may be because you did not turn off self-collision, resulting in collision between two adjacent rigid bodies. For the same bone chain, you should turn off its self-collision
 
+.. raw:: html
+
     <a href="../image/turn_off_self_collistion.png" target="_blank">
         <img src="../image/turn_off_self_collistion.png" style="width: 20%;" />
     </a>
