@@ -30,7 +30,7 @@ Sometimes you may find out that the rigid body stiffness of the same bone chain 
 .. raw:: html
 
     <a href="../image/turn_off_self_collistion.png" target="_blank">
-        <img src="../image/turn_off_self_collistion.png" style="width: 20%;" />
+        <img src="../image/turn_off_self_collistion.png" style="width: 50%;" />
     </a>
 
 
