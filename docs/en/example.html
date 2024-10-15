@@ -57,6 +57,7 @@
 <li class="toctree-l1"><a class="reference internal" href="tool.html">Tool</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Parameters with Examples</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#parameters-tips">Parameters Tips</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#self-collision-issue">Self Collision Issue</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#example">Example</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#furry-ear-and-tail">Furry Ear and Tail</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#hair">Hair</a></li>
@@ -110,6 +111,17 @@
 <p>④The relationship between mass and motion. The greater the mass, the greater the inertial force. If you want to express the feeling of an object staying in the air, counter-intuitively, you need to increase the mass, because a rigid body with a small mass is more likely to be pulled by the spring stiffness and return quickly, the time in the air is not long, and an object with a larger mass has a larger inertial force, and the same spring stiffness takes more time to pull it, so it can reflect the feeling of being in the air.</p>
 <p>⑤The scale is important. The simulation is carried out in accordance with the laws of physics. For example, when giving a rigid body to the breast bone, you may find that it cannot shake up and down. You may need to consider whether the scaling is too small, resulting in the bone being too short and the center of mass moment arm being too short. In this case You can try to enlarge the model, but this is often troublesome, then you can try increasing the mass of the rigidbody or decrease stiffness.</p>
 <p>Generally speaking, there is no need to twist, so the angle limit in the direction of the twist axis can be set to 0</p>
+</section>
+<section id="self-collision-issue">
+<h2>Self Collision Issue<a class="headerlink" href="#self-collision-issue" title="Link to this heading"></a></h2>
+<p>Sometimes you may find out that the rigid body stiffness of the same bone chain is very large. This may be because you did not turn off self-collision, resulting in collision between two adjacent rigid bodies. For the same bone chain, you should turn off its self-collision</p>
+<blockquote>
+<div><dl class="simple">
+<dt>&lt;a href=”../image/turn_off_self_collistion.png” target=”_blank”&gt;</dt><dd><p>&lt;img src=”../image/turn_off_self_collistion.png” style=”width: 20%;” /&gt;</p>
+</dd>
+</dl>
+<p>&lt;/a&gt;</p>
+</div></blockquote>
 </section>
 <section id="example">
 <h2>Example<a class="headerlink" href="#example" title="Link to this heading"></a></h2>

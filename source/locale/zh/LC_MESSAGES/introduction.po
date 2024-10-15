@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Bonex Document\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-29 20:17+0800\n"
+"POT-Creation-Date: 2024-10-15 20:58+0800\n"
 "PO-Revision-Date: 2024-04-15 11:29+0800\n"
 "Last-Translator: \n"
 "Language: zh\n"
@@ -51,11 +51,14 @@ msgstr ""
 "您可以修改刚体的属性并设置其连接刚度、阻尼质量等，以达到您想要的物理效果。"
 
 #: ../../source/introduction.rst:15
-msgid "Platform Support: Windows"
+msgid "Platform Support: Only Windows"
 msgstr ""
 
 #: ../../source/introduction.rst:17
-msgid "Blender Version: 3.6+"
+msgid ""
+"Blender Version: 3.6.1+ (below 3.6.1, although it can be installed, but "
+"realtime simulation is not available) (Goo Engine 3.6 is based on Blender"
+" 3.6.1 which can use realtime simulation)"
 msgstr ""
 
 #: ../../source/introduction.rst:19
@@ -255,4 +258,10 @@ msgstr ""
 #~ msgstr ""
 #~ "这个插件适合没有那么多骨头的情况。 尤其是对于mmd用户来说，这个addon的效率还不如mmd刚体那么高效。 "
 #~ "Blender对物体变换的设置存在明显的性能瓶颈。 在处理一些生成数百或数千个骨骼进行模拟的模型时，此插件速度很慢。"
+
+#~ msgid "Platform Support: Windows"
+#~ msgstr ""
+
+#~ msgid "Blender Version: 3.6+"
+#~ msgstr ""
 

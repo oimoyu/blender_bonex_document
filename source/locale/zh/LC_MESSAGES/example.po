@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Bonex Document\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-19 23:07+0800\n"
-"PO-Revision-Date: 2024-04-19 23:11+0800\n"
+"POT-Creation-Date: 2024-10-15 20:58+0800\n"
+"PO-Revision-Date: 2024-10-15 21:03+0800\n"
 "Last-Translator: \n"
 "Language-Team: zh <LL@li.org>\n"
 "Language: zh\n"
@@ -135,18 +135,45 @@ msgid ""
 msgstr "一般来说不需要扭转，所以扭转轴方向的角度限制可以设置为0"
 
 #: ../../source/example.rst:27
+msgid "Self Collision Issue"
+msgstr "自碰撞问题"
+
+#: ../../source/example.rst:28
+msgid ""
+"Sometimes you may find out that the rigid body stiffness of the same bone "
+"chain is very large. This may be because you did not turn off self-collision, "
+"resulting in collision between two adjacent rigid bodies. For the same bone "
+"chain, you should turn off its self-collision"
+msgstr ""
+"同一根骨链的刚体刚度很大，这可能是因为你没有关闭自碰撞，导致了相邻两个刚体存在"
+"碰撞导致的，对于同一根骨链，你应该关闭他的自碰撞"
+
+#: ../../source/example.rst:30
+msgid "<a href=\"../image/turn_off_self_collistion.png\" target=\"_blank\">"
+msgstr ""
+
+#: ../../source/example.rst:31
+msgid ""
+"<img src=\"../image/turn_off_self_collistion.png\" style=\"width: 20%;\" />"
+msgstr ""
+
+#: ../../source/example.rst:32
+msgid "</a>"
+msgstr ""
+
+#: ../../source/example.rst:36
 msgid "Example"
 msgstr "案例"
 
-#: ../../source/example.rst:29
+#: ../../source/example.rst:38
 msgid "Example video tutorials will be updated sequentially."
 msgstr "示例视频教程将陆续更新。"
 
-#: ../../source/example.rst:32
+#: ../../source/example.rst:41
 msgid "Furry Ear and Tail"
 msgstr "毛茸茸的耳朵和尾巴"
 
-#: ../../source/example.rst:33
+#: ../../source/example.rst:42
 msgid ""
 "For the tail, you want medium stiffness so it can bounce back, and medium "
 "damping so it looks more natural. For the ears, you can refer to the settings "
@@ -155,11 +182,11 @@ msgstr ""
 "对于尾部，您需要中等硬度，这样它可以反弹，中等阻尼，这样它看起来更自然。 对于耳"
 "朵，可以参考尾部的设置，但可以给予更高的阻尼，以体现柔软的效果。"
 
-#: ../../source/example.rst:45
+#: ../../source/example.rst:54
 msgid "Hair"
 msgstr "毛发"
 
-#: ../../source/example.rst:46
+#: ../../source/example.rst:55
 msgid ""
 "For hair, you need lower stiffness because hair is very soft, and higher "
 "rigidbody damping(not spring damping) because hair is very light and subject "
@@ -171,16 +198,16 @@ msgstr ""
 "尼），因为头发很轻并且受到更大的空气阻力。 并降低反弹系数，因为头发柔软且轻，当"
 "它与其他物体碰撞时，它在现实世界中不会反弹太多。"
 
-#: ../../source/example.rst:49
+#: ../../source/example.rst:58
 msgid "Cloth"
 msgstr "布料"
 
-#: ../../source/example.rst:50
+#: ../../source/example.rst:59
 msgid ""
 "For cloth, refer to the parameters of hair, and increase gravity or stiffness"
 msgstr "对于布料，参考头发的参数，并增加重力或硬度"
 
-#: ../../source/example.rst:60
+#: ../../source/example.rst:69
 msgid ""
 "Tips for skirt bones, if your skir bones' roll is not correct, you can select "
 "bones in edit mode, and \"Shift+N -> Cursor\" (maybe is not perfect but it is "
@@ -189,11 +216,11 @@ msgstr ""
 "裙骨小技巧，如果你的裙骨的轴向不正确，可以在编辑模式下选择骨骼，然后“Shift+N -"
 "> 游标”（可能不太完美，但比手动编辑要快）"
 
-#: ../../source/example.rst:63
+#: ../../source/example.rst:72
 msgid "Breast"
 msgstr "胸部"
 
-#: ../../source/example.rst:64
+#: ../../source/example.rst:73
 msgid ""
 "For the breast, a slightly higher stiffness is needed to produce a certain "
 "rocking effect and reflect elasticity. At the same time, adjusting the "
@@ -202,11 +229,15 @@ msgstr ""
 "对于胸部来说，需要稍高的刚度，才能产生一定的摇摆效果，体现弹性。 同时，将位移限"
 "制调整为略高于0，可以达到更好的物理效果。"
 
-#: ../../source/example.rst:75
+#: ../../source/example.rst:84
 msgid "Simple Ragdoll"
 msgstr "简单的布娃娃系统"
 
-#: ../../source/example.rst:85
+#: ../../source/example.rst:95
+msgid "Necklace"
+msgstr ""
+
+#: ../../source/example.rst:109
 msgid ""
 "It should be noted that the dynamic rigid body should not appear in the parent "
 "bone of the kinimatic rigid body. Because in Blender, the transformation of "
@@ -224,3 +255,7 @@ msgstr ""
 "体，从而导致循环作用，搞乱模拟结果。 如果你仍然想创造这样的效果，那么尾部设置的"
 "运动学刚体需要使用“copy transform”骨骼约束，使其位移和旋转脱离父骨骼的影响（注"
 "意不勾选connected ，否则位移将被锁定）。或者您可以使用软连接来实现这一点。"
+
+#: ../../source/example.rst:114
+msgid "Trickcal Character Demo"
+msgstr ""

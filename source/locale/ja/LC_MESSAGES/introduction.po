@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Bonex Document\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-29 20:17+0800\n"
+"POT-Creation-Date: 2024-10-15 20:58+0800\n"
 "PO-Revision-Date: 2024-04-15 11:29+0800\n"
 "Last-Translator: \n"
 "Language: ja\n"
@@ -52,11 +52,14 @@ msgstr ""
 "剛体のプロパティを変更し、その接続の剛性、減衰品質などを設定して、必要な物理的効果を実現できます。"
 
 #: ../../source/introduction.rst:15
-msgid "Platform Support: Windows"
+msgid "Platform Support: Only Windows"
 msgstr ""
 
 #: ../../source/introduction.rst:17
-msgid "Blender Version: 3.6+"
+msgid ""
+"Blender Version: 3.6.1+ (below 3.6.1, although it can be installed, but "
+"realtime simulation is not available) (Goo Engine 3.6 is based on Blender"
+" 3.6.1 which can use realtime simulation)"
 msgstr ""
 
 #: ../../source/introduction.rst:19
@@ -258,4 +261,10 @@ msgstr ""
 #~ "特にMMDユーザーにとって、このアドオンの効率はMMD剛体ほど効率的ではありません。 "
 #~ "Blenderオブジェクト変換には明らかなパフォーマンスボトルネックが適用されます。 "
 #~ "このアドオンは、シミュレーションのために数百または数千の骨を生成するいくつかのモデルを扱うときに遅くなります。"
+
+#~ msgid "Platform Support: Windows"
+#~ msgstr ""
+
+#~ msgid "Blender Version: 3.6+"
+#~ msgstr ""
 

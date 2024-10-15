@@ -57,6 +57,7 @@
 <li class="toctree-l1"><a class="reference internal" href="tool.html">工具</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">参数及示例</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#parameters-tips">参数提示</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#self-collision-issue">自碰撞问题</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#example">案例</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#furry-ear-and-tail">毛茸茸的耳朵和尾巴</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#hair">毛发</a></li>
@@ -110,6 +111,17 @@
 <p>④质量与运动的关系。 质量越大，惯性力越大。 如果你想表达物体停留在空中的感觉，与直觉相反，你需要增加质量，因为质量小的刚体更容易被弹簧刚度拉动并快速返回，时间 在空气中停留的时间不长，质量越大的物体惯性力就越大，同样的弹簧刚度拉动它需要的时间也就越多，所以更能体现在空中的感觉。</p>
 <p>⑤缩放尺寸很重要。 模拟是根据物理定律进行的。 例如，当给胸骨赋予刚体时，你可能会发现它无法上下晃动。 你可能需要考虑是否缩放太小，导致骨骼太短，质心力臂太短。 在这种情况下你可以尝试放大模型，但这往往很麻烦，那么你可以尝试增加刚体的质量或降低刚度。</p>
 <p>一般来说不需要扭转，所以扭转轴方向的角度限制可以设置为0</p>
+</section>
+<section id="self-collision-issue">
+<h2>自碰撞问题<a class="headerlink" href="#self-collision-issue" title="Link to this heading"></a></h2>
+<p>同一根骨链的刚体刚度很大，这可能是因为你没有关闭自碰撞，导致了相邻两个刚体存在碰撞导致的，对于同一根骨链，你应该关闭他的自碰撞</p>
+<blockquote>
+<div><dl class="simple">
+<dt>&lt;a href=&quot;../image/turn_off_self_collistion.png&quot; target=&quot;_blank&quot;&gt;</dt><dd><p>&lt;img src=&quot;../image/turn_off_self_collistion.png&quot; style=&quot;width: 20%;&quot; /&gt;</p>
+</dd>
+</dl>
+<p>&lt;/a&gt;</p>
+</div></blockquote>
 </section>
 <section id="example">
 <h2>案例<a class="headerlink" href="#example" title="Link to this heading"></a></h2>

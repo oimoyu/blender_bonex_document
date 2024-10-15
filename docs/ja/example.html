@@ -58,6 +58,7 @@
 <li class="toctree-l1"><a class="reference internal" href="tool.html">ツール</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">パラメータと例</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#parameters-tips">パラメータのヒント</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#self-collision-issue">自己衝突問題</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#example">例</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#furry-ear-and-tail">毛皮のような耳としっぽ</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#hair">髪</a></li>
@@ -111,6 +112,17 @@
 <p>質量と運動の関係。質量が大きいほど慣性力は大きくなる。物体が宙に浮いている感じを表現したいのであれば、逆に質量を大きくする必要がある。質量が小さい剛体はバネの硬さに引っ張られてすぐに戻りやすく、宙に浮いている時間は長くない。質量が大きい物体は慣性力が大きく、同じバネの硬さでも引っ張るのに時間がかかるので、宙に浮いている感じを反映できる。</p>
 <p>⑤スケールは重要です。 シミュレーションは物理法則に従って実行されます。 たとえば、胸の骨に剛体を与えると、上下に振ることができない場合があります。 スケーリングが小さすぎてボーンが短すぎたり、重心モーメント アームが短すぎたりする可能性があるかどうかを考慮する必要がある場合があります。 この場合、モデルを拡大してみることもできますが、これは多くの場合面倒なので、剛体の質量を増やすか、剛性を下げることを試みることができます。</p>
 <p>一般的にはねじる必要がないため、ねじり軸方向の角度制限を0に設定できます</p>
+</section>
+<section id="self-collision-issue">
+<h2>自己衝突問題<a class="headerlink" href="#self-collision-issue" title="Link to this heading"></a></h2>
+<p>同じボーンチェーンの剛体剛性が非常に大きいことに気付くことがあります。これは、自己衝突をオフにしなかったために、隣接する2つの剛体間で衝突が発生したことが原因である可能性があります。同じボーンチェーンの場合は、自己衝突をオフにする必要があります。</p>
+<blockquote>
+<div><dl class="simple">
+<dt>&lt;a href=&quot;../image/turn_off_self_collistion.png&quot; target=&quot;_blank&quot;&gt;</dt><dd><p>&lt;img src=&quot;../image/turn_off_self_collistion.png&quot; style=&quot;width: 20%;&quot; /&gt;</p>
+</dd>
+</dl>
+<p>&lt;/a&gt;</p>
+</div></blockquote>
 </section>
 <section id="example">
 <h2>例<a class="headerlink" href="#example" title="Link to this heading"></a></h2>

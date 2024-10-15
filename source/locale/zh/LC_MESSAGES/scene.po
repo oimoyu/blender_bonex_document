@@ -9,17 +9,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blender Bonex Document\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-29 20:19+0800\n"
+"POT-Creation-Date: 2024-10-15 20:58+0800\n"
 "PO-Revision-Date: 2024-04-29 20:20+0800\n"
 "Last-Translator: \n"
-"Language-Team: zh <LL@li.org>\n"
 "Language: zh\n"
+"Language-Team: zh <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
 "Generated-By: Babel 2.14.0\n"
-"X-Generator: Poedit 3.4.2\n"
 
 #: ../../source/scene.rst:2
 msgid "Scene Setting"
@@ -27,12 +26,10 @@ msgstr "场景设置"
 
 #: ../../source/scene.rst:10
 msgid ""
-"**FPS**: Should be consistent with blender, the higher the fps, the higher "
-"speed the scene will be. If you want your scene looks faster, you can "
-"decrease to speed up the passage of time."
-msgstr ""
-"**FPS**：应该与 Blender 一致，FPS 越高，场景的速度就越快。 如果你想让你的场景"
-"看起来更快，你可以减少以加快时间的流逝。"
+"**FPS**: Should be consistent with blender, the higher the fps, the "
+"higher speed the scene will be. If you want your scene looks faster, you "
+"can decrease to speed up the passage of time."
+msgstr "**FPS**：应该与 Blender 一致，FPS 越高，场景的速度就越快。 如果你想让你的场景看起来更快，你可以减少以加快时间的流逝。"
 
 #: ../../source/scene.rst:12
 msgid "**Gravity**: The force parallel to the global Z axis is normally -9.81."
@@ -40,30 +37,52 @@ msgstr "**重力**：平行于全局 Z 轴的力，通常为 -9.81。"
 
 #: ../../source/scene.rst:15
 msgid ""
-"**Sub Step Number**: Split one animation frame into multiple small frames, "
-"and simulation them. Used to solve the penetration problem of high-speed "
-"moving objects. This is performance heavy operation,if not necessary, set it "
-"as 1."
-msgstr ""
-"**子步数**: 将一个动画帧拆分成多个小帧，然后进行模拟。用于解决高速运动物体的"
-"穿透问题。这是性能消耗很大的操作，如无必要，请设置为1。"
+"**Sub Step Number**: Split one animation frame into multiple small "
+"frames, and simulation them. Used to solve the penetration problem of "
+"high-speed moving objects. This is performance heavy operation,if not "
+"necessary, set it as 1."
+msgstr "**子步数**: 将一个动画帧拆分成多个小帧，然后进行模拟。用于解决高速运动物体的穿透问题。这是性能消耗很大的操作，如无必要，请设置为1。"
 
-#: ../../source/scene.rst:25
+#: ../../source/scene.rst:17
 msgid ""
-"**Position Iteration Number**: The higher the value, the more accurate the "
-"location of the simulation results."
-msgstr "**位置迭代次数**：值越高，模拟结果的位置越准确。"
+"Sub step means more accurate simulation, but sometimes you may find that "
+"the rigidbody never end after increasing this, if this is not you want, "
+"you can decrease sub step or increase damping."
+msgstr ""
+
+#: ../../source/scene.rst:19
+msgid ""
+"Never end movement issues explan: the inaccurate simulation means "
+"inaccurate numerical calculation, which will lead the small number is "
+"truncated, this means more energy is loosing over time. On the other "
+"hand, too accurate means the energy that should be lost is retained, so "
+"the simulation results show that it is more inclined to motion. If you "
+"want something like the spring toy below, this is absolute you need."
+msgstr ""
 
 #: ../../source/scene.rst:27
 msgid ""
-"**Velocity Iteration Number**: The higher the value, the more accurate the "
-"velocity of the simulation results."
+"The video below shows when a high-speed object moving, increase the sub "
+"step means the movement is split into small movement, so the rigidbody "
+"can interact."
+msgstr ""
+
+#: ../../source/scene.rst:37
+msgid ""
+"**Position Iteration Number**: The higher the value, the more accurate "
+"the location of the simulation results."
+msgstr "**位置迭代次数**：值越高，模拟结果的位置越准确。"
+
+#: ../../source/scene.rst:39
+msgid ""
+"**Velocity Iteration Number**: The higher the value, the more accurate "
+"the velocity of the simulation results."
 msgstr "**速度迭代次数**：值越高，模拟结果的速度越准确。"
 
-#: ../../source/scene.rst:29
+#: ../../source/scene.rst:41
 msgid ""
-"A long rigidbody chain or model intersection need to increase iterations, "
-"because long chains require iterative diffusion to obtain accurate positions."
-msgstr ""
-"长的刚体链或模型相交需要增加迭代次数，因为长链需要迭代扩散才能获得准确的位"
-"置。"
+"A long rigidbody chain or model intersection need to increase iterations,"
+" because long chains require iterative diffusion to obtain accurate "
+"positions."
+msgstr "长的刚体链或模型相交需要增加迭代次数，因为长链需要迭代扩散才能获得准确的位置。"
+
