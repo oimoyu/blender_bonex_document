@@ -30,3 +30,5 @@ Update Log
 1.0.14 fix multiple viewlayer bug.
 
 1.0.15 make sure switch to driver obj with all visible setting on, change some default rigidbody params to better user experience.
+
+1.0.16 add "regenerate all drivers" and "select all physics bones" button.
