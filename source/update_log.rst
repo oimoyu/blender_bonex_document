@@ -28,3 +28,5 @@ Update Log
 1.0.13 Add gravity switch for every rigidbody.
 
 1.0.14 fix multiple viewlayer bug.
+
+1.0.15 make sure switch to driver obj with all visible setting on, change some default rigidbody params to better user experience.
