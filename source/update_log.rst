@@ -34,3 +34,7 @@ Update Log
 1.0.16 add "regenerate all drivers" and "select all physics bones" button.
 
 1.0.17 add rigidbody "centroid" option, optimize ui.
+
+1.0.18 fix blender 4.4 operator define error
+
+1.0.19 fix blender 4.4 operator define error, and keyframe api break
