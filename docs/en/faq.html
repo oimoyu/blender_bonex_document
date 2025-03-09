@@ -63,6 +63,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#what-should-i-do-if-the-laggy-in-rigidbody-modify-mode">What should I do if the laggy in rigidbody modify mode?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#why-can-t-rigidbody-bones-be-moved-manually">Why can’t rigidbody bones be moved manually?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#high-speed-movement-penetrate-rigidbody-issues">High speed movement penetrate rigidbody issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#why-custom-rigidbody-shape-not-work-correctly">Why Custom Rigidbody Shape not work correctly</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#why-this-addon-using-empty-obj-to-drive-bones">Why this addon using empty obj to drive bones?</a></li>
 </ul>
 </li>
@@ -110,6 +111,7 @@
 <p>① Adjust the position of kinematic rigidbody so that it does not conflict with hard constraints</p>
 <p>② Take out the jittered part separately, disable the conflicting kinematic rigid body and recalculate it separately</p>
 <p>③ Adjust parmeter. Sometimes, even though you have relaxed the constraints, you may still find that there is some jitter when your thighs are raised and collide with the skirt. This may be because the rigid body is separated from the hard constraints due to friction. You can try to reduce the friction coefficient.</p>
+<p>④ give a little bit distance limit. At the base of the thigh, jitter often occurs. This is because of the conflict between the thigh bone pivot and skirt base bone pivot. You can add a little bit distance limit to the bone rigid body at the base of the skirt to allow it to have a small amount of move to avoid jitter caused by the conflict of hard constraints. (Of course, you can also optimize the bone binding and model, but it is more cumbersome).</p>
 </section>
 <section id="why-did-the-simulation-stop-early-when-playback">
 <h2>Why did the simulation stop early when playback?<a class="headerlink" href="#why-did-the-simulation-stop-early-when-playback" title="Link to this heading"></a></h2>
@@ -149,6 +151,18 @@
 <section id="high-speed-movement-penetrate-rigidbody-issues">
 <h2>High speed movement penetrate rigidbody issues<a class="headerlink" href="#high-speed-movement-penetrate-rigidbody-issues" title="Link to this heading"></a></h2>
 <p>when a rigid body move in a very high speed, rigidbody will penetrate, and collision will not happen. To avoid this, physx has a feature call ccd. But in my practice, I have not seen such situation, and the ccd need addtional calculation, so I did not add in bonx. But If you have a high speed rigidbody scene and penetration occur, you can send the blender project to me to let me think about this feature.</p>
+</section>
+<section id="why-custom-rigidbody-shape-not-work-correctly">
+<h2>Why Custom Rigidbody Shape not work correctly<a class="headerlink" href="#why-custom-rigidbody-shape-not-work-correctly" title="Link to this heading"></a></h2>
+<p>In rigidbody simulation, convex hull is used to save computational resources. If you use a concave hull shape, it will be baked into convex by physx.
+.. raw:: html</p>
+<blockquote>
+<div><dl class="simple">
+<dt>&lt;a href=”../image/hide_mesh_collconvexction.png” target=”_blank”&gt;</dt><dd><p>&lt;img src=”../image/convex.png” style=”width: 50%;” /&gt;</p>
+</dd>
+</dl>
+<p>&lt;/a&gt;</p>
+</div></blockquote>
 </section>
 <section id="why-this-addon-using-empty-obj-to-drive-bones">
 <h2>Why this addon using empty obj to drive bones?<a class="headerlink" href="#why-this-addon-using-empty-obj-to-drive-bones" title="Link to this heading"></a></h2>

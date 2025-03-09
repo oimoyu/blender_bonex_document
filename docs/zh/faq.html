@@ -63,6 +63,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#what-should-i-do-if-the-laggy-in-rigidbody-modify-mode">刚体编辑模式下卡顿怎么办？</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#why-can-t-rigidbody-bones-be-moved-manually">为什么无法手动移动刚体骨骼？</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#high-speed-movement-penetrate-rigidbody-issues">高速运动穿透刚体问题</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#why-custom-rigidbody-shape-not-work-correctly">Why Custom Rigidbody Shape not work correctly</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#why-this-addon-using-empty-obj-to-drive-bones">为什么这个插件使用空 obj 来驱动骨骼？</a></li>
 </ul>
 </li>
@@ -110,6 +111,7 @@
 <p>① 调整kinematic刚体的位置，使其不与硬约束冲突</p>
 <p>② 单独取出抖动部分，禁用冲突的运动刚体，单独重新计算</p>
 <p>③调整参数。 有时候，即使你放松了约束，但当你的大腿抬起并与裙子碰撞时，你仍然可能会发现有些抖动。 这可能是因为刚体由于摩擦而脱离了硬约束。 您可以尝试降低摩擦系数。</p>
+<p>④ give a little bit distance limit. At the base of the thigh, jitter often occurs. This is because of the conflict between the thigh bone pivot and skirt base bone pivot. You can add a little bit distance limit to the bone rigid body at the base of the skirt to allow it to have a small amount of move to avoid jitter caused by the conflict of hard constraints. (Of course, you can also optimize the bone binding and model, but it is more cumbersome).</p>
 </section>
 <section id="why-did-the-simulation-stop-early-when-playback">
 <h2>为什么回放时模拟提前停止？<a class="headerlink" href="#why-did-the-simulation-stop-early-when-playback" title="Link to this heading"></a></h2>
@@ -149,6 +151,18 @@
 <section id="high-speed-movement-penetrate-rigidbody-issues">
 <h2>高速运动穿透刚体问题<a class="headerlink" href="#high-speed-movement-penetrate-rigidbody-issues" title="Link to this heading"></a></h2>
 <p>当刚体以很高的速度运动时，刚体会穿透，不会发生碰撞。 为了避免这种情况，physx 有一个称为 ccd 的功能。 但在我的实践中，我没有见过这样的情况，而且ccd需要额外的计算，所以我没有在bonx中添加。 但如果你有一个高速刚体场景并发生渗透，你可以将搅拌器项目发送给我，让我考虑这个功能。</p>
+</section>
+<section id="why-custom-rigidbody-shape-not-work-correctly">
+<h2>Why Custom Rigidbody Shape not work correctly<a class="headerlink" href="#why-custom-rigidbody-shape-not-work-correctly" title="Link to this heading"></a></h2>
+<p>In rigidbody simulation, convex hull is used to save computational resources. If you use a concave hull shape, it will be baked into convex by physx.
+.. raw:: html</p>
+<blockquote>
+<div><dl class="simple">
+<dt>&lt;a href=&quot;../image/hide_mesh_collconvexction.png&quot; target=&quot;_blank&quot;&gt;</dt><dd><p>&lt;img src=&quot;../image/convex.png&quot; style=&quot;width: 50%;&quot; /&gt;</p>
+</dd>
+</dl>
+<p>&lt;/a&gt;</p>
+</div></blockquote>
 </section>
 <section id="why-this-addon-using-empty-obj-to-drive-bones">
 <h2>为什么这个插件使用空 obj 来驱动骨骼？<a class="headerlink" href="#why-this-addon-using-empty-obj-to-drive-bones" title="Link to this heading"></a></h2>

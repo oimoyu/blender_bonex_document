@@ -38,3 +38,5 @@ Update Log
 1.0.18 fix blender 4.4 operator define error
 
 1.0.19 fix blender 4.4 operator define error, and keyframe api break
+
+1.0.20 ① add "generate shape from mesh" function, add "collid with neighbor bone" option. Fixed the problem of discontinuous error frames when playing continuously.

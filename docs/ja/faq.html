@@ -64,6 +64,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#what-should-i-do-if-the-laggy-in-rigidbody-modify-mode">剛体変更モードでラグが発生した場合はどうすればよいですか?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#why-can-t-rigidbody-bones-be-moved-manually">剛体ボーンを手動で移動できないのはなぜですか?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#high-speed-movement-penetrate-rigidbody-issues">高速移動が剛体の問題を貫通</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#why-custom-rigidbody-shape-not-work-correctly">Why Custom Rigidbody Shape not work correctly</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#why-this-addon-using-empty-obj-to-drive-bones">なぜこのアドオンは空の obj を使用してボーンを駆動するのでしょうか?</a></li>
 </ul>
 </li>
@@ -111,6 +112,7 @@
 <p>①ハードコンストレイントに抵触しないようにkinematicの位置を調整する</p>
 <p>② ジッタ部分を別途取り出し、競合するkinematic剛体を無効にして別途再計算</p>
 <p>③ パラメータを調整します。 場合によっては、拘束を緩めたにもかかわらず、太ももが上がってスカートと衝突するときに多少の震えが生じることがあります。 これは、摩擦によって剛体がハードな拘束から切り離されたためと考えられます。 摩擦係数を下げることを試みることができます。</p>
+<p>④ give a little bit distance limit. At the base of the thigh, jitter often occurs. This is because of the conflict between the thigh bone pivot and skirt base bone pivot. You can add a little bit distance limit to the bone rigid body at the base of the skirt to allow it to have a small amount of move to avoid jitter caused by the conflict of hard constraints. (Of course, you can also optimize the bone binding and model, but it is more cumbersome).</p>
 </section>
 <section id="why-did-the-simulation-stop-early-when-playback">
 <h2>再生時にシミュレーションが早期に停止したのはなぜですか?<a class="headerlink" href="#why-did-the-simulation-stop-early-when-playback" title="Link to this heading"></a></h2>
@@ -150,6 +152,18 @@
 <section id="high-speed-movement-penetrate-rigidbody-issues">
 <h2>高速移動が剛体の問題を貫通<a class="headerlink" href="#high-speed-movement-penetrate-rigidbody-issues" title="Link to this heading"></a></h2>
 <p>剛体が非常に高速で移動すると、剛体が貫通し、衝突が起こらなくなります。これを避けるために、physxにはccdという機能があります。しかし、私の練習では、そのような状況は見たことがなく、ccdは追加計算が必要なので、bonxには追加しませんでした。しかし、もしあなたが高速のリジッドボディ・シーンを持っていて、ペネトレーションが発生するのであれば、私にこの機能について考えさせるために、blenderのプロジェクトを送ることができます。</p>
+</section>
+<section id="why-custom-rigidbody-shape-not-work-correctly">
+<h2>Why Custom Rigidbody Shape not work correctly<a class="headerlink" href="#why-custom-rigidbody-shape-not-work-correctly" title="Link to this heading"></a></h2>
+<p>In rigidbody simulation, convex hull is used to save computational resources. If you use a concave hull shape, it will be baked into convex by physx.
+.. raw:: html</p>
+<blockquote>
+<div><dl class="simple">
+<dt>&lt;a href=&quot;../image/hide_mesh_collconvexction.png&quot; target=&quot;_blank&quot;&gt;</dt><dd><p>&lt;img src=&quot;../image/convex.png&quot; style=&quot;width: 50%;&quot; /&gt;</p>
+</dd>
+</dl>
+<p>&lt;/a&gt;</p>
+</div></blockquote>
 </section>
 <section id="why-this-addon-using-empty-obj-to-drive-bones">
 <h2>なぜこのアドオンは空の obj を使用してボーンを駆動するのでしょうか?<a class="headerlink" href="#why-this-addon-using-empty-obj-to-drive-bones" title="Link to this heading"></a></h2>

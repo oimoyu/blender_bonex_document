@@ -139,6 +139,11 @@
 <video width="100%" controls src="../video/edit_shape.mp4">
   Your browser does not support the video tag.
 </video><hr class="docutils" />
+<p><strong>Automatically generate Rigidbody Shape by Mesh</strong>: Selected bone, and press &quot;Ctrl+E&quot; , addon will generates the rigidbody shape of the bone based on the mesh with the corresponding weights. (Bones need reset to initial position)</p>
+<p><a href="#id1"><span class="problematic" id="id2">**</span></a>Custom Rigidbody Notice ** :
+① If you use custom rigidbody shape, you need to make sure the shape is convex, otherwise, the rigidbody will bake into convex in phys.
+② Even the vertex is seemed as a part of rigidbody shape, make sure all vertices is what you want to be the shape.</p>
+<hr class="docutils" />
 <p><strong>剛体シェイプのコピー</strong>: 剛体変更インターフェイス内で Ctrl+「M」を押すと、アクティブな剛体シェイプが選択した他の剛体ボーンにコピーされます。</p>
 <video width="100%" controls src="../video/copy_shape.mp4">
   Your browser does not support the video tag.

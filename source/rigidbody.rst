@@ -91,6 +91,14 @@ Press "S" to scale the rigidbody.
 
 ......
 
+**Automatically generate Rigidbody Shape by Mesh**: Selected bone, and press "Ctrl+E" , addon will generates the rigidbody shape of the bone based on the mesh with the corresponding weights. (Bones need reset to initial position)
+
+**Custom Rigidbody Notice ** : 
+① If you use custom rigidbody shape, you need to make sure the shape is convex, otherwise, the rigidbody will bake into convex in phys.
+② Even the vertex is seemed as a part of rigidbody shape, make sure all vertices is what you want to be the shape.
+
+......
+
 **Copy Rigidbody Shape**: Within rigid Body modification interface, press ctrl+"M" will copy the active rigidbody shape to other selected rigidbody bone.
 
 .. raw:: html
