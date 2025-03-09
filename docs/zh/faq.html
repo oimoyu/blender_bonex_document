@@ -154,16 +154,10 @@
 </section>
 <section id="why-custom-rigidbody-shape-not-work-correctly">
 <h2>Why Custom Rigidbody Shape not work correctly<a class="headerlink" href="#why-custom-rigidbody-shape-not-work-correctly" title="Link to this heading"></a></h2>
-<p>In rigidbody simulation, convex hull is used to save computational resources. If you use a concave hull shape, it will be baked into convex by physx.
-.. raw:: html</p>
-<blockquote>
-<div><dl class="simple">
-<dt>&lt;a href=&quot;../image/hide_mesh_collconvexction.png&quot; target=&quot;_blank&quot;&gt;</dt><dd><p>&lt;img src=&quot;../image/convex.png&quot; style=&quot;width: 50%;&quot; /&gt;</p>
-</dd>
-</dl>
-<p>&lt;/a&gt;</p>
-</div></blockquote>
-</section>
+<p>In rigidbody simulation, convex hull is used to save computational resources. If you use a concave hull shape, it will be baked into convex by physx.</p>
+<a href="../image/hide_mesh_collconvexction.png" target="_blank">
+    <img src="../image/convex.png" style="width: 50%;" />
+</a></section>
 <section id="why-this-addon-using-empty-obj-to-drive-bones">
 <h2>为什么这个插件使用空 obj 来驱动骨骼？<a class="headerlink" href="#why-this-addon-using-empty-obj-to-drive-bones" title="Link to this heading"></a></h2>
 <p>对于那些想要这样做的开发人员。 如果要为具有父对象的 obj 设置变换，则必须调用 update() 以确保父矩阵是最新的。 但是 update() 函数将从整个场景更新，如果你的场景很大，这个过程会非常慢。</p>

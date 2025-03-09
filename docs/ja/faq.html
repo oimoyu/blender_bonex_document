@@ -155,16 +155,10 @@
 </section>
 <section id="why-custom-rigidbody-shape-not-work-correctly">
 <h2>Why Custom Rigidbody Shape not work correctly<a class="headerlink" href="#why-custom-rigidbody-shape-not-work-correctly" title="Link to this heading"></a></h2>
-<p>In rigidbody simulation, convex hull is used to save computational resources. If you use a concave hull shape, it will be baked into convex by physx.
-.. raw:: html</p>
-<blockquote>
-<div><dl class="simple">
-<dt>&lt;a href=&quot;../image/hide_mesh_collconvexction.png&quot; target=&quot;_blank&quot;&gt;</dt><dd><p>&lt;img src=&quot;../image/convex.png&quot; style=&quot;width: 50%;&quot; /&gt;</p>
-</dd>
-</dl>
-<p>&lt;/a&gt;</p>
-</div></blockquote>
-</section>
+<p>In rigidbody simulation, convex hull is used to save computational resources. If you use a concave hull shape, it will be baked into convex by physx.</p>
+<a href="../image/hide_mesh_collconvexction.png" target="_blank">
+    <img src="../image/convex.png" style="width: 50%;" />
+</a></section>
 <section id="why-this-addon-using-empty-obj-to-drive-bones">
 <h2>なぜこのアドオンは空の obj を使用してボーンを駆動するのでしょうか?<a class="headerlink" href="#why-this-addon-using-empty-obj-to-drive-bones" title="Link to this heading"></a></h2>
 <p>これをやりたい開発者向け。 親を持つ obj の変換を設定したい場合は、update() を呼び出して親行列が最新であることを確認する必要があります。 ただし、update() 関数はシーン全体から更新するため、シーンが巨大な場合、プロセスが非常に遅くなります。</p>

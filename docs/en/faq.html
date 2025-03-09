@@ -154,16 +154,10 @@
 </section>
 <section id="why-custom-rigidbody-shape-not-work-correctly">
 <h2>Why Custom Rigidbody Shape not work correctly<a class="headerlink" href="#why-custom-rigidbody-shape-not-work-correctly" title="Link to this heading"></a></h2>
-<p>In rigidbody simulation, convex hull is used to save computational resources. If you use a concave hull shape, it will be baked into convex by physx.
-.. raw:: html</p>
-<blockquote>
-<div><dl class="simple">
-<dt>&lt;a href=”../image/hide_mesh_collconvexction.png” target=”_blank”&gt;</dt><dd><p>&lt;img src=”../image/convex.png” style=”width: 50%;” /&gt;</p>
-</dd>
-</dl>
-<p>&lt;/a&gt;</p>
-</div></blockquote>
-</section>
+<p>In rigidbody simulation, convex hull is used to save computational resources. If you use a concave hull shape, it will be baked into convex by physx.</p>
+<a href="../image/hide_mesh_collconvexction.png" target="_blank">
+    <img src="../image/convex.png" style="width: 50%;" />
+</a></section>
 <section id="why-this-addon-using-empty-obj-to-drive-bones">
 <h2>Why this addon using empty obj to drive bones?<a class="headerlink" href="#why-this-addon-using-empty-obj-to-drive-bones" title="Link to this heading"></a></h2>
 <p>For those developer who want to do this. If you want to set transform for a obj with parent, you must call update() to ensure the parent matrix latest. But update() function will update from whole scene, if your scene is huge, the process will be extremely slow.</p>
