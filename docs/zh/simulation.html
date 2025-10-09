@@ -88,7 +88,6 @@
     <img src="../image/simulation_setting.png" style="width: 20%;" />
 </a><p><strong>全部烘焙</strong>：点击该按钮，物理结果将被烘焙到关键帧中。 有 3 个过程阶段。 ①.收集运动学刚体数据。 ②.physx计算过程， 在此过程中可以按ESC键停止烘烤。 ③. 设置驱动器物体的关键帧，这是一个漫长的过程，需要耐心等待。</p>
 <p><strong>播放模拟</strong>：如果启用，则在播放过程中进行模拟。 对于简单的场景，播放可能会很流畅，但在繁重的场景中，播放可能会很卡顿，你可以尝试禁用此功能，然后将动画烘焙到关键帧后播放动画。</p>
-<p><strong>设置关键帧模式</strong>：Blender 设置关键帧有很大的性能问题。 所以我提供了两种设置关键帧的方法。 “普通”：通过高级API设置关键帧，使用更多时间。 “快”：通过基本api设置关键帧，速度更快，但会导致现有关键帧变成线性。 如果您没有在要模拟的骨骼上手动设置任何关键帧，“快速”是更好的选择。</p>
 <p>Keyframe is setting on driver objects, if you want keyframe on bones, go to &quot;Pose -&gt; Animation -&gt; Bake Action -&gt; Clear Constraint&quot;</p>
 <p><strong>烘焙范围</strong>：设置烘焙的模拟范围。 如果没有设置烘焙范围将是场景帧范围。</p>
 <p><strong>仅选定骨骼</strong>：如果启用，则仅模拟和绘制选定的骨骼。</p>

@@ -42,3 +42,5 @@ Update Log
 1.0.20 ① add "generate shape from mesh" function, add "collid with neighbor bone" option. Fixed the problem of discontinuous error frames when playing continuously.
 
 1.0.21 fix playback raise error, fix "generate shape from mesh" not work for some import model
+
+1.1.0 adapt to blender 5.0, save "soft connection" to armature obj to convinient to append to another project

@@ -11,8 +11,6 @@ Simulation
 
 **Playback simulate**: If enable, simulate during playback. For simple scene, playback may be smooth, but in a heavy scene, playback may be very laggy, youcan try to disable this, and play animation after bake animation into keyframe.
 
-**Set Keyframe Mode**: Blender Setting Keyframe has a big performance issuse. So I provide two way to set keyframe. "Normal": set keyframe by advanced API, using more time. "Fast": set keyframe by basic api, faster, but it will cause existing keyframes to become linear. "Fast" is a better choice if you didn't be setting any keyframes manually on the bones that will be simulated.
-
 Keyframe is setting on driver objects, if you want keyframe on bones, go to "Pose -> Animation -> Bake Action -> Clear Constraint"
 
 **Bake range**: Set simulation range for baking. If not set bake range will be scene frame range.
