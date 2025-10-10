@@ -57,7 +57,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">常见问题</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#why-does-relative-displacement-still-occur-after-simulation-even-though-the-joint-distance-is-set-to-0">为什么关节距离设置为0，仿真后仍然出现相对位移？</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#why-does-jitter-occur">为什么会出现抖动？</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#why-did-the-simulation-stop-early-when-playback">为什么回放时模拟提前停止？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#why-did-the-simulation-stop-early-when-playback">~~Why did the simulation stop early when playback?~~</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#why-is-the-simulation-unable-to-move-despite-setting-upper-and-lower-displacement-limits">为什么尽管设置了位移上限和下限，模拟仍无法移动？</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#what-should-i-do-if-the-fps-is-too-low-during-playback">播放时FPS太低怎么办？</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#what-should-i-do-if-the-laggy-in-rigidbody-modify-mode">刚体编辑模式下卡顿怎么办？</a></li>
@@ -114,11 +114,11 @@
 <p>④ give a little bit distance limit. At the base of the thigh, jitter often occurs. This is because of the conflict between the thigh bone pivot and skirt base bone pivot. You can add a little bit distance limit to the bone rigid body at the base of the skirt to allow it to have a small amount of move to avoid jitter caused by the conflict of hard constraints. (Of course, you can also optimize the bone binding and model, but it is more cumbersome).</p>
 </section>
 <section id="why-did-the-simulation-stop-early-when-playback">
-<h2>为什么回放时模拟提前停止？<a class="headerlink" href="#why-did-the-simulation-stop-early-when-playback" title="Link to this heading"></a></h2>
-<p>应该是帧步不连续。 该插件需要模拟每个连续帧。</p>
-<p>① 你可能是在播放过程中尝试跳过关键帧。</p>
-<p>② 检查是否选择“播放每一帧”播放模式（在时间轴视口-&gt;播放-&gt;同步）</p>
-<a href="../image/select_play_every_frame.png" target="_blank">
+<h2>~~Why did the simulation stop early when playback?~~<a class="headerlink" href="#why-did-the-simulation-stop-early-when-playback" title="Link to this heading"></a></h2>
+<p>~~Should be the frame step not continuous. This addon need to get every continuous frame to be simulated.~~</p>
+<p>~~① You may try to skip the frame when playback.~~</p>
+<p>~~② Check whether you select the &quot;Play Every Frame&quot; playback mode(in Timeline viewport -&gt; Playback -&gt; Sync)~~</p>
+<a href="../image/select_play_every_frame.png" target="_blank" style="display:none">
     <img src="../image/select_play_every_frame.png" style="width: 60%;" />
 </a></section>
 <section id="why-is-the-simulation-unable-to-move-despite-setting-upper-and-lower-displacement-limits">

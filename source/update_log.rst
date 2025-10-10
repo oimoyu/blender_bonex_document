@@ -44,3 +44,5 @@ Update Log
 1.0.21 fix playback raise error, fix "generate shape from mesh" not work for some import model
 
 1.1.0 adapt to blender 5.0, save "soft connection" to armature obj to convinient to append to another project
+
+1.2.0 fix 5.0 animation api breaking. Change keyframe limit, now it can freely move keyframe without stop. Save all animation to one slot.
