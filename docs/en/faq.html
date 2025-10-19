@@ -57,7 +57,6 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">FAQ</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#why-does-relative-displacement-still-occur-after-simulation-even-though-the-joint-distance-is-set-to-0">Why does relative displacement still occur after simulation even though the joint distance is set to 0?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#why-does-jitter-occur">Why does jitter occur?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#why-did-the-simulation-stop-early-when-playback">~~Why did the simulation stop early when playback?~~</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#why-is-the-simulation-unable-to-move-despite-setting-upper-and-lower-displacement-limits">Why is the simulation unable to move despite setting upper and lower displacement limits?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#what-should-i-do-if-the-fps-is-too-low-during-playback">What should I do if the FPS is too low during playback?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#what-should-i-do-if-the-laggy-in-rigidbody-modify-mode">What should I do if the laggy in rigidbody modify mode?</a></li>
@@ -113,14 +112,6 @@
 <p>③ Adjust parmeter. Sometimes, even though you have relaxed the constraints, you may still find that there is some jitter when your thighs are raised and collide with the skirt. This may be because the rigid body is separated from the hard constraints due to friction. You can try to reduce the friction coefficient.</p>
 <p>④ give a little bit distance limit. At the base of the thigh, jitter often occurs. This is because of the conflict between the thigh bone pivot and skirt base bone pivot. You can add a little bit distance limit to the bone rigid body at the base of the skirt to allow it to have a small amount of move to avoid jitter caused by the conflict of hard constraints. (Of course, you can also optimize the bone binding and model, but it is more cumbersome).</p>
 </section>
-<section id="why-did-the-simulation-stop-early-when-playback">
-<h2>~~Why did the simulation stop early when playback?~~<a class="headerlink" href="#why-did-the-simulation-stop-early-when-playback" title="Link to this heading"></a></h2>
-<p>~~Should be the frame step not continuous. This addon need to get every continuous frame to be simulated.~~</p>
-<p>~~① You may try to skip the frame when playback.~~</p>
-<p>~~② Check whether you select the “Play Every Frame” playback mode(in Timeline viewport -&gt; Playback -&gt; Sync)~~</p>
-<a href="../image/select_play_every_frame.png" target="_blank" style="display:none">
-    <img src="../image/select_play_every_frame.png" style="width: 60%;" />
-</a></section>
 <section id="why-is-the-simulation-unable-to-move-despite-setting-upper-and-lower-displacement-limits">
 <h2>Why is the simulation unable to move despite setting upper and lower displacement limits?<a class="headerlink" href="#why-is-the-simulation-unable-to-move-despite-setting-upper-and-lower-displacement-limits" title="Link to this heading"></a></h2>
 <p>① Check whether connected is checked in the bone attributes. Connected is the option for blender to lock the bone displacement. Bones with this option checked cannot move in posture mode.</p>

@@ -32,19 +32,6 @@ When a rigid body breaks away from a hard constraint, it will try to return to t
 
 ④ give a little bit distance limit. At the base of the thigh, jitter often occurs. This is because of the conflict between the thigh bone pivot and skirt base bone pivot. You can add a little bit distance limit to the bone rigid body at the base of the skirt to allow it to have a small amount of move to avoid jitter caused by the conflict of hard constraints. (Of course, you can also optimize the bone binding and model, but it is more cumbersome).
 
-~~Why did the simulation stop early when playback?~~
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-~~Should be the frame step not continuous. This addon need to get every continuous frame to be simulated.~~
-
-~~① You may try to skip the frame when playback.~~
-
-~~② Check whether you select the "Play Every Frame" playback mode(in Timeline viewport -> Playback -> Sync)~~
-
-.. raw:: html
-
-    <a href="../image/select_play_every_frame.png" target="_blank" style="display:none">
-        <img src="../image/select_play_every_frame.png" style="width: 60%;" />
-    </a>
 
 Why is the simulation unable to move despite setting upper and lower displacement limits?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

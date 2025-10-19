@@ -45,4 +45,6 @@ Update Log
 
 1.1.0 adapt to blender 5.0, save "soft connection" to armature obj to convinient to append to another project
 
-1.2.0 fix 5.0 animation api breaking. Change keyframe limit, now it can freely move keyframe without stop. Save all animation to one slot.
+1.2.0 fix 5.0 animation api breaking. Change keyframe limit, now it can freely move keyframe without stop. Save all animation to one slot. (This addon version has bake keyframe issue in blender 4.4,4.5)
+
+1.2.1 fix keyframe issue in blender 4.4,4.5
