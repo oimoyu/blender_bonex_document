@@ -48,3 +48,5 @@ Update Log
 1.2.0 fix 5.0 animation api breaking. Change keyframe limit, now you can freely move keyframe without stop. Save all animation to one slot. (This addon version has bake keyframe issue in blender 4.4,4.5)
 
 1.2.1 fix keyframe issue in blender 4.4,4.5. Recommend to use 5.0, which combine all keyframe slot into one action, which is convinient to manage animation.
+
+1.2.2 fix "bonex collection exclude by user will raise error"
