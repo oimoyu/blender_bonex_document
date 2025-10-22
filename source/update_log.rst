@@ -50,3 +50,5 @@ Update Log
 1.2.1 fix keyframe issue in blender 4.4,4.5. Recommend to use 5.0, which combine all keyframe slot into one action, which is convinient to manage animation.
 
 1.2.2 fix "bonex collection exclude by user will raise error"
+
+1.2.3 fix different behavior between bake mode and playback mode
