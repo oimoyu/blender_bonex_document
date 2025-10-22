@@ -15,7 +15,7 @@ Tool
 
 **Enable Selected Bone Constraint**: enable selected bones' driver constraints by setting the influence to 1.
 
-**Regenerate all drivers**: If you import armature from project outside, you can use this to regenerate all driver objects to make sure all driver objects exist.
+**Regenerate all drivers**: If you import armature from project outside, or you mess up the animation keyframe. You can use this to regenerate all driver objects to make sure all driver objects exist and clean.
 
 **Select All Physics Bones**: In pose mode, all the bonex physcs bones will be selected.
 
