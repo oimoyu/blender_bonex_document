@@ -147,6 +147,7 @@
 <section id="why-custom-rigidbody-shape-not-work-correctly">
 <h2>Why Custom Rigidbody Shape not work correctly<a class="headerlink" href="#why-custom-rigidbody-shape-not-work-correctly" title="Link to this heading"></a></h2>
 <p>In rigidbody simulation, convex hull is used to save computational resources. If you use a concave hull shape, it will be baked into convex by physx.</p>
+<p>Make sure your armature transform transform is applied. Rotation will mess up the rigidbody shape result.</p>
 <a href="../image/hide_mesh_collconvexction.png" target="_blank">
     <img src="../image/convex.png" style="width: 50%;" />
 </a></section>

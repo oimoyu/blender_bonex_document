@@ -61,3 +61,8 @@ V, unset the selected bone as rigidbody, but the rigidbody and joint data still 
 
 Ctrl+Alt+Shift+C, Clear selected bone rigidbody data completely.
 
+
+Principle
+------------------------------
+
+Bonex addon call physx, physx simulate the result, result apply to empty objects(I call them drivers), empty objects drive bones by bone constrains.

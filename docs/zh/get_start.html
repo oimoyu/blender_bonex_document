@@ -51,6 +51,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#keyframe-animation-notice">关键帧动画注意事项</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#enter-rigidbody-modify-mode">进入刚体编辑模式</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#in-rigidbody-modify-mode">在刚体修改模式下</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#principle">Principle</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="rigidbody.html">刚体</a></li>
@@ -130,6 +131,10 @@
 <p>按“C”将选定的骨骼设置为刚体。</p>
 <p>V，将选中的骨骼取消设置为刚体，但刚体和关节数据仍然保留，直到下次设置为刚体</p>
 <p>Ctrl+Alt+Shift+C，完全清除选定的骨骼刚体数据。</p>
+</section>
+<section id="principle">
+<h2>Principle<a class="headerlink" href="#principle" title="Link to this heading"></a></h2>
+<p>Bonex addon call physx, physx simulate the result, result apply to empty objects(I call them drivers), empty objects drive bones by bone constrains.</p>
 </section>
 </section>
 

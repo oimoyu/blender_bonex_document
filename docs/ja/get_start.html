@@ -52,6 +52,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#keyframe-animation-notice">キーフレームアニメーションに関する注意事項</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#enter-rigidbody-modify-mode">剛体変更モードに入る</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#in-rigidbody-modify-mode">剛体変更モードの場合</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#principle">Principle</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="rigidbody.html">剛体</a></li>
@@ -131,6 +132,10 @@
 <p>「C」を押して、選択したボーンを剛体として設定します。</p>
 <p>V、選択したボーンを剛体として設定解除しますが、次回剛体に設定するまで剛体とジョイントのデータは保持されます</p>
 <p>Ctrl+Alt+Shift+C、選択したボーン 剛体 データを完全にクリアします。</p>
+</section>
+<section id="principle">
+<h2>Principle<a class="headerlink" href="#principle" title="Link to this heading"></a></h2>
+<p>Bonex addon call physx, physx simulate the result, result apply to empty objects(I call them drivers), empty objects drive bones by bone constrains.</p>
 </section>
 </section>
 
